@@ -1,6 +1,7 @@
 <?php
 namespace Ky\Core;
 
+
 use Ky\Core\Exception;
 
 class ClassLoader
