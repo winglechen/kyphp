@@ -20,7 +20,7 @@ class ClassLoader
 
 		foreach(self::$rules as $key => $dir){
 			if(strpos($path,$key) === 0){
-				$filePath = $dir . substr($path,strlen($key)) . '/'. $name . '.php';
+				$filePath = $dir . substr($path,strlen($key)) . '/'. ucfirst($name) . '.php';
 				$realPath = realPath($filePath);
 
 				if($realPath){
