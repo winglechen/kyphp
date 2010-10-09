@@ -3,4 +3,4 @@
  *	Dispatcher.php
  *
  */
-namespace KY\Webui\webui
+namespace KY\Webui
