@@ -1,5 +1,15 @@
 this is a opensource php framework!
 
-I just separate the project to two part!
+I just separate the project to four part!
 	1> the ui layer
-	2> the data layer
+	2> the data control layer
+        3> the core class 
+        4> the models
+
+<1> the ui layer
+        the ui layer get/set data to the contrller layer
+<2> the core classes
+        it is the basic library
+<3> the models
+        it contains the models of the project
+<4> the 
