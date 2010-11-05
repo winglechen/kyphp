@@ -1,9 +1,12 @@
 <?php
 namespace Ky\Core;
 
-
 use Ky\Core\Exception;
 
+/**
+ *   ClassLoader -- auto load classes
+ *
+ */
 class ClassLoader
 {
 	private static $rules;
@@ -20,7 +23,7 @@ class ClassLoader
 
 		foreach(self::$rules as $key => $dir){
 			if(strpos($path,$key) === 0){
-				$filePath = $dir . substr($path,strlen($key)) . '/'. ucfirst($name) . '.php';
+				$filePath = $dir . substr($path,strlen($key)) . '/'. $name . '.php';
 				$realPath = realPath($filePath);
 
 				if($realPath){
