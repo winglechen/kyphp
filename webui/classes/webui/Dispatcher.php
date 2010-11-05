@@ -3,4 +3,15 @@
  *	Dispatcher.php
  *
  */
-namespace KY\Webui
+namespace KY\Webui;
+
+use \Ky\Core\ClassLoader;
+
+class Dispatcher
+{
+        public function __construct()
+        {
+        
+        }
+}
+
