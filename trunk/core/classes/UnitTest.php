@@ -5,9 +5,9 @@ namespace Ky\Core;
 require_once __DIR__ .'/ClassLoader.php';
 
 ClassLoader::init();
-ClassLoader::register('ky\\core', __DIR__.'/classes/');
+ClassLoader::register('ky\\core', __DIR__);
 
-require_once 'PHPUNIT/Framework/TestCase.php';
+require_once 'PHPUnit/Framework/TestCase.php';
 
 class UnitTest extends \PHPUnit_Framework_TestCase{
 
