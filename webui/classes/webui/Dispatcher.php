@@ -13,5 +13,20 @@ class Dispatcher
         {
         
         }
+
+        public function init()
+        {
+        
+        }
+
+        public function initAutoLoad()
+        {
+        
+        }
+
+        public static function run()
+        {
+        
+        }
 }
 
