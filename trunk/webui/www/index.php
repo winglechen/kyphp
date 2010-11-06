@@ -2,6 +2,6 @@
 /**
  *	入口文件
  */
-require_once(__DIR__ . '/../classes/webui/dispatcher.php');
+require_once(__DIR__ . '/../classes/webui/Dispatcher.php');
 
-\KY\Webui\webui\Dispatcher::run();
+\Ky\Webui\Dispatcher::run();
