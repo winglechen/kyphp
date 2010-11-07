@@ -1,7 +1,7 @@
 <?php
 namespace Ky\Core;
 
-class ConfigLoader
+class Config
 {
         public static function loadIni($filename,$process_section=false,$scanner_mode=false)
         {
