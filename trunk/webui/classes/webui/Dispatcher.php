@@ -13,21 +13,34 @@ class Dispatcher
     public function __construct()
     {
         //autoload init
-        self::initAutoLoad();
+        $this->initAutoLoad();
     
         //load global Config
-        
+        $this->initConfig(); 
 
         //router init and parse the url
+        $this->initRouter();
     }
 
-    public function initAutoLoad()
+    private function initAutoLoad()
     {
         require_once __DIR__ . '/../core/ClassLoader.php';
 
         ClassLoader::init();
         ClassLoader::register('ky\\core', __DIR__ . '/../core/');
         ClassLoader::register('ky\\webui',__DIR__ );
+    }
+
+    private function initConfig()
+    {
+    
+    }
+
+    private function initRouter()
+    {
+        //get controller
+
+        //parse url
     }
 
     public static function run()
