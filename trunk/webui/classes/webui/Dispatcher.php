@@ -65,7 +65,7 @@ class Dispatcher
     }
     private function dispatch()
     {
-    
+        $this->controller::run(); 
     }
 }
 
