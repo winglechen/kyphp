@@ -18,10 +18,10 @@ class Config
         $keys = explode('/',$key);
         $result = null;
         for($i=0,$cnt=count($keys); $i<$cnt; $i++){
-            if($i=0 && isset(self::$config[$keys[0]])){
-                $result = self::$config[$keys[0]]
+            if($i==0 && isset(self::$config[$keys[0]])){
+                $result = self::$config[$keys[0]];
             }elseif(!empty($keys[$i]) && isset($result[$keys[$i]])){
-                $result = $result[$keys[$i]]
+                $result = $result[$keys[$i]];
             }else{
                 $result = null;
                 break;
