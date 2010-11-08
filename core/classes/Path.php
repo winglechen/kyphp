@@ -5,9 +5,17 @@ class Path
 {
     private static $pathes = array();
 
-    public static function register($key,$path)
+    public static function register($key,$path,$isLocal=true)
     {
-        self::$pathes[$key] = $path; 
+        //get realpath for local directory
+        $realPath = ($isLocal) ? realpath($path) : $path;
+
+        //add slash 
+        if('/' != substr($realPath,-1)){
+            $realPath .= '/';
+        }
+
+        self::$pathes[$key] = $realPath; 
     }
 
     public static function get($key)
