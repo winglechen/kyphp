@@ -39,7 +39,7 @@ class Dispatcher
 
     private function initPath()
     {
-        Path::register('config',realpath(__DIR__ . '/../../conf/'));    
+        Path::register('config',__DIR__ . '/../../conf/');    
     }
     private function initConfig()
     {
@@ -52,7 +52,7 @@ class Dispatcher
         //get controller
         $useRouter = Config::get('general/router');
         if(!$useRouter){
-            $this->controller = isset($_GET['controller']) ? $_GET['controller'] : 'webui'
+            $this->controller = isset($_GET['controller']) ? $_GET['controller'] : 'webui';
         }else{
             $this->controller = 'webui';
         }
