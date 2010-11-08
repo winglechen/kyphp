@@ -21,10 +21,9 @@ class ConfigTest extends Ky\Core\UnitTest
 
         public function test_show_get_test_ini_file_ok()
         {
-                $data = Config::loadIni($this->testIni,true);
+                Config::loadIni($this->testIni,true);
 
                 //test cases
-                $this->assertEquals(1,$data['first_section']['one'],'parse test ini fail.');
-
+                $this->assertEquals(1,Config::get('test/first_section/one'),'parse test ini fail.');
         }
 }
