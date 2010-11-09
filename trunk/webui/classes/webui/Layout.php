@@ -7,6 +7,9 @@ namespace Ky\Webui;
 
 class Layout
 {
+    private $_layout    = '';
+    private $_stasks    = array();
+    private $_blocks    = array();    
     private $_viewname  = '';
     private $_blockname = '';
     private $_comname   = '';
@@ -20,7 +23,7 @@ class Layout
     public static function display($viewname)
     {
         $layout = new self($viewname); 
-        $layout->show();
+        $layout->parse();
     }
 
     /**
@@ -28,9 +31,13 @@ class Layout
      *
      *
      */
-    private static function show()
+    private static function parse()
     {
-    
+        //include主文件 and get the base layout
+
+        //parse the layout
+
+        //return the com config
     }
    
     /**
@@ -53,6 +60,16 @@ class Layout
     
     }
 
+    protected function _layout($block_name)
+    {
+
+    }
+
+    protected function _endlayout($block_name=null)
+    {
+    
+    }
+
     /**
      *  区块布局/区块内容填充
      *
@@ -68,7 +85,7 @@ class Layout
      *
      *@var block_name string 区块名称
      */
-    protected function _endblock($block_name)
+    protected function _endblock($block_name=null)
     {
     
     }
