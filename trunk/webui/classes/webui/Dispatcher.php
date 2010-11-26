@@ -65,7 +65,8 @@ class Dispatcher
     }
     private function dispatch()
     {
-        $this->controller::run(); 
+        $controller = "Ky\\Webui\\Controller\\" . $this->controller; 
+        $controller::run(); 
     }
 }
 
