@@ -3,10 +3,21 @@
  *  layout
  *
  */
-namespace Ky\Webui;
+namespace Ky\Core;
+use Ky\Core\Exception;
 
+/**
+ * Layout.php
+ *
+ *  功能：只负责页面布局
+ *
+ *  注：
+ *      1,根布局文件不能为空
+ *      2,子布局文件不能为输出
+ */
 class Layout
 {
+    private $_dir       = '';
     private $_layout    = '';
     private $_stasks    = array();
     private $_blocks    = array();    
@@ -14,9 +25,16 @@ class Layout
     private $_blockname = '';
     private $_comname   = '';
 
-    private function __construct()
+    private function __construct($viewname)
     {
-        $this->_viewname = $viewname;
+        $this->_viewname = $this->_dir . $viewname;
+    }
+
+    public function setDir($dir)
+    {
+        if(empty($dir)) return '';
+
+        $this->_dir = ('/' == substr($dir,-1)) ? $dir : $dir . '/';
     }
 
 
@@ -24,6 +42,8 @@ class Layout
     {
         $layout = new self($viewname); 
         $layout->parse();
+
+        return $layout->_layout;
     }
 
     /**
@@ -31,9 +51,11 @@ class Layout
      *
      *
      */
-    private static function parse()
+    private function parse()
     {
         //include主文件 and get the base layout
+        ob_start();
+        $this->_include($this->_viewname);
 
         //parse the layout
 
@@ -47,7 +69,8 @@ class Layout
      */
     protected function _extends($layout)
     {
-    
+        $file = $this->_dir . $layout;
+        $this->_include($file);
     }
 
     /**
@@ -108,6 +131,21 @@ class Layout
      */
     protected function _include($filename)
     {
-    
+        //路径处理
+        $realPath = realPath($filename);
+        if($realPath){
+            include $filename;
+        }else{
+            throw new \Ky\Core\Exception\FileNotFound($filename);
+        }
+
+        if(empty($this->_layout)){
+            $this->_layout = ob_get_clean();
+
+            //如果主模板为空则抛出异常
+            if(empty($this->_layout)){
+                throw new \Ky\Core\Exception\RootLayoutCantEmpty(); 
+            }
+        }
     }
 }
