@@ -50,7 +50,34 @@ class LayoutTest extends UnitTest
         $this->assertRegExp($content_expected,$content,'load layout file fail.');
 
     }
+    
+    public function test_should_place_work_fine()
+    {
+        $template = './layout/layout_place.php';
+        $content_expected = '//';
+        $content = Layout::display($template);
+        $this->assertRegExp($content_expected,$content,'parse place fail');
+    }
+    public function test_should_block_work_fine()
+    {
+        $template = './layout/layout_block.php';
+        $content_expected = '/I am content of the block content/';
+        $content = Layout::display($template);
+        $this->assertRegExp($content_expected,$content,'parse block fail');
+    }
+
+
     public function test_should_block_layout_work_fine(){}
-    public function test_should_collect_blocks_config_ok(){}
-    public function test_should_collect_coms_config_ok(){}
+    public function test_should_collect_blocks_config_ok()
+    {
+    
+    }
+    public function test_should_collect_coms_config_ok()
+    {
+
+    }
+    public function test_should_remove_com_when_block_change()
+    {
+     
+    }
 }
