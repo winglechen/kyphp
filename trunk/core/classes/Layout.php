@@ -103,7 +103,10 @@ class Layout
     {
         $content   = ob_get_clean();
         $blockName = $this->_block_pre . $this->_cur_layout . $this->_block_suf;
-        $this->_layout = str_replace($blockName,$content,$this->layout);
+        $this->_layout = str_replace($blockName,$content,$this->_layout);
+        if(isset($this->_blocks[$this->_cur_layout])){
+            unset($this->_blocks[$this->_cur_layout]);
+        }
     }
 
     /**
@@ -125,7 +128,7 @@ class Layout
     protected function _endblock($block_name=null)
     { 
         $content = ob_get_clean();
-        if(!isset($this->_blocks[$block_name])){
+        if(!isset($this->_blocks[$this->_cur_block])){
             echo $this->_block_pre . $this->_cur_block . $this->_block_suf;
         }
         $this->_blocks[$this->_cur_block] = $content;

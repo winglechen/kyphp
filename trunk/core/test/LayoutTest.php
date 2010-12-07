@@ -67,7 +67,19 @@ class LayoutTest extends UnitTest
     }
 
 
-    public function test_should_block_layout_work_fine(){}
+    public function test_should_layout_work_fine()
+    {
+        $template = './layout/layout_layout.php';
+        $title = '/title/';
+        $footer = '/footer/';
+        $left   = '/left/';
+        $right  = '/right/';
+        $content = Layout::display($template);
+        $this->assertRegExp($title,$content,'parse layout title fail');
+        $this->assertRegExp($footer,$content,'parse layout footer fail');
+        $this->assertRegExp($left,$content,'parse layout left fail');
+        $this->assertRegExp($right,$content,'parse layout right fail');
+    }
     public function test_should_collect_blocks_config_ok()
     {
     
