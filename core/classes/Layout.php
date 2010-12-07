@@ -17,13 +17,14 @@ use Ky\Core\Exception;
  */
 class Layout
 {
-    private $_dir       = '';
-    private $_layout    = '';
-    private $_stasks    = array();
-    private $_blocks    = array();    
-    private $_viewname  = '';
-    private $_blockname = '';
-    private $_comname   = '';
+    private $_dir           = '';
+    private $_layout        = '';
+    private $_cur_layout    = '';
+    private $_blocks        = array();    
+    private $_cur_block     = '';
+    private $_block_suf     = '__BLOCK%%';
+    private $_block_pre     = '%%BLOCK__';
+    private $_viewname      = '';
 
     private function __construct($viewname)
     {
@@ -57,7 +58,13 @@ class Layout
         ob_start();
         $this->_include($this->_viewname);
 
-        //parse the layout
+        //parse the blocks
+        $keys   = array_keys($this->_blocks);
+        foreach($keys as $key => $value){
+            $keys[$key] = $this->_block_pre . $value . $this->_block_suf;
+        }
+        $values = array_values($this->_blocks);
+        $this->_layout = str_replace($keys,$values,$this->_layout);
 
         //return the com config
     }
@@ -80,17 +87,23 @@ class Layout
      */
     protected function _place($block_name)
     {
-    
+        if(!isset($this->_blocks[$block_name])){
+            $this->_blocks[$block_name] = '';
+            echo $this->_block_pre . $block_name . $this->_block_suf;
+        } 
     }
 
     protected function _layout($block_name)
     {
-
+        $this->_cur_layout = $block_name;
+        ob_start();
     }
 
     protected function _endlayout($block_name=null)
     {
-    
+        $content   = ob_get_clean();
+        $blockName = $this->_block_pre . $this->_cur_layout . $this->_block_suf;
+        $this->_layout = str_replace($blockName,$content,$this->layout);
     }
 
     /**
@@ -100,7 +113,8 @@ class Layout
      */
     protected function _block($block_name)
     {
-        
+        $this->_cur_block = $block_name;
+        ob_start();
     }
 
     /**
@@ -109,8 +123,12 @@ class Layout
      *@var block_name string 区块名称
      */
     protected function _endblock($block_name=null)
-    {
-    
+    { 
+        $content = ob_get_clean();
+        if(!isset($this->_blocks[$block_name])){
+            echo $this->_block_pre . $this->_cur_block . $this->_block_suf;
+        }
+        $this->_blocks[$this->_cur_block] = $content;
     }
 
     /**
