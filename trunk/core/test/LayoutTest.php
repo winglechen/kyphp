@@ -80,10 +80,15 @@ class LayoutTest extends UnitTest
         $this->assertRegExp($left,$content,'parse layout left fail');
         $this->assertRegExp($right,$content,'parse layout right fail');
     }
-    public function test_should_collect_blocks_config_ok()
+    public function test_should_com_work_fine()
     {
-    
+        $template = './layout/layout_com.php';
+        $content_expected = '/\%\%COM__TESTCOM__COM\%\%/';
+        $content = Layout::display($template);
+        $this->assertRegExp($content_expected,$content,'parse com fail');
+
     }
+
     public function test_should_collect_coms_config_ok()
     {
 
