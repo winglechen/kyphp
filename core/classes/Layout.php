@@ -24,6 +24,9 @@ class Layout
     private $_cur_block     = '';
     private $_block_suf     = '__BLOCK%%';
     private $_block_pre     = '%%BLOCK__';
+    private $_com_suf     = '__COM%%';
+    private $_com_pre     = '%%COM__';
+
     private $_viewname      = '';
 
     private function __construct($viewname)
@@ -87,6 +90,7 @@ class Layout
      */
     protected function _place($block_name)
     {
+        $block_name = strtoupper($block_name);
         if(!isset($this->_blocks[$block_name])){
             $this->_blocks[$block_name] = '';
             echo $this->_block_pre . $block_name . $this->_block_suf;
@@ -95,6 +99,7 @@ class Layout
 
     protected function _layout($block_name)
     {
+        $block_name = strtoupper($block_name);
         $this->_cur_layout = $block_name;
         ob_start();
     }
@@ -116,6 +121,7 @@ class Layout
      */
     protected function _block($block_name)
     {
+        $block_name = strtoupper($block_name);
         $this->_cur_block = $block_name;
         ob_start();
     }
@@ -140,9 +146,11 @@ class Layout
      *@var com_name string 组件名称
      *@var config   array  组件配置数组
      */
-    protected function _com($com_name,$config)
+    protected function _com($com_id,$config)
     {
-    
+        $config['com_id'] = strtolower($com_id); 
+        $this->_coms[strtolower($com_id)] = $config;
+        echo $this->_com_pre . strtoupper($com_id) . $this->_com_suf;
     }
 
     /**
