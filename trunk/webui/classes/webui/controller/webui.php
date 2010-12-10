@@ -10,16 +10,24 @@ class Webui
     public static function run()
     {
         echo 'I am the controller webui'; 
-        //invoke layout
-        //$layout = new Layout()
-        //$layout->display($viewname);
+        
+        $output = '';
+        $suite  = null;
+        $coms   = array();
 
-        //invoke suite
-        //$suite = new Suite();
-        //$suite->render($layout->_coms);
+        //get view
+        $view = 'default.php';
+        $layout = new Layout();
+        $layout->parse($view);
 
+        $suite = new Suite();
+        $suite->initCom($layout->_coms);
+        $suite->getData();
+        $coms  = $suite->render();
 
-
-
+        $layout->parseCom($coms);
+        
+        //do something else
+        return $layout->_layout;
     }
 }
