@@ -3,7 +3,7 @@
  *  layout
  *
  */
-namespace Ky\Core;
+namespace Ky\Core\Ui;
 use Ky\Core\Exception;
 
 /**

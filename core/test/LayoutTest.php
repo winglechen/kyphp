@@ -1,6 +1,6 @@
 <?php
 use Ky\Core;
-use Ky\Core\Layout;
+use Ky\Core\Ui\Layout;
 use Ky\Core\UnitTest;
 
 require_once __DIR__ . '/../classes/UnitTest.php';
