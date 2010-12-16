@@ -1,4 +1,6 @@
 <?php
+namespace Ky\Core\Test;
+
 use Ky\Core;
 use Ky\Core\Ui;
 use KY\Core\Ui\Layout;
@@ -15,11 +17,7 @@ class SuiteTest extends UnitTest
     protected function setUp()
     {
         parent::setUp();
-        //$this->layout = new Layout();
-        //$this->output = $this->layout->_layout;
-        //$this->coms   = $this->layout->_coms;
-
-        //$this->suite  = new Suite();
+        $this->coms = array();
     }
 
     protected function tearDown()
@@ -27,7 +25,27 @@ class SuiteTest extends UnitTest
     
     }
 
-    public static function test_should_invoke_com()
+    public function test_should_invoke_com()
+    {
+    
+    }
+
+    public function test_should_throw_class_not_found_exception_when_com_class_is_wrong()
+    {
+    
+    }
+
+    public function test_should_getUrl_Data_work()
+    {
+    
+    }
+    
+    public function test_should_invoke_com_callback_work()
+    {
+    
+    }
+
+    public function test_should_parse_layout_ok()
     {
     
     }

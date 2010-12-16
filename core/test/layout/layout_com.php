@@ -1,6 +1,7 @@
 <?php
     $config = array(
-        
+       'id'     => 'testcom',
+       'com'    => 'comtest'
     );
-    $this->_com('testcom',$config);
+    $this->_com($config);
 

@@ -146,11 +146,14 @@ class Layout
      *@var com_name string 组件名称
      *@var config   array  组件配置数组
      */
-    protected function _com($com_id,$config)
+    protected function _com($config)
     {
-        $config['com_id'] = strtolower($com_id); 
-        $this->_coms[strtolower($com_id)] = $config;
-        echo $this->_com_pre . strtoupper($com_id) . $this->_com_suf;
+        if(!$config['id']){
+            throw new \Ky\Core\Exception\ComConfigWithoutId();
+        }
+        $com_id = strtolower($config['id']); 
+        $this->_coms[$com_id] = $config;
+        echo $this->_com_pre . $com_id . $this->_com_suf;
     }
 
     /**
