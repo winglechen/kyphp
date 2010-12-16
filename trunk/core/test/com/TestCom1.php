@@ -1,4 +1,5 @@
 <?php
+namespace Ky\Core\Test\Com;
 use Ky\Core;
 use Ky\Core\Ui\Com;
 
