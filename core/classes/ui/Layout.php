@@ -29,7 +29,7 @@ class Layout
 
     private $_viewname      = '';
 
-    private function __construct($viewname)
+    public function __construct($viewname)
     {
         $this->_viewname = $this->_dir . $viewname;
     }
@@ -154,6 +154,11 @@ class Layout
         $com_id = strtolower($config['id']); 
         $this->_coms[$com_id] = $config;
         echo $this->_com_pre . $com_id . $this->_com_suf;
+    }
+
+    public function getComConfig()
+    {
+        return $this->_coms;   
     }
 
     /**
