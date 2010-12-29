@@ -1,5 +1,5 @@
 <?php
-namespace Ky\Core\Ui;
+namespace Ky\Core\Http;
 
 class Context
 {

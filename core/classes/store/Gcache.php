@@ -4,7 +4,7 @@
  *
  *
  */
-class GlobalVar
+class Gcache
 {
         public static function get($key)
         {
