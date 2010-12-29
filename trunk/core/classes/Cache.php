@@ -1,4 +1,5 @@
 <?php
+namespace Ky\Core;
 /**
  * cache操作接口
  *

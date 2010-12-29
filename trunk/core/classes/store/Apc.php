@@ -1,4 +1,5 @@
 <?php
+namespace Ky\Core\Store;
 /**
  * Apc Cache
  *
