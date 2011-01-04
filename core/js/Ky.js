@@ -1,9 +1,12 @@
 (function(){
-    var Ky = {};
-    Ky.loader = {
-        load : function(){}
+    var Ky      = {};
+
+    Ky.loader   = {
+        load : function(){},
+        loadCss:function(){},
+        loadJs:function(){}
     };
-    Ky.event  = {
+    Ky.event    = {
         //event handle
         register    : function(){},
         bind        : function(){},
@@ -12,7 +15,15 @@
         group       : function(){},
 
     };
-    Ky.util   = {
+    Ky.util     = {
     
     };
+    Ky.pipe     = {
+         
+    };
+    Ky.com      ={
+        id  : 'ky',
+
+    };
+
 })();
