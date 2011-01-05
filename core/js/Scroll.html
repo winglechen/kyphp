@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无缝滚动</title>
+<script language="javascript" src="../jquery.js"></script>
+<style type="text/css">
+#marquee1{
+    width:200px;
+height:200px;
+overflow:hidden;
+}
+</style>
+</head>
+
+
+<body>
+<script language="javascript">
+(function($){
+ $.fn.marquee = function(opt){
+     var options = $.extend({},$.fn.marquee.defaults,opt);
+
+     return this.each(function(){
+         var $container  = $(this);
+         var scrollObj   = $container.get(0);
+         var $ul         = $container.children();
+         var $lis        = $ul.children();
+
+         var ulHeight        = 0;
+         var containerHeight = $container.height();
+         var containerWidth  = $container.width();
+
+         $ul .css('height',10000);
+
+         $lis.each(function(){
+             ulHeight += $(this).outerHeight();
+             });
+
+         for(var i=1;i<1000;i++){
+         if(ulHeight > containerHeight){
+         break;
+         }
+         ulHeight = 2*ulHeight;
+         $ul.append($ul.children().clone());
+         }
+
+         $ul.append($ul.children().clone()).css('height',ulHeight*2);
+
+         function scrollFunc(){
+             var newPos  = scrollObj.scrollTop + options.scrollAmount;
+             if(newPos >= ulHeight){
+                 newPos -= ulHeight;
+             }
+             scrollObj.scrollTop = newPos;
+         }
+
+         var scrollUid   = setInterval(scrollFunc,30);
+         $container.hover(
+             function(){
+             clearInterval(scrollUid);
+             },
+             function(){
+             clearInterval(scrollUid);
+             scrollUid = setInterval(scrollFunc, 30);
+             }
+         );
+
+     });
+     };
+     $.fn.marquee.defaults = {
+            direction       : 'top', //...
+            scrollAmount    : 1
+     };
+     $.fn.marquee.setDefaults = function(settings){
+         $.extend($.fn.marquee.defaults,settings);
+     };
+})(jQuery);
+
+$(function(){
+    $('#marquee1').marquee();
+});
+
+</script>
+<div id="marquee1">
+    <ul>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <!--li><a href="#">新闻公告三新闻公告三</a></li>
+        <li><a href="#">新闻公告四新闻公告四新闻公告四</a></li>
+        <li><a href="#">新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五</a></li>
+        <li><a href="#">新闻公告六新闻公告六新闻公告六</a></li>
+        <li><a href="#">新闻公告一</a></li>
+        <li><a href="#">新闻公告二新闻公告二新闻公告二新闻公告二</a></li>
+        <li><a href="#">新闻公告三新闻公告三</a></li>
+        <li><a href="#">新闻公告四新闻公告四新闻公告四</a></li>
+        <li><a href="#">新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五</a></li>
+        <li><a href="#">新闻公告六新闻公告六新闻公告六</a></li>
+        <li><a href="#">新闻公告一</a></li>
+        <li><a href="#">新闻公告二新闻公告二新闻公告二新闻公告二</a></li>
+        <li><a href="#">新闻公告三新闻公告三</a></li>
+        <li><a href="#">新闻公告四新闻公告四新闻公告四</a></li>
+        <li><a href="#">新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五</a></li>
+        <li><a href="#">新闻公告六新闻公告六新闻公告六</a></li>
+        <li><a href="#">新闻公告一</a></li>
+        <li><a href="#">新闻公告二新闻公告二新闻公告二新闻公告二</a></li>
+        <li><a href="#">新闻公告三新闻公告三</a></li>
+        <li><a href="#">新闻公告四新闻公告四新闻公告四</a></li>
+        <li><a href="#">新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五</a></li>
+        <li><a href="#">新闻公告六新闻公告六新闻公告六</a></li-->
+    </ul>
+</div>
+
+</body>
+</html>
