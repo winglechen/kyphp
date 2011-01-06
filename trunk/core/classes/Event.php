@@ -1,5 +1,5 @@
 <?php
-namespace Ky\Core\Ui;
+namespace Ky\Core;
 
 /**
  *  ui事件驱动管理
@@ -12,7 +12,14 @@ class Event
     public function register($evt){}
     public function bind($evt,$func){}
     public function unbind($evt,$func){}
-    public function fire($evt){}
+
+    /**
+     *
+     *
+     */
+    public function fire($evt)
+    {
+    }
     public function group($evt,$group){}
     public function ungroup($evt,$group){}
 }
