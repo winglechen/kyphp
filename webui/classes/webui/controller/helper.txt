@@ -1,0 +1,31 @@
+url规则：
+
+http://www.host.com/控制器名称/逻辑参数:值/where/dataField:eq:value/.../
+
+
+可能的控制器：
+    1, ui(界面控制器)
+    2, controller(逻辑控制器)
+    3, form(表单处理)
+    4，proxy(代理)
+    5，其它
+
+控制器格式：
+<?php
+class Controller
+{
+    public function __construct(){}
+
+    public function execute(){}
+}
+
+urlParser:
+    逻辑参数parser
+    数据参数parser
+
+涉及参与者
+    1,Dispatcher
+    2,Router
+    3,urlParser
+    4,Permission
+    5,Controller
