@@ -6,6 +6,7 @@ namespace Ky\Model;
  */
 class Model
 {
+    protected $table    = 'kyphp';
     /**
      * singleton interface
      */
@@ -23,7 +24,13 @@ class Model
     /**
      *  grud operations
      */
-    public function lists(){}
+    public function lists($where=array(),$feilds="*")
+    {
+        $sql = "select * from " . $this->table . ' where 1 ';
+        if(!empty($where)){
+            $sql = $this->parseWhere($sql,$where);
+        }
+    }
     public function detail(){}
     public function add(){}
     public function modify(){}
