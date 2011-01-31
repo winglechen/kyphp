@@ -1,15 +1,8 @@
 this is a opensource php framework!
 
-I just separate the project to four part!
-	1> the ui layer
-	2> the data control layer
-        3> the core class 
-        4> the models
+Features:
+    1> 分布式
+    2> 异步化
+    3> 并行化
+    4> 组件化
 
-<1> the ui layer
-        the ui layer get/set data to the contrller layer
-<2> the core classes
-        it is the basic library
-<3> the models
-        it contains the models of the project
-<4> the 
