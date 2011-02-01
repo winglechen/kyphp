@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+    <table>
+        <name></name>
+        <nick></nick>
+        <engine></engine>
+        <charset></charset>
+        <collate></collate>
+    </table>
+    <fields>
+        <field id="id">
+            <require>true</require>
+            <dataType>int</dataType>
+            <length>11</length>
+        </field>
+        <field id="name">
+        </field>
+    </fields>
+</model>
