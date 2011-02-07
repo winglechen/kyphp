@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+    <table>
+        <name>tableDemo</name>
+        <primaryKey>id</primaryKey>
+        <mysql>
+            <![CDATA[
+                CREATE TABLE tableDemo (
+                id int(11) unsigned not null auto_increment primary key,
+                name char(50) not null default ''
+                )ENGINE=myisam default charset=utf8 collate=utf8_general_ci;
+            ]]>
+        </mysql>
+    </table>
+    <fields>
+        <field id="id">
+            <!-- 
+                dataType array(
+                    tinyint smallint mediumint int bigint
+                    double float
+                    char varchar
+                    text blob
+                );
+            -->
+            <label>id<lable>
+            <ename>id</ename>
+            <dataType>int</dataType>
+            <unsigned>true</unsigned>
+            <auto_increment>true</auto_increment>
+            <require>true</require>
+            <length>10</length>
+            <min>0</min>
+            <max>9999999</max>
+            <default>0</default>
+            <!--
+                dataModel array(
+                    ip timestap email qq postcode 
+                );
+            -->
+            <dataModel isReg="false">ip</dataModel>
+        </field>
+        <field link="category.id">
+        </field>
+    </fields>
+</model>

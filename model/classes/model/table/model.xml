@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+	<meta>
+		<name>model</name>
+
+	</meta>
+    <sql>
+        <mysql>
+            <![CDATA[
+                CREATE TABLE ##tablename# (
+                id mediumint(8) unsigned not null auto_increment primary key,
+                name char(50) not null default ''
+                )ENGINE=myisam default charset=utf8 collate=utf8_general_ci;
+            ]]>
+        </mysql>
+        <oracle>
+        </oracle>
+        <postgresql>
+        </postgresql>
+    </sql>
+    <shading>
+    </shading>
+    <validation>
+        <item name="name">
+            <require>true</require>
+            <length>2-10</length>
+        </item>
+    </validation>
+</model>
