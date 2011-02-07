@@ -1,36 +1,25 @@
 <?php
 namespace Ky\Core;
 
+use Ky\Core\Store\Gcache;
+
 /**
  *  注册表类
  */
 class Register
 {
-    private $data   = array();
-
     public static function set($key,$value)
     {
-        self::$data[$key] = $value;
+        return Gcache::set($key,$value);
     }
 
     public static function get($key)
     {
-        if(isset(self::$data[$key])){
-            return self::$data[$key];
-        }
-
-        return null;
-
+        return Gcache::get($key);
     }
 
-    public static function clear($key=null)
+    public static function remove($key=null)
     {
-        if($key == null){
-            self::$data = array();
-        }else{
-            if(isset(self::$data[$key])){
-                unset(self::$data[$key]);
-            }
-        }
+        return Gcache::remove($key);
     }
 }
