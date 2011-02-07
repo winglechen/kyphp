@@ -14,8 +14,9 @@ namespace Ky\Core;
 class Cache
 {
         private static config = array(
-                'g' => 'global',
+                'g' => 'gcache',
                 'a' => 'apc',
+                'e' => 'ea',
                 'm' => 'memcache',
                 'f' => 'file'
         );
