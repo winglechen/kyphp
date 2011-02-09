@@ -57,9 +57,7 @@ class File
         $key = self::getPath($key);
 
         //check the data expire
-        $mtime = filemtime($key);
-        $now   = time();
-        if($now > $mtime){
+        if(time() > filemtime($key)){
             return null;
         }
         return file_get_contents($key);
