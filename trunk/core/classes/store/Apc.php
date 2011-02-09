@@ -4,6 +4,8 @@ namespace Ky\Core\Store;
 /**
  *  apc cache
  *
+ *  future features:
+ *      1, 数据压缩
  */
 class Apc
 {
