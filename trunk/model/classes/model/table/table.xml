@@ -23,6 +23,9 @@
                 );
             -->
             <label>id<lable>
+            <formType>hidden</formType>
+            <!-- 表单选项  -->
+            <option></option>
             <ename>id</ename>
             <dataType>int</dataType>
             <unsigned>true</unsigned>
