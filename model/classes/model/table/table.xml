@@ -40,6 +40,7 @@
                     ip timestap email qq postcode 
                 );
             -->
+            <formater></formater>
             <dataModel isReg="false">ip</dataModel>
         </field>
         <field link="category.id">
