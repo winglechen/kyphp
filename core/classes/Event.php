@@ -10,16 +10,16 @@ class Event
     private $group  = array();
 
     public function register($evt){}
-    public function bind($evt,$func){}
+    public function bind($evt,$func,$caller=null){}
     public function unbind($evt,$func){}
 
     /**
-     *
      *
      */
     public function fire($evt)
     {
     }
+
     public function group($evt,$group){}
     public function ungroup($evt,$group){}
 }
