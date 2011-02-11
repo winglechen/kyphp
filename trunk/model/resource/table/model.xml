@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables>
+    <table id="modelTable">
+        <sharding>
+            <fields>
+                <field id="fieldId" algorithm="" />
+            </fields>
+        </sharding>
+        <hosts>
+            <host id="hostId">
+                <dbNum>1</dbNum>
+                <tableNum>1</tableNum>
+                <read>true</read>
+                <write>true</write>
+            </host>
+        </hosts>
+    </table>
+</tables>
