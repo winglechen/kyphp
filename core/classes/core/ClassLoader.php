@@ -1,5 +1,5 @@
 <?php
-namespace Ky\Core;
+namespace Ky\Core\Core;
 
 use Ky\Core\Exception;
 

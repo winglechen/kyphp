@@ -1,5 +1,5 @@
 <?php
-namespace Ky\Core;
+namespace Ky\Core\Core;
 
 class Path
 {
