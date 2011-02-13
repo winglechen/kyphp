@@ -63,6 +63,8 @@ class Sql
         return self::$instance;
     }
 
+    public static function get($table,$key){}
+
     //public interface
     public function table()
     {
