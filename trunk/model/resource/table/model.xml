@@ -15,4 +15,37 @@
             </host>
         </hosts>
     </table>
+    <table id="table2">
+        <sharding>
+            <plans>
+                <plan priority="1" >
+                    <field id="fieldId" algorithm="" />
+                    <field id="fieldId" algorithm="" />
+                    <field id="fieldId" algorithm="" />
+                </plan>
+                <plan priority="1" >
+                    <field id="fieldId" algorithm="" />
+                    <field id="fieldId" algorithm="" />
+                    <field id="fieldId" algorithm="" />
+                </plan>
+            </plans>
+        </sharding>
+        <hosts>
+            <host id="hostId">
+                <engine>mysql</engine>
+                <dbNum><dbNum>
+                <tableNum><tableNum>
+                <read></read>
+                <write></write>
+            </host>
+        </hosts>
+        <cache>
+            <itmeCache></itemCache>
+            <listCache></listCache>
+            <sqlMerge>
+                <field id="fieldId" require="" algoritm="range" />
+                <field id="fieldId" require="" algoritm="range" />
+            </sqlMerge>
+        </cache>
+    </table>
 </tables>
