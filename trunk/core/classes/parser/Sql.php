@@ -64,6 +64,7 @@ class Sql
     }
 
     public static function get($table,$key){}
+    public static function set($table,$key,$value){}
 
     //public interface
     public function table()
