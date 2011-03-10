@@ -54,7 +54,7 @@ class PdoMysql
         return $this->query;
     }
 
-    public function getOneRow($sql)
+    public function getRow($sql)
     {
         return $this->query($sql);
     }
