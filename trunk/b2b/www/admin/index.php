@@ -1,3 +1,3 @@
 <?php
 //入口文件
-echo 'index.php';
+require_once('../../cubex/admin/main.php');
