@@ -120,9 +120,9 @@ var navTab = {
 	_getTabsW: function(iStart, iEnd){
 		return this._tabsW(this._getTabs().slice(iStart, iEnd));
 	},
-	_tabsW:function(jTabs){
+	_tabsW:function($tabs){
 		var iW = 0;
-		jTabs.each(function(){
+		$tabs.each(function(){
 			iW += $(this).outerWidth(true);
 		});
 		return iW;
@@ -144,21 +144,21 @@ var navTab = {
 	
 	_visibleStart: function(){
 		var iLeft = this._getLeft(), iW = 0;
-		var jTabs = this._getTabs();
-		for (var i=0; i<jTabs.size(); i++){
+		var $tabs = this._getTabs();
+		for (var i=0; i<$tabs.size(); i++){
 			if (iW + iLeft >= 0) return i;
-			iW += jTabs.eq(i).outerWidth(true);
+			iW += $tabs.eq(i).outerWidth(true);
 		}
 		return 0;
 	},
 	_visibleEnd: function(){
 		var iLeft = this._getLeft(), iW = 0;
-		var jTabs = this._getTabs();
-		for (var i=0; i<jTabs.size(); i++){
-			iW += jTabs.eq(i).outerWidth(true);
+		var $tabs = this._getTabs();
+		for (var i=0; i<$tabs.size(); i++){
+			iW += $tabs.eq(i).outerWidth(true);
 			if (iW + iLeft > this._getScrollBarW()) return i;
 		}
-		return jTabs.size();
+		return $tabs.size();
 	},
 	_scrollPrev: function(){
 		var iStart = this._visibleStart();
@@ -207,14 +207,14 @@ var navTab = {
 	},
 	
 	_switchTab: function(iTabIndex){
-		var jTab = this._getTabs().removeClass("selected").eq(iTabIndex).addClass("selected");
+		var $tab = this._getTabs().removeClass("selected").eq(iTabIndex).addClass("selected");
 		this._getPanels().hide().eq(iTabIndex).show();
 
 		this._getMoreLi().removeClass("selected").eq(iTabIndex).addClass("selected");
 		this._currentIndex = iTabIndex;
 		
 		this._scrollCurrent();
-		this._reload(jTab);
+		this._reload($tab);
 	},
 			
 	_closeTab: function(index){
@@ -256,14 +256,20 @@ var navTab = {
 		}
 	},
 
+	_loadUrlCallback: function($panel){
+		$panel.find("[layoutH]").layoutH();
+		$panel.find(":button.close").click(function(){
+			navTab.closeCurrentTab();
+		});
+	},
 	_reload: function($tab, flag){
 		flag = flag || $tab.data("reloadFlag");
 		var url = $tab.data("url");
 		if (flag && url) {
 			$tab.data("reloadFlag", null);
-			$panel = this._getPanel($tab.data("tabid"));
+			var $panel = this._getPanel($tab.data("tabid"));
 			if ($panel) $panel.loadUrl(url, {}, function(){
-				$panel.find("[layoutH]").layoutH();
+				navTab._loadUrlCallback($panel);
 			});
 		}
 	},
@@ -274,16 +280,18 @@ var navTab = {
 			else $tab.data("reloadFlag", 1);
 		}
 	},
-	reload: function(url, data, tabid){
-		var $panel =  tabid ? this._getPanel(tabid) : this._getPanels().eq(this._currentIndex);
+	reload: function(url, options){
+		var op = $.extend({data:{}, navTabId:"", callback:null}, options);
+		var $panel =  op.navTabId ? this._getPanel(op.navTabId) : this._getPanels().eq(this._currentIndex);
 		if ($panel){
 			if (!url) {
-				var $tab = tabid ? this._getTab(tabid) : this._getTabs().eq(this._currentIndex);
+				var $tab = op.navTabId ? this._getTab(op.navTabId) : this._getTabs().eq(this._currentIndex);
 				url = $tab.data("url");
 			}
 			if (url) {
-				$panel.loadUrl(url, data, function(){
-					$panel.find("[layoutH]").layoutH();
+				$panel.loadUrl(url, op.data, function(response){
+					navTab._loadUrlCallback($panel);
+					if ($.isFunction(op.callback)) op.callback(response);
 				});
 			}
 		}
@@ -295,10 +303,10 @@ var navTab = {
 	 * 
 	 * @param {Object} tabid
 	 * @param {Object} url
-	 * @param {Object} params: title, data, flesh
+	 * @param {Object} params: title, data, fresh
 	 */
 	openTab: function(tabid, url, options){ //if found tabid replace tab, else create a new tab.
-		var op = $.extend({title:"New Tab", data:{}, flesh:true}, options);
+		var op = $.extend({title:"New Tab", data:{}, fresh:true}, options);
 		
 		function openExternal($panel) {
 			var h = navTab._panelBox.height();
@@ -308,17 +316,17 @@ var navTab = {
 		var iOpenIndex = this._indexTabId(tabid);
 
 		if (iOpenIndex >= 0){
-			var jTab = this._getTabs().eq(iOpenIndex);
-			var stSpan = jTab.attr("tabid") == this._op.mainTabId ? "> a > span > span" : "> a > span";
-			jTab.find(stSpan).text(op.title);
-			var jPanel = this._getPanels().eq(iOpenIndex);
-			if(op.flesh || jTab.data("url") != url) {
-				jTab.data("url", url);
+			var $tab = this._getTabs().eq(iOpenIndex);
+			var stSpan = $tab.attr("tabid") == this._op.mainTabId ? "> a > span > span" : "> a > span";
+			$tab.find(stSpan).text(op.title);
+			var $panel = this._getPanels().eq(iOpenIndex);
+			if(op.fresh || $tab.data("url") != url) {
+				$tab.data("url", url);
 				if (url.isExternalUrl()) {
-					openExternal(jPanel);
+					openExternal($panel);
 				} else {
-					jPanel.loadUrl(url, op.data, function(){
-						jPanel.find("[layoutH]").layoutH();
+					$panel.loadUrl(url, op.data, function(){
+						navTab._loadUrlCallback($panel);
 					});
 				}
 			}
@@ -326,17 +334,17 @@ var navTab = {
 		} else {
 			var tabFrag = '<li tabid="#tabid#"><a href="javascript:" title="#title#"><span>#title#</span></a><a href="javascript:void(0)" class="close">close</a></li>';
 			this._tabBox.append(tabFrag.replace("#tabid#", tabid).replaceAll("#title#", op.title));
-			this._panelBox.append('<div></div>');
+			this._panelBox.append('<div class="page"></div>');
 			this._moreBox.append('<li><a href="javascript:" title="#title#">#title#</a></li>'.replaceAll("#title#", op.title));
 			
-			var jTabs = this._getTabs();
-			var jPanel = this._getPanels().filter(":last");
+			var $tabs = this._getTabs();
+			var $panel = this._getPanels().filter(":last");
 			
 			if (url.isExternalUrl()) {
-				openExternal(jPanel);
+				openExternal($panel);
 			} else {
-				jPanel.loadUrl(url, op.data, function(){
-					jPanel.find("[layoutH]").layoutH();
+				$panel.loadUrl(url, op.data, function(){
+					navTab._loadUrlCallback($panel);
 					if ($.History) {
 						$.History.addHistory(tabid, function(tabid){
 							var i = navTab._indexTabId(tabid);
@@ -346,8 +354,8 @@ var navTab = {
 				});
 			}
 			
-			this._currentIndex = jTabs.size() - 1;
-			this._contextmenu(jTabs.filter(":last").hoverClass("hover"));
+			this._currentIndex = $tabs.size() - 1;
+			this._contextmenu($tabs.filter(":last").hoverClass("hover"));
 		}
 		
 		this._init();

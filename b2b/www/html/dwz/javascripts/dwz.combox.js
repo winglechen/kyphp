@@ -23,8 +23,8 @@
 			return this.each(function(){
 				var box = $(this);
 				var selector = $(op.selector, box);
-				box.append("<input type='hidden' name='" + selector.attr("name") + "' value='"+selector.attr("value")+"'/>")
-				.data("title", selector.text());
+
+				box.append('<input type="hidden" name="' + selector.attr("name") + '" value="'+selector.attr("value")+'"/>').data("title", selector.text());
 				allSelectBox.push(box.attr("id"));
 				$(op.selector, box).click(function(){
 					var options = $("#op"+box.attr("id"));
@@ -46,19 +46,19 @@
 					}
 					return false;
 				});
-				$("#op"+box.attr("id")).find(">li").comboxOption(selector, box);				
+				$("#op"+box.attr("id")).find(">li").comboxOption(selector, box);		
 			});
 		},
 		comboxOption: function(selector, box){
 			selector.text(box.data("title"));
-			$("input[name=" + selector.attr("name") + "]", box).attr("value", "");
+			
 			return this.each(function(){
 				$(">a", this).click(function(){
 					var $this = $(this);
 					$this.parent().parent().find(".selected").removeClass("selected");
 					$this.addClass("selected");
 					selector.text($this.text());
-					var property = $("input[name=" + selector.attr("name") + "]", box);
+					var property = $(":hidden", box);
 					if (property.val() != $this.attr("value")) {
 						var change = eval(selector.attr("change"));
 						if ($.isFunction(change)) {
@@ -74,6 +74,8 @@
 								var relObj = $(".combox").find(">div[name=" + box.attr("rel") + "]");
 								options = $("#op"+relObj.attr("id")).html(html);
 								$(">li", options).comboxOption($(">a", relObj), relObj);
+								
+//								if (relObj.attr("rel")) setTimeout(function(){$(">a:first", relObj).trigger("click")}, 100);
 							}
 						}
 					}

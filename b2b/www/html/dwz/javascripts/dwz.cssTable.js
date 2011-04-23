@@ -5,24 +5,16 @@
 (function($){
 	$.fn.extend({
 		cssTable: function(options){
-			var op = $.extend({scrollBox:"tableList"}, options);
+
 			return this.each(function(){
 				var $this = $(this);
 				var $trs = $this.find('tbody>tr');
-				if (!$this.parent().hasClass(op.scrollBox)){
-					var lh = $this.attr('layoutH');
-					$this.removeAttr('layoutH');
-					$this.wrap('<div class="'+op.scrollBox+'"'+ (lh ? ' layoutH="'+lh+'"' : '') +'></div>');
-				}
-				var $grid = $this.parent(); // table scrollBox
+				var $grid = $this.parent(); // table
+				var nowrap = $this.hasClass("nowrap");
 				
-				$trs.hover(function(){
-					$(this).addClass('hover');
-				}, function(){
-					$(this).removeClass('hover');
-				}).each(function(index){
+				$trs.hoverClass("hover").each(function(index){
 					var $tr = $(this);
-					if (index % 2 == 1) $tr.addClass("trbg");
+					if (!nowrap && index % 2 == 1) $tr.addClass("trbg");
 					
 					$tr.click(function(){
 						$trs.filter(".selected").removeClass("selected");
@@ -37,7 +29,12 @@
 					});
 					
 				});
-				
+
+				$this.find("thead [orderField]").orderBy({
+					targetType: $this.attr("targetType"),
+					asc: $this.attr("asc") || "asc",
+					desc:  $this.attr("desc") || "desc"
+				});
 			});
 		}
 	});

@@ -1,84 +1,61 @@
 /**
- * @author Roger Wu
- * @version 1.0
+ * @author Roger Wu v1.0
+ * @author ZhangHuihua@msn.com 2011-4-1
  */
 (function($){
-	$.fn.extend({jTable:function(options){
+	$.fn.jTable = function(options){
 		return this.each(function(){
-		 	var table = this;
-		 	var tlength = $(table).width();
+		 	var $table = $(this), nowrapTD = $table.attr("nowrapTD");
+		 	var tlength = $table.width();
 			var aStyles = [];
-			var $tc = $(table).parent(); // table parent container
+			var $tc = $table.parent().addClass("j-resizeGrid"); // table parent container
 			var layoutH = $(this).attr("layoutH");
-			var flength = $tc.innerWidth();
-			var padleft = parseInt($tc.css("padding-left"));
-			var padright = parseInt($tc.css("padding-right"));
-			var brwidth = parseInt($tc.css("border-right-width"));
-			if(isNaN(brwidth)) brwidth = 0;
-			var blwidth = parseInt($tc.css("border-left-width"));
-			if(isNaN(blwidth)) blwidth = 0;
-			var oldThs = $(table).find("thead>tr:last-child").find("th");
+
+			var oldThs = $table.find("thead>tr:last-child").find("th");
+
 			for(var i = 0, l = oldThs.size(); i < l; i++) {
 				var $th = $(oldThs[i]);
-				var style = [];
-				style[0] = parseInt($th.width() * (flength - 34) / tlength) - 10;
+				var style = [], width = $th.innerWidth() - (100 * $th.innerWidth() / tlength)-2;
+				style[0] = parseInt(width);
 				style[1] = $th.attr("align");
 				aStyles[aStyles.length] = style;
 			}
 			$(this).wrap("<div class='grid'></div>");
-			var $grid = $(table).parent();
-			$grid.html($(table).html());
+			var $grid = $table.parent().html($table.html());
 			var thead = $grid.find("thead");
-			thead.wrap("<div class='gridHeader'><div class='gridThead'><table style='width:" + (flength - 34) + "px;'></table></div></div>");
-//			var firstH = $(">tr:first-child", thead);
+			thead.wrap("<div class='gridHeader'><div class='gridThead'><table style='width:" + (tlength - 20) + "px;'></table></div></div>");
+
 			var lastH = $(">tr:last-child", thead);
 			var ths = $(">th", lastH);
 			$("th",thead).each(function(){
-				$(this).html("<div class='gridCol'>"+ $(this).html() +"</div>");
-			});			
-			for(var i = 0, l = ths.size(); i<l; i++){
-				var $th = $(ths[i]);
-				$th.html("<div class='gridCol' title='"+$th.text()+"'>"+ $th.html() +"</div>");		
-			}
-			setTimeout(function(){
-				ths.each(function(i){
-					var $th = $(this);
-					var style = aStyles[i];
-					$th.addClass(style[1])
-					   .removeAttr("align")
-					   .hoverClass("hover")
-					   .removeAttr("width")
-					   .width(style[0]);
-				});
-			},1);
-//			setTimeout(function(){
-//				lastH.click(function(e){
-//					var $th = $(e.target).parent().parent();
-//					$("th",this).filter(".thSelected").removeClass("thSelected");
-//					$($th).addClass("thSelected");
-//					var cellNum = $.jTableTool.getCellNum($th);
-//					var tbody = $(".gridTbody", $grid);
-//					$("table>tbody>tr", tbody).each(function(){
-//						var tds = $(">td",this);
-//						$(tds).filter(".tdSelected").removeClass("tdSelected");
-//						$(tds).eq(cellNum - 1).addClass("tdSelected");								
-//					});
-//				});			
-//			},1);
+				var $th = $(this);
+				$th.html("<div class='gridCol' title='"+$th.text()+"'>"+ $th.html() +"</div>");	
+			});
+			
+			ths.each(function(i){
+				var $th = $(this), style = aStyles[i];
+				$th.addClass(style[1]).hoverClass("hover").removeAttr("align").removeAttr("width").width(style[0]);
+			}).filter("[orderField]").orderBy({
+				targetType: $table.attr("targetType"),
+				asc: $table.attr("asc") || "asc",
+				desc:  $table.attr("desc") || "desc"
+			});
 
 			var tbody = $grid.find(">tbody");
 			var layoutStr = layoutH ? " layoutH='" + layoutH + "'" : "";
-			tbody.wrap("<div class='gridScroller'" + layoutStr + " style='width:" + (flength - (padleft + padright) - (brwidth + blwidth)) + "px;'><div class='gridTbody'><table style='width:" + (flength - 34) + "px;'></table></div></div>");
+			
+			tbody.wrap("<div class='gridScroller'" + layoutStr + " style='width:" + tlength + "px;'><div class='gridTbody'><table style='width:" + (tlength - 20) + "px;'></table></div></div>");
 			var ftr = $(">tr:first-child", tbody);
 			var $trs = tbody.find('>tr');
+			
 			$trs.hoverClass().each(function(){
 				var $tr = $(this);
 				var $ftds = $(">td", this);
-				var i = 0;
+
 				for (var i=0; i < $ftds.size(); i++) {
 					var $ftd = $($ftds[i]);
-					$ftd.html("<div>" + $ftd.html() + "</div>");
-					$ftd.addClass(aStyles[i][1]);
+					if (nowrapTD != "false") $ftd.html("<div>" + $ftd.html() + "</div>");
+					if (i < aStyles.length) $ftd.addClass(aStyles[i][1]);
 				}		
 				$tr.click(function(){
 					$trs.filter(".selected").removeClass("selected");
@@ -92,109 +69,94 @@
 					}
 				});
 			});
+			
 			$(">td",ftr).each(function(i){
-				$(this).width(aStyles[i][0]);
+				if (i < aStyles.length) $(this).width(aStyles[i][0]);
 			});			
 			$grid.append("<div class='resizeMarker' style='height:300px; left:57px;display:none;'></div><div class='resizeProxy' style='height:300px; left:377px;display:none;'></div>");
-			setTimeout(function(){
-				var scroller = $(".gridScroller", $grid);
-				scroller.scroll(function(event){
-					var header = $(".gridThead", $grid);
-					if(scroller.scrollLeft() > 0){
-						header.css("position", "relative");
-						var scroll = scroller.scrollLeft();
-						header.css("left", scroller.cssv("left") - scroll);
-					}
-					if(scroller.scrollLeft() == 0) {
-						header.css("position", "relative");
-						header.css("left", "0px");
-					}
-			        return false;
-				});		
-			},1);
+	
+			var scroller = $(".gridScroller", $grid);
+			scroller.scroll(function(event){
+				var header = $(".gridThead", $grid);
+				if(scroller.scrollLeft() > 0){
+					header.css("position", "relative");
+					var scroll = scroller.scrollLeft();
+					header.css("left", scroller.cssv("left") - scroll);
+				}
+				if(scroller.scrollLeft() == 0) {
+					header.css("position", "relative");
+					header.css("left", "0px");
+				}
+		        return false;
+			});		
 			
-			setTimeout(function(){
-				$(">tr", thead).each(function(){
-					var tr = this;
-					var subTitle = $(tr).next();
-					$(">th", this).each(function(i){
-						var th = this;
-						$(th).mouseover(function(event){
-							var offset = $.jTableTool.getOffset(th, event).offsetX;
-							if($(th).outerWidth() - offset < 5) {
-								$(th).css("cursor", "col-resize")
-								    .mousedown(function(event){
-									$(".resizeProxy", $grid).show().css({
-										left: $.jTableTool.getRight(th)- $(".gridScroller", $grid).scrollLeft(),
-										top:$.jTableTool.getTop(th),
-										height:$.jTableTool.getHeight(th,$grid),
-										cursor:"col-resize"
-									});
-									$(".resizeMarker", $grid).show().css({
-											left: $.jTableTool.getLeft(th) + 1 - $(".gridScroller", $grid).scrollLeft(),
-											top: $.jTableTool.getTop(th),
-											height:$.jTableTool.getHeight(th,$grid)									
-									});
-									$(".resizeProxy", $grid).jDrag($.extend(options, {scop:true, cellMinW:20, relObj:$(".resizeMarker", $grid)[0],
-											move: "horizontal",
-											event:event,
-											stop: function(){
-												var pleft = $(".resizeProxy", $grid).position().left;
-												var mleft = $(".resizeMarker", $grid).position().left;
-												var move = pleft - mleft - $(th).outerWidth() - 9;
+			
+			$(">tr", thead).each(function(){
 
-												var tbparent = $("table", $grid);
-
-												var cols = $.jTableTool.getColspan($(th));
-												var cellNum = $.jTableTool.getCellNum($(th));
-												var start = $.jTableTool.getStart($(th));
-												var totalW = 0;
-												var cellW = [];
-												if (subTitle[0]) {
-													var $ths = $(">th", subTitle);
-													for (var i = start - 1, j = 0; j < cols; j++) {
-														var wd = $(">div", $ths.eq(i + j)).outerWidth();
-														cellW[cellW.length] = wd;
-														totalW += wd;
-													}
-													for (var i = start - 1, j = 0; j < cols; j++) {
-														$ths.eq(i+j).css("width", cellW[j] + parseInt((cellW[j] * move / totalW).toFixed(0)));
-													}
-												} else {
-													$(th).width($(th).width() + move);
-												}
-																																	
-												var $lastH = $(">tr:last-child", thead);	
-												var tds = $(">td", ftr);
-												var $dcell = $(tds).eq(cellNum - 1);
-												$dcell.css("width", $(">th",$lastH).eq(cellNum - 1).css("width"));
-												
-												$(".resizeMarker,.resizeProxy", $grid).hide();
-											}
-										}));
+				$(">th", this).each(function(i){
+					var th = this, $th = $(this);
+					$th.mouseover(function(event){
+						var offset = $.jTableTool.getOffset(th, event).offsetX;
+						if($th.outerWidth() - offset < 5) {
+							$th.css("cursor", "col-resize").mousedown(function(event){
+								$(".resizeProxy", $grid).show().css({
+									left: $.jTableTool.getRight(th)- $(".gridScroller", $grid).scrollLeft(),
+									top:$.jTableTool.getTop(th),
+									height:$.jTableTool.getHeight(th,$grid),
+									cursor:"col-resize"
 								});
-							} else {
-								$(th).css("cursor", "default");
-								$(th).unbind("mousedown");
-							}
-							return false;
-						});
+								$(".resizeMarker", $grid).show().css({
+										left: $.jTableTool.getLeft(th) + 1 - $(".gridScroller", $grid).scrollLeft(),
+										top: $.jTableTool.getTop(th),
+										height:$.jTableTool.getHeight(th,$grid)									
+								});
+								$(".resizeProxy", $grid).jDrag($.extend(options, {scop:true, cellMinW:20, relObj:$(".resizeMarker", $grid)[0],
+										move: "horizontal",
+										event:event,
+										stop: function(){
+											var pleft = $(".resizeProxy", $grid).position().left;
+											var mleft = $(".resizeMarker", $grid).position().left;
+											var move = pleft - mleft - $th.outerWidth() -9;
+
+											var cols = $.jTableTool.getColspan($th);
+											var cellNum = $.jTableTool.getCellNum($th);
+											var oldW = $th.width(), newW = $th.width() + move;
+											var $dcell = $(">td", ftr).eq(cellNum - 1);
+											
+											$th.width(newW + "px");
+											$dcell.width(newW+"px");
+											
+											var $table1 = $(thead).parent();
+											$table1.width(($table1.width() - oldW + newW)+"px");
+											var $table2 = $(tbody).parent();
+											$table2.width(($table2.width() - oldW + newW)+"px");
+											
+											$(".resizeMarker,.resizeProxy", $grid).hide();
+										}
+									})
+								);
+							});
+						} else {
+							$th.css("cursor", $th.attr("orderField") ? "pointer" : "default");
+							$th.unbind("mousedown");
+						}
+						return false;
 					});
-				});	
-			},1);
-			
-			$(window).bind("resizeGrid", function(){
-				var flength = $tc.innerWidth();
-				var brwidth = parseInt($tc.css("border-right-width"));
-				if(isNaN(brwidth)) brwidth = 0;
-				var blwidth = parseInt($tc.css("border-left-width"));
-				if(isNaN(blwidth)) blwidth = 0;
-				$grid.width(flength - (brwidth + blwidth));
-				$(".gridScroller", $grid).width(flength - (brwidth + blwidth));
+				});
 			});
+		
+			function _resizeGrid(){
+				$("div.j-resizeGrid").each(function(){
+					var width = $(this).innerWidth();
+					if (width){
+						$("div.gridScroller", this).width(width+"px");
+					}
+				});
+			}
+			$(window).unbind("resizeGrid").bind("resizeGrid", _resizeGrid);
 		});
-	}
-	});
+	};
+	
 	
 	$.jTableTool = {
 		getLeft:function(obj) {
@@ -279,5 +241,5 @@
 			};
 			return offset;
 		}
-	}
+	};
 })(jQuery);

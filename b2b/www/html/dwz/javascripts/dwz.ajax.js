@@ -31,15 +31,59 @@ function validateCallback(form, callback) {
  * @param {Object} callback
  */
 function iframeCallback(form, callback){
-	if(!$(form).valid()) {return false;}
-	window.donecallback = callback || DWZ.ajaxDone;
-	if ($("#callbackframe").size() == 0) {
-		$("<iframe id='callbackframe' name='callbackframe' src='about:blank' style='display:none'></iframe>").appendTo("body");
+	var $form = $(form), $iframe = $("#callbackframe");
+	if(!$form.valid()) {return false;}
+
+	if ($iframe.size() == 0) {
+		$iframe = $("<iframe id='callbackframe' name='callbackframe' src='about:blank' style='display:none'></iframe>").appendTo("body");
 	}
 	if(!form.ajax) {
-		$(form).append('<input type="hidden" name="ajax" value="1" />');
+		$form.append('<input type="hidden" name="ajax" value="1" />');
 	}
 	form.target = "callbackframe";
+	
+	_iframeResponse($iframe[0], callback || DWZ.ajaxDone);
+}
+function _iframeResponse(iframe, callback){
+	var $iframe = $(iframe);
+	$iframe.bind("load", function(){
+		$iframe.unbind("load");
+		
+		if (iframe.src == "javascript:'%3Chtml%3E%3C/html%3E';" || // For Safari
+			iframe.src == "javascript:'<html></html>';") { // For FF, IE
+			return;
+		}
+		
+		var doc = iframe.contentDocument ? iframe.contentDocument : window.frames[iframe.id].document;
+
+		// fixing Opera 9.26,10.00
+		if (doc.readyState && doc.readyState != 'complete') return; 
+		// fixing Opera 9.64
+		if (doc.body && doc.body.innerHTML == "false") return;
+	   
+		var response;
+		
+		if (doc.XMLDocument) {
+			// response is a xml document Internet Explorer property
+			response = doc.XMLDocument;
+		} else if (doc.body){
+			try{
+				response = $iframe.contents().find("body").html();
+				if (response) {
+					response = eval("(" + response + ")");
+				} else {
+					response = {};
+				}
+			} catch (e){ // response is html document or plain text
+				response = doc.body.innerHTML;
+			}
+		} else {
+			// response is a xml document
+			response = doc;
+		}
+		
+		callback(response);
+	});
 }
 
 /**
@@ -85,7 +129,7 @@ function dialogAjaxDone(json){
 	DWZ.ajaxDone(json);
 	if (json.statusCode == DWZ.statusCode.ok){
 		if (json.navTabId){
-			navTab.reload(json.forwardUrl, {}, json.navTabId);
+			navTab.reload(json.forwardUrl, {navTabId: json.navTabId});
 		}
 		$.pdialog.closeCurrent();
 	}
@@ -96,7 +140,8 @@ function dialogAjaxDone(json){
  * @param {Object} form
  */
 function navTabSearch(form, navTabId){
-	navTab.reload(form.action, $(form).serializeArray(), navTabId);
+	if (form[DWZ.pageInfo.pageNum]) form[DWZ.pageInfo.pageNum].value = 1;
+	navTab.reload(form.action, {data: $(form).serializeArray(), navTabId:navTabId});
 	return false;
 }
 /**
@@ -104,7 +149,13 @@ function navTabSearch(form, navTabId){
  * @param {Object} form
  */
 function dialogSearch(form){
-	$.pdialog.reload(form.action, $(form).serializeArray());
+	if (form[DWZ.pageInfo.pageNum]) form[DWZ.pageInfo.pageNum].value = 1;
+	$.pdialog.reload(form.action, {data: $(form).serializeArray()});
+	return false;
+}
+function dwzSearch(form, targetType){
+	if (targetType == "dialog") dialogSearch(form);
+	else navTabSearch(form);
 	return false;
 }
 
@@ -115,12 +166,12 @@ function dialogSearch(form){
  */
 function _getPagerForm($parent, args) {
 	var form = $("#pagerForm", $parent).get(0);
-	
+
 	if (form) {
-		args = args || {};
-		if(args["pageNum"])form.pageNum.value = args["pageNum"];
-		if(args["numPerPage"])form.numPerPage.value = args["numPerPage"];
-		if(args["orderField"])form.orderField.value = args["orderField"];
+		if (args["pageNum"]) form[DWZ.pageInfo.pageNum].value = args["pageNum"];
+		if (args["numPerPage"]) form[DWZ.pageInfo.numPerPage].value = args["numPerPage"];
+		if (args["orderField"]) form[DWZ.pageInfo.orderField].value = args["orderField"];
+		if (args["orderDirection"] && form[DWZ.pageInfo.orderDirection]) form[DWZ.pageInfo.orderDirection].value = args["orderDirection"];
 	}
 	
 	return form;
@@ -130,16 +181,26 @@ function _getPagerForm($parent, args) {
  * @param args {pageNum:"n", numPerPage:"n", orderField:"xxx"}
  */
 function navTabPageBreak(args){
+	args = args || {};
 	var form = _getPagerForm(navTab.getCurrentPanel(), args);
-	if (form) navTab.reload(form.action, $(form).serializeArray());
+	var params = $(form).serializeArray();
+	if (args.targetType) params[params.length] = args.targetType;
+	if (form) navTab.reload(form.action, {data: $(form).serializeArray(), callback: args.callback});
 }
 /**
  * 处理dialog中的分页和排序
  * @param args {pageNum:"n", numPerPage:"n", orderField:"xxx"}
  */
 function dialogPageBreak(args){
+	args = args || {};
 	var form = _getPagerForm($.pdialog.getCurrent(), args);
-	if (form) $.pdialog.reload(form.action, $(form).serializeArray());
+	var params = $(form).serializeArray();
+	if (args.targetType) params[params.length] = args.targetType;
+	if (form) $.pdialog.reload(form.action, {data: params, callback: args.callback});
+}
+function dwzPageBreak(args){
+	if (args.targetType == "dialog") dialogPageBreak(args);
+	else navTabPageBreak(args);
 }
 
 function navTabTodo(url, callback){
