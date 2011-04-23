@@ -11,6 +11,7 @@ var DWZ = {
 		LEFT: 37, RIGHT: 39, UP: 38, DOWN: 40,
 		DELETE: 46, BACKSPACE:8
 	},
+	pageInfo: {pageNum:"pageNum", numPerPage:"numPerPage", orderField:"orderField", orderDirection:"orderDirection"},
 	statusCode: {ok:200, error:300, timeout:301},
 	ui:{sbar:true},
 	frag:{}, //page fragment
@@ -51,17 +52,20 @@ var DWZ = {
 	},
 	ajaxError:function (xhr, ajaxOptions, thrownError){
 		if (alertMsg) {
-			alertMsg.error("<p>Http status: " + xhr.status + " " + xhr.statusText + "</p>");
+			alertMsg.error("<div>Http status: " + xhr.status + " " + xhr.statusText + "</div>" 
+				+ "<div>ajaxOptions: "+ajaxOptions + "</div>"
+				+ "<div>thrownError: "+thrownError + "</div>"
+				+ "<div>"+xhr.responseText+"</div>");
+		} else {
+			alert("Http status: " + xhr.status + " " + xhr.statusText + "\najaxOptions: " + ajaxOptions + "\nthrownError:"+thrownError + "\n" +xhr.responseText);
 		}
-		DWZ.debug("Http status: " + xhr.status + " " + xhr.statusText + "\najaxOptions: " + ajaxOptions + "\nthrownError:"+thrownError);
-		DWZ.debug(xhr.responseText);
 	},
 	ajaxDone:function (json){
 		if(json.statusCode == DWZ.statusCode.error) {
 			if(json.message && alertMsg) alertMsg.error(json.message);
 		} else if (json.statusCode == DWZ.statusCode.timeout) {
 			if(json.message && alertMsg) alertMsg.error(json.message, {okCall:DWZ.loadLogin});
-			else loadLogin();
+			else DWZ.loadLogin();
 		} else {
 			if(json.message && alertMsg) alertMsg.correct(json.message);
 		};
@@ -75,6 +79,7 @@ var DWZ = {
 		this._set.loginTitle = op.loginTitle;
 		this._set.debug = op.debug;
 		$.extend(DWZ.statusCode, op.statusCode);
+		$.extend(DWZ.pageInfo, op.pageInfo);
 		
 		jQuery.ajax({
 			type:'GET',
@@ -123,8 +128,8 @@ var DWZ = {
 				url: url,
 				cache: false,
 				data: data,
-				success: function(html){
-					var json = DWZ.jsonEval(html);
+				success: function(response){
+					var json = DWZ.jsonEval(response);
 					if (json.statusCode==DWZ.statusCode.timeout){
 						alertMsg.error(DWZ.msg("sessionTimout"), {okCall:function(){
 							DWZ.loadLogin();
@@ -132,8 +137,8 @@ var DWZ = {
 					} if (json.statusCode==DWZ.statusCode.error){
 						if (json.message) alertMsg.error(json.message);
 					} else {
-						$this.html(html).initUI();
-						if ($.isFunction(callback)) callback();
+						$this.html(response).initUI();
+						if ($.isFunction(callback)) callback(response);
 					}
 				},
 				error: DWZ.ajaxError
@@ -154,7 +159,13 @@ var DWZ = {
 				if (! $refBox) $refBox = ("dialog" == $this.attr("layoutType") && $.pdialog) ? $.pdialog.getCurrent().find(".dialogContent") : $("#container .tabsPageContent");
 				var iRefH = $refBox.height();
 				var iLayoutH = parseInt($this.attr("layoutH"));
-				$this.height(iRefH - iLayoutH > 50 ? iRefH - iLayoutH : 50);
+				var iH = iRefH - iLayoutH > 50 ? iRefH - iLayoutH : 50;
+				
+				if ($this.isTag("table")) {
+					$this.removeAttr("layoutH").wrap('<div layoutH="'+iLayoutH+'" style="overflow:auto;height:'+iH+'"></div>');
+				} else {
+					$this.height(iH).css("overflow","auto");
+				}
 			});
 		},
 		hoverClass: function(className){
@@ -194,10 +205,14 @@ var DWZ = {
 						opacity:opacity || 1
 					}
 				}
-				if (!$this.val() && getAltBox().size() < 1) {
+				if (getAltBox().size() < 1) {
 					if (!$this.attr("id")) $this.attr("id", $this.attr("name") + "_" +Math.round(Math.random()*10000));
-					$('<label class="alt" for="'+$this.attr("id")+'">'+$this.attr("alt")+'</label>').appendTo($this.parent()).css(altBoxCss(1));
+					var $label = $('<label class="alt" for="'+$this.attr("id")+'">'+$this.attr("alt")+'</label>').appendTo($this.parent());
+					
+					$label.css(altBoxCss(1));
+					if ($this.val()) $label.hide();
 				}
+				
 				$this.focus(function(){
 					getAltBox().css(altBoxCss(0.3));
 				}).blur(function(){

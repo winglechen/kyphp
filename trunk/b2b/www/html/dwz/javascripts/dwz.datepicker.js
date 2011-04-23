@@ -238,7 +238,7 @@
 		},
 
 		getDateWrap: function(date){ //得到年,月,日
-			if (!date) date = this.sDate ? this.parseDate(this.sDate) : new Date();
+			if (!date) date = this.parseDate(this.sDate) || new Date();
 			var y = date.getFullYear();
 			var m = date.getMonth()+1;
 			var days = this._getDays(y,m);

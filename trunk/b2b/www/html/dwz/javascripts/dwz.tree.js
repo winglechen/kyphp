@@ -40,10 +40,10 @@
 										var boxes = $("input", tnode);
 										if(boxes.size() > 1) {
 											$(boxes).each(function(){
-												items[items.length] = {name:$(this).attr("name"), value:$(this).val()};
+												items[items.length] = {name:$(this).attr("name"), value:$(this).val(), text:$(this).attr("text")};
 											});
 										} else {
-											items = {name:boxes.attr("name"), value:boxes.val()};
+											items = {name:boxes.attr("name"), value:boxes.val(), text:boxes.attr("text")};
 										}		
 									}								
 									checkFn({checked:checked, items:items});														
@@ -155,8 +155,12 @@
 			var node = $(this);
 			var ckbox = $(">div>.ckbox", node);
 			var $input = node.find("a");
-			ckbox.append("<input type='checkbox' name='" + $input.attr("tname") + "' value='" + $input.attr("tvalue") + "' style='display:none;'/>")
-			.click(function(){
+			var tname = $input.attr("tname"), tvalue = $input.attr("tvalue");
+			var attrs = "text='"+$input.text()+"' ";
+			if (tname) attrs += "name='"+tname+"' ";
+			if (tvalue) attrs += "value='"+tvalue+"' ";
+			
+			ckbox.append("<input type='checkbox' style='display:none;' " + attrs + "/>").click(function(){
 				var cked = ckbox.hasClass("checked");
 				var aClass = cked?"unchecked":"checked";
 				var rClass = cked?"checked":"unchecked";
@@ -186,7 +190,7 @@
 			var ckboxed = stree.find("div.checked").size();
 			var aClass = (ckboxed==ckbox?"checked":(ckboxed!=0?"indeterminate":"unchecked"));
 			var rClass = (ckboxed==ckbox?"indeterminate":(ckboxed!=0?"checked":"indeterminate"));
-			$(">div>.ckbox", parent).removeClass("unchecked").removeClass(rClass).addClass(aClass);
+			$(">div>.ckbox", parent).removeClass("unchecked").removeClass("checked").removeClass(rClass).addClass(aClass);
 			parent._checkParent();
 		}
 	});

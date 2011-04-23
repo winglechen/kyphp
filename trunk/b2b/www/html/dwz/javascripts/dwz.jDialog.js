@@ -4,23 +4,25 @@
  */
 (function($){
 	$.pdialog = {
-		_op:{height:300, width:500, minH:40, minW:50, total:20, max:false, mask:false, resizable:true, drawable:true, maxable:true,minable:true,flesh:true},
+		_op:{height:300, width:500, minH:40, minW:50, total:20, max:false, mask:false, resizable:true, drawable:true, maxable:true,minable:true,fresh:true},
 		_current:null,
 		_zIndex:42,
 		getCurrent:function(){
 			return this._current;
 		},
-		reload:function(url, data, dlgid){
-			var dialog = (dlgid && $("body").data(dlgid)) || this._current;
+		reload:function(url, options){
+			var op = $.extend({data:{}, dialogId:"", callback:null}, options);
+			var dialog = (op.dialogId && $("body").data(op.dialogId)) || this._current;
 			if (dialog){
 				var jDContent = dialog.find(".dialogContent");
-				jDContent.loadUrl(url, data, function(){
+				jDContent.loadUrl(url, op.data, function(response){
 					jDContent.find("[layoutH]").layoutH(jDContent);
 					$(".pageContent", dialog).width($(dialog).width()-14);
 					$(":button.close", dialog).click(function(){
 						$.pdialog.close(dialog);
 						return false;
 					});
+					if ($.isFunction(op.callback)) op.callback(response);
 				});
 			}
 		},
@@ -33,7 +35,7 @@
 				if(dialog.is(":hidden")) {
 					dialog.show();
 				}
-				if(op.flesh || url != $(dialog).data("url")){
+				if(op.fresh || url != $(dialog).data("url")){
 					dialog.data("url",url);
 					dialog.find(".dialogHeader").find("h1").html(title);
 					this.switchDialog(dialog);
