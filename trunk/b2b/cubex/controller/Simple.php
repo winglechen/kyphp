@@ -3,9 +3,17 @@ namespace Ky\Cubex\Controller;
 
 class Simple
 {
-    public static function run()
+    public static function run($action)
     {
-       if(!isset($_GET['p'])) return false;
-       require(CUBEX_PATH . 'page/' . rtrim($_GET['p'],'/') . '.php');
+        $act = '';
+       if(!isset($_GET['p'])){
+            if(!$action){
+                return false;
+            }
+            $act = $action;
+       } else {
+            $act = $_GET['p'];
+      }
+       require(CUBEX_PATH . 'page/' . rtrim($act) . '.php');
     }
 }
