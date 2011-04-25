@@ -5,57 +5,57 @@
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
 <title>kyphp后台管理系统</title>
 
-<link href="dwz/themes/default/style.css" rel="stylesheet" type="text/css" />
-<link href="dwz/themes/css/core.css" rel="stylesheet" type="text/css" />
-<link href="uploadify/css/uploadify.css" rel="stylesheet" type="text/css" />
+<link href="res/dwz/themes/default/style.css" rel="stylesheet" type="text/css" />
+<link href="res/dwz/themes/css/core.css" rel="stylesheet" type="text/css" />
+<link href="res/uploadify/css/uploadify.css" rel="stylesheet" type="text/css" />
 <!--[if IE]>
-<link href="dwz/themes/css/ieHack.css" rel="stylesheet" type="text/css" />
+<link href="res/dwz/themes/css/ieHack.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
-<script src="dwz/javascripts/speedup.js" type="text/javascript"></script>
-<script src="js/jquery-1.4.4.js" type="text/javascript"></script>
-<script src="js/jquery.cookie.js" type="text/javascript"></script>
-<script src="js/jquery.validate.js" type="text/javascript"></script>
-<script src="js/jquery.bgiframe.js" type="text/javascript"></script>
-<script src="xheditor/xheditor-zh-cn.min.js" type="text/javascript"></script>
-<script src="uploadify/scripts/swfobject.js" type="text/javascript"></script>
-<script src="uploadify/scripts/jquery.uploadify.v2.1.0.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/speedup.js" type="text/javascript"></script>
+<script src="res/js/jquery-1.4.4.js" type="text/javascript"></script>
+<script src="res/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="res/js/jquery.validate.js" type="text/javascript"></script>
+<script src="res/js/jquery.bgiframe.js" type="text/javascript"></script>
+<script src="res/xheditor/xheditor-zh-cn.min.js" type="text/javascript"></script>
+<script src="res/uploadify/scripts/swfobject.js" type="text/javascript"></script>
+<script src="res/uploadify/scripts/jquery.uploadify.v2.1.0.js" type="text/javascript"></script>
 
-<script src="dwz/javascripts/dwz.core.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.util.date.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.validate.method.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.regional.zh.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.barDrag.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.drag.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.tree.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.accordion.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.ui.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.theme.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.switchEnv.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.alertMsg.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.contextmenu.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.navTab.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.tab.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.resize.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.jDialog.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.dialogDrag.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.cssTable.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.stable.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.taskBar.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.ajax.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.pagination.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.database.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.datepicker.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.effects.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.panel.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.checkbox.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.history.js" type="text/javascript"></script>
-<script src="dwz/javascripts/dwz.combox.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.core.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.util.date.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.validate.method.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.regional.zh.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.barDrag.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.drag.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.tree.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.accordion.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.ui.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.theme.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.switchEnv.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.alertMsg.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.contextmenu.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.navTab.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.tab.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.resize.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.jDialog.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.dialogDrag.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.cssTable.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.stable.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.taskBar.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.ajax.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.pagination.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.database.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.datepicker.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.effects.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.panel.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.checkbox.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.history.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.combox.js" type="text/javascript"></script>
 
 <!--
 <script src="bin/dwz.min.js" type="text/javascript"></script>
 -->
-<script src="dwz/javascripts/dwz.regional.zh.js" type="text/javascript"></script>
+<script src="res/dwz/javascripts/dwz.regional.zh.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 $(function(){
@@ -238,7 +238,6 @@ $(function(){
 							<p>DWZ框架使用手册 <a href="doc/dwz-user-guide.pdf" target="_blank">http://demo.dwzjs.com/doc/dwz-user-guide.pdf</a></p>
 							<p>Ajax开发视频教材 <a href="doc/dwz-ajax-develop.swf" target="_blank">http://demo.dwzjs.com/doc/dwz-ajax-develop.swf</a></p>
 							<p>DWZ框架演示视频 <a href="doc/dwz-user-guide.swf" target="_blank">http://demo.dwzjs.com/doc/dwz-user-guide.swf</a></p>
-							<p>Google Code下载 <a href="http://code.google.com/p/dwz/" target="_blank">http://code.google.com/p/dwz/</a></p>
 
 <div class="divider"></div>
 <h2>常见问题及解决:</h2>
@@ -302,18 +301,6 @@ Http 405原因是IIS不允许ajax访问*.htm或是*.html后缀的网页，这是
 
 	<div id='background' class='background'></div>
 	<div id='progressBar' class='progressBar'>数据加载中，请稍等...</div>
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-16716654-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? ' https://ssl' : ' http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 </body>
 </html>
