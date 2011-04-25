@@ -3,38 +3,66 @@
  *	Dispatcher.php
  *
  */
-namespace KY\Webui;
+namespace Ky\Core\Core;
 
-use \Ky\Core\ClassLoader;
-use \Ky\Core\Config;
-use \Ky\Core\Path;
+use \Ky\Core\Core\ClassLoader;
+use \Ky\Core\Core\Config;
+use \Ky\Core\Core\Path;
 
 class Dispatcher
 {
-    public $controller = '';
+    public $controller   = '';
+    private $config      = array();
 
-    public function __construct()
+    private function parseUrl()
     {
+        $this->controller = isset($_GET['c']) ? ucfirst($_GET['c']) : 'Ui';
+    }
+
+    private function prepare($config)
+    {
+        $this->parseUrl();
+        $this->config = array(
+            'namespace'     => array(),
+            'config'        => array(),
+        );
+
+        if(!$config) return false;
+
+        if(isset($config['namespace']) && !empty($config['namespace'])){
+            $this->config['namespace'] = $config['namespace'];
+        }
+        if(isset($config['config']) && !empty($config['config'])){
+            $this->config['config'] = $config['config'];
+        }
+
+    }
+
+    public function __construct($config)
+    {
+        $this->prepare($config);
+        
         //autoload init
         $this->initAutoLoad();
    
         //init pathes
-        $this->initPath();
+        //$this->initPath();
 
         //load global Config
         $this->initConfig(); 
 
         //router init and parse the url
-        $this->initRouter();
+        //$this->initRouter();
     }
 
     private function initAutoLoad()
     {
-        require_once __DIR__ . '/../core/ClassLoader.php';
+        require_once __DIR__ . '/ClassLoader.php';
 
         ClassLoader::init();
-        ClassLoader::register('ky\\core', __DIR__ . '/../core/');
-        ClassLoader::register('ky\\webui',__DIR__ );
+        foreach($this->config['namespace'] as $n => $path){
+            ClassLoader::register($n, $path);
+        }
     }
 
     private function initPath()
@@ -43,8 +71,9 @@ class Dispatcher
     }
     private function initConfig()
     {
-        $general_ini = Path::get('config') . 'general.ini';
-        Config::loadIni($general_ini,true); 
+        foreach($this->config['config'] as $key => $path){
+            Config::loadIni(CONFIG_PATH . $path,true); 
+        }
     }
 
     private function initRouter()
@@ -58,14 +87,15 @@ class Dispatcher
         }
     }
 
-    public static function run()
+    public static function run($ini)
     {
-        $dsp = new self();
+        $config = require($ini);
+        $dsp = new self($config);
         $dsp->dispatch();
     }
     private function dispatch()
     {
-        $controller = "Ky\\Webui\\Controller\\" . $this->controller; 
+        $controller = "Ky\\Cubex\\Controller\\" . $this->controller; 
         $controller::run(); 
     }
 }
