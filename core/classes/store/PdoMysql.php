@@ -10,15 +10,15 @@ class PdoMysql
     private $link   = null;
     public  $query  = null;
 
-    public function connect($host,$user,$pass,$dbname)
+    public function connect($host,$user,$pass,$dbname,$charset)
     {
-        $dsn = 'mysql:dbname='.$dbname.';host='.$host;
-
+        $dsn = 'mysql:host='.$host.';port=3306;dbname='.$dbname;
         try{
-            $this->$link = new \PDO($dsn,$user,$pass);
+            $this->link = new \PDO($dsn,$user,$pass);
         }catch(PDOException $e){
             die('Connection failed: ' . $host . ':' . $user . ':' . $pass . ':' . $dbname . ':' . $e->getMessage() );
         }
+        $this->link->query('set names ' . $charset);
     }
 
     public function select($sql,$data=array(),$filter=null)
