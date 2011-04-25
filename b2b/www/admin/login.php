@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>kyphp后台管理系统</title>
-<link href="dwz/themes/css/login.css" rel="stylesheet" type="text/css" />
+<link href="res/dwz/themes/css/login.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 	<div id="login">
 		<div id="login_header">
 			<h1 class="login_logo">
-				<a href="http://demo.dwzjs.com"><img src="dwz/themes/default/images/login_logo.gif" /></a>
+				<a href="http://demo.dwzjs.com"><img src="res/dwz/themes/default/images/login_logo.gif" /></a>
 			</h1>
 			<div class="login_headerContent">
 				<div class="navList">
@@ -20,35 +20,31 @@
 						<li><a href="http://82rs.com/" target="_blank">帮助</a></li>
 					</ul>
 				</div>
-				<h2 class="login_title"><img src="dwz/themes/default/images/login_title.png" /></h2>
+				<h2 class="login_title"><img src="res/dwz/themes/default/images/login_title.png" /></h2>
 			</div>
 		</div>
 		<div id="login_content">
 			<div class="loginForm">
-				<form action="index.html">
+				<form action="index.php?p=admin/login" method="post">
 					<p>
-						<label>总行号：</label>
-						<input type="text" class="login_input" />
-					</p>
-					<p>
-						<label>员工号：</label>
-						<input type="text" size="20" class="login_input" />
+						<label>用户名：</label>
+						<input type="text" size="20" name="name" class="login_input" />
 					</p>
 					<p>
 						<label>密码：</label>
-						<input type="password" size="20" class="login_input" />
+						<input type="password" size="20" name="password" class="login_input" />
 					</p>
-					<p>
+					<!--p>
 						<label>验证码：</label>
 						<input class="code" type="text" size="5" />
-						<span><img src="dwz/themes/default/images/header_bg.png" alt="" width="75" height="24" /></span>
-					</p>
+						<span><img src="res/dwz/themes/default/images/header_bg.png" alt="" width="75" height="24" /></span>
+					</p-->
 					<div class="login_bar">
 						<input class="sub" type="submit" value=" " />
 					</div>
 				</form>
 			</div>
-			<div class="login_banner"><img src="dwz/themes/default/images/login_banner.jpg" /></div>
+			<div class="login_banner"><img src="res/dwz/themes/default/images/login_banner.jpg" /></div>
 			<div class="login_main">
 				<ul class="helpList">
 					<li><a href="#">帮助帮助帮助帮助帮助</a></li>
