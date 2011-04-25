@@ -29,18 +29,18 @@ class ClassLoader
 				if($realPath){
 					require($realPath);
 				}else{
-					require_once(__DIR__ . '/exception/FileNotFound.php');
+					require_once(__DIR__ . '/../exception/FileNotFound.php');
 					throw new \Ky\Core\Exception\FileNotFound("$path/$name.php");
 				}
 
 				if(!class_exists($ordinaryClassName)){
-					require_once(__DIR__.'/exception/ClassNotFound.php');
+					require_once(__DIR__.'/../exception/ClassNotFound.php');
 					throw new \Ky\Core\Exception\ClassNotFound($ordinaryClassName);
 				}
 				return;
 			}
 		}
-		require_once(__DIR__.'/exception/ClassNotFound.php');
+		require_once(__DIR__.'/../exception/ClassNotFound.php');
 		throw new \Ky\Core\Exception\ClassNotFound($ordinaryClassName);
 
 	}
