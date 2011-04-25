@@ -11,17 +11,19 @@ use \Ky\Core\Core\Path;
 
 class Dispatcher
 {
-    public $controller   = '';
-    private $config      = array();
+    private $controller             = '';
+    private $appname                = 'www';
+    private $default_controller     = 'Ui';
+    private $default_action         = 'main';
+    private $config                 = array();
 
     private function parseUrl()
     {
-        $this->controller = isset($_GET['c']) ? ucfirst($_GET['c']) : 'Ui';
+        $this->controller = isset($_GET['c']) ? ucfirst($_GET['c']) : $this->default_controller;
     }
 
     private function prepare($config)
     {
-        $this->parseUrl();
         $this->config = array(
             'namespace'     => array(),
             'config'        => array(),
@@ -87,16 +89,30 @@ class Dispatcher
         }
     }
 
-    public static function run($ini)
+    private function init($appConf)
+    {
+        if(!$appConf || empty($appConf) ){
+            return false;
+        }
+
+        isset($appConf['appname']) && $this->appname = $appConf['appname'];
+        isset($appConf['default_controller']) && $this->default_controller = $appConf['default_controller'];
+        isset($appConf['default_action']) && $this->default_action = $appConf['default_action'];
+        
+        $this->parseUrl();
+    }
+
+    public static function run($ini,$appConf)
     {
         $config = require($ini);
         $dsp = new self($config);
+        $dsp->init($appConf);
         $dsp->dispatch();
     }
     private function dispatch()
     {
         $controller = "Ky\\Cubex\\Controller\\" . $this->controller; 
-        $controller::run(); 
+        $controller::run($this->default_action); 
     }
 }
 
