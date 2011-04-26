@@ -90,7 +90,7 @@ function initUI(_box){
 	if ($.fn.xheditor) {
 		$("textarea.editor", $p).each(function(){
 			var $this = $(this);
-			var op = {skin: 'vista',tools: $this.attr("tools") || 'full'};
+			var op = {skin: 'nostyle',tools: $this.attr("tools") || 'full'};
 			var upAttrs = [
 				["upLinkUrl","upLinkExt","zip,rar,txt"],
 				["upImgUrl","upImgExt","jpg,jpeg,gif,png"],
