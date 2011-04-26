@@ -58,7 +58,8 @@ else if (TARGET_PLATFORM == DATABASE_PLATFORM)
 	// set database name
 	$dbName = "b2b";
 	// set database table prefix
-	define ("TREE_TABLE_PREFIX", "tree");
+    if(!defined("TREE_TABLE_PREFIX"))
+	    define ("TREE_TABLE_PREFIX", "tree");
 }
 else {
 	die("No known target platform specified, in includes/config.php");
