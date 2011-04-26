@@ -14,7 +14,7 @@ var langManager = new languageManager();
 //de for german
 //en for english
 //tr for turkish
-langManager.load("en");  
+langManager.load("zh");  
 
 var treeOps = new TreeOperations();
 $(document).ready(function() {
