@@ -197,13 +197,14 @@ function initUI(_box){
 			var title = $this.attr("title") || $this.text();
 			var tabid = $this.attr("rel") || "_blank";
 			var fresh = eval($this.attr("fresh") || "true");
+            var showInFrame = $this.attr("showInFrame") || false;
 			var url = unescape($this.attr("href")).replaceTmById($p);
 			DWZ.debug(url);
 			if (!url.isFinishedTm()) {
 				alertMsg.error($this.attr("warn") || DWZ.msg("alertSelectMsg"));
 				return false;
 			}
-			navTab.openTab(tabid, url,{title:title, fresh:fresh});
+			navTab.openTab(tabid, url,{title:title, fresh:fresh,showInFrame:showInFrame});
 
 			event.preventDefault();
 		});
