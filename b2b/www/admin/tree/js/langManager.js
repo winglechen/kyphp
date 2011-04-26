@@ -1,7 +1,7 @@
 // language class
 
 function languageManager() {
-	this.lang = "tr";
+	this.lang = "zh";
 		
 	this.load = function(lang) {
 		this.lang = lang

@@ -12,7 +12,7 @@ define("IN_PHP", true);
 
 require_once("common.php");
 
-$rootName = "Root";
+$rootName = "根目录";
 $treeElements = $treeManager->getElementList(null, "manageStructure.php");
 
 ?>
@@ -32,11 +32,10 @@ $treeElements = $treeManager->getElementList(null, "manageStructure.php");
 <script type="text/javascript" src="js/treeOperations.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 </head>
-<body>
+<body style="height:800px;">
 <div class="contextMenu" id="myMenu1">
 		<li class="addFolder">
 			<img src="../res/simpleTree/images/folder_add.png" /> </li>
-		<li class="addDoc"><img src="../res/simpleTree/images/page_add.png" /> </li>
 		<li class="edit"><img src="../res/simpleTree/images/folder_edit.png" /> </li>
 		<li class="delete"><img src="../res/simpleTree/images/folder_delete.png" /> </li>
 		<li class="expandAll"><img src="../res/simpleTree/images/expand.png"/> </li>
