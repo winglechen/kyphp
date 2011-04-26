@@ -322,7 +322,7 @@ var navTab = {
 			var $panel = this._getPanels().eq(iOpenIndex);
 			if(op.fresh || $tab.data("url") != url) {
 				$tab.data("url", url);
-				if (url.isExternalUrl()) {
+				if (url.isExternalUrl()  || options.showInFrame) {
 					openExternal($panel);
 				} else {
 					$panel.loadUrl(url, op.data, function(){
@@ -340,7 +340,7 @@ var navTab = {
 			var $tabs = this._getTabs();
 			var $panel = this._getPanels().filter(":last");
 			
-			if (url.isExternalUrl()) {
+			if (url.isExternalUrl()  || options.showInFrame ) {
 				openExternal($panel);
 			} else {
 				$panel.loadUrl(url, op.data, function(){
