@@ -44,4 +44,23 @@ class Db
 
         return $row;
     }
+
+    public static function addValues($data)
+    {
+       $ret  = "'";
+       $ret .= join("','",array_values($data));
+       $ret .= "'";
+       return $ret;
+    }
+
+    public static function updateValues($data)
+    {
+        $ret = "";
+        foreach($data as $k => $v){
+            $ret .= " set " . $k . "='" . $v . "',";
+        }
+        $ret = rtrim($ret,';');
+
+        return $ret;
+    }
 }
