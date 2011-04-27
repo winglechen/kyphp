@@ -3,6 +3,7 @@ set names utf8;
 
 create table intro_news(
     id mediumint(8) unsigned not null auto_increment primary key,
+    cid smallint(6) unsigned not null default 0,
     title varchar(50) not null default '',
     pic   varchar(100) not null default '',
     ts  int(11) unsigned not null default 0,
