@@ -57,7 +57,7 @@ class Db
     {
         $ret = "";
         foreach($data as $k => $v){
-            $ret .= " set " . $k . "='" . $v . "',";
+            $ret .= " " . $k . "='" . $v . "',";
         }
         $ret = rtrim($ret,';');
 
