@@ -14,6 +14,7 @@ return array(
         'ky\\core'      => LIB_PATH,
         'ky\\cubex'     => CUBEX_PATH,
         'ky\\glider'    => GLIDER_PATH,
+        'ky\\model'     => APP_PATH . 'model',
     ),
     'config'        => array(
         'db'            => 'db.ini',

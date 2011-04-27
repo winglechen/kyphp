@@ -125,40 +125,22 @@ $(function(){
                                     <li><a href="tree/intro_tree.php" showInFrame="true" target="navTab" >分类管理</a></li>
                                 </ul>
                             </li>
-
-							<li><a href="javascript:void(0);" >关于我们</a>
+<?php
+use Ky\Model\IntroCat;
+$data = IntroCat::getChildren();
+foreach($data as $cat){
+?>
+                            <li><a><?php echo $cat['name']; ?></a>
 								<ul>
-                                    <li><a href="index.php?p=admin/intro_list" target="navTab" rel="main">列表</a></li>
-									<li><a href="index.php?p=admin/intro_add" target="navTab" rel="w_tabs">添加</a></li>
+                                    <li><a href="index.php?p=admin/intro_list&cid=<?php echo $cat['Id']; ?>" target="navTab" >信息列表</a></li>
+									<li><a href="index.php?p=admin/intro_add&cid=<?php echo $cat['Id']; ?>" target="navTab" >添加信息</a></li>
 								</ul>
 							</li>
+
+<?php
+}
+?>
 							
-							<li><a>产品与解决方案</a>
-								<ul>
-									<li><a href="w_panel.html" target="navTab" rel="main">列表</a></li>
-									<li><a href="w_tabs.html" target="navTab" rel="w_tabs">添加</a></li>
-								</ul>
-							</li>
-                            
-                            <li><a>体验与服务</a>
-								<ul>
-									<li><a href="w_panel.html" target="navTab" rel="main">列表</a></li>
-									<li><a href="w_tabs.html" target="navTab" rel="w_tabs">添加</a></li>
-								</ul>
-							</li>
-
-                            <li><a>渠道专区</a>
-								<ul>
-									<li><a href="w_panel.html" target="navTab" rel="main">列表</a></li>
-									<li><a href="w_tabs.html" target="navTab" rel="w_tabs">添加</a></li>
-								</ul>
-							</li>
-							<li><a>加入我们</a>
-								<ul>
-									<li><a href="w_panel.html" target="navTab" rel="main">列表</a></li>
-									<li><a href="w_tabs.html" target="navTab" rel="w_tabs">添加</a></li>
-								</ul>
-							</li>
 						</ul>
 					</div>
 					
