@@ -1,15 +1,36 @@
 <?php
-    var_dump($_POST);
+use Ky\Model\Intro;
+use Ky\Model\IntroCat;
+use Ky\Core\Core\Db;
+
+$cids = IntroCat::getCids($_GET['cid']);
+
+$data = array();
+$sql = " select id,title,ts from intro_news where 1 " ;
+if(!empty($_POST)){
+    if(isset($_POST['cid'])){
+        $sql .= ' and cid='.$_POST['cid']; 
+    }else{
+        $sql .= " and cid in(" . join(',',$cids) . ") ";
+    }
+    
+    if(isset($_POST['title'])){
+        $sql .= " and title like '%{$_POST['title']}%' ";
+    }
+}else{
+    $sql .= " and cid in(" . join(',',$cids) . ")";
+}
+$data = Db::getRows($sql);
 ?>
 <div class="page">
     <div class="pageHeader">
-        <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/intro_list" method="post">
+        <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/intro_list&cid=<?php echo $_GET['cid']; ?>" method="post">
         <input type="hidden" name="pageNum" value="1">
             <div class="searchBar">
                 <table class="searchContent">
                     <tr>
                         <td>
-                            分类：<input type="text"/>
+                            分类：<?php echo IntroCat::options($_GET['cid']); ?>
                         </td>
                         <td>
                             标题：<input type="text" name="title" />
@@ -31,25 +52,24 @@
         <table class="list" width="98%" layoutH="116">
             <thead>
                 <tr>
-                    <th width="80">客户号</th>
-                    <th width="100">客户名称</th>
-                    <th width="100">客户划分</th>
-                    <th>证件号码</th>
-                    <th align="right" width="100">信用等级</th>
-                    <th width="100">企业性质</th>
-                    <th width="100">建档日期</th>
+                    <th width="5%" style="text-align:center" >编号</th>
+                    <th width="60%">标题</th>
+                    <th width="15%" style="text-align:center" >添加时间</th>
+                    <th width="20" style="text-align:center" >操作</th>
                 </tr>
             </thead>
             <tbody>
-                <tr target="sid_user" rel="1">
-                    <td>iso127309</td>
-                    <td>北京市政府咿呀哟</td>
-                    <td>政府单位</td>
-                    <td>0-0001027766351528</td>
-                    <td>四等级</td>
-                    <td>政府单位</td>
-                    <td>2009-05-21</td>
-                </tr>
+
+<?php
+foreach($data as $new){
+    echo '<tr>';
+    echo '<td style="text-align:center" >'.$new['id'].'</td>';
+    echo '<td>'.$new['title'].'</td>';
+    echo '<td style="text-align:center" >'.date('Y-m-d',$new['ts']).'</td>';
+    echo '<td style="text-align:center" ><a href="index.php?p=admin/intro_add&cid='.$_GET['cid'].'&id='.$new['id'].'" target="navTab" >编辑</a> | <a href="" target="navTabTodo" title="您确定要删除这条信息吗？" >删除</a></td>';
+    echo '</tr>';
+}
+?>
             </tbody>
         </table>
 
@@ -58,7 +78,7 @@
             <span>共23条</span>
             </div>
 
-            <div class="pagination" targetType="navTab" totalCount="200" numPerPage="20" pageNumShown="10" currentPage="2"></div>
+            <div class="pagination" targetType="navTab" totalCount="200" numPerPage="2" pageNumShown="3" currentPage="2"></div>
         </div>
     </div>
 </div>

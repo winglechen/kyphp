@@ -1,5 +1,5 @@
 <?php
-namespace Ky\Cubex\Model;
+namespace Ky\Model;
 
 use Ky\Core\Core\Db;
 
