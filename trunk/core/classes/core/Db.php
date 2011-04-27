@@ -59,7 +59,7 @@ class Db
         foreach($data as $k => $v){
             $ret .= " " . $k . "='" . $v . "',";
         }
-        $ret = rtrim($ret,';');
+        $ret = rtrim($ret,',');
 
         return $ret;
     }

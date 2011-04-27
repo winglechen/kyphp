@@ -16,4 +16,12 @@ class Uid
     {
     
     }
+
+    public static function num()
+    {
+        $time = explode(' ', microtime());
+        $id = $time[1] . sprintf('%06u', substr($time[0], 2, 6));
+        $id .= substr(sprintf('%010u', mt_rand()), 0, 4);
+        return $id;
+    }
 }
