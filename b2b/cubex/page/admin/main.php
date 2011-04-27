@@ -120,15 +120,16 @@ $(function(){
 					</div>
 					<div class="accordionContent">
 						<ul class="tree treeFolder">
-                            <li><a href="" target="navTab" rel="main" >内容分类管理</a>
-                                <ul></ul>
+                            <li><a>内容分类管理</a>
+                                <ul>
+                                    <li><a href="tree/intro_tree.php" showInFrame="true" target="navTab" >分类管理</a></li>
+                                </ul>
                             </li>
 
-							<li><a href="javascript:void(0);" target="navTab">关于我们</a>
+							<li><a href="javascript:void(0);" >关于我们</a>
 								<ul>
-									<li><a href="" target="navTab" rel="main">浩铭简介</a></li>
-									<li><a href="" target="navTab" rel="page1">浩铭文化</a></li>
-									<li><a href="" target="navTab" rel="page2">浩铭之路</a></li>
+                                    <li><a href="index.php?p=admin/intro_list" target="navTab" rel="main">列表</a></li>
+									<li><a href="index.php?p=admin/intro_add" target="navTab" rel="w_tabs">添加</a></li>
 								</ul>
 							</li>
 							
@@ -182,42 +183,7 @@ $(function(){
 				</ul>
 				<div class="navTab-panel tabsPageContent">
 					<div class="page">
-						<div class="accountInfo">
-							<div class="alertInfo">
-								<h2><a href="doc/dwz-user-guide.pdf" target="_blank">DWZ框架使用手册(PDF)</a></h2>
-								<a href="doc/dwz-user-guide.swf" target="_blank">DWZ框架演示视频</a>
-							</div>
-							<div class="right">
-								<p><a href="doc/dwz-user-guide.zip" target="_blank" style="line-height:19px">DWZ框架使用手册(CHM)</a></p>
-								<p><a href="doc/dwz-ajax-develop.swf" target="_blank" style="line-height:19px">DWZ框架Ajax开发视频教材</a></p>
-							</div>
-							<p><span>DWZ富客户端框架</span></p>
-							<p><a href="demo_page2.html" target="dialog">DWZ研发组</a></p>
-						</div>
-						<div class="pageFormContent" layoutH="80">
-							<p>在线演示地址 http://demo.dwzjs.com</p>
-							<p>DWZ框架使用手册 <a href="doc/dwz-user-guide.pdf" target="_blank">http://demo.dwzjs.com/doc/dwz-user-guide.pdf</a></p>
-							<p>Ajax开发视频教材 <a href="doc/dwz-ajax-develop.swf" target="_blank">http://demo.dwzjs.com/doc/dwz-ajax-develop.swf</a></p>
-							<p>DWZ框架演示视频 <a href="doc/dwz-user-guide.swf" target="_blank">http://demo.dwzjs.com/doc/dwz-user-guide.swf</a></p>
-
-<div class="divider"></div>
-<h2>常见问题及解决:</h2>
-<pre style="margin:5px;line-height:1.4em">
-Error loading XML document: dwz.frag.xml
-直接用IE打开index.html弹出一个对话框：Error loading XML document: dwz.frag.xml
-原因：没有加载成功dwz.frag.xml。IE ajax laod本地文件有限制, 是ie安全级别的问题, 不是框架的问题。
-解决方法：用firefox打开或部署到apache下。
-
-IIS不能使用Ajax解决方案
-IIS下firebug调试报错ajax 405 Method Not Allowed。
-Http 405原因是IIS不允许ajax访问*.htm或是*.html后缀的网页，这是IIS的问题，不是框架bug。
-</pre>
-
-<div class="divider"></div>
-<h2>有偿服务请联系:</h2>
-<p style="color:red">support@dwzjs.com</p>
-						</div>
-
+						
 					</div>
 				</div>
 			</div>
@@ -234,7 +200,7 @@ Http 405原因是IIS不允许ajax访问*.htm或是*.html后缀的网页，这是
 		<div id="splitBarProxy"></div>
 	</div>
 
-	<div id="footer">Copyright &copy; 2010 <a href="demo_page2.html" target="dialog">DWZ研发组</a></div>
+	<div id="footer">Copyright &copy; 2010 <a href="javascript:void(0);">phpky.com</a></div>
 
 <!--拖动效果-->
 	<div class="resizable"></div>
