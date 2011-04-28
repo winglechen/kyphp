@@ -88,8 +88,8 @@ class Output
         <script type="text/javascript">
         var response = {
             statusCode:<?php echo $statusCode; ?>,
-            message:"",
-            navTabId:"<?php echo $msg; ?>",
+            message:"<?php echo $msg; ?>",
+            navTabId:"",
             forwardUrl:"<?php echo $url; ?>",
             callbackType:"forward"
         };
