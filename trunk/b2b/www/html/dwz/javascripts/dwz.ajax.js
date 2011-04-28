@@ -31,6 +31,15 @@ function validateCallback(form, callback) {
  * @param {Object} callback
  */
 function iframeCallback(form, callback){
+    //if(!$(form).valid()) {return false;}
+    window.donecallback = callback || DWZ.ajaxDone;
+    if ($("#callbackframe").size() == 0) {
+        $("<iframe id='callbackframe' name='callbackframe' src='about:blank' style='display:none'></iframe>").appendTo("body");
+    }
+    form.target = "callbackframe";
+}
+
+function iframeCallback2(form, callback){
 	var $form = $(form), $iframe = $("#callbackframe");
 	if(!$form.valid()) {return false;}
 
