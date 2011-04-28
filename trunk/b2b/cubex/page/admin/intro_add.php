@@ -4,22 +4,6 @@ use Ky\Model\IntroCat;
 use Ky\Core\Core\Path;
 use Ky\Core\Uid\Uid;
 
-if(!empty($_POST)){
-    $cid = $_POST['ccid'];
-    unset($_POST['ccid']);
-    $_POST['content'] = addslashes(htmlspecialchars($_POST['content']));
-
-    //file upload
-    move_uploaded_file($_FILES['pic']['tmp_name'],'t.t'); 
-    exit;
-    if(0 == $_POST['id']){
-        Intro::add($_POST);
-    }else{
-        Intro::update($_POST);
-    }
-    header('Location:index.php?p=admin/intro_list&cid='.$cid);
-}
-
 if(isset($_GET['id'])){
     $nid = $_GET['id'];
 }else{
@@ -41,7 +25,7 @@ if(0 !== $nid){
 ?>
 <div class="page">
     <div class="pageContent">
-    <form action="index.php?p=admin/intro_add" enctype="multipart/form-data" class="pageForm required-validate" onsubmit="return iframeCallback(this,navTabAjaxDone);" method="post">
+    <form action="index.php?p=admin/intro_add_done" enctype="multipart/form-data" class="pageForm required-validate" onsubmit="return iframeCallback(this,navTabAjaxDone);" method="post">
         <div class="pageFormContent" layoutH="60">
             <div class="unit">
                 <label>分类：</label>
@@ -53,7 +37,12 @@ if(0 !== $nid){
             </div>
             <div class="unit">
                 <label>图片：</label>
-                <input type="file" name="pic" >
+                <input type="file" name="pic" /><br />
+                <?php 
+                if(!empty($new['pic'])){
+                    echo '<img style="margin-left:120px;width:100px;height:100px;" src="'.$new['pic'].'" />'; 
+                }
+                ?>
             </div>
 
             <div class="unit">
