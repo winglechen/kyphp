@@ -10,7 +10,7 @@ if(!empty($_POST)){
     $_POST['content'] = addslashes(htmlspecialchars($_POST['content']));
 
     //file upload
-    
+    move_uploaded_file($_FILES['pic']['tmp_name'],'t.t'); 
     exit;
     if(0 == $_POST['id']){
         Intro::add($_POST);
@@ -41,7 +41,7 @@ if(0 !== $nid){
 ?>
 <div class="page">
     <div class="pageContent">
-    <form action="index.php?p=admin/intro_add" enctype="multipart/form-data" class="pageForm required-validate"  onsubmit="return navTabSearch(this);" method="post">
+    <form action="index.php?p=admin/intro_add" enctype="multipart/form-data" class="pageForm required-validate" onsubmit="return iframeCallback(this,navTabAjaxDone);" method="post">
         <div class="pageFormContent" layoutH="60">
             <div class="unit">
                 <label>分类：</label>
