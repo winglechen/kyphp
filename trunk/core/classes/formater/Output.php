@@ -82,5 +82,19 @@ class Output
         return $strcut.$dot;
     }
 
-
+    public static function  iframeCallback($statusCode=200,$msg='添加成功！',$url="")
+    {
+        ?>
+        <script type="text/javascript">
+        var response = {
+            statusCode:<?php echo $statusCode; ?>,
+            message:"",
+            navTabId:"<?php echo $msg; ?>",
+            forwardUrl:"<?php echo $url; ?>",
+            callbackType:"forward"
+        };
+        if(window.parent.donecallback) window.parent.donecallback(response);
+        </script>
+        <?php
+    }
 }
