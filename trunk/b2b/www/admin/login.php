@@ -10,7 +10,7 @@
 	<div id="login">
 		<div id="login_header">
 			<h1 class="login_logo">
-				<a href="http://demo.dwzjs.com"><img src="res/dwz/themes/default/images/login_logo.gif" /></a>
+				<a href="http://hm6688.com"><img src="http://pic.hm6688.com/img/logo.png" /></a>
 			</h1>
 			<div class="login_headerContent">
 				<div class="navList">
