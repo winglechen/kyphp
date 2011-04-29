@@ -7,7 +7,7 @@ class IntroCat
 {
     public static function getChildren($cid=0)
     {
-        $sql = "select * from intro_elements where ownerEl=".$cid;
+        $sql = "select * from intro_elements where ownerEl=".$cid." order by position asc";
         return Db::getRows($sql);
     }
     

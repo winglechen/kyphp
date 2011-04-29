@@ -30,4 +30,10 @@ class Intro
         $sql = 'select * from intro_news where id='.$id;
         return Db::getRow($sql);
     }
+
+    public static function delete($id)
+    {
+        $sql = "delete from intro_news where id=".$id;
+        return Db::query($sql);
+    }
 }
