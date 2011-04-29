@@ -66,7 +66,7 @@ foreach($data as $new){
     echo '<td style="text-align:center" >'.$new['id'].'</td>';
     echo '<td>'.$new['title'].'</td>';
     echo '<td style="text-align:center" >'.date('Y-m-d',$new['ts']).'</td>';
-    echo '<td style="text-align:center" ><a href="index.php?p=admin/intro_add&cid='.$_GET['cid'].'&id='.$new['id'].'" target="navTab" >编辑</a> | <a href="" target="navTabTodo" title="您确定要删除这条信息吗？" >删除</a></td>';
+    echo '<td style="text-align:center" ><a href="index.php?p=admin/intro_add&cid='.$_GET['cid'].'&id='.$new['id'].'" target="navTab" >编辑</a> | <a   href="index.php?p=admin/intro_del&cid='.$_GET['cid'].'&id='.$new['id'].'" target="navTab" onclick="return confirm(\'您确定要删除这条信息吗？\');" >删除</a></td>';
     echo '</tr>';
 }
 ?>
