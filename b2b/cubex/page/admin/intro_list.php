@@ -6,7 +6,20 @@ use Ky\Core\Core\Db;
 $cids = IntroCat::getCids($_GET['cid']);
 
 $data = array();
-$sql = " select id,title,ts from intro_news where 1 " ;
+$sql = "" ;
+
+if(!empty($_POST)){
+    $_SESSION['form']    = $_POST;
+    $_SESSION['formurl'] = $_SERVER['REQUEST_URI']; 
+}elseif(isset($_SESSION['form']) && !empty($_SESSION['form'])){
+    if(isset($_SESSION['formurl']) && $_SERVER['REQUEST_URI'] == $_SESSION['formurl']){
+        $_POST = $_SESSION['form']; 
+    }else{
+        $_SESSION['form']    = array();
+    }
+}
+
+
 if(!empty($_POST)){
     if(isset($_POST['cid'])){
         $sql .= ' and cid='.$_POST['cid']; 
@@ -20,7 +33,19 @@ if(!empty($_POST)){
 }else{
     $sql .= " and cid in(" . join(',',$cids) . ")";
 }
-$data = Db::getRows($sql);
+
+
+$sql_num = "select count(1) as num from intro_news where 1 " . $sql;
+$tmp = Db::getRow($sql_num);
+$current_page   = isset($_POST['pageNum']) ? $_POST['pageNum'] : 1;
+$numPerPage     = 10;
+$nums           = $tmp['num'];
+$pages          = ceil($nums/$numPerPage);
+
+$sql_data = " select id,title,ts from intro_news where 1 " . $sql . " limit " . ($current_page - 1) * $numPerPage . "," . $numPerPage;
+
+$data = Db::getRows($sql_data);
+
 ?>
 <div class="page">
     <div class="pageHeader">
@@ -75,10 +100,10 @@ foreach($data as $new){
 
         <div class="panelBar">
             <div class="pages">
-            <span>共23条</span>
+            <span>共<?php echo $nums; ?>条</span>
             </div>
 
-            <div class="pagination" targetType="navTab" totalCount="200" numPerPage="2" pageNumShown="3" currentPage="2"></div>
+            <div class="pagination" targetType="navTab" totalCount="<?php echo $nums; ?>" numPerPage="<?php echo $numPerPage; ?>" pageNumShown="3" currentPage="<?php echo $current_page; ?>"></div>
         </div>
     </div>
 </div>
