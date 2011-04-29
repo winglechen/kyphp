@@ -13,7 +13,7 @@
 
 <div class="menu">
   <ul>
-    <li>全国客户服务热线：<span style="color: #FF9900; font-weight:700; font-family: Verdana; padding-right:20px;">400-700-1818</span></li>
+    <li>全国代理加盟热线：<span style="color: #FF9900; font-weight:700; font-family: Verdana; padding-right:20px;">18858839893</span></li>
     <li id="menu_line"></li>
     <li><a href="index.php">首　　页</a></li>
 <?php
