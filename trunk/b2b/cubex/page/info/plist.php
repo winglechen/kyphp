@@ -1,12 +1,33 @@
 <div class="main1_right productlist">
 <h2><?php echo $_GET['pname']; ?></h2>
 <ul id="NewsListTable">
+
+<?php
+use Ky\Core\Core\Db;
+use Ky\Core\Formater\Output;
+$sql = "select * from intro_news where cid=".$_GET['pid']." order by id desc";
+$data = Db::getRows($sql);
+
+for($i=0,$len=count($data); $i<$len; $i++){
+?>
     <li>
-    <h3>域名</h3>
-    <img class="pic" src="./res/20101202144940504.jpg">
-    <p>企业信息化的钥匙，互联网上的“门牌号码”，开展电子商务必不可少的要素，好的域名让客户更容易记住您的企业。</p>
-    <a href="http://www.cnnic.cn/" class="detail">查看详细&nbsp;&#187;</a>
+    <h3><?php echo $data[$i]['title']; ?></h3>
+    <?php 
+        if(!empty($data[$i]['pic'])){
+            echo '<img class="pic" src="'.$data[$i]['pic'].'">';
+        }
+    ?>
+    <p>
+    <?php
+        $content = htmlspecialchars_decode(stripslashes($data[$i]['content']));
+        $content = strip_tags($content);
+        $content = Output::cut($content,80,''); 
+        echo $content;
+    ?>
+    </p>
+    <a href="index.php?p=info/intro&cid=<?php echo $_GET['cid']; ?>&cname=<?php echo urlencode($_GET['cname']); ?>&pid=<?php echo $_GET['pid'];?>&pname=<?php echo urlencode($_GET['pname']); ?>&nid=<?php echo $data[$i]['id']; ?>" class="detail">查看详细&nbsp;&#187;</a>
     </li>
+<?php } ?>
 </ul>
 </div>
 
