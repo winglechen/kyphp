@@ -91,8 +91,7 @@ $(function(){
 							<li><a href="sidebar_sh.html">杭州</a></li>
 						</ul>
 					</li-->
-					<li><a href="changepwd.html" target="dialog">设置</a></li>
-					<li><a href="http://82rs.com" target="_blank">反馈</a></li>
+					<li><a href="http://hm6688.com" target="_blank">访问前台</a></li>
 					<li><a href="logout.php">退出</a></li>
 				</ul>
 				<!--<ul class="themeList" id="themeList">
