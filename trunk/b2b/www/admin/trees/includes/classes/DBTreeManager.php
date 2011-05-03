@@ -18,18 +18,18 @@
     	$this->db = $dbc;
     } 
 	
- 	public function insertElement($name, $ownerEl, $slave)
+ 	public function insertElement($name, $pid, $slave)
 	{
-		$ownerEl = (int) $ownerEl;
+		$pid = (int) $pid;
 		$sql = sprintf('INSERT INTO ' 
-								. TREE_TABLE_PREFIX . '_elements(name, position, ownerEl, slave)
+								. TREE_TABLE_PREFIX . '_tree(name, position, pid, slave)
 							SELECT 
 								\'%s\', ifnull(max(el.position)+1, 0), %d, %d 
 							FROM '
-								. TREE_TABLE_PREFIX . '_elements el 
+								. TREE_TABLE_PREFIX . '_tree el 
 							WHERE 
-								el.ownerEl = %d ',
-							$name , $ownerEl, $slave, $ownerEl);
+								el.pid = %d ',
+							$name , $pid, $slave, $pid);
 		$out = FAILED;
 		if ($this->db->query($sql) == true) {
 				$out = '({ "elementId":"'.$this->db->lastInsertId().'", "elementName":"'.$name.'", "slave":"'.$slave.'"})';
@@ -40,51 +40,40 @@
  	
  	
  	
- 	public function getElementList($ownerEl, $pageName)
+ 	public function getElementList($pid, $pageName)
 	{
-		if ($ownerEl == null) {
-			$ownerEl = 0;
+		if ($pid == null) {
+			$pid = 0;
 		}
 		else {
-			$ownerEl = (int) $ownerEl;
+			$pid = (int) $pid;
 		}
 		$sql = sprintf("SELECT 
-        					Id, name, slave 
+        					id, name, slave 
         				FROM " 
-        					. TREE_TABLE_PREFIX . "_elements
+        					. TREE_TABLE_PREFIX . "_tree
 		      			WHERE
-		      				ownerEl = %d  
+		      				pid = %d  
 		      			ORDER BY
 		      				position ",
-        				$ownerEl);
+        				$pid);
 						
 		$str = FAILED;
         $result = $this->db->query($sql);
         if ($result !== false)
         {
         	$str = NULL;
-        	/*
-            if ($this->db->numRows($result) > 0)
-            {
-                $str = NULL;
-            }
-            else
-            {
-                $str = NULL;
-                //$str = "<li></li>";
-            }
-            */
             while ($row = $this->db->fetchObject($result))
             {
                 $supp = NULL;
                 if ($row->slave == 0)
                 {
                     $supp = "<ul class='ajax'>"
-                    ."<li id='".$row->Id."'>{url:".$pageName."?action=getElementList&ownerEl=".$row->Id."}</li>"
+                    ."<li id='".$row->id."'>{url:".$pageName."&action=getElementList&pid=".$row->id."}</li>"
                     ."</ul>";
                 }
         
-                $str .= "<li class='text' id='".$row->Id."'>"
+                $str .= "<li class='text' id='".$row->id."'>"
                 ."<span>".$row->name."</span>"
                 .$supp
                 ."</li>";
@@ -96,15 +85,15 @@
  	}
  	
  	
- 	public function updateElementName($name, $elementId, $ownerEl)
+ 	public function updateElementName($name, $elementId, $pid)
 	{
 		$elementId = (int) $elementId;
  		$sql = sprintf('UPDATE ' 
-        						. TREE_TABLE_PREFIX.'_elements 
+        						. TREE_TABLE_PREFIX.'_tree 
 							SET 
 								name = \'%s\'
 					    	WHERE 
-					    		Id = %d ',
+					    		id = %d ',
         					$name, $elementId);
 		$out = FAILED;					
 		if ($this->db->query($sql) == true) {
@@ -115,14 +104,14 @@
  	}
  	
  	
-     public function deleteElement($elementId, &$index = 0, $ownerEl)
+     public function deleteElement($elementId, &$index = 0, $pid)
      {
      	$elementId = (int) $elementId;
          $sql = sprintf('SELECT
-     				 		Id, slave, position, ownerEl 
-     					FROM '. TREE_TABLE_PREFIX .'_elements
+     				 		id, slave, position, pid 
+     					FROM '. TREE_TABLE_PREFIX .'_tree
      					WHERE 
-     						ownerEl = %d ',
+     						pid = %d ',
          				$elementId);
          $row = NULL;
          $index++;
@@ -135,7 +124,7 @@
                  if ($row->slave == "0")
                  {
                      // recursive operation, to reach the deepest element
-                     $this->deleteElement($row->Id, $index);
+                     $this->deleteElement($row->id, $index);
                  }
              }
          }
@@ -145,11 +134,11 @@
          if ($index == 0)
          {
              $sql = sprintf('SELECT 
-     							position, ownerEl
+     							position, pid
      						FROM '
-             .TREE_TABLE_PREFIX.'_elements
+             .TREE_TABLE_PREFIX.'_tree
      						WHERE
-     							Id = %d',
+     							id = %d',
             				 $elementId);
      
      
@@ -158,14 +147,14 @@
                  if ($row = $this->db->fetchObject($result))
                  {
                      $sql = sprintf('UPDATE '
-                    				 .TREE_TABLE_PREFIX.'_elements
+                    				 .TREE_TABLE_PREFIX.'_tree
      								SET 
      									position = position - 1
      								WHERE 
-     									ownerEl = %d
+     									pid = %d
      									AND
      									position > %d',
-                     					$row->ownerEl, $row->position);
+                     					$row->pid, $row->position);
                      $this->db->query($sql);
                  }
              }
@@ -173,11 +162,11 @@
      
          // start to delete it from bottom to top
          $sql = sprintf('DELETE FROM '
-         					.TREE_TABLE_PREFIX.'_elements
+         					.TREE_TABLE_PREFIX.'_tree
      	        		WHERE 
-     			        	ownerEl = %d 
+     			        	pid = %d 
      			        	OR
-     			        	Id = %d ',  $elementId, $elementId);
+     			        	id = %d ',  $elementId, $elementId);
      
 	 	 $out = FAILED;
          if ($this->db->query($sql) == true)
@@ -190,11 +179,11 @@
  	public function changeOrder($elementId, $oldOwnerEl, $destOwnerEl, $destPosition)
 	{
 		$sql = sprintf('SELECT
-						 		ownerEl, position 
+						 		pid, position 
 							FROM '
-								. TREE_TABLE_PREFIX . '_elements 
+								. TREE_TABLE_PREFIX . '_tree 
 							WHERE 
-								Id = %d
+								id = %d
 							LIMIT 1',
 							$elementId);
 		$out = FAILED;					
@@ -203,31 +192,31 @@
 				if ($element = $this->db->fetchObject($result))
 				{						
 					$sql1 = sprintf('UPDATE '
-										 . TREE_TABLE_PREFIX . '_elements 
+										 . TREE_TABLE_PREFIX . '_tree 
 									 SET 
 									 	position = position - 1
 									 WHERE  
 									 	position > %d
 									    AND
-									    ownerEl = %d ',
-									 $element->position, $element->ownerEl);
+									    pid = %d ',
+									 $element->position, $element->pid);
 							   
 					$sql2 = sprintf('UPDATE '
-										. TREE_TABLE_PREFIX . '_elements 
+										. TREE_TABLE_PREFIX . '_tree 
 									 SET 
 									 	position = position + 1
 									 WHERE
 							 			 position >= %d 
 									   	 AND
-									   	 ownerEl = %d ',
+									   	 pid = %d ',
 									 $destPosition, $destOwnerEl);
 							   
 					$sql3 = sprintf('UPDATE '
-										. TREE_TABLE_PREFIX . '_elements 
+										. TREE_TABLE_PREFIX . '_tree 
 									 SET 
-									 	position = %d , ownerEl = %d
+									 	position = %d , pid = %d
 									 WHERE 
-									 	Id = %d ',
+									 	id = %d ',
 										$destPosition, $destOwnerEl, $elementId);
 	
 					
