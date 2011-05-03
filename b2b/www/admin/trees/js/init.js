@@ -14,6 +14,7 @@ var langManager = new languageManager();
 //de for german
 //en for english
 //tr for turkish
+//zh for chinese
 langManager.load("zh");  
 
 var treeOps = new TreeOperations();

@@ -8,12 +8,9 @@
 *
 *********************************************/
 
-if (isset($_REQUEST['action']) && !empty($_REQUEST['action'])) 
-{
+if (isset($_REQUEST['action']) && !empty($_REQUEST['action'])) {
 	$action = $_REQUEST['action'];	
-}
-else 
-{
+}else {
 	die(FAILED);
 }
 define("IN_PHP", true);
@@ -30,15 +27,15 @@ switch($action)
 		 * insert new element
 		 */	
 		if ( ( isset($_POST['name']) === true && $_POST['name'] != NULL )  &&
-		     ( isset($_POST['ownerEl']) === true && $_POST['ownerEl'] != NULL )  &&
+		     ( isset($_POST['pid']) === true && $_POST['pid'] != NULL )  &&
 	         ( isset($_POST['slave']) === true && $_POST['slave'] != NULL )		   
 		   )
 		{				
-			$ownerEl = checkVariable($_POST['ownerEl']);
+			$pid = checkVariable($_POST['pid']);
 			$slave = (int) checkVariable($_POST['slave']);
 			$name = checkVariable($_POST['name']);			
 		  
-			$out = $treeManager->insertElement($name, $ownerEl, $slave);						
+			$out = $treeManager->insertElement($name, $pid, $slave);						
 		}
 		else {
 			$out = FAILED; 
@@ -50,13 +47,13 @@ switch($action)
 		/**
 		 * getting element list
 		 */
-        if( isset($_REQUEST['ownerEl']) == true && $_REQUEST['ownerEl'] != NULL ) {  	
-			$ownerEl = checkVariable($_REQUEST['ownerEl']); 
+        if( isset($_REQUEST['pid']) == true && $_REQUEST['pid'] != NULL ) {  	
+			$pid = checkVariable($_REQUEST['pid']); 
 		}
 		else {
-			$ownerEl = 0;
+			$pid = 0;
 		}
-  		$out = $treeManager->getElementList($ownerEl, $_SERVER['PHP_SELF']);
+  		$out = $treeManager->getElementList($pid, $_SERVER['PHP_SELF'].'?table='.$_GET['table']);
     }
 	break;		
     case "updateElementName":
@@ -66,12 +63,12 @@ switch($action)
     	 */
 		if (isset($_POST['name']) && !empty($_POST['name']) &&
 		    isset($_POST['elementId']) && !empty($_POST['elementId']) &&
-		    isset($_POST['ownerEl']) && $_POST['ownerEl'] != NULL)
+		    isset($_POST['pid']) && $_POST['pid'] != NULL)
 		{			
 			$name = checkVariable($_POST['name']);
 			$elementId = checkVariable($_POST['elementId']); 			
-			$ownerEl = checkVariable($_POST['ownerEl']);
-			$out = $treeManager->updateElementName($name, $elementId, $ownerEl);
+			$pid = checkVariable($_POST['pid']);
+			$out = $treeManager->updateElementName($name, $elementId, $pid);
 		}                         
 		else {
 			$out = FAILED;	
@@ -85,12 +82,12 @@ switch($action)
 		 * deleting an element and elements under it if exists
 		 */
 		if (isset($_POST['elementId']) && !empty($_POST['elementId']) &&
-		    isset($_POST['ownerEl']) && $_POST['ownerEl'] != NULL)
+		    isset($_POST['pid']) && $_POST['pid'] != NULL)
 		{
         	$elementId =  checkVariable($_POST['elementId']);	 
-        	$ownerEl = checkVariable($_POST['ownerEl']); 			 
+        	$pid = checkVariable($_POST['pid']); 			 
         	$index = 0;
-			$out = $treeManager->deleteElement($elementId, $index, $ownerEl);             
+			$out = $treeManager->deleteElement($elementId, $index, $pid);             
 	    }
         else {
 			$out = FAILED;	

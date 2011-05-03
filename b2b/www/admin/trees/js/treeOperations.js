@@ -11,11 +11,6 @@
 /**
  * Operations used in tree structure
  */
-var simpleTree;
-var structureManagerURL = "manageStructure.php";
-var dragOperation = true;
-var operationFailed = -1;
-
 function TreeOperations()
 {
 
@@ -61,6 +56,7 @@ function TreeOperations()
 //		var ch = Array();
 //		ch[0] = '.';
 //		ch[1] = '[';
+$rootName = "根目录";
 //		ch[2] = ']';
 //		ch[3] = '/';
 //		ch[4] = '@';
@@ -205,8 +201,8 @@ function TreeOperations()
 				if (evt.keyCode == 13) // when pressed enter
 				{
 				    var name = $('#inputText').attr('value');
-					var ownerEl = $('#inputText').parent().parent().parent().attr('id');
-					var params = encodeURI("action=insertElement"+"&name="+name+"&ownerEl="+ownerEl+"&slave="+slave);
+					var pid = $('#inputText').parent().parent().parent().attr('id');
+					var params = encodeURI("action=insertElement"+"&name="+name+"&pid="+pid+"&slave="+slave);
 					treeOps.ajaxReq(params, structureManagerURL, treeOps.trAddElement);
 					dragOperation = true;
 				}
@@ -227,8 +223,8 @@ function TreeOperations()
 			);
 		$('#inputText').bind("blur",function(evt){
 				    var name = $('#inputText').attr('value');
-					var ownerEl = $('#inputText').parent().parent().parent().attr('id');
-					var params = encodeURI("action=insertElement"+"&name="+name+"&ownerEl="+ownerEl+"&slave="+slave);
+					var pid = $('#inputText').parent().parent().parent().attr('id');
+					var params = encodeURI("action=insertElement"+"&name="+name+"&pid="+pid+"&slave="+slave);
 					treeOps.ajaxReq(params, structureManagerURL, treeOps.trAddElement);
 					dragOperation = true;
 			    }
@@ -261,9 +257,9 @@ function TreeOperations()
 		if (confirm(langManager.deleteConfirm))
 		{
 			treeOps.treeBusy = true;
-			var ownerEl = treeOps.trGetSelected().parent().parent().attr('id');
+			var pid = treeOps.trGetSelected().parent().parent().attr('id');
 		 	var params = "action=deleteElement&elementId="+treeOps.trGetSelected().attr('id')
-		 				 + "&ownerEl=" + ownerEl;
+		 				 + "&pid=" + pid;
 			treeOps.ajaxReq(params, structureManagerURL, treeOps.trDeleteElement);
 		}
 	}
@@ -280,7 +276,7 @@ function TreeOperations()
 
 		$('#inputText', '#'+ elementId).replaceWith(tmp_node);
 
-		$('ul.ajax>li.doc-last', '#' + elementId).attr('id', info.elementId).html("{url:"+ structureManagerURL +"?action=getElementList&ownerEl="+ info.elementId +"}");
+		$('ul.ajax>li.doc-last', '#' + elementId).attr('id', info.elementId).html("{url:"+ structureManagerURL +"?action=getElementList&pid="+ info.elementId +"}");
 		simpleTree.get(0).setTreeNodes2($('#' + elementId));
 	}
 
@@ -304,8 +300,8 @@ function TreeOperations()
 								 {
 									 if (evt.keyCode == 13) { //pressed enter
 										var name = $('#inputText').attr('value');
-										var ownerEl = $('#inputText').parent().parent().parent().attr('id');
-									 	var params = "action=updateElementName&name="+name+"&elementId="+elementId+"&ownerEl="+ownerEl;
+										var pid = $('#inputText').parent().parent().parent().attr('id');
+									 	var params = "action=updateElementName&name="+name+"&elementId="+elementId+"&pid="+pid;
 
 										treeOps.ajaxReq (params, structureManagerURL, treeOps.trUpdateElementName);
 									 }
@@ -320,8 +316,8 @@ function TreeOperations()
 								 function(evt)
 								 {
 										var name = $('#inputText').attr('value');
-										var ownerEl = $('#inputText').parent().parent().parent().attr('id');
-									 	var params = "action=updateElementName&name="+name+"&elementId="+elementId+"&ownerEl="+ownerEl;
+										var pid = $('#inputText').parent().parent().parent().attr('id');
+									 	var params = "action=updateElementName&name="+name+"&elementId="+elementId+"&pid="+pid;
 
 										treeOps.ajaxReq (params, structureManagerURL, treeOps.trUpdateElementName);
 								 }
