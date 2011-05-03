@@ -114,6 +114,79 @@ $(function(){
 				<div class="toggleCollapse"><h2>主菜单</h2><div>收缩</div></div>
 
 				<div class="accordion" fillSpace="sidebar">
+                
+                    <div class="accordionHeader">
+						<h2><span>Folder</span>b2b管理</h2>
+					</div>
+					<div class="accordionContent">
+						<ul class="tree treeFolder">
+                            <li><a>会员管理</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >卖家管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >买家添加</a></li>
+                                </ul>
+                            </li>
+                            <li><a>产品管理</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >产品管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >求购管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >库存管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a>产品分类</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >分类管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a>文章管理</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >分类管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >文章管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >文章添加</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+				    </div>
+
+
+                    <div class="accordionHeader">
+						<h2><span>Folder</span>内容块管理</h2>
+					</div>
+					<div class="accordionContent">
+						<ul class="tree treeFolder">
+                            <li><a>页面管理</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >页面管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >页面添加</a></li>
+                                </ul>
+                            </li>
+                            <li><a>友情链接管理</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >友情链接列表</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >友情链接添加</a></li>
+                                </ul>
+                            </li>
+                            <li><a>广告管理</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >广告位管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >广告位添加</a></li>
+                                </ul>
+                            </li>
+                            <li><a>内容块管理</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >内容块管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >内容块添加</a></li>
+                                </ul>
+                            </li>
+                            <li><a>seo管理</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >seo管理</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+				    </div>	
+                    
 					<div class="accordionHeader">
 						<h2><span>Folder</span>公司信息</h2>
 					</div>
@@ -131,8 +204,8 @@ foreach($data as $cat){
 ?>
                             <li><a><?php echo $cat['name']; ?></a>
 								<ul>
-                                    <li><a href="index.php?p=admin/intro_list&cid=<?php echo $cat['Id']; ?>" target="navTab" >信息列表</a></li>
-									<li><a href="index.php?p=admin/intro_add&cid=<?php echo $cat['Id']; ?>" target="navTab" >添加信息</a></li>
+                                    <li><a href="index.php?p=admin/intro_list&cid=<?php echo $cat['Id']; ?>" target="navTab" rel="w_panel" >信息列表</a></li>
+									<li><a href="index.php?p=admin/intro_add&cid=<?php echo $cat['Id']; ?>" target="navTab" rel="w_panel" >添加信息</a></li>
 								</ul>
 							</li>
 
@@ -142,7 +215,8 @@ foreach($data as $cat){
 							
 						</ul>
 					</div>
-					
+                    
+
 				</div>
 
 			</div>
