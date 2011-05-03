@@ -1,0 +1,53 @@
+<?php
+$rootName = "根目录";
+
+require_once('includes/classes/Mysql.php');
+require_once('includes/classes/DBTreeManager.php');
+$db = new MySQL($dbHost, $dbUsername, $dbPassword, $dbName);	
+$treeManager = new DBTreeManager($db);
+
+$treeElements = $treeManager->getElementList(null,"manageStructure.php");
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords"  content="" />
+<meta name="description" content="" />
+<title>Editable jquery tree with php codes</title>
+<link rel="stylesheet" type="text/css" href="../res/simpleTree/style.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="../res/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../res/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../res/simpleTree/jquery.simple.tree.js"></script>
+<script type="text/javascript" src="js/langManager.js" ></script>
+<script type="text/javascript" src="js/treeOperations.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+</head>
+<body style="height:800px;">
+<div class="contextMenu" id="myMenu1">
+		<li class="addFolder">
+			<img src="../res/simpleTree/images/folder_add.png" /> </li>
+		<li class="edit"><img src="../res/simpleTree/images/folder_edit.png" /> </li>
+		<li class="delete"><img src="../res/simpleTree/images/folder_delete.png" /> </li>
+		<li class="expandAll"><img src="../res/simpleTree/images/expand.png"/> </li>
+		<li class="collapseAll"><img src="../res/simpleTree/images/collapse.png"/> </li>
+</div>
+<div class="contextMenu" id="myMenu2">
+		<li class="edit"><img src="../res/simpleTree/images/page_edit.png" /> </li>
+		<li class="delete"><img src="../res/simpleTree/images/page_delete.png" /> </li>
+</div>
+
+<div id="wrap">
+	<div id="annualWizard">
+			<ul class="simpleTree" id='pdfTree'>
+					<li class="root" id='<?php echo $treeManager->getRootId();  ?>'><span><?php echo $rootName; ?></span>
+						<ul><?php echo $treeElements; ?></ul>
+					</li>
+			</ul>
+	</div>
+</div>
+<div id='processing'></div>
+</body>
+</html>
