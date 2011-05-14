@@ -21,10 +21,22 @@
  	public function insertElement($name, $pid, $slave)
 	{
 		$pid = (int) $pid;
+        $pPath = '';
+        $path  = '';
+        if(0 == $pid){
+            $path = '0';
+        }else{
+            $sql = "select path from " . TREE_TABLE_PREFIX . '_tree where id='.$pid;
+            $query = $this->db->query($sql);
+            $row   = $this->db->fetchObject($query);
+            $pPath = $row->path;
+            $path  = $pPath . ',' . $pid;
+        }
+
 		$sql = sprintf('INSERT INTO ' 
-								. TREE_TABLE_PREFIX . '_tree(name, position, pid, slave)
+								. TREE_TABLE_PREFIX . '_tree(name, position, pid, slave,path)
 							SELECT 
-								\'%s\', ifnull(max(el.position)+1, 0), %d, %d 
+								\'%s\', ifnull(max(el.position)+1, 0), %d, %d,\''.$path.'\'  
 							FROM '
 								. TREE_TABLE_PREFIX . '_tree el 
 							WHERE 
@@ -178,14 +190,32 @@
  	
  	public function changeOrder($elementId, $oldOwnerEl, $destOwnerEl, $destPosition)
 	{
-		$sql = sprintf('SELECT
-						 		pid, position 
+        $oPath = '';
+        $nPath = '';
+        if(0 == $destOwnerEl){
+            $nPath = '0';
+        }else{
+            $sql = sprintf('SELECT
+						 		path 
 							FROM '
 								. TREE_TABLE_PREFIX . '_tree 
 							WHERE 
 								id = %d
 							LIMIT 1',
-							$elementId);
+							$destOwnerEl);
+            $query = $this->db->query($sql);
+            $row   = $this->db->fetchObject($query);
+            $nPath = $row->path . ',' . $destOwnerEl;
+
+        }
+        $sql = sprintf('SELECT
+                        pid, position,path 
+                    FROM '
+                        . TREE_TABLE_PREFIX . '_tree 
+                    WHERE 
+                        id = %d
+                    LIMIT 1',
+                    $elementId);
 		$out = FAILED;					
 		if ($result = $this->db->query($sql))
 		{			
@@ -214,13 +244,28 @@
 					$sql3 = sprintf('UPDATE '
 										. TREE_TABLE_PREFIX . '_tree 
 									 SET 
-									 	position = %d , pid = %d
+									 	position = %d , pid = %d , path = \''.$nPath.'\'
 									 WHERE 
 									 	id = %d ',
 										$destPosition, $destOwnerEl, $elementId);
-	
-					
-					if ($this->db->query($sql1) && $this->db->query($sql2) && $this->db->query($sql3)) {					
+	            
+                    $oPath  = $element->path . ',' . $elementId;
+                    $nPath .= ','.$elementId;
+				    $sql4   = 'UPDATE '
+										. TREE_TABLE_PREFIX . '_tree 
+									 SET 
+									 	path = REPLACE(path,\''.$oPath.'\',\''.$nPath.'\')
+									 WHERE
+                                        path like \''.$oPath.'\%\'
+                                    ';
+				
+                    $changePath = true;
+                    if($destOwnerEl != $oldOwnerEl){
+                        if(!$this->db->query($sql4)){
+                            $changePath = false;
+                        }
+                    }
+					if ($this->db->query($sql1) && $this->db->query($sql2) && $this->db->query($sql3) && $changePath) {					
 						$out = '({"oldElementId":"'.$elementId.'", "elementId":"'. $elementId .'"})';
 					}					
 				}

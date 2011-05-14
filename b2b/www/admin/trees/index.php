@@ -56,7 +56,7 @@ $(document).ready(function() {
 		afterClick:function(node){
 		},
 		afterDblClick:function(node){
-			alert($('span:first',node).text() + " double clicked");		
+			//alert($('span:first',node).text() + " double clicked");		
 		},
 		afterMove:function(destination, source, pos) {
 			if (dragOperation == true) 
