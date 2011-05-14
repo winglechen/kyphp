@@ -148,7 +148,6 @@ $.fn.simpleTree = function(opt){
 			
 			obj = useParent? obj.parent():obj;
 			//$('li>span', obj) // changed by mekya, before, the line below starts like that
-			
 			$('span', obj).addClass('text')
 			.bind('selectstart', function() {
 				return false;
@@ -200,7 +199,7 @@ $.fn.simpleTree = function(opt){
 				}
 				return false;
 			}).mouseup(function(){
-				if(mousePressed && mouseMoved && dragNode_source)
+				if(mousePressed && mouseMoved && dragNode_source && confirm('are you sure?'))
 				{
 					TREE.moveNodeToFolder($(this).parent());
 				}
@@ -356,7 +355,7 @@ $.fn.simpleTree = function(opt){
 					this.className = this.className.replace('-over','');
 				}
 			}).mouseup(function(){
-				if(mousePressed && dragNode_source && mouseMoved)
+				if(mousePressed && dragNode_source && mouseMoved && confirm('are you sure?'))
 				{
 					dragNode_destination = $(this).parents('li:first');
 					TREE.moveNodeToLine(this);
@@ -554,7 +553,7 @@ $.fn.simpleTree = function(opt){
 				}
 				return false;
 			}).mouseup(function(){
-				if(mousePressed && mouseMoved && dragNode_source)
+				if(mousePressed && mouseMoved && dragNode_source && confirm('are you sure?'))
 				{
 					TREE.moveNodeToFolder($(this).parent());
 				}
