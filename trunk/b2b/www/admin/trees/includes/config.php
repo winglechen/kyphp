@@ -19,7 +19,7 @@ $dbPassword = "";
 // set database name
 $dbName = "b2b";
 // set database table prefix
-$table = isset($_GET['table']) ? $_GET['table'] : 'intro';
+$table = isset($_GET['table']) ? $_GET['table'] : 'tree';
 define ("TREE_TABLE_PREFIX", $table);
 
 define ("SUCCESS", 1);  // Don't edit
