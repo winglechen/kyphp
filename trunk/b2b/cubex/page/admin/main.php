@@ -80,27 +80,9 @@ $(function(){
 			<div class="headerNav">
 				<a class="logo" href="javascript:void(0);">标志</a>
 				<ul class="nav">
-					<!--<li id="switchEnvBox"><a href="javascript:">（<span>北京</span>）切换角色</a>
-						<ul>
-							<li><a href="sidebar_bj.html">北京</a></li>
-							<li><a href="sidebar_sh.html">上海</a></li>
-							<li><a href="sidebar_sh.html">南京</a></li>
-							<li><a href="sidebar_sh.html">深圳</a></li>
-							<li><a href="sidebar_sh.html">广州</a></li>
-							<li><a href="sidebar_sh.html">天津</a></li>
-							<li><a href="sidebar_sh.html">杭州</a></li>
-						</ul>
-					</li-->
 					<li><a href="http://hm6688.com" target="_blank">访问前台</a></li>
 					<li><a href="logout.php">退出</a></li>
 				</ul>
-				<!--<ul class="themeList" id="themeList">
-					<li theme="default"><div class="selected">蓝色</div></li>
-					<li theme="green"><div>绿色</div></li>
-					<li theme="red"><div>红色</div></li>
-					<li theme="purple"><div>紫色</div></li>
-					<li theme="silver"><div>银色</div></li>
-				</ul>-->
 			</div>
 		</div>
 
@@ -122,8 +104,14 @@ $(function(){
 						<ul class="tree treeFolder">
                             <li><a>会员管理</a>
                                 <ul>
-                                    <li><a href="#" rel="w_panel" target="navTab" >卖家管理</a></li>
-                                    <li><a href="#" rel="w_panel" target="navTab" >买家添加</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >商家管理</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >注册审核</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >信用管理</a></li>
+                                </ul>
+                            </li>
+                            <li><a>产品分类</a>
+                                <ul>
+                                    <li><a href="trees/index.php?table=b2b"  showInFrame="true"  rel="w_panel" target="navTab" >分类管理</a></li>
                                 </ul>
                             </li>
                             <li><a>产品管理</a>
@@ -132,15 +120,10 @@ $(function(){
                                     <li><a href="#" rel="w_panel" target="navTab" >求购管理</a></li>
                                     <li><a href="#" rel="w_panel" target="navTab" >库存管理</a></li>
                                 </ul>
-                            </li>
-                            <li><a>产品分类</a>
-                                <ul>
-                                    <li><a href="#" rel="w_panel" target="navTab" >分类管理</a></li>
-                                </ul>
-                            </li>
+                            </li>                  
                             <li><a>文章管理</a>
                                 <ul>
-                                    <li><a href="#" rel="w_panel" target="navTab" >分类管理</a></li>
+                                    <li><a href="trees/index.php?table=news"  showInFrame="true"  rel="w_panel" target="navTab" >分类管理</a></li>
                                     <li><a href="#" rel="w_panel" target="navTab" >文章管理</a></li>
                                     <li><a href="#" rel="w_panel" target="navTab" >文章添加</a></li>
                                 </ul>
@@ -174,8 +157,7 @@ $(function(){
                             </li>
                             <li><a>内容块管理</a>
                                 <ul>
-                                    <li><a href="#" rel="w_panel" target="navTab" >内容块管理</a></li>
-                                    <li><a href="#" rel="w_panel" target="navTab" >内容块添加</a></li>
+                                    <li><a href="index.php?p=admin/page_index"   showInFrame="true"  rel="w_panel" target="navTab" >首页</a></li>                               
                                 </ul>
                             </li>
                             <li><a>seo管理</a>
@@ -216,6 +198,35 @@ foreach($data as $cat){
 						</ul>
 					</div>
                     
+                    
+                    
+                    <div class="accordionHeader">
+						<h2><span>Folder</span>配置管理</h2>
+					</div>
+					<div class="accordionContent">
+						<ul class="tree treeFolder">
+                            <li><a>会员类型</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >配置列表</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >添加配置</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+				    </div>
+				    
+				    <div class="accordionHeader">
+						<h2><span>Folder</span>网站运营</h2>
+					</div>
+					<div class="accordionContent">
+						<ul class="tree treeFolder">
+                            <li><a>邮件群发</a>
+                                <ul>
+                                    <li><a href="#" rel="w_panel" target="navTab" >邮件模板</a></li>
+                                    <li><a href="#" rel="w_panel" target="navTab" >添加模板</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+				    </div>
 
 				</div>
 
