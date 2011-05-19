@@ -157,7 +157,7 @@ $(function(){
                             </li>
                             <li><a>内容块管理</a>
                                 <ul>
-                                    <li><a href="index.php?p=admin/page_index"   showInFrame="true"  rel="w_panel" target="navTab" >首页</a></li>                               
+                                    <li><a href="index.php?p=admin/page_index"    rel="w_panel" target="navTab" >首页</a></li>                               
                                 </ul>
                             </li>
                             <li><a>seo管理</a>
