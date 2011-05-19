@@ -1,6 +1,7 @@
 use b2b;
 set names utf8;
 
+drop table if exists pages;
 create table pages(
     id smallint(6) unsigned not null auto_increment primary key,
     name char(20) not null default '页面',
@@ -14,15 +15,17 @@ create table pages(
 )engine=myisam default charset=utf8 collate=utf8_general_ci;
 
 
+drop table if exists const;
 create table const(
 	name varchar(50) not null default 'const',
 	k    varchar(50) not null default 'key',
 	v    varchar(50) not null default 'value',
 	primary key(k)
-)engine=myisam default charset=utf8 collate=utf8_gener_ci;
+)engine=myisam default charset=utf8 collate=utf8_general_ci;
 
+drop table if exists block;
 create table block(
-    pageId mediumint(8) unsinged not null default 0,
+    pageId mediumint(8) unsigned not null default 0,
     blockId mediumint(8) unsigned not null default 0,
     contentId mediumint(8) unsigned not null default 0,
     title   varchar(100) not null default '',
