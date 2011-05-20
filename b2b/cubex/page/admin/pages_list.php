@@ -1,9 +1,7 @@
 <?php
-use Ky\Model\Intro;
-use Ky\Model\IntroCat;
+use Ky\Model\Pages;
 use Ky\Core\Core\Db;
 
-$cids = IntroCat::getCids($_GET['cid']);
 
 $data = array();
 $sql = "" ;
@@ -21,44 +19,32 @@ if(!empty($_POST)){
 
 
 if(!empty($_POST)){
-    if(isset($_POST['cid'])){
-        $sql .= ' and cid='.$_POST['cid']; 
-    }else{
-        $sql .= " and cid in(" . join(',',$cids) . ") ";
+    if(isset($_POST['name'])){
+        $sql .= " and name like '%{$_POST['name']}%' ";
     }
-    
-    if(isset($_POST['title'])){
-        $sql .= " and title like '%{$_POST['title']}%' ";
-    }
-}else{
-    $sql .= " and cid in(" . join(',',$cids) . ")";
 }
 
-
-$sql_num = "select count(1) as num from intro_news where 1 " . $sql;
+$sql_num = "select count(1) as num from pages where 1 " . $sql;
 $tmp = Db::getRow($sql_num);
 $current_page   = isset($_POST['pageNum']) ? $_POST['pageNum'] : 1;
 $numPerPage     = 10;
 $nums           = $tmp['num'];
 $pages          = ceil($nums/$numPerPage);
 
-$sql_data = " select id,title,ts from intro_news where 1 " . $sql . " limit " . ($current_page - 1) * $numPerPage . "," . $numPerPage;
+$sql_data = " select id,name from pages where 1 " . $sql . " limit " . ($current_page - 1) * $numPerPage . "," . $numPerPage;
 
 $data = Db::getRows($sql_data);
 
 ?>
 <div class="page">
     <div class="pageHeader">
-        <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/intro_list&cid=<?php echo $_GET['cid']; ?>" method="post">
+        <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/pages_list" method="post">
         <input type="hidden" name="pageNum" value="1">
             <div class="searchBar">
                 <table class="searchContent">
                     <tr>
                         <td>
-                            分类：<?php echo IntroCat::options($_GET['cid']); ?>
-                        </td>
-                        <td>
-                            标题：<input type="text" name="title" />
+                            页面名称：<input type="text" name="name" />
                         </td>
                         <td>
                             <div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
@@ -78,9 +64,8 @@ $data = Db::getRows($sql_data);
             <thead>
                 <tr>
                     <th width="5%" style="text-align:center" >编号</th>
-                    <th width="60%">标题</th>
-                    <th width="15%" style="text-align:center" >添加时间</th>
-                    <th width="20" style="text-align:center" >操作</th>
+                    <th width="65%">标题</th>
+                    <th width="30" style="text-align:center" >操作</th>
                 </tr>
             </thead>
             <tbody>
@@ -89,9 +74,8 @@ $data = Db::getRows($sql_data);
 foreach($data as $new){
     echo '<tr>';
     echo '<td style="text-align:center" >'.$new['id'].'</td>';
-    echo '<td>'.$new['title'].'</td>';
-    echo '<td style="text-align:center" >'.date('Y-m-d',$new['ts']).'</td>';
-    echo '<td style="text-align:center" ><a href="index.php?p=admin/intro_add&cid='.$_GET['cid'].'&id='.$new['id'].'" target="navTab" >编辑</a> | <a   href="index.php?p=admin/intro_del&cid='.$_GET['cid'].'&id='.$new['id'].'" target="navTab" onclick="return confirm(\'您确定要删除这条信息吗？\');" >删除</a></td>';
+    echo '<td>'.$new['name'].'</td>';
+    echo '<td style="text-align:center" ><a href="index.php?p=admin/pages_add&id='.$new['id'].'" target="navTab" >编辑</a> | <a   href="index.php?p=admin/pages_del&id='.$new['id'].'" target="navTab" onclick="return confirm(\'您确定要删除这条信息吗？\');" >删除</a></td>';
     echo '</tr>';
 }
 ?>
