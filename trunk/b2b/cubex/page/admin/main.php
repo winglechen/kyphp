@@ -139,8 +139,8 @@ $(function(){
 						<ul class="tree treeFolder">
                             <li><a>页面管理</a>
                                 <ul>
-                                    <li><a href="#" rel="w_panel" target="navTab" >页面管理</a></li>
-                                    <li><a href="#" rel="w_panel" target="navTab" >页面添加</a></li>
+                                    <li><a href="index.php?p=admin/pages_list" rel="w_panel" target="navTab" >页面管理</a></li>
+                                    <li><a href="index.php?p=admin/pages_add" rel="w_panel" target="navTab" >页面添加</a></li>
                                 </ul>
                             </li>
                             <li><a>友情链接管理</a>
