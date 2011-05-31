@@ -1,0 +1,49 @@
+body {font-family:"宋体";font-size:12px;background:url(http://cn.china.cn/v5shouye/images/topNavBg.gif) repeat-x;}
+* {margin:0;padding:0;list-style:none;}
+img {border:0;}
+input, select {font-family:"宋体";font-size:12px;}
+.clear {clear:both;height:0;line-height:0;font-size:0;}
+ul,form{ padding:0; margin:0;}
+a {color:#696969;text-decoration:none;}
+a:hover {color:#cd0000;text-decoration:underline;}
+.wrapCnt, .topNav, .logo, .sreach, .topAd {width:960px;margin:0 auto;}
+.wrapCnt {padding:10px 0px 0 0px;}
+.about {height:19px;padding-top:9px;background:url(http://cn.china.cn/v5shouye/images/footerBg.jpg) repeat-x bottom;text-align:center;color:#646464;}
+.about a {color:#646464;text-decoration:none;}
+.about a:hover {color:#646464;text-decoration:underline;}
+.gsInfo {padding:15px 0;text-align:center;color:#646464;}
+.gsInfo li {height:20px;line-height:20px;}
+.gsInfo1 {width:960px;text-align:center;color:#646464;overflow:hidden;margin-top:5px;}
+.gsInfo1 li {width:960px;height:22px;line-height:22px;}
+.header {clear:both;width:960px;margin:15px auto;}
+.topNav {width:960px;height:16px;margin:6px auto 0 auto;margin-bottom:1px;color:#696969;text-align:right;}
+.topNav label {float:left;}
+.topNav a{margin:0 6px;}
+.topNav img {margin:0 5px 0 10px;}
+.link {height:34px;background:url(http://cn.china.cn/v5shouye/images/tit6Bg.jpg) repeat-x;margin-top:0px !important;margin-top:10px;}
+*+html .link {margin-top:10px !important;}
+.link span {width:953px;padding:12px 0 0 0;float:left;text-align:center;color:#fff;}
+.link span a {color:#fff;text-decoration:none;}
+.link span a:hover {color:#fff;text-decoration:underline;}
+.header {clear:both;width:960px;margin:15px auto; margin-bottom:5px;}
+.header .logo {width:165px;border-right-width:1px;float:left;height:60px;padding:0;padding-left:10px;}
+.header .pageInfo {float:left;height:60px;width:250px;background:url(http://product.cn.china.cn/resource/images/cn/img/huileftbg.gif) left center no-repeat;text-align:left; padding-left:10px;overflow:hidden;}
+.header .pageInfo h1,.header .pageInfo p { float:left;font-size:21px;line-height:40px;color:#fe0404;font-family:"黑体";float:left;font-weight:bold;}
+.header .pageInfo span{ color:#666;line-height:18px; clear:both; display:block;}
+.header .logo {width:165px;border-right-width:1px;float:left;height:60px;padding:0;padding-left:10px;}
+.searchbur * {vertical-align:middle;}
+.searchbur {float:right;width:513px;padding-right:10px;height:61px;overflow:hidden;background:url(http://product.cn.china.cn/resource/images/cn/img/indexsearchbg.gif) left bottom no-repeat;}
+.searchbur .search_bt2 {border:none;width:97px;height:27px;display:inline-block;background:url(http://product.cn.china.cn/resource/images/cn/img/sousuobtn.jpg) no-repeat;margin-bottom:1px;cursor:pointer;}
+.searchBar2 .titlealink2 {padding-left:200px;}
+.titlealink2 {height:22px;padding-top:8px;padding-left:20px;clear:both;cursor:pointer;color:#696969; overflow:hidden;}
+.titlealink2 a {color:#696969;font-weight:bold;display:inline-block;width:49px;height:22px;line-height:18px;text-decoration:none;text-align:center;font-size:13px;}
+.titlealink2 a:hover {color:#d70909;}
+.titlealink2 .hoveron {background:url(http://product.cn.china.cn/resource/images/cn/img/zhixiang.gif) 0 13px no-repeat;}
+.searchkuang {width:392px;height:20px;margin-top:2px;margin-left:7px;padding-right:10px;border:1px #FFF solid;line-height:20px;overflow:hidden;}
+/*daohang*/
+.menubur{ width:922px; margin:0 auto; height:32px; overflow:hidden; background:url(http://product.cn.china.cn/resource/images/cn/img/menuburbg.gif) bottom no-repeat;  padding:0 20px; padding-top:8px;}
+.menubur a{ color:#fff; font-size:14px;line-height:28px; height:32px; font-weight:bold; display:inline-block; width:auto; padding:0 16px; margin:0 5px;}
+.banner{ width:960px; margin:0 auto;}
+.menubur .nowchoose{ background:#f4f7fc; border:1px #dfd7da solid; border-bottom:none; color:#F00; text-decoration:none;}
+.menubur a:hover{background:#f4f7fc;color:#F00; text-decoration:none;}
+/*daohang over*/

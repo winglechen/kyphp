@@ -1,0 +1,468 @@
+.operationPage .operationArea .management .switchTag {
+	clear:both;
+	height:25px;
+	padding-top:3px;
+	padding-right:3px;
+	padding-left:3px;
+}
+.operationPage .operationArea .management .switchTag ul {
+	font-size:12px;
+	text-align:left;
+	padding:0px;
+	float:left;
+	margin:0px 5px 0px 0px;
+}
+.operationPage .operationArea .management .switchTag ul .menuSelected a {
+	background:url(operationPageMenuSelected.gif) no-repeat;
+}
+.operationPage .operationArea .management .switchTag .tagSelected a {
+	color:#000000;
+	text-decoration:none;
+	height:17px;
+	width:92px;
+	display:block;
+	text-align:center;
+	background:url(operationManagementSelected.gif) no-repeat right bottom;
+	padding:8px 0px 0px;
+}
+.operationPage .operationArea .management .switchTag ul a {
+	color:#000000;
+	text-decoration:none;
+	height:17px;
+	width:92px;
+	display:block;
+	text-align:center;
+	background:url(operationManagementUnselected.gif) no-repeat right center;
+	padding:8px 0px 0px;
+}
+.operationPage .operationArea .management .switchTag ul a:hover {
+	color:#FF0000;
+	text-decoration:underline;
+}
+.operationPage .operationArea .management .tabswitchborder .searchproducts .productSearchInput {
+	width:194px;
+	border:1px solid #98B3CB;
+}
+.operationPage .operationArea .management .tabswitchborder .searchproducts .productSelect {
+	color:#0000B0;
+	border:1px solid #98B3CB;
+	font-size:12px;
+}
+.operationPage .operationArea .management .tabswitchborder .productdatablock  .operating .pages a {
+	font-weight: bold;
+	color: #000000;
+}
+.operationPage .operationArea .management .tabswitchborder .productdatablock  .operating .pages a:hover {
+	color: #FF0000;
+}
+.operationPage .operationArea .left .menu .menuSelected a:hover {
+	background-image: url(operationPageMenuSelected.gif);
+}
+.operationPage .operationArea .right .columnTitle img {
+	float: right;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	margin-right: 30px;
+	margin-top: -22px;
+}
+.operationPage .operationArea .right .columnTitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000099;
+	padding-top: 12px;
+	padding-left: 30px;
+}
+.operationPage .operationArea .right .guideInfo a {
+	font-size: 12px;
+	font-weight: normal;
+	color: #000099;
+	display: block;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+.operationPage .operationArea .right .guideInfo a:hover {
+	color: #FF0000;
+}
+.operationPage .operationArea .right .postTips {
+	background-image: url(postTips.gif);
+	background-position: 20px 15px;
+	background-repeat: no-repeat;
+	height: 35px;
+	padding-left: 47px;
+	padding-top: 19px;
+}
+.operationPage .operationArea .right .postTips span {
+	color: #FF0000;
+}
+
+
+.operationPage .operationArea .right .columnBorder .columnContents .colBlueContents .keywords {
+}
+.operationPage .operationArea .right .columnBorder .columnContents .colBlueContents .keywords span {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF8900;
+}
+.operationPage .operationArea .right .columnBorder .columnContents .colBlueContents .keywords a {
+	color: #004BB7;
+	margin: 4px;
+}
+.operationPage .operationArea .right .columnBorder .columnContents .colBlueContents .keywords input {
+	color: #004BB7;
+	padding: 3px;
+	border: 1px solid #A4BDD2;
+}
+.operationPage .operationArea .right .columnBorder .columnContents .colBlueContents .keywords {
+	height: 24px;
+}
+.operationPage .operationArea .right .columnBorder .columnContents .dataListTab .hangye a {
+	color: #666666;
+}
+.operationPage .operationArea .right .columnBorder .columnContents .dataListTab .hangye li {
+	color: #EB0000;
+	background-image: url(industryLiBg.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 12px;
+	list-style-type: none;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booking td {
+	height: 24px;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+	background-color: #F6F6F6;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booking a {
+	color: #004F88;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booked .title {
+	font-weight: bold;
+	background-color: #F6F6F6;
+	padding-left: 27px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+	line-height: 24px;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booked .title a {
+	font-weight: normal;
+	color: #004F88;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booked .list .more a {
+	color: #004F88;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booked .list .products a {
+	color: #004F88;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booked .list .more {
+	padding-right: 15px;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booked {
+	margin-bottom: 15px;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booked .bookDetailList .products td {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E0E0E0;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .booked .bookDetailList .products a {
+	color: #004F88;
+}
+.operationPage .operationArea .right .formcontent .input290 {
+	background-image: url(manageSearchInputBgHover.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	width: 290px;
+	border: 1px solid #83A6C8;
+}
+.operationPage .operationArea .right .formcontent .input290hover {
+	background-image: url(manageSearchInputBgHover.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	width: 290px;
+	border: 1px solid #9ecc00;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .operationNotice a {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .operationNotice span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .serviceLimit .up {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #A7A7A7;
+	background-image: url(serviceLimitBg.jpg);
+	background-repeat: no-repeat;
+	background-position: 27px 10px;
+	padding-top: 30px;
+	padding-left: 100px;
+	padding-bottom: 30px;
+}
+.operationPage .operationArea .right .name {
+	margin-top: 40px;
+	margin-left: 80px;
+}
+.operationPage .operationArea .right .url {
+	margin-top: 25px;
+	margin-left: 170px;
+	margin-bottom: 10px;
+}
+.operationPage .operationArea .right .url a {
+	color: #0000FF;
+}
+.operationPage .operationArea .right .name strong {
+	font-size: 14px;
+}
+.operationPage .operationArea .right .whatzNext .columnBorder .columnContentsView .detail p {
+	font-size: 14px;
+	margin: 0px;
+}
+.operationPage .operationArea .right .whatzNext .columnBorder .columnContentsView .postIt {
+	margin-top: 19px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0000FF;
+	text-align: right;
+}
+.operationPage .operationArea .right .whatzNext .columnBorder .columnContentsView .postIt a {
+	color: #0000FF;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .goods {
+	background-color: #F0F0F0;
+	line-height: 20px;
+	margin-bottom: 15px;
+	padding-top: 8px;
+	padding-right: 20px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+	display: block;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .goods h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000099;
+	margin: 5px;
+	clear: both;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .goods strong {
+	font-size: 14px;
+	clear: left;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .success {
+	line-height: 157%;
+	font-size: 14px;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .success strong {
+	color: #000099;
+}
+.operationPage .operationArea .right .columnBorder .columnContentsView .success a {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000099;
+}
+.operationPage .operationArea .right .searchSwitchTab {
+	margin-left: 28px;
+}
+.operationPage .operationArea .right .searchSwitchTab .tabs {
+	width: 500px;
+	background-image: url(searchTabsBg.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	height: 26px !important;
+	height: 20px;
+}
+.operationPage .operationArea .right .searchSwitchTab .tabs .selectedtabs {
+	border: 1px solid #D1DAE4;
+	border-bottom:none;
+	background-color: #FFFFFF;
+}
+.operationPage .operationArea .right .searchSwitchTab .tabs .selectedtabs a {
+	color: #FF0000;
+	text-decoration: none;
+}
+.operationPage .operationArea .right .searchSwitchTab .tabs ul {
+	float: left;
+	height: 20px;
+	padding-bottom:0px;
+	font-size: 14px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.operationPage .operationArea .right .searchSwitchTab .tabs a {
+	color: #000000;
+	text-decoration: none;
+}
+.operationPage .operationArea .right .searchSwitchTab .searchInput {
+	clear: both;
+	padding: 10px 20px;
+	height: 21px;
+	border: 1px solid #D1DAE4;
+	background-color: #FFFFFF;
+	border-top:none;
+}
+.operationPage .operationArea .right .searchSwitchTab .searchInput .searchBusinessInput {
+	width: 340px;
+	border: 1px solid #83A6C8;
+	background-image: url(manageSearchInputBg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.operationPage .operationArea .right .searchSwitchTab .searchInput .searchBusinessBtn {
+	background-image: url(manageSearchBt.jpg);
+	height: 21px;
+	width: 40px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+.operationPage .operationArea .right .tabswitchborder .searchSwitchTab {
+	margin-left: 28px;
+}
+.operationPage .operationArea .right .tabswitchborder .searchSwitchTab .leaveMsg {
+	background-image: url(leaveMsgAllBg.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	height: 24px;
+}
+.operationPage .operationArea .right .tabswitchborder .searchSwitchTab .leaveMsg .selectedtabs {
+	background-color: #FFFFFF;
+	background-image: url(leaveMsgBgSelected.jpg);
+	background-repeat: repeat-x;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #0099FF;
+	border-right-color: #0099FF;
+	border-bottom-color: #0099FF;
+	border-left-color: #0099FF;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	height: 21px;
+}
+.operationPage .operationArea .right .tabswitchborder .searchSwitchTab .leaveMsg .selectedtabs a {
+	color: #000000;
+	text-decoration: none;
+}
+.operationPage .operationArea .right .tabswitchborder .searchSwitchTab .leaveMsg ul {
+	float: left;
+	height: 20px;
+	font-size: 14px;
+	border: 1px solid #CCCCCC;
+	background-image: url(leaveMsgBg.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	border-bottom:none;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	margin-top: 0px;
+	margin-right: 1px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.operationPage .operationArea .right .tabswitchborder .searchSwitchTab .leaveMsg a {
+	color: #000000;
+	text-decoration: none;
+}
+.operationPage .operationArea .right .searchSwitchTab .searchInput {
+	clear: both;
+	border: 1px solid #D1DAE4;
+	background-color: #FFFFFF;
+	border-top:none;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	width: 458px;
+}
+.operationPage .operationArea .right .searchSwitchTab .searchInput #form1 .searchBusinessInput {
+	width: 340px;
+	border: 1px solid #83A6C8;
+	background-image: url(manageSearchInputBg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.operationPage .operationArea .right .searchSwitchTab .searchInput .searchBusinessBtn {
+	background-image: url(manageSearchBt.jpg);
+	height: 21px;
+	width: 40px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+.operationPage .operationArea .right .tabswitchborder .productdatablock  .operating .pdata .lvMsg a {
+	color: #1662B0;
+	display: block;
+}
+.operationPage .operationArea .right .tabswitchborder .productdatablock  .operating .pdata .lvMsg {
+	text-align: left;
+	line-height: 18px;
+	padding: 10px;
+}
+.operationPage .operationArea .right .tabswitchborder .productdatablock  .operating .pdata .send {
+	line-height: 18px;
+}
+.operationPage .operationArea .right .tabswitchborder .productdatablock  .operating .pdata .send a {
+	color: #1662B0;
+	text-decoration: underline;
+	display: block;
+}
+.operationPage .operationArea .right .tabswitchborder .productdatablock  .operating .pdata .status {
+	padding: 10px;
+}
+.operationPage .operationArea .right .tabswitchborder .productdatablock  .operating .pdata .status span {
+	font-weight: normal;
+	color: #FF0000;
+	display: block;
+	line-height: 18px;
+}
+.operationPage .operationArea .right .tabswitchborder .productdatablock  .operating .productDataBottom .pages .pages {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: underline;
+}
+
+.shangpu{background-image:none; border:none;}
+.shangpucont{
+	padding:10px 40px; padding-bottom:30px;
+}.shangpucont strong{ display:inline-block; background:url(img1/fang.gif) no-repeat; height:40px; line-height:48px; padding-left:50px; font-size:15px; }.shangpucont span{ display:block; padding-left:130px; background:url(img1/dui.gif) 100px 9px no-repeat; line-height:26px;}.shangpucont a img{ margin-left:150px; margin-top:20px;} 
+.leftcont{ width:450px; float:left;}
+.rightcont{ width:280px; float:right;}
+.operationPage .operationArea .management { background-image:none;}
+#newtit{ width:250px;}
+
+.formblock .newscont  .formlabel{ padding:14px 6px; line-height:22px; width:90px;}
+.formblock .newscont  .formcontent{ padding:15px 3px; background-color:#f6f6f6; margin-left:120px;}
+ .youliancont .formcontent span{ color:#666; margin-left:10px;}
+.youliancont #youliantit{ width:200px;}
+.youliancont #youlianadd{ width:300px;}
+.fuzhu{ padding:20px 10px;}
+.bigbutton2{ padding:1px 10px; padding-top:3px; margin:0 10px; cursor:pointer;}
+.youlian{ margin:10px 20px;}
+.youlian .proctiontitle{ text-align:center; } .youlian .proctiontitle a{ font-size:14px;}
+.youlian .datadescription,.youlian .dataexpire,.youlian .datamod{ border:none; padding:12px 20px;}

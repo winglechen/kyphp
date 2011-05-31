@@ -1,0 +1,300 @@
+* {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BODY {
+	FONT-FAMILY: "宋体"; BACKGROUND: url(http://cn.china.cn/v5shouye/images/topNavBg.jpg) repeat-x; FONT-SIZE: 12px
+}
+IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+INPUT {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; FONT-FAMILY: "宋体"; BORDER-TOP-STYLE: none; FONT-SIZE: 12px; BORDER-LEFT-STYLE: none
+}
+SELECT {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; FONT-FAMILY: "宋体"; BORDER-TOP-STYLE: none; FONT-SIZE: 12px; BORDER-LEFT-STYLE: none
+}
+.clear {
+	LINE-HEIGHT: 0; HEIGHT: 0px; CLEAR: both; FONT-SIZE: 0px
+}
+A {
+	COLOR: #696969; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #696969; TEXT-DECORATION: underline
+}
+.red {
+	COLOR: #910035
+}
+.red2 {
+	COLOR: #cd0000
+}
+.red3 {
+	COLOR: #91003d
+}
+.red4 {
+	COLOR: #c31717
+}
+.red5 {
+	COLOR: #9d3d3d
+}
+A.red {
+	COLOR: #910035; TEXT-DECORATION: none
+}
+A.red:hover {
+	COLOR: #910035; TEXT-DECORATION: underline
+}
+A.red5 {
+	COLOR: #910035; TEXT-DECORATION: none
+}
+A.red5:hover {
+	COLOR: #910035; TEXT-DECORATION: underline
+}
+.green {
+	COLOR: #7b9100
+}
+A.green {
+	COLOR: #7b9100; TEXT-DECORATION: none
+}
+A.green:hover {
+	COLOR: #7b9100; TEXT-DECORATION: underline
+}
+.btn2 {
+	LINE-HEIGHT: 19px; WIDTH: 65px; BACKGROUND: url(http://cn.china.cn/v5shouye/images/btn4Bg.gif) no-repeat; HEIGHT: 19px; COLOR: #cd0000; CURSOR: pointer
+}
+.btn3 {
+	LINE-HEIGHT: 20px; WIDTH: 91px; BACKGROUND: url(http://cn.china.cn/v5shouye/images/btn8Bg.jpg) no-repeat; HEIGHT: 20px; COLOR: #cd0000; CURSOR: pointer; FONT-WEIGHT: bold
+}
+.fream1 {
+	BORDER-BOTTOM: #d21000 1px solid; BORDER-LEFT: #d21000 1px solid; LINE-HEIGHT: 21px; PADDING-LEFT: 5px; WIDTH: 440px; BACKGROUND: url(http://cn.china.cn/v5shouye/images/srcIpBg.jpg) repeat-x; HEIGHT: 21px; FONT-SIZE: 14px; BORDER-TOP: #d21000 1px solid; BORDER-RIGHT: #d21000 1px solid
+}
+.fream2 {
+	BORDER-BOTTOM: #ffb872 1px solid; BORDER-LEFT: #ffb872 1px solid; LINE-HEIGHT: 17px; PADDING-LEFT: 5px; WIDTH: 95px; BACKGROUND: url(http://cn.china.cn/v5shouye/images/inputBg.jpg) no-repeat; HEIGHT: 17px; BORDER-TOP: #ffb872 1px solid; BORDER-RIGHT: #ffb872 1px solid
+}
+.wrapCnt {
+	MARGIN: 0px auto; WIDTH: 960px
+}
+.topNav {
+	MARGIN: 0px auto; WIDTH: 960px
+}
+.logo {
+	MARGIN: 10px auto; WIDTH: 960px;height:70px; 
+}
+.sreach {
+	MARGIN: 0px auto; WIDTH: 960px
+}
+.topAd {
+	MARGIN: 0px auto; WIDTH: 960px
+}
+.wrapCnt {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.topNav {
+	TEXT-ALIGN: right; MARGIN: 6px auto 1px; WIDTH: 960px; HEIGHT: 16px; COLOR: #696969
+}
+.topNav LABEL {
+	FLOAT: left
+}
+.topNav IMG {
+	MARGIN: 0px 5px 0px 10px
+}
+/*.logo {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 45px; WIDTH: 905px; PADDING-RIGHT: 50px; HEIGHT: 64px; PADDING-TOP: 0px
+}
+.logo SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 12px; PADDING-RIGHT: 0px; FLOAT: left; COLOR: #cd0000; PADDING-TOP: 16px
+}
+.logo UL {
+	FLOAT: right; PADDING-TOP: 11px
+}
+.logo UL A {
+	WIDTH: 84px; DISPLAY: block; BACKGROUND: url(http://cn.china.cn/v5shouye/images/btn1Bg.gif) no-repeat; FLOAT: left; HEIGHT: 25px; COLOR: #c00; MARGIN-RIGHT: 8px
+}
+.logo UL A:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+.logo UL A IMG {
+	MARGIN: 8px 8px 0px 10px
+}*/
+.link {
+	MARGIN-TOP: 0px !important; BACKGROUND: url(http://cn.china.cn/v5shouye/images/tit6Bg.jpg) repeat-x; HEIGHT: 34px
+}
+* + HTML .link {
+	MARGIN-TOP: 10px !important
+}
+.link SPAN {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 953px; PADDING-RIGHT: 0px; FLOAT: left; COLOR: #fff; PADDING-TOP: 12px
+}
+.link SPAN A {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.link SPAN A:hover {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+.about {
+	TEXT-ALIGN: center; BACKGROUND: url(http://cn.china.cn/v5shouye/images/footerBg.jpg) repeat-x 50% bottom; HEIGHT: 19px; COLOR: #646464; PADDING-TOP: 9px
+}
+.about A {
+	COLOR: #646464; TEXT-DECORATION: none
+}
+.about A:hover {
+	COLOR: #646464; TEXT-DECORATION: underline
+}
+.gsInfo {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 15px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #646464; PADDING-TOP: 0px
+}
+.gsInfo LI {
+	LINE-HEIGHT: 22px; HEIGHT: 22px
+}
+.gsInfo1 {
+	TEXT-ALIGN: center; MARGIN-TOP: 5px; WIDTH: 960px; COLOR: #646464; OVERFLOW: hidden
+}
+.gsInfo1 LI {
+	LINE-HEIGHT: 22px; WIDTH: 960px; HEIGHT: 22px
+}
+.sreach {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; PADDING-TOP: 0px
+}
+.srcCon {
+	BORDER-BOTTOM: #cbcbcb 1px solid; BORDER-LEFT: #cbcbcb 1px solid; BACKGROUND: url(http://cn.china.cn/v5shouye/images/srcConBg.jpg) repeat-x; HEIGHT: 62px; BORDER-RIGHT: #cbcbcb 1px solid
+}
+.srcCon LI {
+	HEIGHT: 26px; COLOR: #cd0000; PADDING-TOP: 5px
+}
+A.srcNew {
+	COLOR: #cd0000; TEXT-DECORATION: none
+}
+.rowR1a P SPAN A {
+	COLOR: #cd0000; TEXT-DECORATION: none
+}
+A.red2 {
+	COLOR: #cd0000; TEXT-DECORATION: none
+}
+A.srcNew:hover {
+	COLOR: #cd0000; TEXT-DECORATION: underline
+}
+.rowR1a P SPAN A:hover {
+	COLOR: #cd0000; TEXT-DECORATION: underline
+}
+A.red2:hover {
+	COLOR: #cd0000; TEXT-DECORATION: underline
+}
+
+
+
+
+.srcNav {
+	BORDER-LEFT: #d21000 1px solid;  HEIGHT: 29px; BORDER-bottom: #d21000 2px solid
+}
+* HTML .srcNav LI {
+	WIDTH: 83px
+}
+.srcNav LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 29px; WIDTH: 84px; FLOAT: left; HEIGHT: 29px; COLOR: #fff; FONT-SIZE: 14px;
+	background:url(http://cn.china.cn/v5shouye/images/srcBg.jpg) repeat-x;
+}
+.srcNav .nav_end {
+	LINE-HEIGHT: 29px; WIDTH: 0px; FLOAT: left; HEIGHT: 29px; BORDER-right: #d21000 1px solid;;
+}
+.srcNav A {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.srcNav A:hover {
+	MARGIN: 0px auto; WIDTH: 88px; DISPLAY: block;  HEIGHT: 26px; COLOR: #cd0000; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+.srcNav SPAN {
+	MARGIN: 0px auto; WIDTH: 88px; DISPLAY: block;  HEIGHT: 26px; COLOR: #cd0000; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+
+
+/*
+.srcNav {
+	BORDER-LEFT: #d21000 1px solid; PADDING-LEFT: 13px; BACKGROUND: url(http://cn.china.cn/v5shouye/images/srcBg.jpg) repeat-x; HEIGHT: 29px; BORDER-RIGHT: #d21000 1px solid
+}
+* HTML .srcNav LI {
+	WIDTH: 83px
+}
+.srcNav LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 29px; WIDTH: 84px; BACKGROUND: url(http://cn.china.cn/v5shouye/images/line1.gif) no-repeat right 7px; FLOAT: left; HEIGHT: 29px; COLOR: #fff; FONT-SIZE: 14px
+}
+.srcNav A {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.srcNav A:hover {
+	MARGIN: 0px auto; WIDTH: 88px; DISPLAY: block; BACKGROUND: url(http://cn.china.cn/v5shouye/images/srcTitBg.jpg) no-repeat; HEIGHT: 26px; COLOR: #cd0000; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+.srcNav SPAN {
+	MARGIN: 0px auto; WIDTH: 88px; DISPLAY: block; BACKGROUND: url(http://cn.china.cn/v5shouye/images/srcTitBg.jpg) no-repeat; HEIGHT: 26px; COLOR: #cd0000; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+*/
+
+
+
+.topAd {
+	PADDING-BOTTOM: 10px !important; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; HEIGHT: 32px; PADDING-TOP: 10px
+}
+* + HTML .topAd {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; HEIGHT: 32px; PADDING-TOP: 10px
+}
+.row2A {
+	WIDTH: 322px; FLOAT: left
+}
+.row2B {
+	WIDTH: 628px; FLOAT: right
+}
+.login {
+	WIDTH: 250px; FLOAT: right
+}
+.loginCon {
+	BACKGROUND: url(http://cn.china.cn/v5shouye/images/loginTBg.jpg) repeat-x; HEIGHT: 60px
+}
+.loginCon UL {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 238px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 5px
+}
+.loginCon UL LI {
+	PADDING-BOTTOM: 1px; LINE-HEIGHT: 20px; PADDING-LEFT: 6px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 20px; COLOR: #cd0000; PADDING-TOP: 4px
+}
+.loginCon UL LI A {
+	COLOR: #cd0000
+}
+* HTML .loginCon LI.else A {
+	MARGIN: -18px 18px 0px 2px
+}
+.loginCon LI.else A {
+	BORDER-BOTTOM: #ffb872 1px solid; BORDER-LEFT: #ffb872 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 17px; MARGIN: 0px 18px 0px 2px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; DISPLAY: inline; BACKGROUND: url(http://cn.china.cn/v5shouye/images/index_1.gif) repeat-x; FLOAT: right; HEIGHT: 17px; COLOR: #cd0000; BORDER-TOP: #ffb872 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #ffb872 1px solid; PADDING-TOP: 0px
+}
+* + HTML .loginCon LI.else A {
+	MARGIN: -21px 18px 0px 2px
+}
+.loginCon IMG {
+	FLOAT: left
+}
+.ad1 {
+	FLOAT: left
+}
+.btn {
+	BORDER-LEFT: #ffc592 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #ffefdf; OVERFLOW: hidden; BORDER-TOP: #f8e0c7 3px solid; BORDER-RIGHT: #ffc592 1px solid; PADDING-TOP: 0px
+}
+.btn P {
+	WIDTH: 248px
+}
+.btn P IMG {
+	MARGIN: 0px 9px 0px 0px
+}
+.btn P A {
+	MARGIN: 7px 3px 0px 6px; PADDING-LEFT: 10px; WIDTH: 60px; DISPLAY: block; BACKGROUND: url(http://cn.china.cn/v5shouye/images/btn3Bg.jpg) no-repeat; FLOAT: left; HEIGHT: 22px; COLOR: #cd0000; FONT-WEIGHT: bold; PADDING-TOP: 10px
+}
+* + HTML .btn P A {
+	MARGIN: 7px 3px 0px 8px
+}
+.btn P A:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+.btnBot {
+	BACKGROUND: url(http://cn.china.cn/v5shouye/images/loginBBg.gif) repeat-x; HEIGHT: 5px
+}
+.closethis {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 28px; MARGIN-TOP: 10px; WIDTH: 28px; DISPLAY: block; HEIGHT: 28px; COLOR: #fff; MARGIN-LEFT: 920px; FONT-SIZE: 26px; CURSOR: pointer; FONT-WEIGHT: bold
+}
+.closethis:hover {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #fff 1px solid; COLOR: #fff; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #fff 1px solid; TEXT-DECORATION: none
+}
