@@ -1,0 +1,284 @@
+/*公共部分*/
+* {
+	font-size:12px
+}
+html {
+	color:#000;
+	background:#FFF;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+li {
+	list-style:none;
+}
+caption, th {
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before, q:after {
+	content:'';
+}
+abbr, acronym {
+	border:0;
+	font-variant:normal;
+}
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input, textarea, select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+legend {
+	color:#000;
+}
+.clear {
+	clear:both;
+}
+.clearboth {
+	line-height:0px;
+	clear:both;
+	font-size:0px;
+}
+.right {
+	background-color: #FFFFFF;
+	float: right;
+	width: 70%;
+}
+/*顶部导航*/
+.nav {
+	clear:both;
+	height:12px;
+	width:950px;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#E2E2E2;
+	text-align:right;
+	padding:7px 5px;
+	background:#F7F7F7 url(manage_logo.gif) no-repeat 3px;
+	margin:0px auto;
+}
+.nav a:hover {
+	color:#FF0000;
+}
+.companyName {
+	width:960px;
+	clear:both;
+	margin:0px auto;
+	line-height:60px;
+	text-align:center;
+	font-size:24px;
+	font-weight:bold;
+}
+.nav a {
+	color:#000000;
+	margin:0px 3px;
+}
+.nav .clientName {
+	font-weight:bold;
+	color:#0060FF;
+}
+/*主导航*/
+.mainNav {
+	clear:both;
+	height:24px;
+	width:960px;
+	background:url(manage_mainNavbg.jpg) repeat-x;
+	margin:0px auto 13px;
+}
+.mainNav .imgleft {
+	float:left;
+}
+.mainNav .imgright {
+	float:right;
+}
+.mainNav .menu {
+	float:left;
+	font-size:14px;
+	color:#FFFFFF;
+	margin-left:10px;
+	height:24px;
+	line-height:24px;
+}
+.mainNav .menu span {
+	padding-right:6px;
+	padding-left:6px;
+	margin:0px 1px;
+}
+.mainNav .menu a {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.mainNav .menu .selected {
+	height:14px;
+	padding:4px 10px !important;
+	padding:5px 10px;
+	background:url(manage_mainNavSelected.jpg);
+}
+.mainNav .menu a:hover {
+	color:#FF0000;
+	text-decoration:underline;
+}
+/*页脚*/
+.footer {
+	clear:both;
+	width:960px;
+	margin:20px auto;
+}
+.footer .links {
+	text-align:center;
+	padding-bottom:13px;
+}
+.footer .links a {
+	color:#000000;
+}
+.footer .copyright {
+	text-align:center;
+	padding-top:13px;
+	border-top-width:3px;
+	border-top-style:solid;
+	border-top-color:#238FE4;
+	background:url(manageLogo.jpg) no-repeat 36px 9px;
+}
+.footer .copyright a {
+	color:#000000;
+	text-decoration:none;
+}
+/*留言列表*/
+.self p, .other p {
+	line-height: 1.5;
+	margin:4px;
+}
+.self .title, .other .title {
+	width: 90%;
+	padding: 4px;
+	background-color: #BCCCDF;
+	font-weight:bold;
+}
+.self .content, .other .content {
+	text-align: left;
+	width: 90%;
+	padding: 3px;
+	border: 1px solid #BCCCDF;
+}
+.other .title {
+	float: right;
+}
+.other .content {
+	float: right;
+	background-image: url(corn_l.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-bottom: 20px;
+}
+.self .title {
+	float: left;
+}
+.self .content {
+	float: left;
+	background-image: url(corn_r.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding-bottom: 20px;
+}
+.content .contact {
+	color:#CC3300;
+}
+.self, .other {
+	margin-top: 10px;
+}
+.self {
+	margin-left: 10px;
+}
+.other {
+	margin-right:10px;
+}
+/*信息表格*/
+.infotable {
+	border: 1px solid #FFFFFF;
+	border-bottom:1px solid #B9DDFE;
+	line-height:150%;
+	padding: 8px;
+	margin:10px;
+}
+.infotable td, .infotable th {
+	border: 1px solid #FFFFFF;
+	border-bottom:1px solid #B9DDFE;
+	padding: 6px;
+	line-height:150%;
+	border-collapse:collapse;
+	text-align:center;
+}
+.infotable td p {
+	line-height:150%;
+	text-align:left;
+}
+.infotable td p.title {
+	font-weight:bold;
+}
+.infotable tr.even td {
+	background-color: #FFFF99;
+}
+.infotable tr.hover td {
+	background-image:url(table_hover.gif);
+	background-color:#3399FF;
+	background-position: center;
+	background-repeat: repeat-x;
+}
+.infotable tr.selected {
+	background-color:#99CC33;
+}
+.infotable th {
+	background-color: #B9DDFE;
+	text-align:center;
+}
+/*操作提示提示*/
+.op_tip {
+	background-color:#FDFFFC;
+	border:1px solid #B8EFB2;
+	color:#2A8703;
+	margin: 8px;
+	padding:8px;
+}
+.op_tip p {
+	line-height: 150%;
+	margin: 8px;
+}
+.op_tip strong {
+	font-weight:bold;
+}
+.op_tip b {
+	font-weight:bold;
+	color:#990000;
+}
+/*分页器*/
+.pageNav {
+	background-color: #B9DDFE;
+	text-align: right;
+	margin: 8px;
+	padding: 4px;
+	border: 1px solid #B9DDFE;
+}
+.pageNav select {
+	vertical-align: middle;
+}

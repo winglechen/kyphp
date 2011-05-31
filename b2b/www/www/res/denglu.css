@@ -1,0 +1,17 @@
+﻿.main{width:860px;margin: 15px auto;}
+.main .left{width:456px;float:left;overflow:hidden;}
+.main .right{width:318px;height:345px;padding-left:42px;padding-top:50px;padding-right:42px;float:right;overflow: hidden;border:1px #d5d5d5 solid;}
+.pic_one{height:141px; overflow:hidden;}
+.wenzi{font-family:"黑体";margin-top: 10px;}
+.wenzi b{ color:#cc0000; font-size:17px;  line-height:40px;}
+.wenzi span{ display:block; color:#020000; font-size:14px; line-height:35px; clear:both; padding-top:5px; padding-bottom:5px;}
+.wenzi span img{ display:block; float:left; margin-right:10px;}
+.right b{font-family:"黑体";font-size:19px;line-height:30px;display:block;margin-top:20px;}
+.right span{display:block;color:#F00;line-height:20px;}
+.right table{ font-size:14px; font-weight:bold; line-height:30px; margin-top:10px; margin-left:5px;}
+.right table input{ width:120px; height:20px; font-size:12px; line-height:20px; border:1px #849cb8 solid;}
+.right table a{ font-size:12px; color:#333; font-weight:normal;}
+.right table .subbtn{ display:block; width:73px; height:27px; text-align:center; line-height:27px; background:url(res/btn_one.gif) no-repeat; font-size:14px; font-weight:bold; margin-top:5px; color:#010101;}
+.right table .subbtn:hover{ text-decoration:none; color:#434350;}
+.tiao{ height:2px; background:url(res/tiao.gif) no-repeat; margin:15px auto 15px auto;}
+.right .btn4{display:block;width:122px;height:37px;margin-top:15px;margin-left:20px;}

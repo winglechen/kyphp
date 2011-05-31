@@ -1,0 +1,29 @@
+/* CSS Document */
+body{ color:#646464;}
+.yjy{ width:839px; margin:10px auto 0 auto; border:2px #D6D6D6 solid;}
+.yjy .title{ background:url(res/img/yjy_4.gif) #EFEFEF right repeat-y; line-height:21px; width:708px; margin:23px auto 20px auto; padding:3px 0 0 8px;}
+.yjy .title span{ color:#cd0000;}
+.yjy .title p{ float:right; margin:-22px 109px 0 0; display:inline; width:auto;}
+.yjy p{ width:666px; padding:0 20px 0 30px; margin:0 auto;}
+.yjy table{ width:716px; margin:0 auto 20px auto; line-height:21px;}
+.yjy table tr td{ height:40px;}
+.yjy table tr td span{ color:#cd0000; margin:0 5px; display:inline;}
+.yjy table tr td span a{ float:none; color:#cd0000; font-weight:normal; line-height:21px; padding:0;}
+.yjy table tr th{ text-align:right; padding:0 10px 0 0;}
+.yjy table tr th span{ color:#cd0000;}
+.yjy table tr td .putong{ background:url(res/img/yjy_5.gif) repeat-x; height:19px; border:1px #D5D5D5 solid; color:#646464; padding:5px 0 0 0;}
+.yjy table tr td img{ float:left; margin:3px 5px 0 10px; display:inline;}
+.yjy table tr td .jiaodian{ background:url(res/img/yjy_8.gif) repeat-x; height:19px; border:1px #cd0000 solid; padding:5px 0 0 0; color:#646464; margin:10px 0;}
+.yjy table tr td input{ margin:0px 3px; float:left;}
+.yjy table tr td p{ width:60px; float:left; padding:0;}
+.yjy table tr td a{ float:left; font-weight:bold; line-height:40px;}
+
+.yjy .bot{ background:#EFEFEF; width:839px; text-align:center; line-height:21px; padding:10px 0 16px 0;}
+.yjy .bot a{ color:#cd0000;}
+.yjy .bot .btn{ background:url(res/img/yjy_10.gif) repeat-x; border:1px #cd0000 solid; color:#cd0000; font-weight:bold; padding:0 10px; font-size:14px; line-height:43px; height:43px; margin:10px auto 0 auto; width:230px;}
+
+.wright{ background:url(res/img/yjy_6.gif) no-repeat 3px 2px; height:22px; line-height:21px; padding:0 0 0 25px;margin:0 0 0 10px; display:inline; float:left;}
+.wrong{no-repeat 3px 2px; line-height:21px; padding:0 0 0 25px; margin:0 0 0 10px; display:inline; float:left;}
+
+
+

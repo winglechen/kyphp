@@ -1,0 +1,9 @@
+if (window['google'] != undefined && window['google']['loader'] != undefined) {
+if (!window['google']['ads']) {
+window['google']['ads'] = {};
+google.ads.Version = '1.0';
+google.ads.JSHash = '6fda35b51be6567d681dc0b68443ed25';
+google.ads.LoadArgs = 'file\75ads\46v\0751\46packages\75search';
+}
+google.loader.writeLoadTag("script", google.loader.ServiceBase + "/api/ads/1.0/6fda35b51be6567d681dc0b68443ed25/search.I.js", false);
+}

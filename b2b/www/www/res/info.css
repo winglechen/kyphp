@@ -1,0 +1,107 @@
+
+.blank8{ height:8px; background:#fff; overflow:hidden; clear:both;}
+.clear7{ clear:both; overflow:hidden; height:1px; visibility:hidden;}
+.f14{ font-size:14px;}
+.wrap{width:960px;margin:0 auto;line-height:30px;}
+.wrap *{
+	line-height:24px;
+}
+.menu{ background:url(http://cn.china.cn/1V5ZIXUN/images/menu_bg.gif) repeat-x;}
+.menu p{ background:url(http://cn.china.cn/1V5ZIXUN/images/menu_l.gif) left no-repeat; line-height:23px; padding-top:10px; padding-left:15px; color:#fff;}
+.menu p span{ float:right; margin-top:-10px;}
+.menu p a,.menu p a:hover{ color:#fff;}
+.conBox{ width:100%; background:url(http://cn.china.cn/1V5ZIXUN/images/conbg.gif) repeat-y;}
+.conbg_b{ height:1px; background:url(http://cn.china.cn/1V5ZIXUN/images/conbg_b.gif) no-repeat; clear:both; overflow:hidden;}
+.leftBox{ width:314px; float:left;}
+.midBox{ width:464px; margin:0 7px; display:inline; float:left;}
+.rightBox{ width:168px; float:right;}
+.rBox { width:639px; float:right;}
+.focusTu{ border:1px solid #CBCBCB; text-align:center; padding-top:1px; background:url(http://cn.china.cn/1V5ZIXUN/images/focusbg.gif) bottom repeat-x;}
+.focusTu p{ line-height:180%; color:#f00;}
+.focusTu p a,.focusTu p a:hover{ color:#f00;}
+div.border{ border:1px solid #CBCBCB;}
+
+a{ color:#000;}
+a:hover{ color:#000;}
+
+
+div.bn{ border-bottom:none;}
+div.title{ font-size:14px; font-weight:bold; padding:0 10px;}
+div.title span{ font-size:12px; font-weight:normal; float:right;}
+div.title span.mg{ margin-right:55px;}
+div.title a,div.title a:hover{ color:#c00;}
+.else{color:#fff}
+.else a{ color:fff; }
+.else a:hover{ color:fff; }
+div.border .title div a{ color:#FFFFFF; line-height:23px;}
+div.border .title div a:hover{ color:#FFFFFF; line-height:23px;}
+div.box{ width:100%; padding:10px 0 1px 0;}
+.leftBox div.border{ background:url(http://cn.china.cn/1V5ZIXUN/images/titbg.jpg) 0 3px repeat-x;}
+.leftBox div.title{ line-height:21px; color:#c00; border-bottom:3px solid #c00; background:url(http://cn.china.cn/1V5ZIXUN/images/ico_tit.gif) 10px 7px no-repeat; padding:3px 10px 0 20px;}
+.midBox div.title{ background:url(http://cn.china.cn/1V5ZIXUN/images/titbg001.jpg) repeat-x; padding:0 10px 0 0; line-height:23px;}
+.midBox div.title div{ width:206px; line-height:23px; color:#fff; padding-left:10px; background:url(http://cn.china.cn/1V5ZIXUN/images/tit_001.jpg) left no-repeat;}
+.rBox div.title{ background:url(http://cn.china.cn/1V5ZIXUN/images/titbg001.jpg) repeat-x; padding:0 10px 0 0; line-height:23px;}
+.rBox div.title div{ width:206px; line-height:23px; color:#fff; padding-left:10px; background:url(http://cn.china.cn/1V5ZIXUN/images/tit_001.jpg) left no-repeat;}
+.rightBox div.title { background:#c00; line-height:23px; color:#fff;}
+.rightBox div.title a,.rightBox div.title a:hover{ color:#fff;}
+.topbg{ background:#fff url(http://cn.china.cn/1V5ZIXUN/images/top_bg.jpg) repeat-x; padding:10px 10px 1px 10px;}
+.topbg h1{ text-align:center; color:#c00; font-size:16px; line-height:200%;}
+.topbg p{ text-indent:20px; font-size:14px; color:#000; padding-bottom:10px;}
+.topbg ul{ border-top:1px dashed #646464; padding:8px 0 3px 0;}
+.topbg li{ font-size:14px; background:url(http://cn.china.cn/1V5ZIXUN/images/dot1.gif) 5px 7px no-repeat; padding-left:15px; line-height:24px;}
+.topbg li span{ float:right; *margin:-24px 10px 0 0; display:inline; color:#646464;}
+.disBox{ padding:0 10px;}
+.disBox p{ color:#c00; padding:5px 0;}
+.disBox p a{color:#c00;}
+.disBox p a:hover{color:#c00;}
+.disBox div{ width:100%;}
+.disBox div img{ float:left; margin-right:5px;}
+.tabBox{ padding:0 10px;}
+.tabBox div{ border:1px solid #EFEFEF;}
+.tabBox div p{ line-height:200%; padding:0 6px;}
+.tabBox div p.gray{ background:#EFEFEF;}
+.adr{ background:#fff; border:2px solid #B0B0B0;}
+.twoBox{ width:100%; background:url(http://cn.china.cn/1V5ZIXUN/images/twobg.gif) repeat-y;}
+.two_b{ height:1px; background:url(http://cn.china.cn/1V5ZIXUN/images/twobg_b.gif) no-repeat; clear:both; overflow:hidden;}
+.list04{ padding:0 5px;}
+.list04 li{ background:url(http://cn.china.cn/1V5ZIXUN/images/dot1.gif) 5px 7px no-repeat; padding-left:15px;}
+.list03 { padding: 5px 10px;}
+.list03 li{ font-size:14px; background:url(http://cn.china.cn/1V5ZIXUN/images/dot1.gif) 5px 7px no-repeat; padding-left:15px; line-height:24px;}
+.list03 li span{ float:right; *margin:-24px 10px 0 0; display:inline; color:#646464;}
+.w470{ width:470px; float:left;}
+.w470 ul{ margin:0 10px; padding:6px 0;}
+ul.line{ border-bottom:1px dashed #646464;}
+.w470 li span{ float:right; color:#646464;}
+.w167{ width:167px; float:right;}
+.ullist{ padding:5px 10px;}
+.wBox{ padding:0 10px;}
+.wBox ul{ padding:6px 0;}
+p.cRed{ text-align:right; color:#c00; padding:0 5px;}
+p.cRed a,p.cRed a:hover{ color:#c00; }
+p.pic2{ text-align:center; margin:0 5px; padding-bottom:10px;}
+p.pic2 img{ border:2px solid #B0B0B0; display:block; margin:0 auto; }
+.piclist03{ line-height:260%; text-align:center; border-bottom:1px dashed #646464; margin:0 5px;}
+.piclist03 img{ border:2px solid #B0B0B0; display:block; margin:0 auto;}
+.piclist03 ul{ padding:0 5px;}
+.titr{ color:#c00; font-weight:bold; padding:0 10px; line-height:200%; background:url(http://cn.china.cn/1V5ZIXUN/images/bgtit07.gif) right 4px no-repeat;}
+.picul{ width:100%;}
+.picul li{ width:50%; text-align:center; line-height:160%; float:left;}
+.picul li img{ border:2px solid #B0B0B0; display:block; margin:0 auto;}
+p.pic07{ width:100%; font-size:14px; text-align:center; line-height:200%; float:left;}
+p.pic07 img{ border:2px solid #B0B0B0; display:block; margin:0 auto;}
+p.pic07 a,p.pic07 a:hover{ font-size:14px; font-weight:bold;}
+.list01{ background:#fff url(http://cn.china.cn/1V5ZIXUN/images/x.gif) top repeat-x; padding:10px 12px 0; clear:both;}
+.list02{ padding:0 10px;}
+.list02 ul{ padding:0 15px;}
+.list02 p{ line-height:36px; color:#646464; text-align:center; background:url(http://cn.china.cn/1V5ZIXUN/images/but007.jpg) center no-repeat; margin-top:10px; clear:both;}
+.list02 p a,.list02 p a:hover{ color:#c00;  font-weight:bold;}
+.picul01{ width:110px; text-align:center; float:left;}
+.picul01 li{ width:110px; line-height:160%; padding-bottom:6px; float:left;}
+.picul01 li img{ border:2px solid #B0B0B0; display:block; margin:0 auto;}
+.txtBox{ width:200px; float:right;}
+.txtBox h5{ text-align:center; font-size:14px; color:#646464;}
+.txtBox li span a,.txtBox li span a:hover{ color:#c00;}
+.picBox{ width:100%;}
+.picBox img{ float:left; border:2px solid #B0B0B0;  margin:0 10px;}
+.picBox ul{ width:185px; float:left;}
+.picBox li span a,.picBox li span a:hover{ color:#c00;}

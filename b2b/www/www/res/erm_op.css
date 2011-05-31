@@ -1,0 +1,358 @@
+/*操作页布局*/
+.operationPage {
+	margin:0px auto;
+	clear:both;
+	width:960px;
+	background:url(operationPageTipsBg.gif) repeat-x;
+}
+.operationPage .tips {
+	clear:both;
+	height:33px;
+	margin-bottom:12px;
+	background:url(operationPageTipsBg.gif) repeat-x;
+}
+.operationPage .operationArea {
+	clear:both;
+	background-image: url(operationAreaBg.gif);
+	background-repeat: repeat-y;
+	background-position: 0px 12px;
+}
+.operationPage .operationArea .left {
+	clear:left;
+	float:left;
+	width:123px;
+}
+.operationPage .operationArea .right {
+	float:left;
+	width:835px !important;
+	width:835px;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#E0E0E0;
+	border-top-width:1px;
+	border-right-width:1px;
+	border-left-width:0px;
+	_height:600px;/*IE ONLY*/
+	min-height:600px;/*FOR FIREFOX*/
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: #E0E0E0;
+	border-right-color: #E0E0E0;
+}
+.operationPage .operationArea .management {
+	float:left;
+	width:836px !important;
+	width:835px;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#E0E0E0;
+	border-top-width:1px;
+	border-right-width:1px;
+	border-left-width:0px;
+	_height:600px;/*IE ONLY*/
+	min-height:600px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: #E0E0E0;
+	border-right-color: #E0E0E0;
+	background-image: url(operationManagement.gif);
+	background-repeat: no-repeat;
+	background-position:0px 0px;
+}
+
+/*标题*/
+.operationPage .tips .rightBorder {
+	float:right;
+	height:33px;
+	width:4px;
+	background:url(operationPageTipsRight.gif) no-repeat;
+}
+.operationPage .tips .leftBorder {
+	clear:left;
+	float:left;
+	height:33px;
+	width:35px;
+	background:url(operationPageTipsLeft.jpg) no-repeat;
+}
+.operationPage .tips .tipsTitle {
+	font-size:14px;
+	font-weight:bold;
+	float:left;
+	margin-top:9px;
+	margin-left:12px;
+}
+.operationPage .tips .tipsButton {
+	float:right;
+	margin-top:6px;
+	margin-right:8px;
+}
+.operationPage .tips .tipsButton img {
+	border-top-width:0px;
+	border-right-width:0px;
+	border-bottom-width:0px;
+	border-left-width:0px;
+}
+
+
+/*左侧菜单导航*/
+
+.operationPage .operationArea .left .menu ul {
+	margin:0px;
+	font-size:14px;
+	text-align:left;
+	padding:0px;
+}
+.operationPage .operationArea .left .menu .menuSelected a {
+	background:url(operationPageMenuSelected.gif) no-repeat;
+}
+.operationPage .operationArea .left .menu a {
+	color:#000000;
+	text-decoration:none;
+	height:24px;
+	width:123px;
+	display:block;
+	text-indent:25px;
+	background:url(operationPageMenuUnselect.gif) no-repeat right;
+	padding:11px 0px 0px;
+}
+.operationPage .operationArea .left .menu a:hover {
+	color:#FF0000;
+	text-decoration:none;
+	background-image: url(operationPageMenuHover.gif);
+}
+.operationPage .operationArea .left .menu {
+}
+.operationPage .operationArea .left .menu .menuSelected a {
+	font-weight:bold;
+}
+.operationPage .operationArea .left .spacetop {
+	height:32px;
+	clear:both;
+	background:url(operationPageLeftTop.gif) no-repeat right top;
+}
+
+
+/*录入表格页面*/
+.formblock {
+	border: 1px solid #E0E0E0;
+	border-bottom: none;
+	border-top: none;
+	margin-bottom: 8px;
+	padding: 0px;
+	margin-top: 8px;
+	margin-left:10px;
+	margin-right:10px;
+}
+.formblock .formheader {
+	background-image: url(formHeaderBg.jpg);
+	background-repeat: repeat-x;
+	font-size: 14px;
+	font-weight: bold;
+	height: 22px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E0E0E0;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #E0E0E0;
+}
+.formblock .formline {
+	background-color: #F6F6F6;
+	border-bottom-color: #E0E0E0;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 4px;
+}
+.formblock .formline .formcontent {
+	background-color: #FFFFFF;
+	margin-left: 160px;
+	padding: 6px;
+	text-indent: -3px;
+	 line-height:22px;	
+}
+.formblock .formline .formcontent .input220 {
+	border: 1px solid #7F9DB9;
+	width: 220px;
+}
+.formblock .formline .formcontent .note {
+	color: #999999;
+	display: block;
+	margin-top: 9px;
+}
+.formblock .formline .formlabel {
+	float: left;
+	font-weight: bold;
+	padding: 6px;
+	text-align: right;
+	width: 135px;
+	clear:left;
+}
+.formblock .formline .formlabel span {
+	color: #FF0000;
+	line-height:22px;
+}
+.formblock .formline .formfull embed{
+display:block;
+margin:0 auto;
+}
+
+.btsumbit {
+	clear: both;
+	text-align: center;
+}
+.btsumbit input {
+	font-size: 14px;
+	margin: 10px;
+	text-align: center;
+}
+.formline .formcontent .prompt {
+	background-color: #FFFFCD;
+	padding: 7px;
+	border: 1px solid #DAC011;
+}
+.formblock .formline .formcontent .input173px {
+	border: 1px solid #7E9BB9;
+	width: 173px;
+}
+.formblock .formheader .headerTitle {
+	background-image: url(headerTitleBg.gif);
+	background-repeat: no-repeat;
+	background-position: 8px 6px;
+	height: 17px;
+	padding-left: 25px;
+	padding-top: 5px;
+}
+/*留言页样式*/
+.fasong {
+	height: 32px;
+	width: 803px;
+	border: 1px solid #7E8C99;
+}
+.fabiao {
+	height: 32px;
+	width: 803px;
+	border: 1px solid #7E8C99;
+	background-position: center;
+}
+.cuxiao {
+	font-size: 12px;
+	font-weight: bold;
+	color: #646464;
+	padding-left: 30px;
+	padding-top: 15px;
+}.cuxiaoa {
+	font-size: 12px;
+	font-weight: bold;
+	color: #646464;
+	padding-left: 30px;
+}
+.biaod {
+	height: 25px;
+	width: 612px;
+	border: 1px solid #A2AAB3;
+	background-image: url(biaodan_bggg.gif);
+}
+
+.biaodd {
+	height: 166px;
+	width: 612px;
+	border: 1px solid #A2AAB3;
+	background-image: url(dd.gif);
+}
+
+
+.zi {
+	font-size: 14px;
+	font-weight: bold;
+	color: #1A5580;
+	line-height: 20px;
+}
+.snajiao {
+	padding-left: 13px;
+	background-image: url(bg.gif);
+}
+.dabiao {
+	border: 1px solid #7E8C99;
+}
+.huizii {
+	font-size: 12px;
+	color: #646464;
+	background-image: url(bg_01.gif);
+}
+.tishi {
+	font-size: 12px;
+	color: #646464;
+	background-image: url(bg.gif);
+}
+
+.huifu {
+	padding-right: 20px;
+	font-size: 12px;
+	color: #1A5580;
+	background-image: url(images/bg_01.gif);
+}
+.bbf {
+	background-image: url(images/bg.gif);
+}
+
+.hongzi {
+	font-size: 12px;
+	color: #cd0000;
+}
+
+.neirong {
+	font-size: 12px;
+	line-height: 20px;
+	color: #646464;
+	padding-left: 20px;
+}
+.neirongg {
+	font-size: 14px;
+	line-height: 20px;
+	color: #646464;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.xuxian {
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-bottom-color: #1A5580;
+	font-size: 12px;
+	line-height: 20px;
+	color: #646464;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: left;
+}
+.xuxiann {
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-bottom-color: #1A5580;
+	font-size: 12px;
+	line-height: 20px;
+	color: #646464;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: left;
+	background-color: #F6F8FA;
+}
+.lanzi {
+	font-size: 12px;
+	color: #1A5580;
+}
+.ttd {
+	background-color: #F6F8FA;
+}
+.qiche {
+	background-image: url(bg.gif);
+}
