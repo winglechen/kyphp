@@ -28,54 +28,50 @@
 
 	 	 	 	 
 <div class="right">
-		    <div class="guideInfo"> 
+		    <!--div class="guideInfo"> 
 	    	    <span>公司审核被拒：您发布的信息中可能含有重复或雷同的信息，建议去掉或修改。</span> <a href="http://my.cn.china.cn/admin.php?op=B2BCorpInfoBaseShow&auth=adad359ab3bbd4093d728eb07a7c777d" target="_self">立即修改</a> 
-	    	    	    </div>
+	    	</div-->
         <!--公司基本信息-->
     <div class="formblock">
       <div class="formheader">
-        <div class="headerTitle">公司基本信息(<a href="http://my.cn.china.cn/admin.php?op=B2BCorpInfoBaseShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改</a>)</div>
+        <div class="headerTitle">公司基本信息(<a href="index.php?p=www/member/company_basicinfo">修改</a>)</div>
       </div>
       <div class="formline">
         <div class="formlabel">公司名称：</div>
-        <div class="formcontent">博爱人生网络有限公司&nbsp;</div>
+        <div class="formcontent"><?php echo $_SESSION['corpname']; ?>&nbsp;</div>
       </div>
       <div class="formline">
         <div class="formlabel">企业类型：</div>
-        <div class="formcontent">                        私营独资企业
-          </div>
+        <div class="formcontent"><?php echo $_SESSION['corptype']; ?>&nbsp;
+         </div>
       </div>
       <div class="formline">
         <div class="formlabel">公司注册地址：</div>
-        <div class="formcontent">&nbsp;</div>
+        <div class="formcontent"><?php echo $_SESSION['registerPlace']; ?>&nbsp;</div>
       </div>
       <div class="formline">
         <div class="formlabel">注册资本：</div>
-        <div class="formcontent">           --
+        <div class="formcontent"><?php echo $_SESSION['capitial']; ?>&nbsp;
         </div>
       </div>
       <div class="formline">
         <div class="formlabel">公司简介:</div>
-        <div class="formcontent">博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！</div>
+        <div class="formcontent"><?php echo $_SESSION['corpintro']; ?>&nbsp;</div>
       </div>
-     <!--<div class="formline">
-        <div class="formlabel">主营产品:</div>
-        <div class="formcontent">&nbsp;</div>
-      </div>-->
       <div class="formline">
         <div class="formlabel">主营行业:</div>
-        <div class="formcontent">笔记本电脑, &nbsp;</div>
+        <div class="formcontent"><?php echo $_SESSION['categories']; ?>&nbsp;</div>
       </div>
       <div class="formline">
         <div class="formlabel"></div>
-        <div class="formcontent"><a href="http://my.cn.china.cn/admin.php?op=B2BCorpInfoBaseShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改公司基本信息</a></div>
+        <div class="formcontent"><a href="index.php?p=www/member/company_basicinfo">修改公司基本信息</a></div>
       </div>
     </div>
     <!--/公司基本信息-->
     <!--公司图片信息-->
     <div class="formblock">
       <div class="formheader">
-        <div class="headerTitle">公司图片（<a href="http://my.cn.china.cn/admin.php?op=CorpPicUploadShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改</a>）</div>
+        <div class="headerTitle">公司图片（<a href="">修改</a>）</div>
       </div>
       <div class="formline">
         <div>
@@ -93,84 +89,84 @@
     <!--/公司图片信息-->
     <!--联系人信息-->
     <div class="formblock">
-      <div class="formheader"><div class="headerTitle">联系方式(<a href="http://my.cn.china.cn/admin.php?op=UpdateContactInfoShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改</a>)</div>
+      <div class="formheader"><div class="headerTitle">联系方式(<a href="index.php?p=www/member/company_contact">修改</a>)</div>
       </div>        
         <div class="formline">
           <div class="formlabel">业务联系人姓名：</div>
-		  <div class="formcontent">陈思源&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['realname']; ?>&nbsp;</div>
         </div>
         <div class="formline">
           <div class="formlabel">性别：</div>
 		  <div class="formcontent">
-	    	<label> 先生 </label> 
+	    	<label><?php echo $_SESSION['sex']; ?>&nbsp;</label> 
 		  </div>
         </div>
         <div class="formline">
           <div class="formlabel">公司电话：</div>
-		  <div class="formcontent">86-0571-8632669&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['tel']; ?>&nbsp;</div>
         </div>
         <div class="formline">
           <div class="formlabel">传真：</div>
-		  <div class="formcontent">86-0571-8632669&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['fax']; ?>&nbsp;</div>
         </div>
         <div class="formline">
           <div class="formlabel">E-mail：</div>
-		  <div class="formcontent"> winglechen@yahoo.com.cn </div>
+		  <div class="formcontent"><?php echo $_SESSION['email']; ?>&nbsp;</div>
         </div>
         <div class="formline">
           <div class="formlabel">所在地区：</div>
-		  <div class="formcontent">浙江 杭州&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['province'].'&nbsp;&nbsp;' .$_SESSION['city']; ?>&nbsp;</div>
         </div>
         
         <div class="formline">
           <div class="formlabel">公司地址：</div>
-		  <div class="formcontent">杭州&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['address']; ?>&nbsp;</div>
         </div>
         
         <div class="formline">
           <div class="formlabel">邮政编码：</div>
-		  <div class="formcontent">310000&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['zipCode']; ?>&nbsp;</div>
         </div>
         
         <div class="formline">
           <div class="formlabel">部门：</div>
-		  <div class="formcontent">&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['dept']; ?>&nbsp;</div>
         </div> 
         
         <div class="formline">
           <div class="formlabel">职位：</div>
-		  <div class="formcontent">&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['job']; ?>&nbsp;</div>
         </div> 
         
         <div class="formline">
           <div class="formlabel">手机：</div>
-		  <div class="formcontent">13989484420&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['mobile']; ?>&nbsp;</div>
         </div> 
         
         <div class="formline">
           <div class="formlabel">公司网址：</div>
 		  <div class="formcontent">
-		  <a href="http:" target="_blank" ref="nofollow" style="text-decoration:underline;" rel="nofollow">http://</a>&nbsp;
+		  <a href="<?php echo $_SESSION['website']; ?>" target="_blank" ref="nofollow" style="text-decoration:underline;" rel="nofollow">?php echo $_SESSION['website']; ?></a>&nbsp;
 		  </div>
         </div>  
                 <div class="formline">
           <div class="formlabel">msn：</div>
-		  <div class="formcontent">&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['msn']; ?>&nbsp;</div>
         </div> 
                 <div class="formline">
           <div class="formlabel">QQ：</div>
-		  <div class="formcontent">&nbsp;</div>
+		  <div class="formcontent"><?php echo $_SESSION['qq']; ?>&nbsp;</div>
         </div> 
         <div class="formline">
         <div class="formlabel"></div>
-        <div class="formcontent"><a href="http://my.cn.china.cn/admin.php?op=UpdateContactInfoShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改联系信息</a></div>
+        <div class="formcontent"><a href="index.php?p=www/member/company_contact">修改联系信息</a></div>
       </div>
      </div>
     <!--/联系人信息-->
     <!--信用认证信息-->
     <div class="formblock">
       <div class="formheader">
-        <div class="headerTitle">信用认证信息(<a href="http://my.cn.china.cn/admin.php?op=CorpDetailInfoShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改</a>)</div>
+        <div class="headerTitle">信用认证信息(<a href="index.php?p=www/member/company_detail">修改</a>)</div>
       </div>
       <div class="formline">
         <div class="formlabel">公司成立时间：<span id="d_setupTime" style="display:none">*</span></div>
@@ -220,14 +216,14 @@
       </div>
       <div class="formline">
         <div class="formlabel"></div>
-        <div class="formcontent"><a href="http://my.cn.china.cn/admin.php?op=CorpDetailInfoShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改信用认证信息</a></div>
+        <div class="formcontent"><a href="index.php?p=www/member/company_detail">修改信用认证信息</a></div>
       </div>
     </div>
     <!--/信用认证信息-->
     <!--详细信息-->
     <div class="formblock">
       <div class="formheader">
-        <div class="headerTitle">详细信息(<a href="http://my.cn.china.cn/admin.php?op=CorpDetailInfoShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改</a>)</div>
+        <div class="headerTitle">详细信息(<a href="index.php?p=www/member/company_detail">修改</a>)</div>
       </div>
       <div class="formline">
         <div class="formlabel">员工人数：<span id="d_numberOfEmployee" style="display:none">*</span></div>
@@ -284,14 +280,14 @@
       </div>
       <div class="formline">
         <div class="formlabel"></div>
-        <div class="formcontent"><a href="http://my.cn.china.cn/admin.php?op=CorpDetailInfoShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改详细信息</a></div>
+        <div class="formcontent"><a href="index.php?p=www/member/company_detail">修改详细信息</a></div>
       </div>
     </div>
     <!--详细信息-->
     <!-- 生产信息 -->
     <div class="formblock">
       <div class="formheader">
-        <div class="headerTitle">生产信息(<a href="http://my.cn.china.cn/admin.php?op=CorpDetailInfoShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改</a>)</div>
+        <div class="headerTitle">生产信息(<a href="index.php?p=www/member/company_detail">修改</a>)</div>
       </div>
       <div class="formline">
         <div class="formlabel">月产量：<span id="d_monthOutputUnit" style="display:none">*</span></div>
@@ -324,7 +320,7 @@
       </div>
       <div class="formline">
         <div class="formlabel"></div>
-        <div class="formcontent"><a href="http://my.cn.china.cn/admin.php?op=CorpDetailInfoShow&auth=adad359ab3bbd4093d728eb07a7c777d">修改生产信息</a></div>
+        <div class="formcontent"><a href="index.php?p=www/member/company_detail">修改生产信息</a></div>
       </div>
     </div>
     <!--/生产信息-->

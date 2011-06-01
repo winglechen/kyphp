@@ -13,6 +13,8 @@
 <body>
 <?php
 include "header.php";
+//include "header_nav.php";
+//include "header_logo.php";
 include "login_body.php";
 include "footer.php";
 
