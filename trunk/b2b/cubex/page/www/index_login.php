@@ -100,14 +100,14 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
 <div class="login">
     <div class="loginCon">
         <img src="./res/loginTL.jpg" width="6" height="60" alt="">
-        <form id="login" name="login" method="get" action="">
+        <form id="login" name="login" method="get" action="index.php?p=www/login_done">
             <ul>
                 <li>用户名： 
                     <input type="text" name="username" class="fream2"> 
                     <input type="submit" name="submit" value="登 录" class="btn2" onclick="javascript:return check();">
                 </li>
                 <li>密&nbsp;&nbsp;码： 
-                    <input type="password" name="passport" class="fream2"> 
+                    <input type="password" name="password" class="fream2"> 
                     &nbsp;<a href="http://my.cn.china.cn/admin.php?op=B2BForgetInfoShow&type=passwd">忘记密码</a>
                 </li>
             </ul>
