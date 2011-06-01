@@ -1,6 +1,7 @@
 use b2b;
 set names utf8;
 
+drop table if exists product;
 create table product(
     id mediumint(8) unsigned not null auto_increment primary key comment '序号',
     corpid mediumint(8) unsigned not null default 0 comment '公司id',
@@ -30,6 +31,7 @@ create table product(
     key(category3)
 )engine=myisam default charset=utf8 collate=utf8_general_ci;
 
+drop table if exists company;
 CREATE TABLE IF NOT EXISTS `company` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '序号',
   `username` varchar(20) NOT NULL DEFAULT '' COMMENT '会员登录名',
