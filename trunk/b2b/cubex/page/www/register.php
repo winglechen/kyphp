@@ -39,7 +39,7 @@ function tab(n)
 
 }
 var j=1;
-setInterval('autoFocus()',2800);
+//setInterval('autoFocus()',2800);
 var autokey = false;
 function autoFocus() {
     if(!$('mqmp')) return false;

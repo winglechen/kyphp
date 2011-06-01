@@ -470,9 +470,16 @@ function changeAutoKey()
     </div>
 </div>
 <!--企业top10 end-->
+
+
+<!--左侧广告 begin-->
+		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320x78.jpg" width="320" height="78" alt=""></a></div>
+<!--左侧广告 end-->
+
 <!--市场展销 begin-->
 		<div class="row1B">
-       	  <p><label><a href="http://cn.china.cn/huodong/" target="_blank">市场展销</a></label><span><a href="http://cn.china.cn/huodong/" target="_blank">买家请进</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cn.china.cn/huodong/" target="_blank">更多</a>&gt;&gt;</span><img src="./res/tit7R.jpg" alt="" width="2" height="26" style="float:right"></p>
+       	  <p><label><a href="http://cn.china.cn/huodong/" target="_blank">市场展销</a></label>
+       	    </p>
           <div class="row1A">
             <div class="row1AMain2">
                  <dl>
@@ -485,6 +492,10 @@ function changeAutoKey()
         </div>
 <!--市场展销 end-->
 
+
+<!--左侧广告 begin-->
+		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320x78.jpg" width="320" height="125" alt=""></a></div>
+<!--左侧广告 end-->
 
 	</div>
 	<div class="rowR1">

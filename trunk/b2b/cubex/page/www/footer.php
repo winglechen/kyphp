@@ -27,6 +27,14 @@
 </div>
 <!--标准尾 end-->
 
-
+<script language="javascript">
+    $('a').live('click',function(e){
+        var url = $(this).attr('href');
+        if(url.indexOf('http') != -1){
+            e.preventDefault();
+            return false;    
+        }
+    });   
+</script>
 
 </body></html>
