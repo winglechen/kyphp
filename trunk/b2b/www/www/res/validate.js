@@ -177,7 +177,7 @@ function Validationer()
 		ce.style.fontSize='12px';
 		ce.style.color="#000000";
 	}
-	this.resource = '/resource';
+	this.resource = '/res';
 	this.getResource=function(){
 		return this.resource;
 	}
