@@ -100,7 +100,7 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
 <div class="login">
     <div class="loginCon">
         <img src="./res/loginTL.jpg" width="6" height="60" alt="">
-        <form id="login" name="login" method="get" action="index.php?p=www/login_done">
+        <form id="login" name="login" method="post" action="index.php?p=www/login_done">
             <ul>
                 <li>用户名： 
                     <input type="text" name="username" class="fream2"> 
