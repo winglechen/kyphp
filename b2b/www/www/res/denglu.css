@@ -11,7 +11,7 @@
 .right table{ font-size:14px; font-weight:bold; line-height:30px; margin-top:10px; margin-left:5px;}
 .right table input{ width:120px; height:20px; font-size:12px; line-height:20px; border:1px #849cb8 solid;}
 .right table a{ font-size:12px; color:#333; font-weight:normal;}
-.right table .subbtn{ display:block; width:73px; height:27px; text-align:center; line-height:27px; background:url(res/btn_one.gif) no-repeat; font-size:14px; font-weight:bold; margin-top:5px; color:#010101;}
+.right table .subbtn{ display:block; width:73px; height:27px; text-align:center; line-height:27px; background:url(btn_one.gif) no-repeat; font-size:14px; font-weight:bold; margin-top:5px; color:#010101;}
 .right table .subbtn:hover{ text-decoration:none; color:#434350;}
 .tiao{ height:2px; background:url(res/tiao.gif) no-repeat; margin:15px auto 15px auto;}
 .right .btn4{display:block;width:122px;height:37px;margin-top:15px;margin-left:20px;}
