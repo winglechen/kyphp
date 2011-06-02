@@ -122,7 +122,7 @@
 <div class="erm_im_title">
 <ul><li></li><li style="background:none; width:auto; color:#296BB3; font-weight:bold; margin-top:-3px; padding-left:5px;">会员信息</li></ul></div>
 <div class="erm_membertxt"><div class="erm_membertxtmid">公司：<?php echo $_SESSION['corpname']; ?><br>
-姓名：陈思源<br>邮箱：<?php echo $_SESSION['email']; ?></div>
+姓名：<?php echo $_SESSION['realname']; ?><br>邮箱：<?php echo $_SESSION['email']; ?></div>
 <div class="erm_membertdowen"><ul>
 <li><a href="index.php?p=www/member/company_main" target="_blank">公司信息</a></li>
 <li><a href="index.php?p=www/member/company_contact" target="_blank">联系方式</a></li>
