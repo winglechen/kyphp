@@ -23,7 +23,7 @@
 <!--title-->
 <div class="erm_header_back">
 <div class="erm_header_textleft">企业管理系统</div>
-<div class="erm_header_textright"><strong>陈思源，您好！</strong><span>
+<div class="erm_header_textright"><strong><?php echo $_SESSION['realname']; ?>，您好！</strong><span>
 <a href="index.php?p=www/logout">退出</a></span>
 </div>
     <div style=" margin:5px 0 0 0; width:940px; float:left; text-align:center;">
