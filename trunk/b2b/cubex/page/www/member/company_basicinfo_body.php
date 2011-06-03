@@ -79,7 +79,7 @@ function checkInput()
           <div class="formlabel">公司名称：<span>*</span></div>
 		  <div class="formcontent">
 		   		 
-				<input name="corpname" id="corpname" type="text" value="博爱人生网络有限公司" style="width:221px;">
+				<input name="corpname" id="corpname" type="text" value="<?php echo $_SESSION['corpname']; ?>" style="width:221px;">
 				<span id="corpname_err"></span>
 			  	<div class="note">请填写贵公司的中文全称，如：北京浩天有限责任公司。</div>
 					  </div>
@@ -88,47 +88,15 @@ function checkInput()
           <div class="formlabel">企业类型：<span>*</span></div>
 		  <div class="formcontent">
 		    			     
-            	   <select name="corptype" id="corptype" separator=" ">
-<option label="请选择" value="0">请选择</option>
-<option label="个体经营" value="101">个体经营</option>
-<option label="私营独资企业" value="201" selected="selected">私营独资企业</option>
-<option label="私营合伙企业" value="202">私营合伙企业</option>
-<option label="私营有限责任公司" value="203">私营有限责任公司</option>
-<option label="私营股份有限公司" value="204">私营股份有限公司</option>
-<option label="国有企业" value="205">国有企业</option>
-<option label="集体企业" value="206">集体企业</option>
-<option label="股份合作企业" value="207">股份合作企业</option>
-<option label="联营企业" value="208">联营企业</option>
-<option label="有限责任公司(国有独资)" value="209">有限责任公司(国有独资)</option>
-<option label="其他有限责任公司" value="210">其他有限责任公司</option>
-<option label="股份有限公司" value="211">股份有限公司</option>
-<option label="其他内资企业" value="212">其他内资企业</option>
-<option label="有限责任公司(中外合资)" value="213">有限责任公司(中外合资)</option>
-<option label="三来一补" value="301">三来一补</option>
-<option label="分支机构" value="302">分支机构</option>
-<option label="合资经营企业(港或澳、台资)" value="401">合资经营企业(港或澳、台资)</option>
-<option label="合作经营企业(港或澳、台资)" value="402">合作经营企业(港或澳、台资)</option>
-<option label="港、澳、台商独资经营企业" value="403">港、澳、台商独资经营企业</option>
-<option label="港、澳、台商投资股份有限公司" value="404">港、澳、台商投资股份有限公司</option>
-<option label="中外合资经营企业" value="405">中外合资经营企业</option>
-<option label="中外合作经营企业" value="406">中外合作经营企业</option>
-<option label="外资企业" value="407">外资企业</option>
-<option label="外商投资股份有限公司" value="408">外商投资股份有限公司</option>
-<option label="政府机构" value="501">政府机构</option>
-<option label="非盈利组织" value="502">非盈利组织</option>
-<option label="其他" value="503">其他</option>
-</select>
-
-	       						<span id="corptype_err"></span>
+            	   <select name="corptype" id="corptype">
+		   </select>
+		   <span id="corptype_err"></span>
 						</div>
         </div> 
-<!-- //TODO::whd 移走到公司详细信息中 -->
-<!-- 
- -->
         <div class="formline">
           <div class="formlabel">公司简介：<span>*</span><br><span class="hui12">(50-1200 字)</span></div>
 		  <div class="formcontent">
-		  	<textarea name="corpintro" cols="60" rows="10" id="corpintro">博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！博爱人生，勇者胜！</textarea>
+		  	<textarea name="corpintro" cols="60" rows="10" id="corpintro"><?php echo $_SESSION['corpintro']; ?></textarea>
             <span id="corpintro_err"></span>
             <div class="note">
 				<ul>
@@ -274,19 +242,14 @@ function resetIndustrys(id)
   }
 </script>
 
-<select name="select" id="category1" size="8" style="width: 140px;height: 150px;" onchange="onChangeCategory1()"><option value="1">办公、文教</option><option value="239">电脑、软件</option><option value="372">电工电气</option><option value="629">化工</option><option value="1176">家用电器</option><option value="1277">建筑、建材</option><option value="1536">能源</option><option value="1590">农业</option><option value="1851">食品、饮料</option><option value="1970">医药、保养</option><option value="2056">印刷</option><option value="2149">加工</option><option value="2214">安全、防护</option><option value="2300">包装</option><option value="2381">纸业</option><option value="2442">纺织、皮革</option><option value="2623">服装</option><option value="2738">服饰</option><option value="2993">机械及行业设备</option><option value="3186">精细化学品</option><option value="3368">仪器仪表</option><option value="3504">交通运输</option><option value="3615">礼品、工艺品、饰品</option><option value="3816">汽摩及配件</option><option value="3967">通讯产品</option><option value="4058">玩具</option><option value="4157">冶金矿产</option><option value="4289">商务服务</option><option value="4378">二手设备转让</option><option value="4386">库存积压</option><option value="4396">照明工业</option><option value="4493">电子元器件</option><option value="4673">传媒</option><option value="4759">五金、工具</option><option value="5029">环保</option><option value="5055">家居用品</option><option value="5202">运动、休闲</option><option value="231">其他未分类</option></select>
+<select name="select" id="category1" size="8" style="width: 140px;height: 150px;" onchange="onChangeCategory1()"></select>
 <select name="select" id="category2" size="8" style="width: 140px;height: 150px;" onchange="onChangeCategory2()"></select>
 <select name="select" id="category3" size="8" style="width: 140px;height: 150px; " onchange="onChangeCategory3()"></select><br>
-<script language="javascript"> loadCategories();</script>
 
-<input type="hidden" name="categoryName" id="categoryName" value="">
-<input type="hidden" name="categoryId" id="categoryId" value="">
-<input type="hidden" id="selectedCate" name="selectedCate" value="">
-<input type="hidden" name="popDivId" id="popDivId">
 <div id="industryDiv" style="display:none"></div> 
 
 <div style="clear:both; padding:4px; font-size:14px; font-weight:bold">您选择的行业类目是：<span id="fullCategory"></span></div>
-<div class="prompt" style="margin-bottom: 10px;">
+<!--div class="prompt" style="margin-bottom: 10px;">
 <table width="100%" cellspacing="5" cellpadding="0" border="0">
 <tbody>
 	    <tr>
@@ -296,11 +259,8 @@ function resetIndustrys(id)
     </tr>
     </tbody>
 </table>
-</div>          <!--/行业选择控件-->
+</div-->          <!--/行业选择控件-->
           <input type="button" name="industryBt" value=" 设为主营行业 " onclick="doAddIndustry();">
-          <input type="hidden" id="categories" name="categories" value="276,">
-          <input type="hidden" value="0" name="needExProp" id="needExProp">
-          <input type="hidden" name="categoryType" id="categoryType" value="PRODUCT">
         </div>
       </div>
     </div>
@@ -319,25 +279,6 @@ Validation.register('categories','请选择公司主营行业','noblank');
     <!--/提交按钮-->
 </form>
 </div>
-<script language="JavaScript" type="text/javascript">
-<!--
-	
-	Validation.register('corpname','公司名称不能为空','noblank');	
-	Validation.register('corpname','公司名称长度不能超过100','text',{max:100,min:1});
-    Validation.register('corpname', '不允许英文和数字结尾或者全为英文和数字','noendenglish');
-    Validation.register('corpname', '不允许的非法字符', 'specialcharacter');
-    Validation.register('corpname', '公司名称不能小于5个', 'text',{min:5});
-	Validation.register('corptype','请选企业类型','noblank');
-	Validation.register('corptype','请选企业类型','SelectValue');
-	
-
-	
-	Validation.register('corpintro','请填写简介','noblank');
-	Validation.register('corpintro','简介字数在50-1200之间','text',{max:1200,min:50});
-	
--->
-</script>
-
 
 		<div style="clear:both; font-size:0px; line-height:0px; height:0px; background-color:#FFFFFF"></div>	 	 	
 	 	 	 	 
