@@ -51,16 +51,12 @@
       </div>
       <div class="formline">
         <div class="formlabel">注册资本：</div>
-        <div class="formcontent"><?php echo $_SESSION['capitial']; ?>&nbsp;
+        <div class="formcontent"><?php echo $_SESSION['capital']; ?>万&nbsp;
         </div>
       </div>
       <div class="formline">
         <div class="formlabel">公司简介:</div>
         <div class="formcontent"><?php echo $_SESSION['corpintro']; ?>&nbsp;</div>
-      </div>
-      <div class="formline">
-        <div class="formlabel">主营行业:</div>
-        <div class="formcontent"><?php echo $_SESSION['categories']; ?>&nbsp;</div>
       </div>
       <div class="formline">
         <div class="formlabel"></div>
@@ -170,48 +166,48 @@
       </div>
       <div class="formline">
         <div class="formlabel">公司成立时间：<span id="d_setupTime" style="display:none">*</span></div>
-        <div class="formcontent"><span>&nbsp;</span> </div>
+        <div class="formcontent"><span><?php echo $_SESSION['setupTime']; ?>&nbsp;</span> </div>
       </div>
       <div class="formline">
         <div class="formlabel">公司注册号：<span id="d_registerNumber" style="display:none">*</span></div>
         <div class="formcontent">
-        	&nbsp;
+        	<?php echo $_SESSION['registerNumber']; ?>&nbsp;
         </div>
       </div>
       <div class="formline">
         <div class="formlabel">税务注册号：<span id="d_taxRegNo" style="display:none">*</span></div>
         <div class="formcontent">
-          &nbsp;
+          <?php echo $_SESSION['taxRegNo']; ?>&nbsp;
         </div>
       </div>
       <div class="formline">
         <div class="formlabel">营业期限：</div>
         <div class="formcontent">
-          --&nbsp;
+          <?php echo $_SESSION['manageTime']; ?>&nbsp;
 		</div>
       </div>
       <div class="formline">
         <div class="formlabel">经营范围：<span id="d_manageBound" style="display:none">*</span></div>
         <div class="formcontent">
-          &nbsp;
+          <?php echo $_SESSION['manageBound']; ?>&nbsp;
 		</div>
       </div>
       <div class="formline">
         <div class="formlabel">登记机关：<span id="d_registerOrgan" style="display:none">*</span></div>
         <div class="formcontent">
-          &nbsp;
+          <?php echo $_SESSION['egisterOrgan']; ?>&nbsp;
 		</div>
       </div>
       <div class="formline">
         <div class="formlabel">最近年检时间：<span id="d_checkTime" style="display:none">*</span></div>
         <div class="formcontent">
-        	&nbsp;
+        	<?php echo $_SESSION['checkTime']; ?>&nbsp;
 		</div>
       </div>
       <div class="formline">
         <div class="formlabel">法定代表人/负责人：<span id="d_artificialPerson" style="display:none">*</span></div>
         <div class="formcontent">
-        	&nbsp;
+        	<?php echo $_SESSION['artificialPerson']; ?>&nbsp;
 		</div>
       </div>
       <div class="formline">
@@ -228,54 +224,54 @@
       <div class="formline">
         <div class="formlabel">员工人数：<span id="d_numberOfEmployee" style="display:none">*</span></div>
         <div class="formcontent">
-		                  &nbsp;
+		                  <?php echo $_SESSION['numberOfEmployee']; ?>&nbsp;
                 </div>
       </div>
       <div class="formline">
         <div class="formlabel">经营模式：<span id="d_manageMode" style="display:none">*</span></div>
         <div class="formcontent">
-		                  &nbsp;
+		                  <?php echo $_SESSION['manageMode']; ?>&nbsp;
         		</div>
       </div>
       <div class="formline"></div>
       <div class="formline">
         <div class="formlabel">品牌名称：<span id="d_brand" style="display:none">*</span></div>
-        <div class="formcontent">&nbsp;</div>
+        <div class="formcontent"><?php echo $_SESSION['brand']; ?>&nbsp;</div>
       </div>
       <div class="formline">
         <div class="formlabel">主要经营地点：<span id="d_manageArea" style="display:none">*</span></div>
-        <div class="formcontent">&nbsp;</div>
+        <div class="formcontent"><?php echo $_SESSION['manageArea']; ?>&nbsp;</div>
       </div>
-      <div class="formline">
+      <!--div class="formline">
         <div class="formlabel">主要市场：</div>
         <div class="formcontent">
 					&nbsp;
 		        </div>
-      </div>
+      </div-->
       <div class="formline">
         <div class="formlabel">主要客户群：<span id="d_primaryCustomers" style="display:none">*</span></div>
-        <div class="formcontent">&nbsp;</div>
+        <div class="formcontent"><?php echo $_SESSION['primaryCustomers']; ?>&nbsp;</div>
       </div>
       <div class="formline">
         <div class="formlabel">年营业额：<span id="d_turnover" style="display:none">*</span></div>
         <div class="formcontent">
-							&nbsp;
+							<?php echo $_SESSION['turnover']; ?>&nbsp;
 				</div>
       </div>
       <div class="formline">
         <div class="formlabel">进出口情况 <span id="d_exportAmount" style="display:none">*</span></div>
         <div class="formcontent"> 年出口额：
-                          &nbsp;
+                          <?php echo $_SESSION['exportAmount']; ?>&nbsp;
         <br>
           年进口额：
-		                  &nbsp;
+		                  <?php echo $_SESSION['importAmount']; ?>&nbsp;
         		</div>
       </div>
       <div class="formline">
         <div class="formlabel">银行帐号 <span id="d_accountBank" style="display:none">*</span></div>
         <div class="formcontent"> 
-          开户银行：<br>
-          帐号：
+          开户银行：<?php echo $_SESSION['accountBank']; ?>&nbsp;<br>
+          帐号：<?php echo $_SESSION['account']; ?>&nbsp;
         </div>
       </div>
       <div class="formline">
@@ -284,7 +280,7 @@
       </div>
     </div>
     <!--详细信息-->
-    <!-- 生产信息 -->
+    <!-- 生产信息 >
     <div class="formblock">
       <div class="formheader">
         <div class="headerTitle">生产信息(<a href="index.php?p=www/member/company_detail">修改</a>)</div>
@@ -323,7 +319,7 @@
         <div class="formcontent"><a href="index.php?p=www/member/company_detail">修改生产信息</a></div>
       </div>
     </div>
-    <!--/生产信息-->
+    <生产信息-->
 
     <div style="clear:both; font-size:0px; line-height:0px; height:0px; background-color:#FFFFFF"></div>
   </div>

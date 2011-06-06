@@ -17,49 +17,13 @@
 		  }	  
 </style>
 <script language="javascript" src="./res/areas.js"></script>
-<script language="javascript" src="./res/common.js"></script>
-<script language="javascript" src="./res/validate.js"></script>
+
 <style type="text/css">.inputlabelok{background:url(/res/img/chkok.gif) no-repeat 0px 0px; padding:2px 0 2px 24px; background-color:#F6F6F6;}.inputlabel{background:transparent; padding:2px 0 2px 24px;}</style>
-<script language="JavaScript" type="text/JavaScript" src="./res/prototype.js"></script>
 
 
 
-<script language="javascript">
-websiteUrl = "http://my.cn.china.cn";
 
-var isValidEmail = true;
-var isValidSubDomain = true;
-function doSubmit(formId, doAction)
-{
-    var formObj = document.getElementById(formId);
-    
-    if (!checkInput())
-        return false;
-    if(!Validation.validAll())
-        return false;
-		
-    formObj.target="";
-    formObj.action = doAction;
-    formObj.submit();
-}
-function checkInput()
-{
-	if(isValidSubDomain == false)
-	{
-		var subdomainObj = document.getElementById('corpSubdomain');
-		subdomainObj.focus();
-		return false;
-	}
-	if(isValidEmail == false)
-	{
-		var emailObj = document.getElementById('email');
-		emailObj.focus();
-		return false;
-	}
-	return true;
-}
 
-</script>
 
 <div class="operationPage">
   <?php include "admin_nav.php"; ?>
@@ -72,63 +36,13 @@ function checkInput()
 	 
 	 
 	 
-	 <script>
 
-corpId = "1684368535";
-
-function getValues()
-{
-	var t_p = document.getElementById("t_province");
-	var t_c = document.getElementById("t_city");
-	var p = document.getElementById("province");
-	var c = document.getElementById("capitalcity");
-	t_p.value = p.value;
-	t_c.value = c.value;
-}
-function doSubmit(formId, doAction)
-{
-    var formObj = document.getElementById(formId);
-    getValues();
-    if(!Validation.validAll())
-        return false;
-    if (document.getElementById("t_city").value=="00")
-    {
-	  	alert("请选择地区");
-	  	return false;
-	}
-    formObj.target="";
-    formObj.action = doAction;
-    formObj.submit();
-}  
-
-function reportError(request, ex) 
-{
-	if (ex.name == "NS_ERROR_NOT_AVAILABLE")
-	{
-		//alert('请求未完成');
-		return;
-	}
-	alert("执行请求过程中发生错误：\n\n  " + ex.message + "  \n\n请刷新页面重试。");
-}
-
-function robotBind()
-{
-	var msnObj = document.getElementById('msn');
-	Validation.register('msn', '请填写正确的MSN','email');
-	if(Validation.valid(msnObj.id) == true)
-	{
-		var url = "admin.php?op=ShowRobotBind&msn="+$F('msn');
-		var win = window.open (url,'newwindow','height=500,width=700,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no'); 
-	}
-}
-</script>
 
 
 <div class="right">
  		<div class="postTips">联系方式 (带 <span>*</span> 为必填项) </div>
-<form id="editForm" name="editForm" action="" method="post">
+<form id="editForm" name="editForm" action="index.php?p=www/member/company_add" method="post">
 	<div class="formblock">
-        <input type="hidden" name="modType" value="">
         <div class="formheader"><div class="headerTitle">联系方式</div></div>        
         <div class="formline">
           <div class="formlabel">业务联系人姓名：<span>*</span></div>
@@ -141,8 +55,8 @@ function robotBind()
           <div class="formlabel">性别：<span>*</span></div>
 		  <div class="formcontent">
 		  	      
-		    	     <label><input type="radio" name="sex" value="0" checked="checked" id="sex">先生</label> 
-<label><input type="radio" name="sex" value="1" id="sex">女士</label> 
+		    	     <label><input type="radio" name="sex" value="先生" <?php if('先生' == $_SESSION['sex']) echo ' checked="checked"' ; ?> id="sex">先生</label> 
+<label><input type="radio" name="sex" value="女士" <?php if('女士' == $_SESSION['sex']) echo ' checked="checked"' ; ?> id="sex">女士</label> 
 
 		          		</div>
         </div>
@@ -150,14 +64,14 @@ function robotBind()
           <div class="formlabel">公司电话：<span>*</span></div>
 
 		  <div class="formcontent">
-		    	<input name="tel" id="tel" type="text" value="<?php echo $_SESSION['tel']; ?>gc">
+		    	<input name="tel" id="tel" type="text" value="<?php echo $_SESSION['tel']; ?>">
                 <span id="tel_err"></span>
 		  </div>
         </div>
         <div class="formline">
           <div class="formlabel">传真：<span>*</span></div>
 		  <div class="formcontent"> 
-		    	<input name="fax" id="fax" type="text" value="<?php echo $_SESSION['fax']; ?>gc">
+		    	<input name="fax" id="fax" type="text" value="<?php echo $_SESSION['fax']; ?>">
                 <span id="fax_err"></span>
 		 </div>
         </div>
@@ -171,14 +85,14 @@ function robotBind()
         <div class="formline">
           <div class="formlabel">所在地区：<span>*</span></div>
 		  <div class="formcontent">
-		    	<select name="tt_province" id="province" style="width:74px;height:21px">
+		    	<select id="province" style="width:74px;height:21px">
                        </select>
-                        <select name="tt_city" id="capitalcity" style="width:74px;height:21px">
+                        <select n id="capitalcity" style="width:74px;height:21px">
                        </select>
-                        <select name="select" id="city" style="width:74px;height:21px;display:none">
+                        <select  id="city" style="width:74px;height:21px;display:none">
                         </select>
-                        <input name="t_province" id="t_province" type="hidden" value="浙江">
-                        <input name="t_city" id="t_city" type="hidden" value="杭州">
+                        <input name="province" id="t_province" type="hidden" value="浙江">
+                        <input name="city" id="t_city" type="hidden" value="杭州">
 						
                   	<script language="javascript">
   					control=getAreaControl("province","capitalcity", "city");
@@ -286,7 +200,8 @@ function robotBind()
     <table style="margin-left:200px; margin-bottom:15px;">
       <tbody><tr>
         <td>
-        <input type="button" name="modifyContact" class="bigbutton" value=" 修  改  " >
+        <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>" />
+        <input type="submit"  class="bigbutton" value=" 修  改  " >
         </td>
       </tr>
     </tbody></table>
