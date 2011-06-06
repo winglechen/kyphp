@@ -68,7 +68,7 @@ function checkInput()
 	 	 	 	
 	<div class="right">
 		<div class="postTips">(带 <span>*</span> 为必填项)</div>
-<form id="corpInfoForm" name="corpInfoForm" action="" method="post">
+<form id="corpInfoForm" name="corpInfoForm" action="index.php?p=www/member/company_add" method="post">
 	<!--信用认证信息-->	
 	<div class="formblock">
 		<div class="formheader">
@@ -84,57 +84,58 @@ function checkInput()
         <div class="formline">
           <div class="formlabel">注册资本：<span id="d_capital" style="display: none; ">*</span></div>
 		  <div class="formcontent">
-	           	<input id="capital" name="capital" type="text" value="<?php echo $_SESSION[""]; ?>" size="5" maxlength="16">万元 (请根据营业执照如实填写)
+	           	<input id="capital" name="capital" type="text" value="<?php echo $_SESSION["capital"]; ?>" size="5" maxlength="16">万元 (请根据营业执照如实填写)
 	           	<span id="capital_err"></span>
 		  		  </div>
 		</div>
 		<div class="formline">
           <div class="formlabel">公司成立时间：<span id="d_setupTime" style="display:none">*</span></div>
 		  <div class="formcontent">
-				<input type="text" name="setupTime" id="setupTime" value="<?php echo $_SESSION[""]; ?>">
+				<input type="text" name="setupTime" id="setupTime" value="<?php echo $_SESSION["setupTime"]; ?>">
 					  </div>
 		</div>
 		<div class="formline">
           <div class="formlabel">公司注册号：<span id="d_registerNumber" style="display: none; ">*</span></div>
 		  <div class="formcontent">
-		            	<input name="registerNumber" id="registerNumber" type="text" value="<?php echo $_SESSION[""]; ?>" maxlength="32" style="width:221px;">
+		            	<input name="registerNumber" id="registerNumber" type="text" value="<?php echo $_SESSION["registerNumber"]; ?>" maxlength="32" style="width:221px;">
           		  </div>
 		</div>
 		<div class="formline">
           <div class="formlabel">税务注册号：<span id="d_taxRegNo" style="display: none; ">*</span></div>
 		  <div class="formcontent">
-		            	<input name="taxRegNo" id="taxRegNo" type="text" value="<?php echo $_SESSION[""]; ?>" maxlength="25" style="width:221px;">
+		            	<input name="taxRegNo" id="taxRegNo" type="text" value="<?php echo $_SESSION["taxRegNo"]; ?>" maxlength="25" style="width:221px;">
           		  </div>
 		</div>
 		<div class="formline">
           <div class="formlabel">营业期限：</div>
 		  <div class="formcontent">
-		            	<input name="manageTime" id="manageTime" type="text" value="<?php echo $_SESSION[""]; ?>" maxlength="32" style="width:221px;">
+		            	<input name="manageTime" id="manageTime" type="text" value="<?php echo $_SESSION["manageTime"]; ?>" maxlength="32" style="width:221px;">
           		  </div>
 		</div>
 		<div class="formline">
           <div class="formlabel">经营范围：<span id="d_manageBound" style="display: none; ">*</span></div>
 		  <div class="formcontent">
-			<textarea name="manageBound" id="manageBound" cols="50" rows="5"></textarea>
+			<textarea name="manageBound" id="manageBound" cols="50" rows="5"><?php echo $_SESSION["manageBound"]; ?></textarea>
 					  </div>
 		</div>
 		<div class="formline">
           <div class="formlabel">登记机关：<span id="d_registerOrgan" style="display: none; ">*</span></div>
 		  <div class="formcontent">
-		<input name="registerOrgan" id="registerOrgan" type="text" value="<?php echo $_SESSION[""]; ?>" maxlength="32" style="width:221px;">
+		<input name="registerOrgan" id="registerOrgan" type="text" value="<?php echo $_SESSION["registerOrgan"]; ?>" maxlength="32" style="width:221px;">
 					  </div>
 		</div>
 		
 		<div class="formline">
           <div class="formlabel">最近年检时间：<span id="d_checkTime" style="display:none">*</span></div>
 		  <div class="formcontent">
+		    <input name="checkTime" id="checkTime" type="text" value="<?php echo $_SESSION["checkTime"]; ?>" maxlength="32" style="width:221px;">
 		  </div>
 		</div>
 		
 		<div class="formline">
           <div class="formlabel">法定代表人/负责人：<span id="d_artificialPerson" style="display: none; ">*</span></div>
 		  <div class="formcontent">
-			<input name="artificialPerson" id="artificialPerson" type="text" value="<?php echo $_SESSION[""]; ?>" size="30" maxlength="32" style="width:221px;">
+			<input name="artificialPerson" id="artificialPerson" type="text" value="<?php echo $_SESSION["artificialPerson"]; ?>" size="30" maxlength="32" style="width:221px;">
 					  </div>
 		</div>		
 	</div>
@@ -150,6 +151,10 @@ function checkInput()
           <div class="formlabel">员工人数：</div>
 		  <div class="formcontent">
 		  	<select name="numberOfEmployee" id="numberOfEmployee" separator=" ">
+<?php
+use Ky\Model\Config;
+echo Config::getOption('staffnum','option',$_SESSION['numberOfEmployee']);
+?>		  
 			</select>
 
 		  </div>
@@ -159,6 +164,9 @@ function checkInput()
           <div class="formlabel">经营模式：</div>
 		  <div class="formcontent">
 		  	<select name="manageMode" id="manageMode" separator=" ">
+<?php
+echo Config::getOption('managemode','option',$_SESSION['manageMode']);
+?>
 			</select>
 
 		  </div>
@@ -177,14 +185,14 @@ function checkInput()
 		  	<input name="manageArea" id="manageArea" type="text" value="<?php echo $_SESSION["manageArea"]; ?>" style="width:221px;">
 		  </div>
 		</div>
-		<div class="formline">
+		<!--div class="formline">
           <div class="formlabel">主要市场：
           	<br><span class="hui12">（请选最主要的三个）</span>
           </div>
 		  <div class="formcontent">
 		  	 <label><input type="checkbox" name="primaryMarket[]" value="0">大陆</label> 
 		  </div>
-		</div>
+		</div-->
 		<div class="formline">
           <div class="formlabel">主要客户群：</div>
 		  <div class="formcontent">
@@ -196,7 +204,9 @@ function checkInput()
           <div class="formlabel">年营业额：</div>
 		  <div class="formcontent">
 		  	<select name="turnover" id="turnover" separator=" ">
-<option label="人民币 10 万元/年以下" value="1">人民币 10 万元/年以下</option>
+<?php
+echo Config::getOption('turnover','option',$_SESSION['turnover']);
+?>
 </select>
 
 		  </div>
@@ -205,11 +215,15 @@ function checkInput()
           <div class="formlabel">进出口情况</div>
 		  <div class="formcontent">
 		  年出口额：<select name="exportAmount" id="exportAmount" separator=" ">
-<option label="人民币 10 万元/年以下" value="1">人民币 10 万元/年以下</option>
+<?php
+echo Config::getOption('turnover','option',$_SESSION['exportAmount']);
+?>
 </select>
 
 		  年进口额：<select name="importAmount" id="importAmount" separator=" ">
-<option label="人民币 10 万元/年以下" value="1">人民币 10 万元/年以下</option>
+<?php
+echo Config::getOption('turnover','option',$_SESSION['importAmount']);
+?>
 </select>
 
           </div>
@@ -224,7 +238,7 @@ function checkInput()
 	</div>
 	<!--详细信息-->
 	<!-- 生产信息 -->
-	<div class="formblock">
+	<!--div class="formblock">
 		<div class="formheader">
 	         <div class="headerTitle">生产信息(选填部分) </div>
 	       </div>	
@@ -233,7 +247,6 @@ function checkInput()
 		  <div class="formcontent">
 		  	<input name="monthOutput" id="monthOutput" type="text" value="<?php echo $_SESSION["monthOutput"]; ?>" style="width:100px;">
 	           <select name="monthOutputUnit" id="monthOutputUnit" separator=" ">
-<option label="台" value="1">台</option>
 </select>
 
 		  </div>
@@ -244,8 +257,8 @@ function checkInput()
 		  		<input name="workshopArea" id="workshopArea" type="text" value="<?php echo $_SESSION["workshopArea"]; ?>" style="width:221px;">
 	                  （平方米）
 		  </div>
-		</div>
-		<div class="formline">
+		</div -->
+		<!--div class="formline">
 	         <div class="formlabel">是否提供OEM代加工？</div>
 		  <div class="formcontent">
 		  	<label><input type="radio" name="providerOEM" value="1">是</label> 
@@ -268,11 +281,12 @@ function checkInput()
 
 		  </div>
 		</div>
-	</div> 
+	</div--> 
 	<!-- 生产信息 -->
     <!--提交按钮-->
 <table width="100%"><tbody><tr><td align="center">
-      <input type="button" class="bigbutton" value="提交公司详细信息" >
+      <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>" />
+      <input type="submit" class="bigbutton" value="提交公司详细信息" >
 </td></tr></tbody></table>
     <!--/提交按钮-->
 </form>
