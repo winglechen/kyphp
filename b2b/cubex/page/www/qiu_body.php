@@ -1143,7 +1143,7 @@ a.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
         </div>
 <!--在中供如何找买家 end-->
 <!--左侧广告 begin-->
-	<div class="rowLAd"><a href="http://cn.china.cn/zixun/" target="_blank"><img src="./res/320x78.jpg"></a></div>
+	<div class="rowLAd"><a href="http://cn.china.cn/zixun/" target="_blank"><img src="./res/320X78.jpg"></a></div>
 <!--左侧广告 end-->
 
 <!--信用活跃指数 begin-->
@@ -1193,7 +1193,7 @@ a.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
 <!--信用活跃指数 end-->
 
 <!--左侧广告 begin-->
-		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320x78.jpg" width="320" height="78" alt=""></a></div>
+		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320X78.jpg" width="320" height="78" alt=""></a></div>
 <!--左侧广告 end-->
 
 <!--市场展销 begin-->
@@ -1219,7 +1219,7 @@ a.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
 
 
 <!--左侧广告 begin-->
-		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320x78.jpg" width="320" height="105" alt=""></a></div>
+		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320X78.jpg" width="320" height="105" alt=""></a></div>
 <!--左侧广告 end-->
 
 

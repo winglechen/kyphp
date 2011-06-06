@@ -272,7 +272,7 @@ function changeAutoKey()
 <!--特色产业带 end-->
 
 <!--左侧广告 begin-->
-		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320x78.jpg" width="320" height="78" alt=""></a></div>
+		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320X78.jpg" width="320" height="78" alt=""></a></div>
 <!--左侧广告 end-->
 <!--企业top10 begin-->
 			      
@@ -473,7 +473,7 @@ function changeAutoKey()
 
 
 <!--左侧广告 begin-->
-		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320x78.jpg" width="320" height="78" alt=""></a></div>
+		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320X78.jpg" width="320" height="78" alt=""></a></div>
 <!--左侧广告 end-->
 
 <!--市场展销 begin-->
@@ -494,7 +494,7 @@ function changeAutoKey()
 
 
 <!--左侧广告 begin-->
-		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320x78.jpg" width="320" height="125" alt=""></a></div>
+		<div class="rowLAd"><a href="http://cn.china.cn/shangqing/index.html"><img src="./res/320X78.jpg" width="320" height="125" alt=""></a></div>
 <!--左侧广告 end-->
 
 	</div>
