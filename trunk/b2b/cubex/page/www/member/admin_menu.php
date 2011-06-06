@@ -36,5 +36,19 @@ if('product' == $_GET['module']){
       </div> 
 </div>
 <?php 
+}else{
+?>
+    <div class="left">
+      <div class="spacetop"></div>
+      <div class="menu">      
+        <ul class="menuSelected">
+          <a href="index.php?p=www/member/product_list">列表</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/product_add">添加</a>
+        </ul>  	                             
+      </div>
+    </div>	
+<?php  
 }
 ?>
