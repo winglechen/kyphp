@@ -146,7 +146,7 @@
         <div class="formline">
           <div class="formlabel">公司网址：</div>
 		  <div class="formcontent">
-		  <a href="<?php echo $_SESSION['website']; ?>" target="_blank" ref="nofollow" style="text-decoration:underline;" rel="nofollow">?php echo $_SESSION['website']; ?></a>&nbsp;
+		  <a href="<?php echo $_SESSION['website']; ?>" target="_blank" ref="nofollow" style="text-decoration:underline;" rel="nofollow"><?php echo $_SESSION['website']; ?></a>&nbsp;
 		  </div>
         </div>  
                 <div class="formline">

@@ -17,49 +17,14 @@
 		  }	  
 </style>
 
-<script language="javascript" src="./res/common.js"></script>
-<script language="javascript" src="./res/validate.js"></script>
+
+
 <style type="text/css">.inputlabelok{background:url(/res/img/chkok.gif) no-repeat 0px 0px; padding:2px 0 2px 24px; background-color:#F6F6F6;}.inputlabel{background:transparent; padding:2px 0 2px 24px;}</style>
-<script language="JavaScript" type="text/JavaScript" src="./res/prototype.js"></script>
 
 
 
-<script language="javascript">
-websiteUrl = "http://my.cn.china.cn";
 
-var isValidEmail = true;
-var isValidSubDomain = true;
-function doSubmit(formId, doAction)
-{
-    var formObj = document.getElementById(formId);
-    
-    if (!checkInput())
-        return false;
-    if(!Validation.validAll())
-        return false;
-		
-    formObj.target="";
-    formObj.action = doAction;
-    formObj.submit();
-}
-function checkInput()
-{
-	if(isValidSubDomain == false)
-	{
-		var subdomainObj = document.getElementById('corpSubdomain');
-		subdomainObj.focus();
-		return false;
-	}
-	if(isValidEmail == false)
-	{
-		var emailObj = document.getElementById('email');
-		emailObj.focus();
-		return false;
-	}
-	return true;
-}
 
-</script>
 
 <div class="operationPage">
   <?php include "admin_nav.php"; ?>
@@ -110,86 +75,6 @@ function checkInput()
 	</div>
 	<!--基本信息-->
 	<!--行业信息-->
-   	
-<script language="JavaScript" type="text/javascript">
-<!--//
-function doAddIndustry()
-{
-	var industrysObj = document.getElementById('categories');
-	var dspIndustryObj = document.getElementById('displayIndustryPaths');
-	var fcObj = document.getElementById("fullCategory");
-	var industryIdObj = document.getElementById("categoryId");
-	var industryId = industryIdObj.value;
-	var industrysStr = industrysObj.value;
-	var industrys = industrysStr.split(",");
-	if(industrys.length > 8)
-	{
-		alert("行业最多可以选择8个");
-		return false;
-	}
-	else
-	{
-		var canAdd = true;
-		for(i=0; i<industrys.length; i++)
-		{
-			if(industrys[i] == industryId)
-			{
-				canAdd = false;
-			}
-		}
-		if(canAdd)
-		{
-			var pathStr = (fcObj.textContent==undefined)?fcObj.innerText:fcObj.textContent;
-			var dspIndustryStr = "<p id="+industryIdObj.value+">"+pathStr+"(<a href='javascript:void(0);' onclick='doDeleteIndustry("+industryIdObj.value+")'>删除</a>)</p>&nbsp;&nbsp;&nbsp;";
-			dspIndustryObj.innerHTML = dspIndustryObj.innerHTML+dspIndustryStr;
-			industrysStr += industryId+",";
-			industrysObj.value = industrysStr;
-		}
-	}
-}
-function contains(str, kw)
-{
-	var regEx = new RegExp(kw);
-	return regEx.test(str);
-}
-function doDeleteIndustry(id)
-{
-	var dspIndustryObj = document.getElementById('displayIndustryPaths');
-	var dspIndustryStr = dspIndustryObj.innerHTML;
-	var splitDspIndustrys = dspIndustryStr.split("&nbsp;&nbsp;&nbsp;");
-	var dspIndustryStr = "";
-	for(i=0; i<splitDspIndustrys.length; i++)
-	{
-		if(splitDspIndustrys[i] != "")
-		{
-			if(contains(splitDspIndustrys[i], id) == false)
-			{
-				dspIndustryStr += splitDspIndustrys[i]+"&nbsp;&nbsp;&nbsp;";
-			}
-		}
-	}
-	dspIndustryObj.innerHTML = dspIndustryStr;
-	resetIndustrys(id);
-}
-function resetIndustrys(id)
-{
-	var dspIndustryObj = document.getElementById('displayIndustryPaths');
-	var dspIndustryStr = dspIndustryObj.innerHTML;
-	var industrysObj = document.getElementById('categories');
-	var orgIndustrysStr = industrysObj.value;
-	var industrys = orgIndustrysStr.split(",");
-	var industrysStr = "";
-	for(i=0; i<industrys.length; i++)
-	{
-		if(industrys[i] != "" && industrys[i] != id && contains(dspIndustryStr, industrys[i]))
-		{
-			industrysStr += industrys[i]+",";
-		}
-	}
-	industrysObj.value = industrysStr;
-}
-//-->
-</script>
 
  <div class="formblock">
       <div class="formline">
@@ -211,36 +96,6 @@ function resetIndustrys(id)
 <script language="JavaScript" type="text/JavaScript" src="./res/ajaxindustry.js"></script>
 <link href="./res/popdiv.css" rel="stylesheet" type="text/css">
 
-<script language="javascript">  
-  function industryMRUChange()
-  {
-    $("industryMRU").blur();
-    var industryPath = $("industryMRU").value;
-    if (industryPath != "")
-    {
-        var industries = industryPath.split(",");
-        if (industries.length > 2)
-            tId = industries[2];
-        else
-           tId = null;
-        selectIndustryPath(industries[0], industries[1], tId)
-    }   
-  } 
-  function searchIndustry()
-  {
-        var kwObj = document.getElementById("industryKW");
-        var industryDivObj = document.getElementById("industryDiv");
-        var kw = kwObj.value;
-        if(kw == '')
-        {
-            alert('请输入行业关键词！');
-        }
-        else
-        {
-            searchIndustryByKW(kw, industryDivObj);
-        }
-  }
-</script>
 
 <select name="select" id="category1" size="8" style="width: 140px;height: 150px;" onchange="onChangeCategory1()"></select>
 <select name="select" id="category2" size="8" style="width: 140px;height: 150px;" onchange="onChangeCategory2()"></select>
