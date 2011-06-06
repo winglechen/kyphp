@@ -37,10 +37,10 @@ CREATE TABLE IF NOT EXISTS `company` (
   `username` varchar(20) NOT NULL DEFAULT '' COMMENT '会员登录名',
   `password` varchar(32) NOT NULL DEFAULT '123456' COMMENT '密码',
   `corpname` varchar(100) NOT NULL DEFAULT '' COMMENT '公司名称',
-  `corptype` tinyint(4) NOT NULL DEFAULT '0' COMMENT '企业类型',
+  `corptype` varchar(40) NOT NULL DEFAULT '0' COMMENT '企业类型',
   `corpintro` varchar(200) NOT NULL DEFAULT '' COMMENT '公司简介',
   `registerPlace` varchar(100) NOT NULL DEFAULT '' COMMENT '公司注册地',
-  `capitial` tinyint(4) unsigned NOT NULL DEFAULT '0' COMMENT '注册资本',
+  `capital` tinyint(4) unsigned NOT NULL DEFAULT '0' COMMENT '注册资本',
   `capitalUnit` varchar(40) NOT NULL DEFAULT '' COMMENT '资本单位',
   `categories` varchar(100) NOT NULL DEFAULT '' COMMENT '主营行业',
   `logo` varchar(100) NOT NULL DEFAULT '' COMMENT '企业logo',
@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `company` (
   `tel` varchar(20) NOT NULL DEFAULT '' COMMENT '公司电话',
   `fax` varchar(20) NOT NULL DEFAULT '' COMMENT '传真',
   `email` varchar(100) NOT NULL DEFAULT '' COMMENT '电子邮箱',
-  `province` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '省份',
-  `city` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '城市',
+  `province` varchar(20) NOT NULL COMMENT '省份',
+  `city` varchar(20) NOT NULL DEFAULT '''''' COMMENT '城市',
   `address` varchar(100) NOT NULL DEFAULT '' COMMENT '公司地址',
   `zipCode` varchar(6) NOT NULL DEFAULT '' COMMENT '邮政编码',
   `dept` varchar(20) NOT NULL DEFAULT '' COMMENT '部门',
@@ -88,4 +88,4 @@ CREATE TABLE IF NOT EXISTS `company` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
-)engine=myisam default charset=utf8 collate=utf8_general_ci; 
+)engine=myisam default charset=utf8 collate=utf8_general_ci;
