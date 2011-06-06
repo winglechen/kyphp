@@ -6,7 +6,7 @@ use Ky\Model\Config;
 /**
  *  配置信息http接口
  */
-class Config
+class Conf
 {
     public static function run($action)
     {
