@@ -1,25 +1,20 @@
 <style>
-		  .tongzhi {
-	padding-top: 0px;
-	padding-right: 20px;
-	padding-bottom: 0px;
-	padding-left: 20px;		  
-		  }
-		  .tongzhi  li{
-	padding:8px;
-	border-bottom-style: solid;
-	border-bottom-color: #CCCCCC;
-	border-bottom-width: 1px;
-		  }
-			  .tongzhi li i {
-			  color:#CCCCCC
-		  
-		  }	  
+.tongzhi {
+padding-top: 0px;
+padding-right: 20px;
+padding-bottom: 0px;
+padding-left: 20px;		  
+}
+.tongzhi  li{
+padding:8px;
+border-bottom-style: solid;
+border-bottom-color: #CCCCCC;
+border-bottom-width: 1px;
+}
+.tongzhi li i {
+color:#CCCCCC
+}	  
 </style>
-
-
-
-
 
 
 
@@ -30,7 +25,7 @@
 
 	 	 	 	 <div class="management">
     <div class="switchTag">
-    <ul class="">
+    <!--ul class="">
 		<a href="admin.php?op=SellInfoList&amp;searchType=online&amp;auth=adad359ab3bbd4093d728eb07a7c777d">上线(0)</a>
 	</ul>
 	<ul class="tagSelected">
@@ -41,20 +36,14 @@
 	</ul>
 	<ul class="">
 		<a href="admin.php?op=SellInfoList&amp;searchType=offline&amp;auth=adad359ab3bbd4093d728eb07a7c777d">下线(0)</a>
-    </ul>
+    </ul-->
     </div>
     <div class="tabswitchborder">
       <div class="searchproducts">
-        <form name="searchForm" id="searchForm" method="post" action="admin.php?op=SellInfoList&amp;auth=adad359ab3bbd4093d728eb07a7c777d">
+        <form name="searchForm" id="searchForm" method="post" action="">
           <label for="label">产品名称</label>
-          <input type="text" name="caption" id="caption" value="" class="productSearchInput" onmousemove="this.focus();" style="height:19px;line-height:19px;">
-          <select name="searchType" id="searchType" class="productSelect">
-             <option value="online">上线</option>
-             <option value="auditing" selected="">审核中</option>
-             <option value="refuse">审核拒绝</option>
-             <option value="offline">下线</option>
-          </select>
-          <input type="submit" name="Submit3" value="查 询">
+          <input type="text" name="productName" id="caption" value="" class="productSearchInput" style="height:19px;line-height:19px;">
+          <input type="submit" value="查 询">
         </form>
       </div>
       <div class="productdatablock">
@@ -66,13 +55,11 @@
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tbody><tr>
                 <td>
-                                                                &nbsp;&nbsp;&nbsp;共有 <span>0</span> 条商业信息已发布上网！ </td>
+                                                                </td>
                 <td align="right" class="shangxia"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tbody><tr>
 		<td align="right" valign="middle">
-				<span>上一页</span>
-	    	    	第 1/1 页
-	    	    <span>下一页</span>
+				
 	            </td>
 	</tr>
 </tbody></table></td>
@@ -81,7 +68,6 @@
             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="pdata">
               <thead>
                 <tr>
-                  <td width="35">&nbsp;</td>
                   <td width="110">图片</td>
                   <td>标题</td>
                                     <td width="130">更新时间</td>
@@ -89,12 +75,7 @@
                 </tr>
               </thead>
               <tbody>
-                                              <tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">
-                  <td align="center" valign="middle" class="dataselect">
-<!---->
-	                  	
-
-</td>
+                 <tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">
                   <td align="center" valign="middle" class="datapic"><img src="http://img.cn.china.cn/1/0,0,379,68449,440,384,62b2b6fe.jpg" width="100" height="84"></td>
                   <td align="left" valign="top" class="datadescription"><div class="productdesc">
                     <div class="proctiontitle"><a href="admin.php?op=SellInfoShow&amp;sellInfoId=1685433139&amp;searchType=auditing&amp;auth=adad359ab3bbd4093d728eb07a7c777d" target="_blank">供应笔记本电脑</a></div>
@@ -112,21 +93,17 @@
                              </tbody>
             </table>
             <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:12px;" class="productDataBottom">
-              <tbody><tr>
-                <td height="35">
-                                                                </td></tr>
+              <tbody>
               <tr>
                 <td>
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="pages">
 	<tbody><tr>
-		<td align="right" valign="middle" style="padding-right:15px; border-bottom:1px solid #93CFFE; background-color:#CBE6FE;">
+		<td align="right" valign="middle" style="height:25px;padding-right:15px; border-bottom:1px solid #93CFFE; background-color:#CBE6FE;">
 				<span>首&nbsp;&nbsp;页</span>
 		<span>上一页</span>
 	    	    	第 1/1 页
 	    	    <span>下一页</span>
-	    <span>末&nbsp;&nbsp;页</span>
-	    		  <span id="gotopagespan">转到第 <select onchange="gotopage(this)"><option value="1" selected="">1</option></select>
-				  <script>function gotopage(obj){window.location="admin.php?op=SellInfoList&searchType=auditing&caption=&auth=adad359ab3bbd4093d728eb07a7c777d&pagenum="+obj.options[obj.selectedIndex].value.toString()}</script> 页</span>
+	    <span>末&nbsp;&nbsp;页</span> 		  
         </td>
 	</tr>
 </tbody></table>                </td>

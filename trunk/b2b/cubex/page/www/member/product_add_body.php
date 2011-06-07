@@ -28,16 +28,51 @@
   <div class="operationArea">
 	<?php include "admin_menu.php"; ?>
 
+<?php
+use Ky\Model\Product;
+$_GET['id'] = 3;
+if(isset($_GET['id'])){
+   $form = Product::detail($_GET['id']);  
+   $form['detail'] = stripslashes($form['detail']);  
+}else{
+   $form = array(
+        'productName' => '',
+        'detail'      => '',
+        'expire'      => 0,
+        'pic'         => '',
+        'measureUnit' => '',
+        'productPrice'            => '',
+        'minAmount'            => '',
+        'totalAmount'            => '',
+        'deliverDate'            => '',
+        'brief'            => '',
+        'keyword'            => '',
+        'title'            => '',
+        
+        'category1'    => 0,
+        'category2'    => 0,
+        'category3'    => 0,
+        'province'     => '',
+        'city'         => '',
+   );    
+}
+
+?>
+
 	 	 	 	 
 				 
 				 
 				 <div class="right">
-  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/product_add_done">
+  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/product_add_done"  enctype="multipart/form-data" >
 	<input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
 	<input type="hidden" name="corpname" value="<?php echo $_SESSION['corpname']; ?>" />
 	<input type="hidden" name="province" value="<?php echo $_SESSION['province']; ?>" />
 	<input type="hidden" name="city" value="<?php echo $_SESSION['city']; ?>" />
-
+<?php
+    if(isset($_GET['id'])){
+        echo '<input type="hidden" name="id" value="'.$_GET['id'].'" />';    
+    }
+?>
         <div class="postTips"><span>提示：</span>发布供应信息，让客户快速找到您。</div>
     <div class="formblock">
       <div class="formheader">
@@ -47,7 +82,7 @@
        <div class="formline">
        <div class="formlabel"><span class="inputlabelok"></span>产品名称：<span>*</span></div>
        <div class="formcontent">
-       <input name="productName" id="productName" value="" type="text" class="input220" >
+       <input name="productName" id="productName" value="<?php echo $form['productName']; ?>" type="text" class="input220" >
        <span id="oproductName_err"></span>
        <div class="note">产品名称中请勿出现规格、型号、品牌等内容.</div>
          </div>
@@ -97,12 +132,20 @@
             <select name="category1" onfocus="checkInput(this);" nextStep="category2" next="category2" dataUrl="index.php?c=conf&t=category&pid=" messageSpan="cat_err" id="category1" size="8" style="width: 140px;height: 150px;" >
 <?php
 use Ky\Model\Config;
-echo Config::getTree('category','option',null,0);
+echo Config::getTree('category','option',$form['category1'],0);
 ?>	           
             </select>
             <select name="category2" onfocus="checkInput(this);" nextStep="category3"  dataUrl="index.php?c=conf&t=category&pid=" messageSpan="cat_err"  id="category2" size="8" style="width: 140px;height: 150px;" >
+<?php
+if(!empty($form['category1']))
+    echo Config::getTree('category','option',$form['category2'],$form['category1']);
+?>          
             </select>
             <select name="category3" onfocus="checkInput(this);" messageSpan="cat_err"  id="category3" size="8" style="width: 140px;height: 150px; " >
+<?php
+if(!empty($form['category1']) && !empty($form['category2']))
+    echo Config::getTree('category','option',$form['category3'],$form['category2']);
+?>            
              </select>
             </div>
             <br />
@@ -113,7 +156,7 @@ echo Config::getTree('category','option',null,0);
 <div class="formline">
   <div class="formlabel"><span id="lbl_offerSubject">&nbsp;</span>信息标题：<span>*</span></div>
   <div class="formcontent">
-    <input name="title" id="title" value="" type="text" class="input220">
+    <input name="title" id="title" value="<?php echo $form['title']; ?>" type="text" class="input220">
     <span id="offerSubject_err"></span>
     <div class="note">限50字以内，请务必填写准确，便于客户迅速找到您。<br>
       建议信息标题在标识产品分类的同时增加产品的具体信息，如型号、主要参数、行业用名。</div>
@@ -123,7 +166,7 @@ echo Config::getTree('category','option',null,0);
       <div class="formline">
       <div class="formlabel"><span id="lbl_offerKeyword"></span>关键词：</div>
 	   <div class="formcontent">
-       	<input id="keyword" name="keyword" value="" type="text" class="input220">
+       	<input id="keyword" name="keyword" value="<?php echo $form['keyword']; ?>" type="text" class="input220">
         <div class="note">为了让买家更精确的找到您，请填写产品名称的核心词、通称或别称。</div>
 	   </div>
     </div>
@@ -133,7 +176,7 @@ echo Config::getTree('category','option',null,0);
       <div class="formline">
         <div class="formlabel"><span id="lbl_offerDetail">&nbsp;</span>详细说明：<span>*</span></div>
         <div class="formcontent">
-		  <textarea cols="120" id="detail" name="detail" rows="20"></textarea>
+		  <textarea cols="120" id="detail" name="detail" rows="20"><?php echo $form['detail']; ?></textarea>
 <script language="javascript">
 KE.show({id : 'detail'});
 </script>
@@ -161,9 +204,15 @@ KE.show({id : 'detail'});
         <div class="formlabel">上传图片：</div>
         <div class="formcontent"> 
 <table cellspacing="0" cellpadding="0" width="100%" border="0">
-  <input type="hidden" name="picIndex" id="picIndex" value="0">
   <tbody><tr>
-    <td width="109" id="tdpic01"><img name="uploadImage0" id="uploadImage0" src="./res/no_pic.gif" width="100" height="100"></td>
+    <td width="109" id="tdpic01">
+<?php
+    if(!empty($form['pic'])){
+        echo '<img src="'.$form['pic'].'" width="100" height="100">';    
+    }
+?>
+        
+    </td>
     <td height="35" valign="top">
     <table border="0" cellspacing="0" cellpadding="0">
       <tbody><tr>
@@ -208,30 +257,30 @@ KE.show({id : 'detail'});
                 <td width="140" align="right">计量单位：</td>
                 <td><select name="measureUnit" id="measureUnit">
 <?php
-echo Config::getOption('units','option');
+echo Config::getOption('units','option',$form['measureUnit']);
 ?>                    
 </select>
 </td>
               </tr>
               <tr>
                 <td align="right">产品单价：</td>
-                <td><input name="productPrice" id="productPrice" type="text" class="input173px" value="">
+                <td><input name="productPrice" id="productPrice" type="text" class="input173px" value="<?php echo $form['productPrice']; ?>">
                   元/<span id="priceUnit"> 单位 </span> <span id="productPrice_err"> </span></td>
               </tr>
               <tr>
                 <td align="right">最小起订量：</td>
-                <td><input name="minAmount" id="minAmount" type="text" class="input173px" value="">
+                <td><input name="minAmount" id="minAmount" type="text" class="input173px" value="<?php echo $form['minAmount']; ?>">
                   <span id="minAmountUnit"> 单位 </span> <span id="minAmount_err"></span> </td>
               </tr>
               <tr>
                 <td align="right">供货总量：</td>
-                <td><input name="totalAmount" id="totalAmount" type="text" class="input173px" value="">
+                <td><input name="totalAmount" id="totalAmount" type="text" class="input173px" value="<?php echo $form['totalAmount']; ?>">
                   <span id="totalAmountUnit"> 单位 </span> <span id="totalAmount_err"></span> </td>
               </tr>
               <tr>
                 <td align="right">发货期限：</td>
                 <td>自买家付款之日起
-                  <input name="deliverDate" id="deliverDate" type="text" value="" size="2">
+                  <input name="deliverDate" id="deliverDate" type="text" value="<?php echo $form['deliverDate']; ?>" size="2">
                   天内发货</td>
               </tr>
             </tbody>
