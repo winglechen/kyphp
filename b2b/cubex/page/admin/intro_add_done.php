@@ -14,9 +14,9 @@ if(!empty($_POST)){
     if($_FILES['pic']['name']){
         $uid      = Uid::num();
         $ext      = Path::getFileExt($_FILES['pic']['name']);
-        $fileName = IMG_PATH . $uid . '.' . $ext;
+        $fileName = IMG_PATH  . 'upload/' . $uid . '.' . $ext;
         move_uploaded_file($_FILES['pic']['tmp_name'],$fileName);
-        $_POST['pic'] = IMG_HOST . $uid . '.' . $ext ;
+        $_POST['pic'] = IMG_HOST .'upload/' . $uid . '.' . $ext ;
     }
 
     if(0 == $_POST['id']){
