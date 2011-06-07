@@ -32,7 +32,7 @@ class Company
 
     private static function dispatch()
     {
-        
+         
         require(CUBEX_PATH . 'page/' . rtrim(self::$act) . '.php');
     }
 
