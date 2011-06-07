@@ -133,7 +133,7 @@ echo Config::getTree('category','option',null,0);
       <div class="formline">
         <div class="formlabel"><span id="lbl_offerDetail">&nbsp;</span>详细说明：<span>*</span></div>
         <div class="formcontent">
-		  <textarea cols="80" id="detail" name="detail" rows="10"></textarea>
+		  <textarea cols="120" id="detail" name="detail" rows="20"></textarea>
 <script language="javascript">
 KE.show({id : 'detail'});
 </script>
