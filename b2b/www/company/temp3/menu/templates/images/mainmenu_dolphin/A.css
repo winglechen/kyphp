@@ -1,0 +1,39 @@
+#menumain{
+   margin:0;
+   white-space:nowrap;
+   overflow:hidden;
+   height:40px;
+}
+
+#menumain .mainmenuiner {
+    height:40px;
+	padding:0;
+    line-height:40px;
+    overflow: hidden;
+    margin: 0 0 0 160px; 
+}
+
+#menumain a.menumain:link,#menumain a.menumain:active,#menumain a.menumain:visited{
+   display:block;
+   float:left;
+   height:40px;
+   text-decoration: none;
+   text-align:center;
+   width:100px;
+   color:#fff;
+   font:14px/39px 'SimSun',Arial,Sans-Serif;
+   background:url(menu.jpg) 0px 0px repeat-x;
+   margin:0px;
+}
+
+#menumain a.menumain:hover{
+   display:block;
+   float:left;
+   height:40px;
+   color:#fff; 
+   text-decoration: none;
+   text-align:center;
+   width:100px;
+   font:14px/39px 'SimSun',Arial,Sans-Serif;
+   margin:0px;
+} 
