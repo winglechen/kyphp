@@ -1,3 +1,13 @@
+<?php
+use Ky\Model\Product;
+use Ky\Core\Core\Db;
+use Ky\Core\Core\Form;
+
+Form::init('product_list_search');
+
+    
+?>
+
 <style>
 .tongzhi {
 padding-top: 0px;
@@ -41,6 +51,8 @@ color:#CCCCCC
     <div class="tabswitchborder">
       <div class="searchproducts">
         <form name="searchForm" id="searchForm" method="post" action="">
+            <input type="hidden" name="namespace" value="product_list_search" />
+            <input type="hidden" name="page" value="page" />
           <label for="label">产品名称</label>
           <input type="text" name="productName" id="caption" value="" class="productSearchInput" style="height:19px;line-height:19px;">
           <input type="submit" value="查 询">
