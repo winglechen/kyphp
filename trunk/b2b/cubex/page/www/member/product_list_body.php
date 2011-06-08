@@ -3,7 +3,14 @@ use Ky\Model\Product;
 use Ky\Core\Core\Db;
 use Ky\Core\Core\Form;
 
-Form::init('product_list_search');
+Form::init('member_product_list_search');
+$condition = array(
+    'productName' => 'like',
+);
+$page = array(
+    'cur'   => $_POST['page'],
+    'num'   => 10
+);
 
     
 ?>
@@ -51,7 +58,7 @@ color:#CCCCCC
     <div class="tabswitchborder">
       <div class="searchproducts">
         <form name="searchForm" id="searchForm" method="post" action="">
-            <input type="hidden" name="namespace" value="product_list_search" />
+            <input type="hidden" name="namespace" value="member_product_list_search" />
             <input type="hidden" name="page" value="page" />
           <label for="label">产品名称</label>
           <input type="text" name="productName" id="caption" value="" class="productSearchInput" style="height:19px;line-height:19px;">
