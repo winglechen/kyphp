@@ -28,6 +28,8 @@ class Product
     private static function page($where,$page)
     {
         if(!$page) return '';
+        
+        
     }
     
     public static function update($data)
