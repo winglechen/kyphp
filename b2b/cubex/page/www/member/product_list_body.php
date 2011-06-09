@@ -3,14 +3,26 @@ use Ky\Model\Product;
 use Ky\Core\Core\Db;
 use Ky\Core\Core\Form;
 
+$_POST = array(
+    'corpid'        => 3,
+    'productName'   => 'te',
+    'namespace'     => 'member_product_list_search',
+);
+
+
 Form::init('member_product_list_search');
+
 $condition = array(
     'productName' => 'like',
+    'corpid'      => 'eq',
 );
 $page = array(
-    'cur'   => $_POST['page'],
-    'num'   => 10
+    'cur'           => $_POST['page'],
+    'numPerPage'    => 10
 );
+$data = Product::lists('id,pic,productName,brief,ts,checked',$condition,$_POST,$page);
+var_dump($data);
+exit;
 
     
 ?>
@@ -57,9 +69,10 @@ color:#CCCCCC
     </div>
     <div class="tabswitchborder">
       <div class="searchproducts">
-        <form name="searchForm" id="searchForm" method="post" action="">
+        <form name="searchForm" id="searchForm" method="post" action="index.php?p=www/member/product_list">
             <input type="hidden" name="namespace" value="member_product_list_search" />
             <input type="hidden" name="page" value="page" />
+            <input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
           <label for="label">产品名称</label>
           <input type="text" name="productName" id="caption" value="" class="productSearchInput" style="height:19px;line-height:19px;">
           <input type="submit" value="查 询">

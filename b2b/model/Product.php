@@ -15,28 +15,12 @@ class Product
 
     public static function lists($columns="*",$where=null,$data=array(),$page=false)
     {
-         $sql = 'select ' . $columns . ' from ' . self::$table ;
+        $sql  = 'select ' . $columns . ' from ' . self::$table . ' ' ;
+        $sql .= Sql::where($where,$data);
          
-         $where = ' where 1';
+        return Db::getRows($sql);       
     }
-    
-    public static function formatWhere($where,$data)
-    {
-        if(!$where) return ''; 
-        $ret = ' where 1 ';
-        foreach($where as $column => $con){
-            if(isset($data[$column]) && !empty($data[$column]))
-            $ret .= self::where($column,$data[$column],$con); 
-        }
-    }
-    
-    private static function where($column,$data,$con)
-    {
-        $con = strtolower($con);
-        return self::$con($column,$data);    
-    }
-    
-    
+   
     public static function update($data)
     {
         $id = $data['id'];
