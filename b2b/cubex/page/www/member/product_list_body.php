@@ -17,12 +17,13 @@ $condition = array(
     'corpid'      => 'eq',
 );
 $page = array(
-    'cur'           => $_POST['page'],
-    'numPerPage'    => 10
+    'url'           => 'index.php?p=www/member/product_list&page=',
+    'curPage'           => $_POST['page'],
+    'numPerPage'    => 10,
+    'style'         => 'default',
 );
 $data = Product::lists('id,pic,productName,brief,ts,checked',$condition,$_POST,$page);
-var_dump($data);
-exit;
+
 
     
 ?>

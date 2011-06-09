@@ -58,5 +58,24 @@ class Sql
     public static function like($column,$data)
     {
         return " and " . $column . " like '%" . $data . "%' ";
-    }      
+    }    
+    
+    public static function addValues($data)
+    {
+       $ret  = "'";
+       $ret .= join("','",array_values($data));
+       $ret .= "'";
+       return $ret;
+    }
+
+    public static function updateValues($data)
+    {
+        $ret = "";
+        foreach($data as $k => $v){
+            $ret .= " " . $k . "='" . $v . "',";
+        }
+        $ret = rtrim($ret,',');
+
+        return $ret;
+    }  
 }
