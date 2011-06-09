@@ -104,20 +104,20 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
             <ul>
                 <li>用户名： 
                     <input type="text" name="username" class="fream2"> 
-                    <input type="submit" name="submit" value="登 录" class="btn2" onclick="javascript:return check();">
+                    <input type="submit" name="submit" value="登 录" class="btn2" ">
                 </li>
                 <li>密&nbsp;&nbsp;码： 
                     <input type="password" name="password" class="fream2"> 
-                    &nbsp;<a href="http://my.cn.china.cn/admin.php?op=B2BForgetInfoShow&type=passwd">忘记密码</a>
+                    &nbsp;<a href="#">忘记密码</a>
                 </li>
             </ul>
         </form>
         <img src="./res/loginTR.jpg" width="6" height="60" alt="">
     </div>
   <div class="btn">
-        <p><a href="http://my.cn.china.cn/admin.php?op=B2BRegisterShow" target="_blank"><img src="./res/sign8.gif" width="13" height="13" align="absmiddle">注册</a>
-<a href="http://my.cn.china.cn/admin.php?op=ApplyRegisterShow" target="_blank" style="width:138px;height:24px;padding-top:9px;background:url(http://cn.china.cn/v5shouye/images/btn3Bg1.jpg) no-repeat;display:block;color:#CD0000;font-weight:bold;float:left;margin-top: 7px;margin-right: 3px;margin-bottom: 0;margin-left: 4px;padding-left: 12px;"><img src="./res/sign9.gif" width="13" height="18" align="absmiddle" style="padding-left: 7px;">加入浩铭网</a></p>
- <p><a href="http://my.cn.china.cn/admin.php?op=CorpBaseInfoShow" target="_blank">发布信息</a><a href="http://cn.china.cn/hyfw/index.html" target="_blank">推广公司</a><a href="http://cn.china.cn/buy/index.html" target="_blank">寻找买家</a></p>
+        <p><a href="index.php?p=www/register" target="_blank"><img src="./res/sign8.gif" width="13" height="13" align="absmiddle">注册</a>
+<a href="index.php?p=www/register" target="_blank" style="width:138px;height:24px;padding-top:9px;background:url(http://cn.china.cn/v5shouye/images/btn3Bg1.jpg) no-repeat;display:block;color:#CD0000;font-weight:bold;float:left;margin-top: 7px;margin-right: 3px;margin-bottom: 0;margin-left: 4px;padding-left: 12px;"><img src="./res/sign9.gif" width="13" height="18" align="absmiddle" style="padding-left: 7px;">加入浩铭网</a></p>
+ <p><a href="index.php?p=www/member/product_add" target="_blank">发布信息</a><a href="index.php?p=www/register" target="_blank">推广公司</a><a href="index.php?p=www/register" target="_blank">寻找买家</a></p>
     </div>
     <div class="btnBot">
         <img src="./res/loginBL.gif" width="6" height="5" style="float: left">
