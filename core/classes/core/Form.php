@@ -16,7 +16,7 @@ class Form
             $_SESSION['form']    = $_POST;
         }elseif(isset($_SESSION['form']) ){
             $_POST = $_SESSION['form']; 
-            $_POST[$page] = $_GET[$page];
+            $_POST[$page] = isset($_GET[$page]) ? $_GET[$page] : 1;
         }
 
         if($namespace){
