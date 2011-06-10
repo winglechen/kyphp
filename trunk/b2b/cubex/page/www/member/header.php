@@ -37,7 +37,7 @@
           </table>
     </div>
      <div>
-        <span class="erm_header_storetext" style=" float:left; text-align:right; width:930px;">我的商铺：<a href="#" target="_blank">http://<?php echo $_SESSION['username'] ?>.hm6688.com</a></span>
+        <span class="erm_header_storetext" style=" float:left; text-align:right; width:930px;">我的商铺：<a href="#" target="_blank">http://<?php echo $_SESSION['username'] ?>.haomingchina.com</a></span>
      </div>
      <div style="clear:both"></div>
 </div>
