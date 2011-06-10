@@ -16,7 +16,7 @@ class Page
         self::$config = array_merge(self::$config,$config); 
         
         $style = strtolower(self::$config['style']) . 'Page';
-        self::$style();
+        return self::$style();
     }    
 
     private static function defaultPage()
@@ -36,7 +36,7 @@ class Page
 
     private static function showNums()
     {
-        return '<span style="float:right;">结果数：<strong>'.self::$config['nums'].'</strong></span>';
+        return '<span style="float:left;margin-left:10px;">结果数：<strong>'.self::$config['nums'].'</strong></span>';
     }
 
     private static function firstPage()
@@ -75,9 +75,9 @@ class Page
         return self::formatLink('末&nbsp;&nbsp;页',self::$config['pages']); 
     }   
 
-    private static function formatLink($text$page=1)
+    private static function formatLink($text,$page=1)
     {
-        return  ' <a href="'self::$config['url'] . $page . '" >' . $text . '</a> '
+        return  ' <a href="' . self::$config['url'] . $page . '" >' . $text . '</a> ';
     }
 
     private static function getPages()
