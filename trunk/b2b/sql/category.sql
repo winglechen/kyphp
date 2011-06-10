@@ -1,4 +1,5 @@
-
+use b2b;
+set names utf8;
 CREATE TABLE  `b2b_tree` (
  `id` mediumint(8) unsigned NOT NULL auto_increment,
  `name` varchar(45) NOT NULL,
