@@ -3,14 +3,8 @@ use Ky\Model\Product;
 use Ky\Core\Core\Db;
 use Ky\Core\Core\Form;
 
-$_POST = array(
-    'corpid'        => 3,
-    'productName'   => 'te',
-    'namespace'     => 'member_product_list_search',
-);
-
-
 Form::init('member_product_list_search');
+$_POST['corpid'] = $_SESSION['id'];
 
 $condition = array(
     'productName' => 'like',
@@ -18,14 +12,12 @@ $condition = array(
 );
 $page = array(
     'url'           => 'index.php?p=www/member/product_list&page=',
-    'curPage'           => $_POST['page'],
+    'curPage'       => $_POST['page'],
     'numPerPage'    => 10,
     'style'         => 'default',
 );
 $data = Product::lists('id,pic,productName,brief,ts,checked',$condition,$_POST,$page);
 
-
-    
 ?>
 
 <style>
@@ -103,27 +95,58 @@ color:#CCCCCC
                 <tr>
                   <td width="110">图片</td>
                   <td>标题</td>
-                                    <td width="130">更新时间</td>
-                                    <td width="115">操作</td>
+                  <td width="130">更新时间</td>
+                  <td width="115">操作</td>
                 </tr>
               </thead>
               <tbody>
-                 <tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">
-                  <td align="center" valign="middle" class="datapic"><img src="http://img.cn.china.cn/1/0,0,379,68449,440,384,62b2b6fe.jpg" width="100" height="84"></td>
-                  <td align="left" valign="top" class="datadescription"><div class="productdesc">
-                    <div class="proctiontitle"><a href="admin.php?op=SellInfoShow&amp;sellInfoId=1685433139&amp;searchType=auditing&amp;auth=adad359ab3bbd4093d728eb07a7c777d" target="_blank">供应笔记本电脑</a></div>
-                                      <div class="productiondetail">二手电脑出售，价格实惠，有意者请电话联系！</div>
-                  </div></td>
-                  <td align="center" valign="middle" class="dataexpire">
-                                    2011-01-10
-                  </td>
-                  <td align="center" valign="middle" class="datamod"><table width="100%" border="0" cellspacing="3" cellpadding="0" class="modopration">
-                                    	  <tbody><tr>
-                      	<td align="center">审核中 <a href="admin.php?op=SellInfoUpdateShow&amp;sellInfoId=1685433139&amp;searchType=auditing&amp;auth=adad359ab3bbd4093d728eb07a7c777d">修改</a></td>
-                      </tr>
-                                    </tbody></table></td>
+<?php
+$row = null;
+for($i=0,$len=count($data['data']); $i<$len; $i++){
+    $row = $data['data'][$i];
+?>
+<tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">
+    <td align="center" valign="middle" class="datapic">
+<?php
+    if(!empty($row['pic'])){
+        echo '<img src="'.$row['pic'].'" width="100" height="84">';
+        
+    }
+?>
+    </td>
+    <td align="left" valign="top" class="datadescription">
+        <div class="productdesc">
+            <div class="proctiontitle">
+                <a href="index.php?p=www/member/product_add&id=<?php echo $row['id']; ?>"><?php echo $row['productName']; ?></a>
+            </div>
+            <div class="productiondetail"><?php echo $row['brief']; ?></div>
+        </div>
+    </td>
+    <td align="center" valign="middle" class="dataexpire">
+        <?php echo date('Y-m-d',$row['ts']); ?>
+    </td>
+    <td align="center" valign="middle" class="datamod">
+        <table width="100%" border="0" cellspacing="3" cellpadding="0" class="modopration">
+            <tbody>
+                <tr>
+                    <td align="center">
+                    <?php 
+                        if($row['ts']){
+                            echo '审核通过'; 
+                        }else{
+                            echo '审核中';
+                        }
+                    ?>
+                    <a href="index.php?p=www/member/product_add&id=<?php echo $row['id']; ?>">修改</a></td>
                 </tr>
-                             </tbody>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<?php
+}
+?>
+                </tbody>
             </table>
             <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:12px;" class="productDataBottom">
               <tbody>
@@ -132,11 +155,9 @@ color:#CCCCCC
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="pages">
 	<tbody><tr>
 		<td align="right" valign="middle" style="height:25px;padding-right:15px; border-bottom:1px solid #93CFFE; background-color:#CBE6FE;">
-				<span>首&nbsp;&nbsp;页</span>
-		<span>上一页</span>
-	    	    	第 1/1 页
-	    	    <span>下一页</span>
-	    <span>末&nbsp;&nbsp;页</span> 		  
+<?php
+    echo $data['page'];
+?>
         </td>
 	</tr>
 </tbody></table>                </td>
