@@ -30,7 +30,7 @@
 
 <?php
 use Ky\Model\Product;
-$_GET['id'] = 3;
+
 if(isset($_GET['id'])){
    $form = Product::detail($_GET['id']);  
    $form['detail'] = stripslashes($form['detail']);  
