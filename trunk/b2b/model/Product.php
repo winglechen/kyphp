@@ -21,15 +21,38 @@ class Product
         
         $page = self::page($where,$page);    
          
-        $sql .= $where . ' ' . $page;
+        $sql .= $where . ' ' . $page['sql'];
         $data = Db::getRows($sql);       
+
+        return array(
+            'data'  => $data,
+            'page'  => $page['data'],
+        );
     }
     
     private static function page($where,$page)
     {
-        if(!$page) return '';
+        if(!$page) return array(
+            'sql'   => '',
+            'data'  => ''
+        );
         
-        
+        $sql = ' limit ' . ($page['curPage'] - 1)*$page['numPerPage'] . ',' . $page['numPerPage'];
+
+        $page['nums'] = self::getQueryNums($where); 
+        $page = Page::show($page);
+
+        return array(
+            'sql'   => $sql,
+            'data'  => $page
+        );
+    }
+
+    public static function getQueryNums($where)
+    {
+        $sql    = 'select count(1) as num from ' . self::$table . ' ' . $where;
+        $data   = Db::getRow($sql);
+        return $data['num'];
     }
     
     public static function update($data)
