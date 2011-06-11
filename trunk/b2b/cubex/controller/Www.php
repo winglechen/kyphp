@@ -27,7 +27,11 @@ class Www
                 $_GET['module'] = 'product';  
             }elseif(strpos(self::$act,'/company')){
                 $_GET['module'] = 'company';  
-            }elseif(strpos(self::$act,'/qiugou')){
+            }elseif(strpos(self::$act,'/supply')){
+                $_GET['module'] = 'supply'; 
+            }elseif(strpos(self::$act,'/website')){
+                $_GET['module'] = 'website'; 
+            }elseif(strpos(self::$act,'/qiu')){
                 $_GET['module'] = 'qiugou';  
             }elseif(strpos(self::$act,'/inquire')){
                 $_GET['module'] = 'inquire';  
