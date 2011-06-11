@@ -18,18 +18,10 @@
 ini_set("max_execution_time",60000000);
 $Crawler = new Crawler();
 $jobs    = array(
-    array('http://demo.2799.cn/1294374538/','./temp4/','index.html'),
-    array('http://demo.2799.cn/1294374538/news/class/','./temp4/news/class/','index.html'),
-    array('http://demo.2799.cn/1294374538/product/class/','./temp4/product/class/','index.html'),
-    
-    array('http://demo.2799.cn/1294375486/','./temp5/','index.html'),
-    array('http://demo.2799.cn/1294375486/news/class/','./temp5/news/class/','index.html'),
-    array('http://demo.2799.cn/1294375486/product/class/','./temp5/product/class/','index.html'),
-    
-    array('http://demo.2799.cn/1295931972/','./temp6/','index.html'),
-    array('http://demo.2799.cn/1295931972/news/class/','./temp6/news/class/','index.html'),
-    array('http://demo.2799.cn/1295931972/product/class/','./temp6/product/class/','index.html'),
-    
+    array('http://demo.2799.cn/1294129129/','./temp1/','index.html'),
+    array('http://demo.2799.cn/1294129129/news/class/','./temp1/news/class/','index.html'),
+    array('http://demo.2799.cn/1294129129/product/class/','./temp1/product/class/','index.html'),
+
 );
 $Crawler->addJobs($jobs);
 $Crawler->run();
