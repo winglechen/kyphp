@@ -10,12 +10,12 @@
 require_once 'JSON.php';
 
 $php_path = dirname(__FILE__) . '/';
-$php_url = dirname($_SERVER['PHP_SELF']) . '/';
+$php_url = 'http://localhost/kyphp/b2b/www/www/';
 
 //文件保存目录路径
 $save_path = $php_path . '../attached/';
 //文件保存目录URL
-$save_url = $php_url . '../attached/';
+$save_url = $php_url . 'editor/attached/';
 //定义允许上传的文件扩展名
 $ext_arr = array('gif', 'jpg', 'jpeg', 'png', 'bmp');
 //最大文件大小
@@ -78,7 +78,10 @@ if (empty($_FILES) === false) {
 	$file_url = $save_url . $new_file_name;
 	
 	header('Content-type: text/html; charset=UTF-8');
+	echo json_encode(array('error' => 0, 'url' => $file_url));
+	exit;
 	$json = new Services_JSON();
+	
 	echo $json->encode(array('error' => 0, 'url' => $file_url));
 	exit;
 }
