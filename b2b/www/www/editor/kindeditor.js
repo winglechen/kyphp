@@ -953,6 +953,7 @@ KE.cmd = function(id) {
 
 KE.format = {
 	getUrl : function(url, mode, host, pathname) {
+		console.log(url, mode, host, pathname);
 		if (!mode) return url;
 		mode = mode.toLowerCase();
 		if (!KE.util.inArray(mode, ['absolute', 'relative', 'domain'])) return url;
@@ -1006,7 +1007,7 @@ KE.format = {
 			url = getRelativePath(host + pathname, 0).substr(2);
 		} else if (mode == 'absolute') {
 			if (url.substr(0, host.length) === host) {
-				url = url.substr(host.length);
+				//url = url.substr(host.length);
 			}
 		}
 		return url;
