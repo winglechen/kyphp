@@ -45,7 +45,7 @@ include "header.php";
             <tbody>
             <tr>
               <td align="right"><strong>样式一</strong></td>
-              <td><img name="uploadImage0" id="uploadImage0" src="./temp/temp2.png" width="300" height="300" style="margin:10px 0;"></td>
+              <td><img name="uploadImage0" id="uploadImage0" src="./temp/temp1.png" width="300" height="300" style="margin:10px 0;"></td>
               <td align="right"><strong>样式二</strong></td>
               <td><img name="uploadImage0" id="uploadImage" src="./temp/temp3.png" width="300" height="300" style="margin:10px 0;"></td>
             </tr>
