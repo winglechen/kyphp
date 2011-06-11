@@ -16,6 +16,7 @@ $page = array(
     'numPerPage'    => 10,
     'style'         => 'default',
 );
+
 $data = Product::lists('id,pic,productName,brief,ts,checked',$condition,$_POST,$page);
 
 ?>
@@ -64,7 +65,7 @@ color:#CCCCCC
       <div class="searchproducts">
         <form name="searchForm" id="searchForm" method="post" action="index.php?p=www/member/product_list">
             <input type="hidden" name="namespace" value="member_product_list_search" />
-            <input type="hidden" name="page" value="page" />
+            <input type="hidden" name="pageParam" value="page" />
             <input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
           <label for="label">产品名称</label>
           <input type="text" name="productName" id="caption" value="" class="productSearchInput" style="height:19px;line-height:19px;">
