@@ -49,7 +49,22 @@ if('product' == $_GET['module']){
         </ul>  	                             
       </div>
     </div>
-    
+
+<?php
+}elseif('qiugou' == $_GET['module']){
+?>
+    <div class="left">
+      <div class="spacetop"></div>
+      <div class="menu">      
+        <ul class="menuSelected">
+          <a href="index.php?p=www/member/qiugou_list">管理求购信息</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/qiugou_add">发布求购信息</a>
+        </ul>  	                             
+      </div>
+    </div>
+        
 <?php
 }elseif('website' == $_GET['module']){
 ?>

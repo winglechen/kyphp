@@ -1,9 +1,9 @@
 <?php
-use Ky\Model\Supply;
+use Ky\Model\Qiugou;
 use Ky\Core\Core\Db;
 use Ky\Core\Core\Form;
 
-Form::init('member_supply_list_search');
+Form::init('member_qiugou_list_search');
 $_POST['corpid'] = $_SESSION['id'];
 
 $condition = array(
@@ -11,13 +11,13 @@ $condition = array(
     'corpid'      => 'eq',
 );
 $page = array(
-    'url'           => 'index.php?p=www/member/supply_list&page=',
+    'url'           => 'index.php?p=www/member/qiugou_list&page=',
     'curPage'       => $_POST['page'],
     'numPerPage'    => 10,
     'style'         => 'default',
 );
 
-$data = Supply::lists('id,pic,productName,brief,ts,checked',$condition,$_POST,$page);
+$data = Qiugou::lists('id,pic,productName,brief,ts,checked',$condition,$_POST,$page);
 
 ?>
 
@@ -63,8 +63,8 @@ color:#CCCCCC
     </div>
     <div class="tabswitchborder">
       <div class="searchproducts">
-        <form name="searchForm" id="searchForm" method="post" action="index.php?p=www/member/supply_list">
-            <input type="hidden" name="namespace" value="member_supply_list_search" />
+        <form name="searchForm" id="searchForm" method="post" action="index.php?p=www/member/qiugou_list">
+            <input type="hidden" name="namespace" value="member_qiugou_list_search" />
             <input type="hidden" name="pageParam" value="page" />
             <input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
           <label for="label">产品名称</label>
