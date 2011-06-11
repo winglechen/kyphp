@@ -1,0 +1,49 @@
+#menumain_dolphin{
+   margin:0;
+   white-space:nowrap;
+   overflow:hidden;
+   height:15px;
+}
+
+#menumain_dolphin .mainmenuiner {
+    height:15px;
+	padding:0;
+    line-height:15px;
+    overflow: hidden;
+    margin:0px; 
+}
+
+#menumain_dolphin .menuright {
+	float:right;
+    height:15px;
+	width:2px;
+	padding:0;
+    overflow: hidden;
+    margin:0px;
+	background:url(menu.jpg) 0px 0px no-repeat;
+}
+
+#menumain_dolphin a.menumain_dolphin:link,#menumain_dolphin a.menumain_dolphin:active,#menumain_dolphin a.menumain_dolphin:visited{
+   display:block;
+   float:left;
+   height:15px;
+   text-decoration: none;
+   text-align:center;
+   width:91px;
+   color:#b4b4b4;
+   font:12px/15px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+   background:url(menu.jpg) 0px 0px no-repeat;
+   margin:0px 0px 0px -1px;
+}
+
+#menumain_dolphin a.menumain_dolphin:hover{
+   display:block;
+   float:left;
+   height:15px;
+   color:#fff; 
+   text-decoration: none;
+   text-align:center;
+   width:91px;
+   font:12px/15px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+   margin:0px 0px 0px -1px;
+} 
