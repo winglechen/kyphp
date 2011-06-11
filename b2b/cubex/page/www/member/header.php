@@ -55,9 +55,11 @@
                 <!--li style="background: none;"><span>首&nbsp;&nbsp;页</span></li-->
                 <li style="background: none;"><a href="index.php?p=www/member/index">首&nbsp;&nbsp;页</a></li>
                 <li><a href="index.php?p=www/member/product_list">我的供应</a></li>
+                <li><a href="index.php?p=www/member/supply_list">我的库存</a></li>
                 <li><a href="index.php?p=www/member/qiu_list">我的求购</a></li>                
                 <li><a href="#">询盘信息</a></li>                    
                 <li><a href="index.php?p=www/member/company_main">公司信息</a></li>
+                <li><a href="index.php?p=www/member/website_style">自助建站</a></li>
                 <li><a href="index.php?p=www/member/account">帐户信息</a></li>
         </ul>
         </div>

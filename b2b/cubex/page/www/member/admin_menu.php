@@ -35,6 +35,51 @@ if('product' == $_GET['module']){
         </ul>   
       </div> 
 </div>
+<?php
+}elseif('supply' == $_GET['module']){
+?>
+    <div class="left">
+      <div class="spacetop"></div>
+      <div class="menu">      
+        <ul class="menuSelected">
+          <a href="index.php?p=www/member/supply_list">管理库存信息</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/supply_add">发布库存信息</a>
+        </ul>  	                             
+      </div>
+    </div>
+    
+<?php
+}elseif('website' == $_GET['module']){
+?>
+    <div class="left">
+      <div class="spacetop"></div>
+      <div class="menu">      
+        <ul class="menuSelected">
+          <a href="index.php?p=www/member/website_style">网站设置</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/product_add">网站导航管理</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/product_add">网站底部链接</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/product_add">公司介绍页面</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/product_add">公司新闻分类</a>
+        </ul>  
+        <ul class="">
+          <a href="index.php?p=www/member/product_add">公司新闻列表</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/product_add">公司新闻添加</a>
+        </ul>	
+                                     
+      </div>
+    </div>
 <?php 
 }else{
 ?>
