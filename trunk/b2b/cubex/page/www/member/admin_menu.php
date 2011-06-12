@@ -84,13 +84,16 @@ if('product' == $_GET['module']){
           <a href="index.php?p=www/member/product_add">公司介绍页面</a>
         </ul>
         <ul class="">
-          <a href="index.php?p=www/member/product_add">公司新闻分类</a>
+          <a href="index.php?p=www/member/website_new_category_list">公司新闻分类</a>
         </ul>  
         <ul class="">
-          <a href="index.php?p=www/member/product_add">公司新闻列表</a>
+          <a href="index.php?p=www/member/website_new_category_add">新闻分类添加</a>
+        </ul> 
+        <ul class="">
+          <a href="index.php?p=www/member/website_new_list">公司新闻列表</a>
         </ul>
         <ul class="">
-          <a href="index.php?p=www/member/product_add">公司新闻添加</a>
+          <a href="index.php?p=www/member/website_new_add">公司新闻添加</a>
         </ul>	
                                      
       </div>

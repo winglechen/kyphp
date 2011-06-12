@@ -30,6 +30,33 @@ class Config
         return self::_formatSingleOption($data,$default);
     }
     
+    public static function getValue($tableName,$value,$pid=-1)
+    {
+        $data = self::getOption($tableName,'array',null,$pid);
+        foreach($data as $row){
+            if($value == $row['id']){
+                return $row;    
+            }    
+        }
+        
+        return array();
+    }
+    
+    public static function add($table,$data)
+    {
+        $sql = "insert into " .$table." (". join(',',array_keys($data)) . ") values(" . Db::addValues($data). " ) ";
+        Db::query($sql);
+    }
+    
+    public static function update($table,$data)
+    {
+        $id = $data['id'];
+        unset($data['id']);
+    
+        $sql = 'update ' .$table. ' set ' . Db::updateValues($data) . ' where id=' . $id;
+        Db::query($sql);
+    }
+    
     private static function format($data,$option,$default)
     {
         $option = strtolower($option);
