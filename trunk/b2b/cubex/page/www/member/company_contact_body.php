@@ -47,7 +47,7 @@
         <div class="formline">
           <div class="formlabel">业务联系人姓名：<span>*</span></div>
 		  <div class="formcontent">
-		    	<input name="realname" id="realname" type="text" value="<?php echo $_SESSION['realname']; ?>gc">
+		    	<input name="realname" id="realname" type="text" value="<?php echo $_SESSION['realname']; ?>">
                 <span id="name_err"></span>
 		</div>
         </div>

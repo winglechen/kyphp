@@ -4,7 +4,7 @@ if('product' == $_GET['module']){
     <div class="left">
       <div class="spacetop"></div>
       <div class="menu">      
-        <ul class="menuSelected">
+        <ul class="">
           <a href="index.php?p=www/member/product_list">管理供应信息</a>
         </ul>
         <ul class="">
@@ -18,7 +18,8 @@ if('product' == $_GET['module']){
 <div class="left"> 
       <div class="spacetop"></div> 
       <div class="menu"> 
-        <ul class="menuSelected"> 
+        <!-- class=menuSelected -->       
+        <ul class=""> 
           <a href="index.php?p=www/member/company_main">公司信息首页</a> 
         </ul> 
              <ul class=""> 
@@ -31,8 +32,8 @@ if('product' == $_GET['module']){
           <a href="index.php?p=www/member/company_contact">联系人信息</a> 
         </ul> 
         <ul class=""> 
-          <a href="index.php?p=www/member/company_pic">公司图片</a> 
-        </ul>   
+          <a href="index.php?p=www/member/company_account">帐户信息</a> 
+        </ul>
       </div> 
 </div>
 <?php
@@ -41,7 +42,7 @@ if('product' == $_GET['module']){
     <div class="left">
       <div class="spacetop"></div>
       <div class="menu">      
-        <ul class="menuSelected">
+        <ul class="">
           <a href="index.php?p=www/member/supply_list">管理库存信息</a>
         </ul>
         <ul class="">
@@ -56,7 +57,7 @@ if('product' == $_GET['module']){
     <div class="left">
       <div class="spacetop"></div>
       <div class="menu">      
-        <ul class="menuSelected">
+        <ul class="">
           <a href="index.php?p=www/member/qiugou_list">管理求购信息</a>
         </ul>
         <ul class="">
@@ -71,8 +72,11 @@ if('product' == $_GET['module']){
     <div class="left">
       <div class="spacetop"></div>
       <div class="menu">      
-        <ul class="menuSelected">
+        <ul class="">
           <a href="index.php?p=www/member/website_style">网站设置</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/website_setting_add">网站图片</a>
         </ul>
         <ul class="">
           <a href="index.php?p=www/member/product_add">网站导航管理</a>
@@ -81,7 +85,10 @@ if('product' == $_GET['module']){
           <a href="index.php?p=www/member/product_add">网站底部链接</a>
         </ul>
         <ul class="">
-          <a href="index.php?p=www/member/product_add">公司介绍页面</a>
+          <a href="index.php?p=www/member/website_page_list">公司自定义页面</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/website_page_add">自定义页面添加</a>
         </ul>
         <ul class="">
           <a href="index.php?p=www/member/website_new_category_list">公司新闻分类</a>
@@ -104,7 +111,7 @@ if('product' == $_GET['module']){
     <div class="left">
       <div class="spacetop"></div>
       <div class="menu">      
-        <ul class="menuSelected">
+        <ul class="">
           <a href="index.php?p=www/member/product_list">列表</a>
         </ul>
         <ul class="">

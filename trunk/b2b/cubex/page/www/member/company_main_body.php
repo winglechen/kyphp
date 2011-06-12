@@ -64,7 +64,7 @@
       </div>
     </div>
     <!--/公司基本信息-->
-    <!--公司图片信息-->
+    <!--公司图片信息>
     <div class="formblock">
       <div class="formheader">
         <div class="headerTitle">公司图片（<a href="">修改</a>）</div>
@@ -82,7 +82,7 @@
         </div>
       </div>
     </div>
-    <!--/公司图片信息-->
+    <--/公司图片信息-->
     <!--联系人信息-->
     <div class="formblock">
       <div class="formheader"><div class="headerTitle">联系方式(<a href="index.php?p=www/member/company_contact">修改</a>)</div>
