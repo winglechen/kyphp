@@ -23,7 +23,7 @@
 <!--title-->
 <div class="erm_header_back">
 <div class="erm_header_textleft">企业管理系统</div>
-<div class="erm_header_textright"><strong><?php echo $_SESSION['realname']; ?>，您好！</strong><span>
+<div class="erm_header_textright"><strong><?php echo $_SESSION['username']; ?>，您好！</strong><span>
 <a href="index.php?p=www/logout">退出</a></span>
 </div>
     <div style=" margin:5px 0 0 0; width:940px; float:left; text-align:center;">
@@ -57,10 +57,9 @@
                 <li><a href="index.php?p=www/member/product_list">我的供应</a></li>
                 <li><a href="index.php?p=www/member/supply_list">我的库存</a></li>
                 <li><a href="index.php?p=www/member/qiugou_list">我的求购</a></li>                
-                <li><a href="#">询盘信息</a></li>                    
+                <!--li><a href="#">询盘信息</a></li-->                    
                 <li><a href="index.php?p=www/member/company_main">公司信息</a></li>
                 <li><a href="index.php?p=www/member/website_style">自助建站</a></li>
-                <li><a href="index.php?p=www/member/account">帐户信息</a></li>
         </ul>
         </div>
         <div class="clear_line"></div>

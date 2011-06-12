@@ -3,7 +3,9 @@ use Ky\Model\Company;
 session_start();
 
 if(!empty($_POST)){
-    
+    if(isset($_POST['password'])){
+        $_POST['password'] = md5($_POST['password']);    
+    }
     
     if(0 == $_POST['id']){
         Company::add($_POST);

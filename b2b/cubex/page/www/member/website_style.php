@@ -45,19 +45,23 @@ include "header.php";
             <tbody>
             <tr>
               <td align="right"><strong>样式一</strong></td>
-              <td><img name="uploadImage0" id="uploadImage0" src="./temp/temp1.png" width="300" height="300" style="margin:10px 0;"></td>
+              <td>
+                <a href="index.php?p=www/member/website_style_done&s=1" >
+                <img name="uploadImage0" id="uploadImage0" src="./temp/temp1.png" width="300" height="300" style="margin:10px 0;border:0;"></a></td>
               <td align="right"><strong>样式二</strong></td>
-              <td><img name="uploadImage0" id="uploadImage" src="./temp/temp3.png" width="300" height="300" style="margin:10px 0;"></td>
+              <td>
+                <a href="index.php?p=www/member/website_style_done&s=3" >
+                <img name="uploadImage0" id="uploadImage" src="./temp/temp3.png" width="300" height="300" style="margin:10px 0;border:0;"></a></td>
             </tr>
             <tr>
               <td align="right"><strong>样式三</strong></td>
-              <td><img name="uploadImage0" id="uploadImage0" src="./temp/temp4.png" width="300" height="300" style="margin:10px 0;"></td>
+              <td><a href="index.php?p=www/member/website_style_done&s=4" ><img name="uploadImage0" id="uploadImage0" src="./temp/temp4.png" width="300" height="300" style="margin:10px 0;border:0;"></a></td>
               <td align="right"><strong>样式四</strong></td>
-              <td><img name="uploadImage0" id="uploadImage" src="./temp/temp5.png" width="300" height="300" style="margin:10px 0;"></td>
+              <td><a href="index.php?p=www/member/website_style_done&s=5" ><img name="uploadImage0" id="uploadImage" src="./temp/temp5.png" width="300" height="300" style="margin:10px 0;border:0;"></a></td>
             </tr>
             <tr>
               <td align="right"><strong>样式五</strong></td>
-              <td><img name="uploadImage0" id="uploadImage0" src="./temp/temp6.png" width="300" height="300" style="margin:10px 0;"></td>
+              <td><a href="index.php?p=www/member/website_style_done&s=6" ><img name="uploadImage0" id="uploadImage0" src="./temp/temp6.png" width="300" height="300" style="margin:10px 0;border:0;"></a></td>
               <td align="right"><strong></strong></td>
               <td></td>
             </tr>
