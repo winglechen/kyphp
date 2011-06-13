@@ -1,6 +1,8 @@
 <?php 
 namespace Ky\Cubex\Controller;
 
+use Ky\Model\Mset;
+
 
 /**
  *  配置信息http接口
@@ -10,6 +12,7 @@ class Company
     private static $act = '';
     public static function run($action)
     {
+        session_start();
         self::prepare($action);
         self::dispatch();    
     }
@@ -25,6 +28,16 @@ class Company
         $host = strtolower(trim($_SERVER['SERVER_NAME']));
         $nick = substr($host,0,strpos($host,"."));
         $_GET['nick'] = $nick;
+        self::getCompanySetting();
+    }
+
+    private static function getCompanySetting()
+    {
+        $data = Mset::detailByNick($_GET['nick']); 
+        $_SESSION['id']         = $data['corpid'];
+        $_SESSION['setting']    = $data;
+        $_GET['corpid']         = $data['corpid'];
+        $_GET['temp']           = $data['temp'];
     }
     
     private static function getAction($action)
@@ -46,8 +59,9 @@ class Company
 
     private static function dispatch()
     {
-         
-        require(CUBEX_PATH . 'page/' . rtrim(self::$act) . '.php');
+        $act = 'temp' . $_GET['temp'] . '/' . self::$act;
+
+        require(APP_PATH . 'www/company/' . rtrim($act) . '.php');
     }
 
 }

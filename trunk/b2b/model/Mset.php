@@ -74,6 +74,17 @@ class Mset
         return  self::$data;
     }
     
+    public static function detailByNick($nick)
+    {
+        if(!empty(self::$data)){
+            return self::$data;
+        }
+        $sql = "select * from company_setting where username='".$nick."'";
+        self::$data = @Db::getRow($sql);
+
+        return  self::$data;
+    }
+    
     public static function delete($id)
     {
         $sql = "delete from company_setting where id=".$id;
