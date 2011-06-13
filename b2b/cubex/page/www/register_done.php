@@ -20,5 +20,6 @@ $data = array(
     'username'  => $_POST['username'],
     'corpid'    => $id, 
 );
+$_SESSION['id'] = $id;
 Mset::add($data);
 header('Location:index.php?p=www/member/index'); 
