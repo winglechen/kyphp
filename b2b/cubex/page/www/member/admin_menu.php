@@ -79,10 +79,16 @@ if('product' == $_GET['module']){
           <a href="index.php?p=www/member/website_setting_add">网站图片</a>
         </ul>
         <ul class="">
-          <a href="index.php?p=www/member/product_add">网站导航管理</a>
+          <a href="index.php?p=www/member/website_nav_list">网站导航管理</a>
         </ul>
         <ul class="">
-          <a href="index.php?p=www/member/product_add">网站底部链接</a>
+          <a href="index.php?p=www/member/website_nav_add">网站导航添加</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/website_nav2_list">网站底部链接</a>
+        </ul>
+        <ul class="">
+          <a href="index.php?p=www/member/website_nav2_add">底部链接添加</a>
         </ul>
         <ul class="">
           <a href="index.php?p=www/member/website_page_list">公司自定义页面</a>

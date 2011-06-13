@@ -5,12 +5,12 @@ use Ky\Core\Core\Db;
 use Ky\Core\Core\Sql;
 use Ky\Core\Core\Page;
 
-class Mpage
+class Mnav
 {
-    private static $table = 'company_page';
+    private static $table = 'company_nav';
     public static function add($data)
     {
-        $sql = "insert into company_page (". join(',',array_keys($data)) . ",ts) values(" . Db::addValues($data). ",".time().")";
+        $sql = "insert into company_nav (". join(',',array_keys($data)) . ",ts) values(" . Db::addValues($data). ",".time().")";
         Db::query($sql);
     }
     
@@ -60,43 +60,19 @@ class Mpage
         $id = $data['id'];
         unset($data['id']);
     
-        $sql = 'update company_page set ' . Db::updateValues($data) . ' where id=' . $id;
+        $sql = 'update company_nav set ' . Db::updateValues($data) . ' where id=' . $id;
         Db::query($sql);
     }
     
     public static function detail($id)
     {
-        $sql = 'select * from company_page where id='.$id;
+        $sql = 'select * from company_nav where id='.$id;
         return Db::getRow($sql);
-    }
-
-    public static function getOption()
-    {
-        $data = self::getOptionData();
-        return self::formatOption($data);
-    }
-
-    public static function getOPtionData()
-    {
-        $sql = 'select id,name from company_page where corpid='.$_SESSION['id'];
-        return Db::getRows($sql);
-    }
-    private static function formatOption($data)
-    {
-        if(empty($data)) return '';
-        $ret = '';
-        
-        foreach($data as $option){
-            $ret .= '<option value="' .$option['id']. '"';
-            $ret .= ' >'.$option['name'].'</option>';
-        }
-        
-        return $ret;
     }
     
     public static function delete($id)
     {
-        $sql = "delete from company_page where id=".$id;
+        $sql = "delete from company_nav where id=".$id;
         return Db::query($sql);
     }
 }
