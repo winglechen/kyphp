@@ -9,6 +9,7 @@ class Company
     {
         $sql = "insert into company (". join(',',array_keys($data)) . ",ts) values(" . Db::addValues($data). ",".time().")";
         Db::query($sql);
+        return Db::insertId();
     }
 
     public static function lists($where)
