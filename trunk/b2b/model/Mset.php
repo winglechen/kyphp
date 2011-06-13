@@ -58,7 +58,6 @@ class Mset
     
     public static function update($data)
     {  
-        //@self::add($data);
         $sql = 'update company_setting set ' . Db::updateValues($data) . ' where corpid='.$_SESSION['id'] ;
         Db::query($sql);
     }
