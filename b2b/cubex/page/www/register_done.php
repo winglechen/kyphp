@@ -1,5 +1,6 @@
 <?php
 use Ky\Model\Company;
+use Ky\Model\Mset;
 
 session_start();
 
@@ -12,6 +13,12 @@ unset($_POST['passwordcheck']);
 $_POST['password'] = md5($_POST['password']);
 
 
-Company::add($_POST);
+$id = Company::add($_POST);
 $_SESSION = $_POST;
+
+$data = array(
+    'username'  => $_POST['username'],
+    'corpid'    => $id, 
+);
+Mset::add($data);
 header('Location:index.php?p=www/member/index'); 

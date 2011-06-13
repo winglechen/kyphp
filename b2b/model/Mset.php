@@ -8,6 +8,7 @@ use Ky\Core\Core\Page;
 class Mset
 {
     private static $table = 'company_setting';
+    private static $data  = array();
     public static function add($data)
     {
         $sql = "insert into company_setting (". join(',',array_keys($data)) . ") values(" . Db::addValues($data). ")";
@@ -57,15 +58,20 @@ class Mset
     
     public static function update($data)
     {  
-        @self::add($data);
+        //@self::add($data);
         $sql = 'update company_setting set ' . Db::updateValues($data) . ' where corpid='.$_SESSION['id'] ;
         Db::query($sql);
     }
     
     public static function detail()
     {
+        if(!empty(self::$data)){
+            return self::$data;
+        }
         $sql = 'select * from company_setting where corpid='.$_SESSION['id'];
-        return @Db::getRow($sql);
+        self::$data = @Db::getRow($sql);
+
+        return  self::$data;
     }
     
     public static function delete($id)
