@@ -24,6 +24,11 @@ class Db
 
         return mysql_query($sql,self::$link);
     }
+    
+    public static function insertId()
+    {
+        return mysql_insert_id(self::$link);
+    }
 
     public static function getRow($sql)
     {
