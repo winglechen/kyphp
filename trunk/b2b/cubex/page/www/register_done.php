@@ -10,6 +10,7 @@ if($_SESSION['checkNum'] != $_POST['checkNum']){
 
 unset($_POST['checkNum']);
 unset($_POST['passwordcheck']);
+$password       = $_POST['password'];
 $_POST['password'] = md5($_POST['password']);
 
 
@@ -22,4 +23,6 @@ $data = array(
 );
 $_SESSION['id'] = $id;
 Mset::add($data);
+$data = Company::login($_POST['username'],$password);
+$_SESSION = $data;
 header('Location:index.php?p=www/member/index'); 
