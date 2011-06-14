@@ -35,12 +35,7 @@
 <div style="padding:0px">
 
 
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="1002" height="280">
- <param name="movie" value="diy/pics/20101217/1292564238.swf" />
- <param name="quality" value="high" />
- <param name="wmode" value="transparent" />
- <embed src="temp1/diy/pics/20101217/1292564238.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1002" height="280"></embed>
-</object>
+<img src="temp1/banner.png" width="1002" height="280">
 
 </div>
 </div>
@@ -91,13 +86,13 @@
 <div id="menumain_dolphin">
 <div class="mainmenuiner">
 
-<a href="temp1/index.php" target="_self" class="menumain_dolphin">网站首页</a>
+<a href="./index.php" target="_self" class="menumain_dolphin">网站首页</a>
 
-<a href="temp1/page/html/company.php" target="_self" class="menumain_dolphin">公司简介</a>
+<a href="./index.php?p=page&id=" target="_self" class="menumain_dolphin">公司简介</a>
 
-<a href="temp1/news/class/" target="_self" class="menumain_dolphin">新闻动态</a>
+<a href="index.php?p=news" target="_self" class="menumain_dolphin">新闻动态</a>
 
-<a href="temp1/product/class" target="_self" class="menumain_dolphin">产品系列</a>
+<a href="index.php?p=product" target="_self" class="menumain_dolphin">产品系列</a>
 
 <a href="temp1/page/join/notice.php" target="_self" class="menumain_dolphin">品牌加盟</a>
 
