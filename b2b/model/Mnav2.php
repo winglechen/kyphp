@@ -5,12 +5,12 @@ use Ky\Core\Core\Db;
 use Ky\Core\Core\Sql;
 use Ky\Core\Core\Page;
 
-class Mnav
+class Mnav2
 {
-    private static $table = 'company_nav';
+    private static $table = 'company_nav2';
     public static function add($data)
     {
-        $sql = "insert into company_nav (". join(',',array_keys($data)) . ") values(" . Db::addValues($data). ")";
+        $sql = "insert into company_nav2 (". join(',',array_keys($data)) . ") values(" . Db::addValues($data). ")";
         Db::query($sql);
     }
     
@@ -60,19 +60,19 @@ class Mnav
         $id = $data['id'];
         unset($data['id']);
     
-        $sql = 'update company_nav set ' . Db::updateValues($data) . ' where id=' . $id;
+        $sql = 'update company_nav2 set ' . Db::updateValues($data) . ' where id=' . $id;
         Db::query($sql);
     }
     
     public static function detail($id)
     {
-        $sql = 'select * from company_nav where id='.$id;
+        $sql = 'select * from company_nav2 where id='.$id;
         return Db::getRow($sql);
     }
     
     public static function delete($id)
     {
-        $sql = "delete from company_nav where id=".$id;
+        $sql = "delete from company_nav2 where id=".$id;
         return Db::query($sql);
     }
 }

@@ -1,5 +1,5 @@
 <?php
-use Ky\Model\Mnav;
+use Ky\Model\Mnav2;
 use Ky\Core\Formater\Output;
 use Ky\Core\Core\Path;
 use Ky\Core\Uid\Uid;
@@ -34,15 +34,15 @@ if(!empty($_POST)){
         }
        
         $data['corpid'] = $_SESSION['id'];
-        Mnav::add($data);
+        Mnav2::add($data);
     }else{
         $data = array(
             'id'    => $_POST['id'],
             'name'    => $_POST['name'],
             'url'    => $_POST['url'],
         );
-        Mnav::update($_POST);       
+        Mnav2::update($_POST);       
     }
     
 }
-header('Location:index.php?p=www/member/website_nav_list');
+header('Location:index.php?p=www/member/website_nav2_list');

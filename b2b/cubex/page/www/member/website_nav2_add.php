@@ -32,12 +32,12 @@ include "header.php";
 	<?php include "admin_menu.php"; ?>
 
 <?php
-use Ky\Model\Mnav;
+use Ky\Model\Mnav2;
 use Ky\Model\Config;
 use Ky\Model\Mpage;
 
 if(isset($_GET['id'])){
-   $form = Mnav::detail($_GET['id']);  
+   $form = Mnav2::detail($_GET['id']);  
    $form['urltype'] = 0;
    $get = ture;
 }else{
@@ -61,7 +61,7 @@ if(isset($_GET['id'])){
 				 
 				 
 				 <div class="right">
-  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/website_nav_add_done"  enctype="multipart/form-data" >
+  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/website_nav2_add_done"  enctype="multipart/form-data" >
 	<input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
 <?php
     if(isset($_GET['id'])){
@@ -130,7 +130,7 @@ if(isset($_GET['id'])){
        <div class="formcontent">
        <select name="nid">
 <?php
-   echo  Config::getTree('member_new_category','option',null,$_SESSION['id']);
+    echo Config::getTree('member_new_category','option',null,$_SESSION['id']);
 ?>
        </select>
        <span id="oproductName_err"></span>
