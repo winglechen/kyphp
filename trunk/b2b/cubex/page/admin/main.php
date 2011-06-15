@@ -164,6 +164,7 @@ $(function(){
                                 <ul>
                                     <li><a href="index.php?p=admin/news_block"    rel="w_panel" target="navTab" >新闻模块</a></li>                               
                                     <li><a href="index.php?p=admin/product_block"    rel="w_panel" target="navTab" >产品模块</a></li>                               
+                                    <li><a href="index.php?p=admin/company_block"    rel="w_panel" target="navTab" >公司模块</a></li>                               
                                 </ul>
                             </li>
                             <li><a>seo管理</a>
