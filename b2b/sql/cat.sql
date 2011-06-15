@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `pid` int(11) unsigned NOT NULL DEFAULT '0',
   `name` varchar(50) DEFAULT NULL,
   `level` tinyint(4) unsigned NOT NULL DEFAULT '1',
-  `isEnd` tinyint(4) unsigned NOT NULL DEFAULT '0',
+  `slave` tinyint(4) unsigned NOT NULL DEFAULT '0',
   `prop` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5720 ;
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 -- 转存表中的数据 `category`
 --
 
-INSERT INTO `category` (`id`, `pid`, `name`, `level`, `isEnd`, `prop`) VALUES
+INSERT INTO `category` (`id`, `pid`, `name`, `level`, `slave`, `prop`) VALUES
 (1, 0, '办公、文教', 1, 0, '[]'),
 (2, 1, '学习文具', 2, 0, '[]'),
 (3, 2, '书包', 3, 1, '[{"id":"1","name":"规格","datatype":"0","fieldtype":null,"defaultvalue":null,"unit":null,"optional":"1"},{"id":"2","name":"材质","datatype":"0","fieldtype":null,"defaultvalue":null,"unit":null,"optional":"1"},{"id":"3","name":"款式","datatype":"0","fieldtype":null,"defaultvalue":null,"unit":null,"optional":"1"},{"id":"4","name":"产地","datatype":"0","fieldtype":null,"defaultvalue":null,"unit":null,"optional":"1"}]'),
