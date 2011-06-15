@@ -16,16 +16,30 @@
 					var $tr = $(this);
 					if (!nowrap && index % 2 == 1) $tr.addClass("trbg");
 					
-					$tr.click(function(){
-						$trs.filter(".selected").removeClass("selected");
-						$tr.addClass("selected");
-						var sTarget = $tr.attr("target");
+					$tr.click(function(e){
+						//$trs.filter(".selected").removeClass("selected");
+                        if(e.target.tagName.toLowerCase() == 'input'){
+						    $tr.toggleClass("selected");
+                            return;
+                        }
+                        $tr.find('input:checkbox').each(function(e){
+                            var obj = $(this);
+                            if(obj.attr('checked')){
+                                obj.attr('checked','');
+						        $tr.removeClass("selected");
+                            }else{
+                                obj.attr('checked','checked');
+						        $tr.addClass("selected");
+                            }
+                        });
+                        
+						/*var sTarget = $tr.attr("target");
 						if (sTarget) {
 							if ($("#"+sTarget, $grid).size() == 0) {
 								$grid.prepend('<input id="'+sTarget+'" type="hidden" />');
 							}
 							$("#"+sTarget, $grid).val($tr.attr("rel"));
-						}
+						}*/
 					});
 					
 				});
