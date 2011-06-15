@@ -63,7 +63,7 @@
 		$sql = sprintf("SELECT 
         					id, name, slave 
         				FROM " 
-        					. TREE_TABLE_PREFIX . "
+        					. TREE_TABLE_PREFIX . " 
 		      			WHERE
 		      				pid = %d  
 		      			ORDER BY
@@ -101,7 +101,7 @@
 	{
 		$elementId = (int) $elementId;
  		$sql = sprintf('UPDATE ' 
-        						. TREE_TABLE_PREFIX.' 
+        						. TREE_TABLE_PREFIX.'  
 							SET 
 								name = \'%s\'
 					    	WHERE 
@@ -121,7 +121,7 @@
      	$elementId = (int) $elementId;
          $sql = sprintf('SELECT
      				 		id, slave, position, pid 
-     					FROM '. TREE_TABLE_PREFIX .'
+     					FROM '. TREE_TABLE_PREFIX .' 
      					WHERE 
      						pid = %d ',
          				$elementId);
@@ -148,7 +148,7 @@
              $sql = sprintf('SELECT 
      							position, pid
      						FROM '
-             .TREE_TABLE_PREFIX.'
+             .TREE_TABLE_PREFIX.' 
      						WHERE
      							id = %d',
             				 $elementId);
@@ -159,7 +159,7 @@
                  if ($row = $this->db->fetchObject($result))
                  {
                      $sql = sprintf('UPDATE '
-                    				 .TREE_TABLE_PREFIX.'
+                    				 .TREE_TABLE_PREFIX.' 
      								SET 
      									position = position - 1
      								WHERE 
@@ -174,7 +174,7 @@
      
          // start to delete it from bottom to top
          $sql = sprintf('DELETE FROM '
-         					.TREE_TABLE_PREFIX.'
+         					.TREE_TABLE_PREFIX.' 
      	        		WHERE 
      			        	pid = %d 
      			        	OR
@@ -198,7 +198,7 @@
             $sql = sprintf('SELECT
 						 		path 
 							FROM '
-								. TREE_TABLE_PREFIX . ' 
+								. TREE_TABLE_PREFIX . '  
 							WHERE 
 								id = %d
 							LIMIT 1',
@@ -211,7 +211,7 @@
         $sql = sprintf('SELECT
                         pid, position,path 
                     FROM '
-                        . TREE_TABLE_PREFIX . ' 
+                        . TREE_TABLE_PREFIX . '  
                     WHERE 
                         id = %d
                     LIMIT 1',
@@ -222,7 +222,7 @@
 				if ($element = $this->db->fetchObject($result))
 				{						
 					$sql1 = sprintf('UPDATE '
-										 . TREE_TABLE_PREFIX . ' 
+										 . TREE_TABLE_PREFIX . '  
 									 SET 
 									 	position = position - 1
 									 WHERE  
@@ -232,7 +232,7 @@
 									 $element->position, $element->pid);
 							   
 					$sql2 = sprintf('UPDATE '
-										. TREE_TABLE_PREFIX . ' 
+										. TREE_TABLE_PREFIX . '  
 									 SET 
 									 	position = position + 1
 									 WHERE
@@ -252,7 +252,7 @@
                     $oPath  = $element->path . ',' . $elementId;
                     $nPath .= ','.$elementId;
 				    $sql4   = 'UPDATE '
-										. TREE_TABLE_PREFIX . ' 
+										. TREE_TABLE_PREFIX . '  
 									 SET 
 									 	path = REPLACE(path,\''.$oPath.'\',\''.$nPath.'\')
 									 WHERE
