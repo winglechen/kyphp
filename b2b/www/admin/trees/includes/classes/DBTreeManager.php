@@ -26,7 +26,7 @@
         if(0 == $pid){
             $path = '0';
         }else{
-            $sql = "select path from " . TREE_TABLE_PREFIX . '_tree where id='.$pid;
+            $sql = "select path from " . TREE_TABLE_PREFIX . ' where id='.$pid;
             $query = $this->db->query($sql);
             $row   = $this->db->fetchObject($query);
             $pPath = $row->path;
@@ -34,11 +34,11 @@
         }
 
 		$sql = sprintf('INSERT INTO ' 
-								. TREE_TABLE_PREFIX . '_tree(name, position, pid, slave,path)
+								. TREE_TABLE_PREFIX . '(name, position, pid, slave,path)
 							SELECT 
 								\'%s\', ifnull(max(el.position)+1, 0), %d, %d,\''.$path.'\'  
 							FROM '
-								. TREE_TABLE_PREFIX . '_tree el 
+								. TREE_TABLE_PREFIX . ' el 
 							WHERE 
 								el.pid = %d ',
 							$name , $pid, $slave, $pid);
@@ -63,7 +63,7 @@
 		$sql = sprintf("SELECT 
         					id, name, slave 
         				FROM " 
-        					. TREE_TABLE_PREFIX . "_tree
+        					. TREE_TABLE_PREFIX . "
 		      			WHERE
 		      				pid = %d  
 		      			ORDER BY
@@ -101,7 +101,7 @@
 	{
 		$elementId = (int) $elementId;
  		$sql = sprintf('UPDATE ' 
-        						. TREE_TABLE_PREFIX.'_tree 
+        						. TREE_TABLE_PREFIX.' 
 							SET 
 								name = \'%s\'
 					    	WHERE 
@@ -121,7 +121,7 @@
      	$elementId = (int) $elementId;
          $sql = sprintf('SELECT
      				 		id, slave, position, pid 
-     					FROM '. TREE_TABLE_PREFIX .'_tree
+     					FROM '. TREE_TABLE_PREFIX .'
      					WHERE 
      						pid = %d ',
          				$elementId);
@@ -148,7 +148,7 @@
              $sql = sprintf('SELECT 
      							position, pid
      						FROM '
-             .TREE_TABLE_PREFIX.'_tree
+             .TREE_TABLE_PREFIX.'
      						WHERE
      							id = %d',
             				 $elementId);
@@ -159,7 +159,7 @@
                  if ($row = $this->db->fetchObject($result))
                  {
                      $sql = sprintf('UPDATE '
-                    				 .TREE_TABLE_PREFIX.'_tree
+                    				 .TREE_TABLE_PREFIX.'
      								SET 
      									position = position - 1
      								WHERE 
@@ -174,7 +174,7 @@
      
          // start to delete it from bottom to top
          $sql = sprintf('DELETE FROM '
-         					.TREE_TABLE_PREFIX.'_tree
+         					.TREE_TABLE_PREFIX.'
      	        		WHERE 
      			        	pid = %d 
      			        	OR
@@ -198,7 +198,7 @@
             $sql = sprintf('SELECT
 						 		path 
 							FROM '
-								. TREE_TABLE_PREFIX . '_tree 
+								. TREE_TABLE_PREFIX . ' 
 							WHERE 
 								id = %d
 							LIMIT 1',
@@ -211,7 +211,7 @@
         $sql = sprintf('SELECT
                         pid, position,path 
                     FROM '
-                        . TREE_TABLE_PREFIX . '_tree 
+                        . TREE_TABLE_PREFIX . ' 
                     WHERE 
                         id = %d
                     LIMIT 1',
@@ -222,7 +222,7 @@
 				if ($element = $this->db->fetchObject($result))
 				{						
 					$sql1 = sprintf('UPDATE '
-										 . TREE_TABLE_PREFIX . '_tree 
+										 . TREE_TABLE_PREFIX . ' 
 									 SET 
 									 	position = position - 1
 									 WHERE  
@@ -232,7 +232,7 @@
 									 $element->position, $element->pid);
 							   
 					$sql2 = sprintf('UPDATE '
-										. TREE_TABLE_PREFIX . '_tree 
+										. TREE_TABLE_PREFIX . ' 
 									 SET 
 									 	position = position + 1
 									 WHERE
@@ -242,7 +242,7 @@
 									 $destPosition, $destOwnerEl);
 							   
 					$sql3 = sprintf('UPDATE '
-										. TREE_TABLE_PREFIX . '_tree 
+										. TREE_TABLE_PREFIX . ' 
 									 SET 
 									 	position = %d , pid = %d , path = \''.$nPath.'\'
 									 WHERE 
@@ -252,7 +252,7 @@
                     $oPath  = $element->path . ',' . $elementId;
                     $nPath .= ','.$elementId;
 				    $sql4   = 'UPDATE '
-										. TREE_TABLE_PREFIX . '_tree 
+										. TREE_TABLE_PREFIX . ' 
 									 SET 
 									 	path = REPLACE(path,\''.$oPath.'\',\''.$nPath.'\')
 									 WHERE

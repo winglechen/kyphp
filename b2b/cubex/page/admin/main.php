@@ -111,7 +111,7 @@ $(function(){
                             </li>
                             <li><a>产品分类</a>
                                 <ul>
-                                    <li><a href="trees/index.php?table=b2b"  showInFrame="true"  rel="w_panel" target="navTab" >分类管理</a></li>
+                                    <li><a href="trees/index.php?table=category"  showInFrame="true"  rel="w_panel" target="navTab" >分类管理</a></li>
                                 </ul>
                             </li>
                             <li><a>产品管理</a>
@@ -123,9 +123,9 @@ $(function(){
                             </li>                  
                             <li><a>文章管理</a>
                                 <ul>
-                                    <li><a href="trees/index.php?table=news"  showInFrame="true"  rel="w_panel" target="navTab" >分类管理</a></li>
-                                    <li><a href="#" rel="w_panel" target="navTab" >文章管理</a></li>
-                                    <li><a href="#" rel="w_panel" target="navTab" >文章添加</a></li>
+                                    <li><a href="trees/index.php?table=ncategory"  showInFrame="true"  rel="w_panel" target="navTab" >分类管理</a></li>
+                                    <li><a href="index.php?p=admin/news_list" rel="w_panel" target="navTab" >文章管理</a></li>
+                                    <li><a href="index.php?p=admin/news_add" rel="w_panel" target="navTab" >文章添加</a></li>
                                 </ul>
                             </li>
                         </ul>
