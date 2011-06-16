@@ -145,14 +145,13 @@ $(function(){
                             </li>
                             <li><a>友情链接管理</a>
                                 <ul>
-                                    <li><a href="#" rel="w_panel" target="navTab" >友情链接列表</a></li>
-                                    <li><a href="#" rel="w_panel" target="navTab" >友情链接添加</a></li>
+                                    <li><a href="index.php?p=admin/links_list" rel="w_panel" target="navTab" >友情链接列表</a></li>
+                                    <li><a href="index.php?p=admin/links_add" rel="w_panel" target="navTab" >友情链接添加</a></li>
                                 </ul>
                             </li>
                             <li><a>广告管理</a>
                                 <ul>
-                                    <li><a href="#" rel="w_panel" target="navTab" >广告位管理</a></li>
-                                    <li><a href="#" rel="w_panel" target="navTab" >广告位添加</a></li>
+                                    <li><a href="index.php?p=admin/ads_list" rel="w_panel" target="navTab" >广告列表</a></li>
                                 </ul>
                             </li>
                             <li><a>内容块管理</a>
