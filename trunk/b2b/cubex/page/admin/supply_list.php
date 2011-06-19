@@ -23,20 +23,20 @@ if(!empty($_POST)){
     }
 }
 
-$sql_num = "select count(1) as num from product where 1 " . $sql;
+$sql_num = "select count(1) as num from supply where 1 " . $sql;
 $tmp = Db::getRow($sql_num);
 $current_page   = isset($_POST['pageNum']) ? $_POST['pageNum'] : 1;
 $numPerPage     = 10;
 $nums           = $tmp['num'];
 $pages          = ceil($nums/$numPerPage);
 
-$sql_data = " select id,pic,productName from product where 1 " . $sql . " limit " . ($current_page - 1) * $numPerPage . "," . $numPerPage;
+$sql_data = " select id,pic,productName from supply where 1 " . $sql . " limit " . ($current_page - 1) * $numPerPage . "," . $numPerPage;
 $data = Db::getRows($sql_data);
 echo mysql_error();
 ?>
 <div class="page">
     <div class="pageHeader">
-        <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/product_list" method="post">
+        <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/supply_list" method="post">
         <input type="hidden" name="pageNum" value="1">
             <div class="searchBar">
                 <table class="searchContent">

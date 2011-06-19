@@ -106,7 +106,6 @@ $(function(){
                                 <ul>
                                     <li><a href="index.php?p=admin/company_list" rel="w_panel" target="navTab" >商家管理</a></li>
                                     <li><a href="index.php?p=admin/company_check" rel="w_panel" target="navTab" >注册审核</a></li>
-                                    <li><a href="index.php?p=admin/company_credit" rel="w_panel" target="navTab" >信用管理</a></li>
                                 </ul>
                             </li>
                             <li><a>产品分类</a>
@@ -117,8 +116,11 @@ $(function(){
                             <li><a>产品管理</a>
                                 <ul>
                                     <li><a href="index.php?p=admin/product_list" rel="w_panel" target="navTab" >产品管理</a></li>
+                                    <li><a href="index.php?p=admin/product_check" rel="w_panel" target="navTab" >产品审核</a></li>                        
                                     <li><a href="index.php?p=admin/qiugou_list" rel="w_panel" target="navTab" >求购管理</a></li>
+                                    <li><a href="index.php?p=admin/qiugou_check" rel="w_panel" target="navTab" >求购审核</a></li>
                                     <li><a href="index.php?p=admin/supply_list" rel="w_panel" target="navTab" >库存管理</a></li>
+                                    <li><a href="index.php?p=admin/supply_check" rel="w_panel" target="navTab" >库存审核</a></li>
                                 </ul>
                             </li>                  
                             <li><a>文章管理</a>
@@ -163,7 +165,10 @@ $(function(){
                                 <ul>
                                     <li><a href="index.php?p=admin/news_block"    rel="w_panel" target="navTab" >新闻模块</a></li>                               
                                     <li><a href="index.php?p=admin/product_block"    rel="w_panel" target="navTab" >产品模块</a></li>                               
-                                    <li><a href="index.php?p=admin/company_block"    rel="w_panel" target="navTab" >公司模块</a></li>                               
+                                    <li><a href="index.php?p=admin/company_block"    rel="w_panel" target="navTab" >公司模块</a></li> 
+                                    <li><a href="index.php?p=admin/qiugou_block"    rel="w_panel" target="navTab" >求购模块</a></li>  
+                                    <li><a href="index.php?p=admin/supply_block"    rel="w_panel" target="navTab" >库存模块</a></li>  
+                                    <li><a href="index.php?p=admin/html_block&f=category_block"    rel="w_panel" target="navTab" >静态模块</a></li>                            
                                 </ul>
                             </li>
                             <li><a>seo管理</a>
