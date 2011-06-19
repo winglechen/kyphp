@@ -36,7 +36,7 @@ if(0 !== $nid){
                 <input type="text" name="url" size="50" value="<?php echo $new['url']; ?>" />
             </div>
 
-            <div class="unit">
+            <div class="unit" style="display:none;">
                 <label>图片：</label>
                 <input type="file" name="pic" /><br />
                 <?php 
@@ -46,7 +46,6 @@ if(0 !== $nid){
                 ?>
             </div>
                 <input type="hidden" name="id" value="<?php echo $new['id']; ?>" />
-            </div>
 
                         <!--div class="divider"></div-->
         </div>
