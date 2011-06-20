@@ -7,6 +7,7 @@ create table blockpos(
     pageId mediumint(8) unsigned not null default 0,
     pageName varchar(30) not null default '',
     name varchar(30) not null default '内容块',
+    blockType varchar(20) not null default 'product',
     detail varchar(1000) not null default '',
     key(pageId)
 )engine=myisam default charset=utf8 collate=utf8_general_ci;

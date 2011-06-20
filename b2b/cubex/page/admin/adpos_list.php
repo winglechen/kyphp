@@ -19,7 +19,7 @@ if(!empty($_POST)){
 
 $cid = 0;
 if(!empty($_POST)){
-    if(isset($_POST['cid'])){
+    if(isset($_POST['cid']) && !empty($_POST['cid'])){
         $cid = $_POST['cid'];
         $sql .= ' and pageId='.$_POST['cid']; 
     }    

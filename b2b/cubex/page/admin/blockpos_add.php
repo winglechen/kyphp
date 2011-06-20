@@ -31,6 +31,10 @@ if(0 !== $nid){
                 <input type="text" name="name" size="50" value="<?php echo $new['name']; ?>" />
             </div>
             <div class="unit">
+                <label>类型：</label>
+                <input type="text" name="blockType" size="50" value="<?php echo $new['blockType']; ?>" />
+            </div>
+            <div class="unit">
                 <label>内容：</label>
                 <textarea name="detail" rows="22" cols="125">
                         <?php echo $new['detail']; ?>
