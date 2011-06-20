@@ -153,7 +153,7 @@ $(function(){
                             </li>
                             <li><a>广告管理</a>
                                 <ul>
-                                    <li><a href="index.php?p=admin/ads_list" rel="w_panel" target="navTab" >广告位列表</a></li>
+                                    <li><a href="index.php?p=admin/adpos_list" rel="w_panel" target="navTab" >广告位列表</a></li>
                                     <li><a href="index.php?p=admin/ads_list" rel="w_panel" target="navTab" >广告列表</a></li>
                                 </ul>
                             </li>

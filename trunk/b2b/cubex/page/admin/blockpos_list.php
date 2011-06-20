@@ -16,10 +16,9 @@ if(!empty($_POST)){
         $_SESSION['form']    = array();
     }
 }
-
 $cid = 0;
 if(!empty($_POST)){
-    if(isset($_POST['cid'])){
+    if(isset($_POST['cid']) && !empty($_POST['cid'])){
         $cid = $_POST['cid'];
         $sql .= ' and pageId='.$_POST['cid']; 
     }    
@@ -72,6 +71,7 @@ $data = Db::getRows($sql_data);
                     <th width="5%" style="text-align:center" >编号</th>
                     <th width="20%">页面</th>
                     <th width="40%" style="text-align:center" >名称</th>
+                    <th width="10%" style="text-align:center" >类型</th>
                     <th width="20%" style="text-align:center" >操作</th>
                 </tr>
             </thead>
@@ -83,6 +83,7 @@ foreach($data as $new){
     echo '<td style="text-align:center" >'.$new['id'].'</td>';
     echo '<td>'.$new['pageName'].'</td>';
     echo '<td>'.$new['name'].'</td>';
+    echo '<td>'.$new['blockType'].'</td>';
     echo '<td style="text-align:center" ><a href="index.php?p=admin/blockpos_add&id='.$new['id'].'" target="navTab" >编辑</a> | <a   href="index.php?p=admin/blockpos_del&id='.$new['id'].'" target="navTab"  >增加内容</a></td>';
     echo '</tr>';
 }
