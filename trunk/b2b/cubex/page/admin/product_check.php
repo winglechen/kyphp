@@ -60,7 +60,8 @@ echo mysql_error();
     <div class="pageContent">
         <div class="panelBar">
             <ul class="toolBar">
-				<li><a class="edit" href="" target="navTab"><span>审核</span></a></li>
+				<li><a class="edit" href="index.php?p=admin/product_check_done&id={rowid}" target="navTab"><span>审核通过</span></a></li>
+				<li><a class="edit" href="index.php?p=admin/product_check_undone&id={rowid}" target="navTab"><span>审核不通过</span></a></li>
 				<li class="line">line</li>
 			</ul>
         </div>

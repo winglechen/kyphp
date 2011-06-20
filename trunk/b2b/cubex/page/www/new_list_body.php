@@ -5,11 +5,9 @@
 </style>
 
 <!--广告 begin-->
-	      <div class="topAd"><a href="http://my.cn.china.cn/admin.php?op=B2BRegisterShow"><img src="./res/960X32.gif" width="960" height="32" alt=""></a></div>
-
-
-
-
+<div class="topAd" style="margin-top:0;margin-bottom:0;">
+<a href="http://my.cn.china.cn/admin.php?op=B2BRegisterShow"><img src="./res/960X32.gif" width="960" height="32" alt=""></a>
+</div>
 <!--广告 end-->	
 <!--热门活动/登录 end-->
 <div class="wrapCnt" style="padding-top:0;">

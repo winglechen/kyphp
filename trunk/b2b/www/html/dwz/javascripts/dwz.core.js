@@ -259,8 +259,16 @@ var DWZ = {
 		replaceTmById:function(_box) {
 			var $parent = _box || $(document);
 			return this.replace(RegExp("({[A-Za-z_]+[A-Za-z0-9_]*})","g"), function($1){
-				var $input = $parent.find("#"+$1.replace(/[{}]+/g, ""));
-				return $input.size() > 0 ? $input.val() : $1;
+				//var $input = $parent.find("#"+$1.replace(/[{}]+/g, ""));
+				var $ids = [];
+				var $input = $parent.find("input[name=\""+$1.replace(/[{}]+/g, "")+"[]\"]").each(function(){
+				    if($(this).attr('checked'))
+				        $ids.push($(this).val());   
+				 }); 
+				 if($ids.length == 0) return $1;
+				 
+				$ids = $ids.join(',');
+				return $ids;
 			});
 		},
 		isFinishedTm:function(){
