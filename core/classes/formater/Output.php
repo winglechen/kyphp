@@ -81,17 +81,35 @@ class Output
         }
         return $strcut.$dot;
     }
-
-    public static function  iframeCallback($statusCode=200,$msg='添加成功！',$url="")
+    
+    public static function  navTabCallback($statusCode=200,$msg='添加成功！',$url="",$callback='')
     {
+        if(!$callback) $callback = "forward";
         ?>
         <script type="text/javascript">
         var response = {
             statusCode:<?php echo $statusCode; ?>,
             message:"<?php echo $msg; ?>",
-            navTabId:"",
+            navTabId:"product",
             forwardUrl:"<?php echo $url; ?>",
-            callbackType:"forward"
+            callbackType:"<?php echo $callback; ?>"
+        };
+        navTabAjaxDone(response);
+        </script>
+        <?php
+    }
+
+    public static function  iframeCallback($statusCode=200,$msg='添加成功！',$url="",$callback='')
+    {
+        if(!$callback) $callback = "forward";
+        ?>
+        <script type="text/javascript">
+        var response = {
+            statusCode:<?php echo $statusCode; ?>,
+            message:"<?php echo $msg; ?>",
+            navTabId:"product",
+            forwardUrl:"<?php echo $url; ?>",
+            callbackType:"<?php echo $callback; ?>"
         };
         if(window.parent.donecallback) window.parent.donecallback(response);
         </script>

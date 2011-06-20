@@ -47,6 +47,18 @@ class Product
             'data'  => $page
         );
     }
+    
+    public static function checked($ids)
+    {
+        $sql = 'update product set checked=1 where id in(' . $ids . ')';
+        Db::query($sql);    
+    }
+    
+    public static function unchecked($ids)
+    {
+        $sql = 'update product set checked=0 where id in(' . $ids . ')';
+        Db::query($sql);    
+    }
 
     public static function getQueryNums($where)
     {

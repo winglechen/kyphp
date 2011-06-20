@@ -116,7 +116,7 @@ $(function(){
                             <li><a>产品管理</a>
                                 <ul>
                                     <li><a href="index.php?p=admin/product_list" rel="w_panel" target="navTab" >产品管理</a></li>
-                                    <li><a href="index.php?p=admin/product_check" rel="w_panel" target="navTab" >产品审核</a></li>                        
+                                    <li><a href="index.php?p=admin/product_check" rel="w_panel" target="navTab" rel="product" >产品审核</a></li>                        
                                     <li><a href="index.php?p=admin/qiugou_list" rel="w_panel" target="navTab" >求购管理</a></li>
                                     <li><a href="index.php?p=admin/qiugou_check" rel="w_panel" target="navTab" >求购审核</a></li>
                                     <li><a href="index.php?p=admin/supply_list" rel="w_panel" target="navTab" >库存管理</a></li>
