@@ -153,11 +153,13 @@ $(function(){
                             </li>
                             <li><a>广告管理</a>
                                 <ul>
+                                    <li><a href="index.php?p=admin/ads_list" rel="w_panel" target="navTab" >广告位列表</a></li>
                                     <li><a href="index.php?p=admin/ads_list" rel="w_panel" target="navTab" >广告列表</a></li>
                                 </ul>
                             </li>
                             <li><a>内容块管理</a>
                                 <ul>
+                                    <li><a href="index.php?p=admin/blockpos_list"    rel="w_panel" target="navTab" >内容块管理</a></li>                               
                                     <li><a href="index.php?p=admin/page_index"    rel="w_panel" target="navTab" >首页</a></li>                               
                                 </ul>
                             </li>
