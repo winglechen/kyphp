@@ -15,6 +15,23 @@ class Pages
     {
     
     }
+    
+    public static function options($value=0)
+    {
+        $sql  = 'select * from pages';
+        $data = Db::getRows($sql); 
+
+        $ret = '<select name="cid">';
+        for($i=0,$len=count($data); $i<$len; $i++){
+            $ret .= "<option value='" . $data[$i]['id'] . "' ";
+            if($value == $data[$i]['id']){
+                $ret .= " selected ";
+            }
+            $ret .= " >" . $data[$i]['name'] . "</option>";
+        }
+        $ret .= '</select>';
+        return $ret;
+    }
 
     public static function update($data)
     {
