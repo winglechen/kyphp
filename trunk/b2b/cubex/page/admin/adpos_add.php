@@ -26,6 +26,20 @@ if(0 !== $nid){
     <div class="pageContent">
     <form action="index.php?p=admin/adpos_add_done" enctype="multipart/form-data" class="pageForm required-validate" onsubmit="return iframeCallback(this,navTabAjaxDone);" method="post">
         <div class="pageFormContent" layoutH="60">
+<?php
+    if(isset($_GET['pid'])){
+?>
+
+            <div class="unit">
+                <label>页面：</label>
+                <?php echo $_GET['pname']; ?>
+                <input type="hidden" name="pageId" value="<?php echo $_GET['pid']; ?>" />
+                <input type="hidden" name="pageName" value="<?php echo $_GET['pname']; ?>" />
+            </div>
+
+<?php
+}
+?>
             <div class="unit">
                 <label>名称：</label>
                 <input type="text" name="name" size="50" value="<?php echo $new['name']; ?>" />

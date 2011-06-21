@@ -7,7 +7,7 @@ use Ky\Core\Uid\Uid;
 
 if(!empty($_POST)){
     
-       if(0 == $_POST['id']){
+    if(0 == $_POST['id']){
         Adpos::add($_POST);
     }else{
         Adpos::update($_POST);
