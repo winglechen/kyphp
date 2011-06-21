@@ -199,7 +199,7 @@ A.red2:hover {
 	COLOR: #fff; TEXT-DECORATION: none
 }
 .srcNav A:hover {
-	MARGIN: 0px auto; WIDTH: 88px; DISPLAY: block;  HEIGHT: 26px; COLOR: #cd0000; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 3px
+	MARGIN: 0px auto;  DISPLAY: block;  COLOR: #cd0000; TEXT-DECORATION: none; 
 }
 .srcNav SPAN {
 	MARGIN: 0px auto; WIDTH: 88px; DISPLAY: block;  HEIGHT: 26px; COLOR: #cd0000; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 3px
