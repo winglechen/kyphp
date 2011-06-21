@@ -84,7 +84,7 @@ foreach($data as $new){
     echo '<td>'.$new['pageName'].'</td>';
     echo '<td>'.$new['name'].'</td>';
     echo '<td>'.$new['blockType'].'</td>';
-    echo '<td style="text-align:center" ><a href="index.php?p=admin/blockpos_add&id='.$new['id'].'" target="navTab" >编辑</a> | <a   href="index.php?p=admin/block_list&btype='.$new['blockType'].'&bid='.$new['id'].'" target="navTab"  >增加内容</a></td>';
+    echo '<td style="text-align:center" ><a href="index.php?p=admin/blockpos_add&id='.$new['id'].'" target="navTab" >编辑</a> | <a   href="index.php?p=admin/block_add&btype='.$new['blockType'].'&bid='.$new['id'].'" target="navTab"  >增加内容</a></td>';
     echo '</tr>';
 }
 ?>

@@ -6,6 +6,7 @@ use Ky\Core\Uid\Uid;
 
 
 if(!empty($_POST)){
+    $_POST['brief']  = Output::cut(strip_tags($_POST['content']),100,'');
     $_POST['content'] = addslashes(htmlspecialchars($_POST['content']));
     
     if($_FILES['pic']['name']){
