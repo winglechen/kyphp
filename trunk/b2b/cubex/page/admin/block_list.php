@@ -1,7 +1,6 @@
 <?php
 use Ky\Core\Core\Db;
 
-
 $data = array();
 $sql = "" ;
 
@@ -16,7 +15,7 @@ if(!empty($_POST)){
     }
 }
 
-
+$blockType = $_GET['btype'];
 
 $sql .= ' and blockId='.$_GET['bid']; 
 
@@ -46,7 +45,7 @@ $data = Db::getRows($sql_data);
                         </td>
                     </tr>
                 </table>
-                <!--div class="subBar">
+                <!div class="subBar">
                     <ul>
                         <li><div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div></li>
                     </ul>
@@ -55,9 +54,22 @@ $data = Db::getRows($sql_data);
         </form>
     </div-->
     <div class="pageContent">
+<?php
+use Ky\Model\Blockpos;
+$blockInfo = Blockpos::detail($_GET['bid']);
+?>
+        <div class="panel collapse" >
+            <h1>内容块描述:<?php echo $blockInfo['name']; ?></h1>
+            <div>
+                类型：<?php echo $blockInfo['blockType']; ?><br />
+                描述：<?php echo $blockInfo['detail']; ?>
+            </div>
+        </div>
+        <br/>
         <div class="panelBar">
             <ul class="toolBar">
-				<li><a class="add" href="#" target="navTab"><span>添加内容</span></a></li>
+				<li><a class="add" href="index.php?p=admin/block_add&bid=<?php echo $_GET['bid']; ?>&btype=<?php echo $blockType; ?>" target="navTab" rel="addblock"><span>添加内容</span></a></li>
+				<li><a class="del" href="index.php?p=admin/block_del&id={rowid}" target="navTab"><span>删除内容</span></a></li>
 				<li class="line">line</li>
 			</ul>
         </div>

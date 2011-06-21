@@ -32,12 +32,27 @@ $pages          = ceil($nums/$numPerPage);
 
 $sql_data = " select id,pic,productName from product where 1 " . $sql . " limit " . ($current_page - 1) * $numPerPage . "," . $numPerPage;
 $data = Db::getRows($sql_data);
-echo mysql_error();
 ?>
 <div class="page">
+<?php
+use Ky\Model\Blockpos;
+if(isset($_GET['bid'])){
+    $_POST['bid'] = $_GET['bid'];
+}
+$blockInfo = Blockpos::detail($_POST['bid']);
+?>
+        <div class="panel collapse" >
+            <h1>内容块描述:<?php echo $blockInfo['name']; ?></h1>
+            <div>
+                类型：<?php echo $blockInfo['blockType']; ?><br />
+                描述：<?php echo $blockInfo['detail']; ?>
+            </div>
+        </div>
+        <br/>
     <div class="pageHeader">
         <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/product_list" method="post">
-        <input type="hidden" name="pageNum" value="1">
+        <input type="hidden" name="pageNum" value="1" />
+        <input type="hidden" name="bid" value="<?php echo $_POST['bid']; ?>" />
             <div class="searchBar">
                 <table class="searchContent">
                     <tr>
