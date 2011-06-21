@@ -64,8 +64,8 @@ $data = Db::getRows($sql_data);
             <thead>
                 <tr>
                     <th width="5%" style="text-align:center" >编号</th>
-                    <th width="65%">标题</th>
-                    <th width="30" style="text-align:center" >操作</th>
+                    <th width="40%">标题</th>
+                    <th width="40%" style="text-align:center" >操作</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,7 +75,7 @@ foreach($data as $new){
     echo '<tr>';
     echo '<td style="text-align:center" >'.$new['id'].'</td>';
     echo '<td>'.$new['name'].'</td>';
-    echo '<td style="text-align:center" ><a href="index.php?p=admin/pages_add&id='.$new['id'].'" target="navTab" >编辑</a> | <a   href="index.php?p=admin/pages_del&id='.$new['id'].'" target="navTab" onclick="return confirm(\'您确定要删除这条信息吗？\');" >删除</a></td>';
+    echo '<td style="text-align:center" ><a href="index.php?p=admin/pages_add&id='.$new['id'].'" target="navTab" >编辑</a> | <a   href="index.php?p=admin/pages_del&id='.$new['id'].'" target="navTab" onclick="return confirm(\'您确定要删除这条信息吗？\');" >删除</a> | <a href="index.php?p=admin/blockpos_add&pid='.$new['id'].'&pname='.$new['name'].'" target="navTab" rel="addblockpos" >添加内容块</a>  | <a href="index.php?p=admin/adpos_add&pid='.$new['id'].'&pname='.$new['name'].'" target="navTab" rel="addadpos" >添加广告块</a></td>';
     echo '</tr>';
 }
 ?>
