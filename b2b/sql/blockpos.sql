@@ -26,7 +26,11 @@ drop table if exists pages;
 create table pages(
     id smallint(6) unsigned not null auto_increment primary key,
     name char(20) not null default '页面',
-    detail char(50) not null default ''
+    detail char(50) not null default '',
+    title   varchar(200) not null default 'b2b',
+    keyword varchar(200) not null default 'b2b',
+    description varchar(200) not null default 'b2b',
+    cache int(8) unsigned not null default 0
 )engine=myisam default charset=utf8 collate=utf8_general_ci;
 
 insert into pages(id,name) values

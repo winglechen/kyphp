@@ -16,10 +16,12 @@ class Pages
     
     }
     
-    public static function options($value=0)
+    public static function options($value=0,$returnArray=false)
     {
         $sql  = 'select * from pages';
         $data = Db::getRows($sql); 
+
+        if($returnArray) return $data;
 
         $ret = '<select name="cid">';
         for($i=0,$len=count($data); $i<$len; $i++){
