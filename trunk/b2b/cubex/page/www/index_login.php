@@ -104,7 +104,7 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
             <ul>
                 <li>用户名： 
                     <input type="text" name="username" class="fream2"> 
-                    <input type="submit" name="submit" value="登 录" class="btn2" ">
+                    <input type="submit" name="submit" value="登 录" class="btn2" >
                 </li>
                 <li>密&nbsp;&nbsp;码： 
                     <input type="password" name="password" class="fream2"> 
