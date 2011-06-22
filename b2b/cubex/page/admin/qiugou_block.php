@@ -35,6 +35,21 @@ $data = Db::getRows($sql_data);
 echo mysql_error();
 ?>
 <div class="page">
+<?php
+use Ky\Model\Blockpos;
+if(isset($_GET['bid'])){
+    $_POST['bid'] = $_GET['bid'];
+}
+$blockInfo = Blockpos::detail($_POST['bid']);
+?>
+        <div class="panel collapse" >
+            <h1>内容块描述:<?php echo $blockInfo['name']; ?></h1>
+            <div>
+                类型：<?php echo $blockInfo['blockType']; ?><br />
+                描述：<?php echo $blockInfo['detail']; ?>
+            </div>
+        </div>
+        <br/>
     <div class="pageHeader">
         <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/qiugou_list" method="post">
         <input type="hidden" name="pageNum" value="1">
@@ -60,11 +75,9 @@ echo mysql_error();
     <div class="pageContent">
         <div class="panelBar">
             <ul class="toolBar">
-                <li>
-                    <div class="buttonActive"><div class="buttonContent"><button type="submit"> 选 择 </button></div></div>
-                </li>
-                <li class="line">line</li>
-            </ul>
+				<li><a class="edit" rel="add_new_block" href="index.php?p=admin/add_block&pid=<?php echo $blockInfo['pageId']; ?>&bid=<?php echo $blockInfo['id']; ?>&btype=<?php echo $blockInfo['blockType']; ?>&id={rowid}" target="navTab"><span>添加</span></a></li>
+				<li class="line">line</li>
+			</ul>
         </div>
 
         <table class="list" width="98%" layoutH="116">

@@ -11,28 +11,28 @@ if(isset($_GET['id'])){
 
 if(0 !== $nid){
     $new = Pages::detail($nid);
-    $new['content'] = stripslashes($new['content']);
 }else{
     $new = array(
         'id'        => 0,
+        'name'      => '',
         'title'     => '',
         'cid'       => 0,
         'pic'       => '',
-        'content'   => '',
+        'detail'   => '',
     );
 }
 ?>
 <div class="page">
     <div class="pageContent">
-    <form action="index.php?p=admin/intro_add_done" enctype="multipart/form-data" class="pageForm required-validate" onsubmit="return iframeCallback(this,navTabAjaxDone);" method="post">
+    <form action="index.php?p=admin/pages_add_done" enctype="multipart/form-data" class="pageForm required-validate" onsubmit="return iframeCallback(this,navTabAjaxDone);" method="post">
         <div class="pageFormContent" layoutH="60">
             <div class="unit">
-                <label>标题：</label>
-                <input type="text" name="title" size="50" value="<?php echo $new['title']; ?>" />
+                <label>名称：</label>
+                <input type="text" name="name" size="50" value="<?php echo $new['name']; ?>" />
             </div>
             <div class="unit">
-                <label>内容：</label>
-                <textarea  name="content" rows="4" cols="125"><?php echo $new['content']; ?></textarea>
+                <label>介绍：</label>
+                <textarea  name="detail" rows="4" cols="125"><?php echo $new['detail']; ?></textarea>
                 <input type="hidden" name="id" value="<?php echo $new['id']; ?>" />
             </div>
             <!--div class="divider"></div-->
