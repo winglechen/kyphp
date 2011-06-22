@@ -75,11 +75,9 @@ $blockInfo = Blockpos::detail($_GET['bid']);
     <div class="pageContent">
         <div class="panelBar">
             <ul class="toolBar">
-                <li>
-                    <div class="buttonActive"><div class="buttonContent"><button type="submit"> 选 择 </button></div></div>
-                </li>
-                <li class="line">line</li>
-            </ul>
+				<li><a class="edit" rel="add_new_block" href="index.php?p=admin/add_block&pid=<?php echo $blockInfo['pageId']; ?>&bid=<?php echo $blockInfo['id']; ?>&btype=<?php echo $blockInfo['blockType']; ?>&id={rowid}" target="navTab"><span>添加</span></a></li>
+				<li class="line">line</li>
+			</ul>
         </div>
 
         <table class="list" width="98%" layoutH="116">

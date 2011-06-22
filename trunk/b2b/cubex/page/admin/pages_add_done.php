@@ -1,15 +1,11 @@
 <?php
 use Ky\Core\Formater\Output;
-use Ky\Model\Intro;
-use Ky\Model\IntroCat;
+use Ky\Model\Pages;
 use Ky\Core\Core\Path;
 use Ky\Core\Uid\Uid;
 
 
 if(!empty($_POST)){
-    $cid = $_POST['ccid'];
-    unset($_POST['ccid']);
-    $_POST['content'] = addslashes(htmlspecialchars($_POST['content']));
     
     if($_FILES['pic']['name']){
         $uid      = Uid::num();
@@ -20,12 +16,12 @@ if(!empty($_POST)){
     }
 
     if(0 == $_POST['id']){
-        Intro::add($_POST);
+        Pages::add($_POST);
     }else{
-        Intro::update($_POST);
+        Pages::update($_POST);
     }
     
-    Output::iframeCallback(200,'添加成功','index.php?p=admin/intro_list&cid='.$cid);
+    Output::iframeCallback(200,'添加成功','index.php?p=admin/pages_list');
     //header('Location:index.php?p=admin/intro_list&cid='.$cid);
 }else{
     Output::iframeCallback(300,'添加失败');

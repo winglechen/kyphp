@@ -176,10 +176,17 @@ $(function(){
                             </li>
                             <li><a>seo管理</a>
                                 <ul>
-                                    <li><a href="#" rel="w_panel" target="navTab" >seo管理</a></li>
+<?php
+use Ky\Model\Pages;
+$pages = Pages::options(0,true);
+foreach($pages as $page){
+?>
+                                    <li><a href="index.php?p=admin/seo&pid=<?php echo $page['id']; ?>" rel="w_panel" target="navTab" ><?php echo $page['name'] ?></a></li>
+<?php
+}
+?>
                                 </ul>
                             </li>
-
                         </ul>
 				    </div>	
                     
