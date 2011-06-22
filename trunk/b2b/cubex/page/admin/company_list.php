@@ -58,13 +58,13 @@ $data = Db::getRows($sql_data);
     </div>
     <div class="pageContent">
         <div class="panelBar">
-            <ul class="toolBar">
+            <!--ul class="toolBar">
 				<li><a class="add" href="demo_page4.html" target="navTab"><span>添加</span></a></li>
 				<li><a class="delete" href="ajaxDone.html?uid={rowid}" target="navTabTodo" title="确定要删除吗?"><span>删除</span></a></li>
 				<li><a class="edit" href="demo_page4.html?uid={rowid}" target="navTab"><span>修改</span></a></li>
 				<li class="line">line</li>
 				<li><a class="icon" href="javascript:void(0);"><span>导入EXCEL</span></a></li>
-			</ul>
+			</ul-->
         </div>
 
         <table class="list" width="98%" layoutH="116">

@@ -59,7 +59,7 @@ $data = Db::getRows($sql_data);
     <div class="pageContent">
         <div class="panelBar">
             <ul class="toolBar">
-				<li><a class="edit" href="" target="navTab"><span>审核</span></a></li>
+				<li><a class="edit" href="index.php?p=admin/check_company&ids={rowid}" target="dialog"><span>审核</span></a></li>
 				<li class="line">line</li>
 			</ul>
         </div>
