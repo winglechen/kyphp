@@ -27,7 +27,7 @@ if(!empty($_POST)){
 $sql_num = "select count(1) as num from news where 1 " . $sql;
 $tmp = Db::getRow($sql_num);
 $current_page   = isset($_POST['pageNum']) ? $_POST['pageNum'] : 1;
-$numPerPage     = 10;
+$numPerPage     = 20;
 $nums           = $tmp['num'];
 $pages          = ceil($nums/$numPerPage);
 

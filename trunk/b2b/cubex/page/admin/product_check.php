@@ -57,7 +57,7 @@ echo mysql_error();
             </div>
         </form>
     </div>
-    <div class="pageContent">
+    <div class="pageContent" layoutH="45">
         <div class="panelBar">
             <ul class="toolBar">
 				<li><a class="edit" href="index.php?p=admin/product_check_done&id={rowid}" target="navTab"><span>审核通过</span></a></li>

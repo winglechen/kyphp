@@ -63,7 +63,7 @@ if(isset($_GET['id'])){
 				 
 				 
 				 <div class="right">
-  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/product_add_done"  enctype="multipart/form-data" >
+  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/qiugou_add_done"  enctype="multipart/form-data" >
 	<input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
 	<input type="hidden" name="corpname" value="<?php echo $_SESSION['corpname']; ?>" />
 	<input type="hidden" name="province" value="<?php echo $_SESSION['province']; ?>" />
