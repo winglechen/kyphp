@@ -72,7 +72,7 @@ $blockInfo = Blockpos::detail($_POST['bid']);
             </div>
         </form>
     </div>
-    <div class="pageContent">
+    <div class="pageContent" layoutH="45">
         <div class="panelBar">
              <ul class="toolBar">
 				<li><a class="edit" rel="add_new_block" href="index.php?p=admin/add_block&pid=<?php echo $blockInfo['pageId']; ?>&bid=<?php echo $blockInfo['id']; ?>&btype=<?php echo $blockInfo['blockType']; ?>&id={rowid}" target="navTab"><span>添加</span></a></li>

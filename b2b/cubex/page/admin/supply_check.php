@@ -57,7 +57,7 @@ echo mysql_error();
             </div>
         </form>
     </div>
-    <div class="pageContent">
+    <div class="pageContent"  layoutH="45">
         <div class="panelBar">
             <ul class="toolBar">
 				<li><a class="edit" href="" target="navTab"><span>审核</span></a></li>

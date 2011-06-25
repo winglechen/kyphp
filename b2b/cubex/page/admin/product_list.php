@@ -57,7 +57,7 @@ echo mysql_error();
             </div>
         </form>
     </div>
-    <div class="pageContent">
+    <div class="pageContent" layoutH="45">
         <div class="panelBar">
             <ul class="toolBar">
                 <li>
@@ -67,7 +67,7 @@ echo mysql_error();
             </ul>
         </div>
 
-        <table class="list" width="98%" layoutH="116">
+        <table class="list" width="98%" layoutH="45">
             <thead>
                 <tr>
                     <th width="20px;" style="text-align:center" ><input type="checkbox" class="checkboxCtrl" group="rowid[]" ></th>
