@@ -21,12 +21,15 @@ class Product
         
         $page = self::page($where,$page);    
          
-        $sql .= $where . ' ' . $page['sql'];
-        $data = Db::getRows($sql);       
+        $sql .= $where . ' order by id desc ' . $page['sql'] ;
+        
+        $data = Db::getRows($sql);  
+             
 
         return array(
             'data'  => $data,
             'page'  => $page['data'],
+            'conf'  => $page['conf'],
         );
     }
     
@@ -34,17 +37,20 @@ class Product
     {
         if(!$page) return array(
             'sql'   => '',
-            'data'  => ''
+            'data'  => '',
+            'conf'  => $page,
         );
         
         $sql = ' limit ' . ($page['curPage'] - 1)*$page['numPerPage'] . ',' . $page['numPerPage'];
 
         $page['nums'] = self::getQueryNums($where); 
+        $conf         = $page;
         $page = Page::show($page);
 
         return array(
             'sql'   => $sql,
-            'data'  => $page
+            'data'  => $page,
+            'conf'  => $conf,
         );
     }
     

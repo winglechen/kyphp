@@ -1,8 +1,9 @@
 <?php
-use Ky\Model\Product;
+include "header.php";
+use Ky\Model\Qiugou;
 use Ky\Model\Company;
 
-$form = Product::detail($_GET['id']);  
+$form = Qiugou::detail($_GET['id']);  
 $form['detail'] = stripslashes(htmlspecialchars_decode($form['detail']));  
 
 $company = Company::detail($form['corpid']);
@@ -145,3 +146,5 @@ function popWindow(url)
 </div>
 </div-->
 
+
+<?php include "footer.php"; ?>

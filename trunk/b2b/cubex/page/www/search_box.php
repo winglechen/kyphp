@@ -18,6 +18,15 @@
 
 
 </style>
+<script>
+ function tabChang(n)
+ {
+    $('#tag0,#tag1,#tag2').removeClass('current');  
+    $('#tag'+n).addClass('current'); 
+    $('#formtype').val(n);
+ }    
+</script>
+
 <div class="search-bar"> 
     <ul class="search-nav"> 
         <li><a href="javascript:tabChang(0)" target="_self" id="tag0" class="">找产品</a></li> 
@@ -28,9 +37,24 @@
         <span class="sp_L"></span>
         <span class="sp_R"></span> 
         <div class="formbox"> 
-            <input type="text" class="txtbox" value="请输入关键字找产品"  name="keyWord" id="MainKey"> 
+            <form action="index.php?p=www/search" method="post" />
+            <input type="text" class="txtbox" value="<?php if(isset($_POST['keyword'])) echo $_POST['keyword']; else echo '请输入关键字找产品'; ?>"  name="keyword" id="MainKey"> 
             <input type="image" src="res/img/btn_img.gif" class="btnimg" onclick="return SearchByMainKey();">          
-            <input type="hidden" value="1" name="linkType" id="formtype"> 
+            <input type="hidden" value="0" name="sType" id="formtype"> 
+            </form>
         </div> 
    </div> 
 </div>
+
+<script>
+$('#MainKey').bind('focus',function(){
+    if($(this).val() == '请输入关键字找产品'){
+        $(this).val('');    
+    }    
+}).bind('blur',function(){
+    if($(this).val() == ''){
+        $(this).val('请输入关键字找产品');
+            
+    }    
+});    
+</script>

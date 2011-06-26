@@ -58,16 +58,19 @@ function autoFocus() {
 <div class="row1B" style="margin-top:0px;">
 <p><label><a href="http://cn.china.cn/zuixinchanpin/" target="_blank">热门商机</a></label><img src="./res/tit7R.jpg" width="2" height="26" style="float:right"></p>
 <div class="row1BCon">
-  	<dl class="row1Bdl1">
+  	        <dl class="row1Bdl1">
             	<dt><a href="http://product.cn.china.cn/selling-leads/%CA%D6%B5%E7%CD%B2/?id=945765" target="_blank"><img src="./res/a077c6.jpg" alt="手电筒"></a></dt>
                 <dd><a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;945765&#39;,&#39;d2050_7089&#39;)" id="utitle_945765" target="_blank" href="http://product.cn.china.cn/selling-leads/%CA%D6%B5%E7%CD%B2/?id=945765">手电筒</a></dd>
-            </dl>  	<dl class="row1Bdl1">
+            </dl>  	
+            <dl class="row1Bdl1">
             	<dt><a href="http://product.cn.china.cn/selling-leads/%CA%B5%C4%BE%C3%C5/?id=945764" target="_blank"><img src="./res/7a855b.jpg" alt="实木门"></a></dt>
                 <dd><a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;945764&#39;,&#39;d2050_7089&#39;)" id="utitle_945764" target="_blank" href="http://product.cn.china.cn/selling-leads/%CA%B5%C4%BE%C3%C5/?id=945764">实木门</a></dd>
-            </dl>  	<dl class="row1Bdl1">
+            </dl>  	
+            <dl class="row1Bdl1">
             	<dt><a href="http://product.cn.china.cn/selling-leads/%B2%CA%B8%D6%B0%E5/?id=945763" target="_blank"><img src="./res/a142de.jpg" alt="彩钢板"></a></dt>
                 <dd><a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;945763&#39;,&#39;d2050_7089&#39;)" id="utitle_945763" target="_blank" href="http://product.cn.china.cn/selling-leads/%B2%CA%B8%D6%B0%E5/?id=945763">彩钢板</a></dd>
-            </dl>  	<dl class="row1Bdl1">
+            </dl>  	
+            <dl class="row1Bdl1">
             	<dt><a href="http://product.cn.china.cn/selling-leads/%BD%D3%CF%DF%B6%CB%D7%D3/?id=945755" target="_blank"><img src="./res/255c7d.jpg" alt="接线端子"></a></dt>
                 <dd><a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;945755&#39;,&#39;d2050_7089&#39;)" id="utitle_945755" target="_blank" href="http://product.cn.china.cn/selling-leads/%BD%D3%CF%DF%B6%CB%D7%D3/?id=945755">接线端子</a></dd>
             </dl>  
@@ -428,7 +431,7 @@ function autoFocus() {
  <li><a href="http://product.cn.china.cn/selling-leads/%C5%A6%BF%DB/" target="_blank"><img src="./res/1b0032.jpg" alt="纽扣"></a><a href="http://product.cn.china.cn/selling-leads/%C5%A6%BF%DB/" target="_blank">纽扣</a></li> <li><a href="http://product.cn.china.cn/selling-leads/%CD%DF%C0%E3%D6%BD%CF%E4/" target="_blank"><img src="./res/4f83ac.jpg" alt="瓦楞纸箱"></a><a href="http://product.cn.china.cn/selling-leads/%CD%DF%C0%E3%D6%BD%CF%E4/" target="_blank">瓦楞纸箱</a></li> <li><a href="http://product.cn.china.cn/selling-leads/%B1%A3%CE%C2%B2%C4%C1%CF/" target="_blank"><img src="./res/334016.jpg" alt="保温材料"></a><a href="http://product.cn.china.cn/selling-leads/%B1%A3%CE%C2%B2%C4%C1%CF/" target="_blank">保温材料</a></li> <li><a href="http://product.cn.china.cn/selling-leads/%B8%D6%D6%C6%C9%A2%C8%C8%C6%F7/" target="_blank"><img src="./res/0feae9.jpg" alt="钢制散热器"></a><a href="http://product.cn.china.cn/selling-leads/%B8%D6%D6%C6%C9%A2%C8%C8%C6%F7/" target="_blank">钢制散热器</a></li> <li><a href="http://product.cn.china.cn/selling-leads/%B9%E2%D1%A7%BE%B5%C6%AC/" target="_blank"><img src="./res/7a8c38.jpg" alt="光学镜片"></a><a href="http://product.cn.china.cn/selling-leads/%B9%E2%D1%A7%BE%B5%C6%AC/" target="_blank">光学镜片</a></li> <li><a href="http://product.cn.china.cn/selling-leads/%D2%BA%D1%B9%B4%B8/" target="_blank"><img src="./res/8e6c48.jpg" alt="液压锤"></a><a href="http://product.cn.china.cn/selling-leads/%D2%BA%D1%B9%B4%B8/" target="_blank">液压锤</a></li>
 </ul></div>
 
-<?php include 'category_block.php'; ?>
+<?php include __DIR__.'/category_block.php'; ?>
 
 
 <div class="clear"></div>

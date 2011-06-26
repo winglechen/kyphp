@@ -27,6 +27,7 @@ class Qiugou
         return array(
             'data'  => $data,
             'page'  => $page['data'],
+            'conf'  => $page['conf'],
         );
     }
     
@@ -40,11 +41,13 @@ class Qiugou
         $sql = ' limit ' . ($page['curPage'] - 1)*$page['numPerPage'] . ',' . $page['numPerPage'];
 
         $page['nums'] = self::getQueryNums($where); 
+        $conf         = $page;
         $page = Page::show($page);
 
         return array(
             'sql'   => $sql,
-            'data'  => $page
+            'data'  => $page,
+            'conf'  => $conf,
         );
     }
 

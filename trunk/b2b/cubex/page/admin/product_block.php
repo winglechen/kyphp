@@ -19,7 +19,7 @@ if(!empty($_POST)){
 
 if(!empty($_POST)){
     if(isset($_POST['productName'])){
-        $sql .= " and productName like '%{$_POST['name']}%' ";
+        $sql .= " and productName like '%{$_POST['productName']}%' ";
     }
 }
 
@@ -50,7 +50,7 @@ $blockInfo = Blockpos::detail($_POST['bid']);
         </div>
         <br/>
     <div class="pageHeader">
-        <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/product_list" method="post">
+        <form onsubmit="return navTabSearch(this);" id="pagerForm" action="index.php?p=admin/product_block" method="post">
         <input type="hidden" name="pageNum" value="1" />
         <input type="hidden" name="bid" value="<?php echo $_POST['bid']; ?>" />
             <div class="searchBar">
@@ -72,7 +72,7 @@ $blockInfo = Blockpos::detail($_POST['bid']);
             </div>
         </form>
     </div>
-    <div class="pageContent" layoutH="45">
+    <div class="pageContent" layoutH="120">
         <div class="panelBar">
              <ul class="toolBar">
 				<li><a class="edit" rel="add_new_block" href="index.php?p=admin/add_block&pid=<?php echo $blockInfo['pageId']; ?>&bid=<?php echo $blockInfo['id']; ?>&btype=<?php echo $blockInfo['blockType']; ?>&id={rowid}" target="navTab"><span>添加</span></a></li>
@@ -80,7 +80,7 @@ $blockInfo = Blockpos::detail($_POST['bid']);
 			</ul>    
         </div>
 
-        <table class="list" width="98%" layoutH="116">
+        <table class="list" width="98%" layoutH="0">
             <thead>
                 <tr>
                     <th width="20px;" style="text-align:center" ><input type="checkbox" class="checkboxCtrl" group="rowid[]" ></th>
