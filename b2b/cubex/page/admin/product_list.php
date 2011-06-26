@@ -19,7 +19,7 @@ if(!empty($_POST)){
 
 if(!empty($_POST)){
     if(isset($_POST['productName'])){
-        $sql .= " and productName like '%{$_POST['name']}%' ";
+        $sql .= " and productName like '%{$_POST['productName']}%' ";
     }
 }
 
@@ -32,7 +32,7 @@ $pages          = ceil($nums/$numPerPage);
 
 $sql_data = " select id,pic,productName from product where 1 " . $sql . " limit " . ($current_page - 1) * $numPerPage . "," . $numPerPage;
 $data = Db::getRows($sql_data);
-echo mysql_error();
+
 ?>
 <div class="page">
     <div class="pageHeader">

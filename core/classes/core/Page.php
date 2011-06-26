@@ -17,7 +17,17 @@ class Page
         
         $style = strtolower(self::$config['style']) . 'Page';
         return self::$style();
-    }    
+    } 
+    
+    private static function googlePage()
+    {
+        return \Ky\Core\Page\Google::show(self::$config);
+    } 
+    
+    private static function b2bPage()
+    {
+        return \Ky\Core\Page\B2b::show(self::$config);
+    } 
 
     private static function defaultPage()
     {

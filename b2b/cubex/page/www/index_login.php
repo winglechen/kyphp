@@ -19,7 +19,13 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
 </div>
 <!--广告 end-->
 
+<?php
+use Ky\Model\Block;
+$block1 = Block::listByBlock(1);
+$block2 = Block::listByBlock(2);
 
+
+?>
 
 <div class="wrapCnt" style="padding-top:0;">
 <div class="row2A">
@@ -40,7 +46,11 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
 <dd><a href="http://www.eptee.com/cn/index/index.asp" target="_blank">亚洲环保展</a></dd>
 </dl>
 <ul>
-<li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;967004&#39;,&#39;d2050_7083&#39;)" id="utitle_967004" target="_blank" href="http://cn.china.cn/huodong/chengxinxuanyan/index.html?id=967004"><font color="red">诚信网商签字承诺倡议活动</font></a></li><li>·<a id="utitle_945512" target="_blank" href="http://guangjiaohui.china.cn/"><font color="red">2011年第109届广交会</font></a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;976730&#39;,&#39;d2050_7083&#39;)" id="utitle_976730" target="_blank" href="http://cn.china.cn/huodong/yingxiao/index.html?id=976730"><font color="red">体验产品精准营销服务</font></a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;981187&#39;,&#39;d2050_7083&#39;)" id="utitle_981187" target="_blank" href="http://cn.china.cn/shiguanhezuo/Indonesia.html?id=981187">浩铭网与印尼使馆共携手</a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;981186&#39;,&#39;d2050_7083&#39;)" id="utitle_981186" target="_blank" href="http://cn.china.cn/shiguanhezuo/Ghana.html?id=981186">浩铭网结盟加纳驻华使馆</a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;980351&#39;,&#39;d2050_7083&#39;)" id="utitle_980351" target="_blank" href="http://cn.china.cn/guojimaijia/croatiapurchase-6.html?id=980351">克罗地亚使馆求购LED显示器</a></li>
+<?php 
+    for($i=1,$cnt=count($block1); $i<$cnt && $i<7; $i++){
+        echo '<li>·<a target="_blank" href="'.$block1[$i]['url'].'"><font>'.$block1[$i]['title'].'</font></a></li>';
+}
+?>
 </ul>
 <div class="clear"></div>
 </div>
@@ -52,8 +62,14 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
 <dt><a href="http://cn.china.cn/sell-in-china/index.html" target="_blank"><img src="./res/zhongguohezuohuoban.jpg"></a></dt> 
 <dd><a href="http://cn.china.cn/sell-in-china/index.html" target="_blank"><font color="red">使馆推荐 优质产品<br>打开国际采购新渠道</font></a></dd>
 </dl>
-<ul>  
-<li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;972627&#39;,&#39;d2050_29773&#39;)" id="utitle_972627" target="_blank" href="http://cn.china.cn/guojimaijia/bangladeshselling-3.html?id=972627">孟加拉寻找中国蓖麻种子进</a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;959671&#39;,&#39;d2050_29773&#39;)" id="utitle_959671" target="_blank" href="http://cn.china.cn/guojimaijia/bangladeshselling-2.html?id=959671">孟加拉寻找中国芝麻进口商</a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;959670&#39;,&#39;d2050_29773&#39;)" id="utitle_959670" target="_blank" href="http://cn.china.cn/guojimaijia/hungaryselling-6.html?id=959670">匈牙利推荐净水技术和消防</a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;914531&#39;,&#39;d2050_29773&#39;)" id="utitle_914531" target="_blank" href="http://cn.china.cn/guojimaijia/turkeyselling-5.html?id=914531">土耳其推荐橄榄油</a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;935690&#39;,&#39;d2050_29773&#39;)" id="utitle_935690" target="_blank" href="http://cn.china.cn/guojimaijia/moroccoselling-1.html?id=935690">摩洛哥使馆推荐Halieutis</a></li><li>·<a onmousedown="qhstat_j2chan(&#39;deal&#39;,&#39;935687&#39;,&#39;d2050_29773&#39;)" id="utitle_935687" target="_blank" href="http://cn.china.cn/guojimaijia/ethiopiapurchaseselling-1.html?id=935687">埃塞俄比亚寻找投资机遇</a></li>
+<ul>
+    
+<?php 
+    for($i=1,$cnt=count($block2); $i<$cnt && $i<7; $i++){
+        echo '<li>·<a target="_blank" href="'.$block2[$i]['url'].'"><font>'.$block2[$i]['title'].'</font></a></li>';
+}
+?>
+
 </ul>
 <div class="clear"></div>
 </div>

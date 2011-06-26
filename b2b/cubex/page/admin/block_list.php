@@ -53,7 +53,7 @@ $data = Db::getRows($sql_data);
             </div>
         </form>
     </div-->
-    <div class="pageContent">
+    <div class="pageContent" layoutH="0" >
 <?php
 use Ky\Model\Blockpos;
 $blockInfo = Blockpos::detail($_GET['bid']);
@@ -100,7 +100,7 @@ foreach($data as $new){
     echo'</td>';
     echo '<td>'.$new['title'].'</td>';
     echo '<td>'.$new['url'].'</td>';
-    echo '<td style="text-align:center" ><a   href="index.php?p=admin/block_del&cid='.$_GET['cid'].'&id='.$new['id'].'" target="navTab" onclick="return confirm(\'您确定要删除这条信息吗？\');" >删除</a></td>';
+    echo '<td style="text-align:center" ><!--a   href="index.php?p=admin/block_del&cid='.$_GET['cid'].'&id='.$new['id'].'" target="navTab" onclick="return confirm(\'您确定要删除这条信息吗？\');" >删除</a--></td>';
     echo '</tr>';
 }
 ?>

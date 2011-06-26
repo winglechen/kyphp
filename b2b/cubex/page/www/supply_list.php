@@ -1,5 +1,7 @@
 <?php
-use Ky\Model\Product;
+
+include "header.php";
+use Ky\Model\Supply;
 use Ky\Model\Config;
 use Ky\Core\Core\Db;
 use Ky\Core\Core\Form;
@@ -38,13 +40,13 @@ $condition = array(
     'checked'     => 'eq',
 );
 $page = array(
-    'url'           => 'index.php?p=www/list&page=',
+    'url'           => 'index.php?p=www/supply_list&page=',
     'curPage'       => $_POST['page'],
     'numPerPage'    => 10,
     'style'         => 'b2b',
 );
 
-$data = Product::lists('*',$condition,$_POST,$page);
+$data = Supply::lists('*',$condition,$_POST,$page);
 
 
 ?>
@@ -59,7 +61,7 @@ $data = Product::lists('*',$condition,$_POST,$page);
 
 </div>
      您所在的位置：<a href="http://cn.china.cn/">首页</a>
-     &gt; <a href="index.php" target="_blank">供应信息</a>
+     &gt; <a href="index.php" target="_blank">库存信息</a>
            
     </div>
 
@@ -222,7 +224,7 @@ echo $data['page'];
 <ul>
 <?php
     foreach($category as $cat){
-       echo '<li><a target="_blank" href="index.php?p=www/list&category1='.$cat['id'].'">'.$cat['name'].'</a></li>';
+       echo '<li><a target="_blank" href="index.php?p=www/supply_list&category1='.$cat['id'].'">'.$cat['name'].'</a></li>';
     }
 ?>
 </ul>
@@ -254,22 +256,8 @@ echo $data['page'];
 
 
   
- 
-  <!--div class="searchBar2">
-  <div class="searchform2">
 
-	<div class="titlealink">
-		<a class="hoveron" title="台式机的供应信息" onclick="searchInfo(&#39;top&#39;,&#39;1&#39;);">供应</a>
-		<a title="台式机的求购信息" onclick="searchInfo(&#39;top&#39;,&#39;2&#39;);">求购</a>
-		<a title="台式机的相关公司" onclick="searchInfo(&#39;top&#39;,&#39;0&#39;);">公司</a>
-	</div>
-      <div class="searcont">
-      <input type="text" name="k" id="k2" value="台式机" autocomplete="off" class="searchBarInput" onkeydown="subSearch(event,&#39;bottom&#39;)">
-      <input type="button" name="button2" id="button2" value="&#160;" class="search_bt" onclick="searchInfo(&#39;bottom&#39;,&#39;&#39;);">
-  <input type="button" name="button3" id="button3" value="&#160;" class="zhida_bt" onclick="javascript: fundirectgotocorp(&#39;bottom&#39;)">
-       </div>
-  </div>
-</div-->
 
 <!-- friend link -->
    
+<?php include "footer.php"; ?>
