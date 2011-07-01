@@ -7,9 +7,10 @@ body{ color:#646464;}
 .yjy p{ width:666px; padding:0 20px 0 30px; margin:0 auto;}
 .yjy table{ width:716px; margin:0 auto 20px auto; line-height:21px;}
 .yjy table tr td{ height:40px;}
-.yjy table tr td span{ color:#cd0000; margin:0 5px; display:inline;}
+/*.yjy table tr td span{ color:#cd0000; margin:0 5px; display:inline;}
 .yjy table tr td span a{ float:none; color:#cd0000; font-weight:normal; line-height:21px; padding:0;}
-.yjy table tr th{ text-align:right; padding:0 10px 0 0;}
+*/.
+yjy table tr th{ text-align:right; padding:0 10px 0 0;}
 .yjy table tr th span{ color:#cd0000;}
 .yjy table tr td .putong{ background:url(res/img/yjy_5.gif) repeat-x; height:19px; border:1px #D5D5D5 solid; color:#646464; padding:5px 0 0 0;}
 .yjy table tr td img{ float:left; margin:3px 5px 0 10px; display:inline;}

@@ -41,6 +41,22 @@ class Company
         $sql = 'select * from company where id='.$id;
         return Db::getRow($sql);
     }
+    
+    public static function usernameValid($username)
+    {
+        $sql  = 'select * from company where username="'.$username.'"';
+        $data =  Db::getRow($sql);
+
+        return ($data) ? true : false;
+    }
+    
+    public static function emailValid($email)
+    {
+        $sql  = 'select * from company where email="'.$email.'"';
+        $data =  Db::getRow($sql);
+
+        return ($data) ? true : false;
+    }
 
     public static function delete($id)
     {
