@@ -85,7 +85,8 @@ var validator = {
                 chinese     : /^[\u0391-\uFFE5]+$/,
                 dateType    : /^\d{4}-\d{2}-\d{2}$/,
                 int         : /^\d+$/,
-                userName    : /^[a-zA-Z].*$/,
+                userName    : /^[a-zA-Z][a-zA-Z0-9]+$/,
+                password    : /^[a-zA-Z0-9]+$/,
 				float		: /^\d\.\d*$/,
                 mobile      : /^1[3|8|5]\d{9}$/,
 				phone		: /^((\(\d{2,3}\))|(\d{3}\-))?(\(0\d{2,3}\)|0\d{2,3}-)?[1-9]\d{6,7}(\-\d{1,4})?$/,
@@ -242,7 +243,6 @@ var validator = {
                 err = err + ' is not validated';    
             }  
         }
-        
         return err;
     },
     
@@ -251,7 +251,7 @@ var validator = {
         if(obj.getAttribute('ajax') == null) return false;
         
         var result = $.ajax({
-                    		url:obj.getAttribute('ajax')+trim(obj.value),
+                    		url:obj.getAttribute('ajax')+encodeURI(trim(obj.value)),
                     		async:false
                         }).responseText;
 						
@@ -408,13 +408,12 @@ function showMessage(obj,msg,styleType){
 	var classHint  = (obj.getAttribute('classHint')  != null) ? obj.getAttribute('classHint')  : 'hint';
 	var classErr   = (obj.getAttribute('classErr') != null)   ? obj.getAttribute('classErr')   : 'no';
 	var classRight = (obj.getAttribute('classRight') != null) ? obj.getAttribute('classRight') : 'yes';
-	
 	var showStyle = '';
 	switch(styleType){
 	    case 'hint':
 	        showStyle = classHint;
 	        break;
-	    case 'err':
+	    case 'wrong':
 	        showStyle = classErr;
 	        break;
 	    case 'right':
