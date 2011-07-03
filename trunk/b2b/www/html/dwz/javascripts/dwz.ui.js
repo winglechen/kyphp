@@ -209,6 +209,27 @@ function initUI(_box){
 			event.preventDefault();
 		});
 	});
+	
+	$("area[target=navTab]", $p).each(function(){
+		$(this).click(function(event){
+			var $this = $(this);
+			var title = $this.attr("title") || $this.text();
+			var tabid = $this.attr("rel") || "_blank";
+			var fresh = eval($this.attr("fresh") || "true");
+            var showInFrame = $this.attr("showInFrame") || false;
+			var url = unescape($this.attr("href")).replaceTmById($p);
+			DWZ.debug(url);
+			if (!url.isFinishedTm()) {
+				alertMsg.error($this.attr("warn") || DWZ.msg("alertSelectMsg"));
+				return false;
+			}
+			navTab.openTab(tabid, url,{title:title, fresh:fresh,showInFrame:showInFrame});
+
+			event.preventDefault();
+		});
+	});
+	
+	
 	// navTabTodo
 	$("a[target=navTabTodo]", $p).each(function(){
 		$(this).click(function(event){
@@ -265,6 +286,39 @@ function initUI(_box){
 			return false;
 		});
 	});
+	
+	$("area[target=dialog]", $p).each(function(){
+		$(this).click(function(event){
+			var $this = $(this);
+			var title = $this.attr("title") || $this.text();
+			var rel = $this.attr("rel") || "_blank";
+			var options = {};
+			var w = $this.attr("width");
+			var h = $this.attr("height");
+			if (w) options.width = w;
+			if (h) options.height = h;
+			options.max = eval($this.attr("max") || "false");
+			options.mask = eval($this.attr("mask") || "false");
+			options.maxable = eval($this.attr("maxable") || "true");
+			options.minable = eval($this.attr("minable") || "true");
+			options.fresh = eval($this.attr("fresh") || "true");
+			options.resizable = eval($this.attr("resizable") || "true");
+			options.drawable = eval($this.attr("drawable") || "true");
+			options.close = eval($this.attr("close") || "");
+			options.param = $this.attr("param") || "";
+			
+			var url = unescape($this.attr("href")).replaceTmById($p);
+			DWZ.debug(url);
+			if (!url.isFinishedTm()) {
+				alertMsg.error($this.attr("warn") || DWZ.msg("alertSelectMsg"));
+				return false;
+			}
+			$.pdialog.open(url, rel, title, options);
+			
+			return false;
+		});
+	});
+	
 	$("a[target=ajax]", $p).each(function(){
 		$(this).click(function(event){
 			var $this = $(this);
