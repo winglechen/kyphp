@@ -65,65 +65,7 @@ var PDV_PAGENAME='query';
 <div id="newsquery">
 <ul id="queryul">
  
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?339.html" target="_self"   >发现最美的情调舞台</a></div>
-	<div class="time">2009-12-15</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?358.html" target="_self"   >升级五金配置 赠送石英石台面</a></div>
-	<div class="time">2010-01-06</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?366.html" target="_self"   >橱柜品牌进军家居定制行业</a></div>
-	<div class="time">2010-01-06</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?337.html" target="_self"   > 将于上海与世界博览会同时期召开上海家具展将于上海与世界博览会同时期召开</a></div>
-	<div class="time">2009-12-15</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?381.html" target="_self"   >何保养木制家具如何保养木制家具如何保养木制家具</a></div>
-	<div class="time">2010-01-25</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?377.html" target="_self"   >如何保养木制家具如何保养木制家具如何保养木制家具</a></div>
-	<div class="time">2010-01-25</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?380.html" target="_self"   >季家具选购的十大原则春季家具选购的十大原则</a></div>
-	<div class="time">2010-01-25</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?379.html" target="_self"   >家具选购的十大原则春季家具选购的十大原则</a></div>
-	<div class="time">2010-01-25</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?378.html" target="_self"   >春季家具选购的十大原则春季家具选购的十大原则</a></div>
-	<div class="time">2010-01-25</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp1/news/html/?376.html" target="_self"   >购买板式家具以及推拉门者必读购买板式家具以及推拉门者必读</a></div>
-	<div class="time">2010-01-25</div>
-
-</li>
+<?php include __DIR__.'/../common/new_list.php'; ?>
 
 </ul>
 </div>
