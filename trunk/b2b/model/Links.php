@@ -29,6 +29,12 @@ class Links
             'page'  => $page['data'],
         );
     }
+
+	public static function show()
+	{
+		$sql = "select * from links";
+		return Db::getRows($sql);
+	}
     
     private static function page($where,$page)
     {
