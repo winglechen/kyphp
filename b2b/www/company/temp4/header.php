@@ -141,8 +141,6 @@
 	<a href="temp4/" style="color:#2e2e2e;padding-right:4px;font:12px/20px Simsun;">返回首页</a>
 	<img src="temp4/effect/templates/images/sep.jpg" border="0" style="margin:0px 2px 0px 1px;vertical-align:middle;" />
 <a href="temp4/http://demo.2799.cn/1294374538/" style="color:#2e2e2e;padding-right:4px;font:12px/20px Simsun;" onClick="window.external.addFavorite('http://demo.2799.cn/1294374538/','医疗器械公司'); return(false);">加入收藏</a>
-	<img src="temp4/effect/templates/images/sep.jpg" border="0" style="margin:0px 2px 0px 1px;vertical-align:middle;" />
-<a href="temp4/mailto:boss@mail.com" style="color:#2e2e2e;padding-right:0px;font:12px/20px Simsun;">联系我们</a>
 </div>
 
 
