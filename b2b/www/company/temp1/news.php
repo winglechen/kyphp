@@ -14,19 +14,19 @@ var PDV_PAGENAME='query';
 <div id='pdv_14813' class='pdv_class'  title='' style='width:207px;height:170px;top:99px;left:0px; z-index:10'>
 <div id='spdv_14813' class='pdv_content' style='overflow:visible;width:100%;'>
 <div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;">
-<div style="height:49px;border:0px;padding:0;margin:0;background:url(temp1/base/border/784/images/title.jpg) 0px 0px no-repeat;">
-	<div style="float:right;width:5px;height:49px;background:url(temp1/base/border/784/images/title.jpg) -995px 0px no-repeat;"></div>
-</div>
-<div style="margin:0px;padding:0px;">
-<link href="temp1/news/templates/css/news_search_dolphin.css" rel="stylesheet" type="text/css" />
-
-<?php
-    include __DIR__ . '/../common/new_search.php';
-?>
-
-
-
-</div>
+    <div style="height:49px;border:0px;padding:0;margin:0;background:url(temp1/base/border/784/images/title.jpg) 0px 0px no-repeat;">
+    	<div style="float:right;width:5px;height:49px;background:url(temp1/base/border/784/images/title.jpg) -995px 0px no-repeat;"></div>
+    </div>
+    <div style="margin:0px;padding:0px;">
+    <link href="temp1/news/templates/css/news_search_dolphin.css" rel="stylesheet" type="text/css" />
+    
+    <?php
+        include __DIR__ . '/../common/new_search.php';
+    ?>
+    
+    
+    
+    </div>
 </div>
 
 </div>
