@@ -1,10 +1,22 @@
+<?php
+use Ky\Model\Config;
+$cat =  Config::getOption('member_new_category','array',null,$_SESSION['id']);
+
+?>
+
 <script language="javascript" src="common/selectbox.js"></script>
 <div class="newssearchformzone">
 <form id="newssearchform" method="get" action="temp1/news/class/index.php">
   <div class="newssearchform">
-    <select name="catid" id="catid" class="box" style="display:none; background:#ffffff; width:132px; height:19px;">
+    <select name="cid" id="catid" class="box" style="display:none; background:#ffffff; width:132px; height:19px;">
       <option value="0" >请选择分类</option>
-	  <option value='86'>公司动态</option><option value='99'>行业新闻</option><option value='105'>橱柜指南</option>
+<?php
+
+for($i=0,$cnt=count($cat); $i<$cnt; $i++){
+   echo '<option value="'.$cat[$i]['id'].'" >'.$cat[$i]['name'].'</option>';   
+}
+?>
+
     </select> 
 	<script>
 	makeSelectBox('catid','temp1/');
