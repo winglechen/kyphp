@@ -12,9 +12,8 @@ unset($_POST['checkNum']);
 unset($_POST['passwordcheck']);
 $password       = $_POST['password'];
 $_POST['password'] = md5($_POST['password']);
-
-
 $id = Company::add($_POST);
+
 $_SESSION = $_POST;
 
 $data = array(
