@@ -49,16 +49,9 @@ var PDV_PAGENAME='query';
 
 <link href="temp1/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
-<ul id="queryul">
  
-<?php include __DIR__.'/../common/new_list.php'; ?>
+<?php include __DIR__.'/../common/new_detail.php'; ?>
 
-</ul>
-</div>
-
-<div id="showpages">
-	  <div id="pagesinfo">共16条 每页10条 页次：1/2</div>
-	  <div id="pages"><ul><li class="pbutton"><a href=/1294129129/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li><a href=/1294129129/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>2</a></li><li class="pbutton"><a  href=/1294129129/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key= >下一页</a></li><li class="opt"><select onChange="window.location=this.options[this.selectedIndex].value"><option value="/1294129129/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=" selected>第1页</option><option value="/1294129129/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=">第2页</option></select></li><li class="pbutton"><a href=/1294129129/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>尾页</a></li></ul></div>
 </div>
 
 
@@ -101,8 +94,14 @@ var PDV_PAGENAME='query';
 <div class="newsclass_dolphin">
 
 
-<?php include __DIR__.'/../common/new_category.php'; ?>
+<a href="temp1/news/class/?86.html" target="_self" class="newsclass_dolphin">公司动态</a>
 
+
+<a href="temp1/news/class/?99.html" target="_self" class="newsclass_dolphin">行业新闻</a>
+
+
+<a href="temp1/news/class/?105.html" target="_self" class="newsclass_dolphin">橱柜指南</a>
+ 
 </div>
 
 </div>

@@ -58,21 +58,8 @@ $().picFit("auto");
 <link href="temp1/product/templates/css/productclass_dolphin.css" rel="stylesheet" type="text/css" />
 <div class="productclass_dolphin">
 
+<?php include __DIR__.'/../common/product_category.php'; ?>
 
-<a href="temp1/product/class/?115.html" target="_self" class="productclass_dolphin">精品展示系列</a>
-
-
-<a href="temp1/product/class/?116.html" target="_self" class="productclass_dolphin">烤漆系列橱柜</a>
-
-
-<a href="temp1/product/class/?74.html" target="_self" class="productclass_dolphin">实木系列橱柜</a>
-
-
-<a href="temp1/product/class/?121.html" target="_self" class="productclass_dolphin">模压系列橱柜</a>
-
-
-<a href="temp1/product/class/?122.html" target="_self" class="productclass_dolphin">面板和配件</a>
- 
 </div>
 
 </div>
@@ -110,29 +97,10 @@ $().picFit("auto");
 </div>
 <div style="margin:0px;padding:0px;">
 <link href="temp1/product/templates/css/product_searchform_dolphin.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="temp1/product/js/selectbox.js"></script>
-<div class="productsearchformzone">
-<form id="productsearchform" method="get" action="temp1/product/class/index.php">
-  
-   <div class="productsearchform">
-    <select name="catid" id="catid" class="box" style="display:none; background:#ffffff; width:132px; height:19px;">
-      <option value="0" >请选择分类</option>
-      
-	  <option value='74'>实木系列橱柜</option><option value='115'>精品展示系列</option><option value='116'>烤漆系列橱柜</option><option value='121'>模压系列橱柜</option><option value='122'>面板和配件</option>
-    
-    </select> 
-	<script>
-	makeSelectBox('catid','temp1/');
-	</script>
-  </div>
-    <div class="productsearchformleft">
-    <input name="key" type="text" id="productsearchform_key" value="" style="width:81px;" class="inputtext">
-  </div>
-  <div class="productsearchform2">
-  <input name="imageField" id="button" type="image" src="temp1/product/templates/images/searchr.jpg" >
-  </div>
-</form>
-</div>
+
+<?php
+    include __DIR__ . '/../common/product_search.php';
+?>
 
 </div>
 </div>
