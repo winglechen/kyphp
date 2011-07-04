@@ -1,6 +1,7 @@
 <?php
 namespace Ky\Model;
 
+use Ky\Model\Config;
 use Ky\Core\Core\Db;
 use Ky\Core\Core\Sql;
 use Ky\Core\Core\Page;
@@ -12,6 +13,35 @@ class Product
     {
         $sql = "insert into product (". join(',',array_keys($data)) . ",ts) values(" . Db::addValues($data). ",".time().")";
         Db::query($sql);
+        
+        self::addCategory($data);
+    }
+    
+    private static function addCategory($data)
+    {
+        $cat = array(
+            'pid'   => $data['corpid'],
+        ); 
+           
+        if(isset($data['category3'])){
+            $cat['id'] =  $data['category3'];  
+            $pid       =  $data['category2']; 
+        }elseif(isset($data['category2'])){
+            $cat['id'] =  $data['category2']; 
+            $pid       =  $data['category1']; 
+        }else{
+            $cat['id'] =  $data['category1']; 
+            $pid       =  0; 
+        }
+        
+        $tmp = Config::getValue('category',$cat['id'],$pid);
+        
+        $cat['name'] = $tmp['name'];
+        
+        $sql = "insert into member_category (". join(',',array_keys($cat)) . ") values(" . Db::addValues($cat). ")";
+        
+        Db::query($sql);
+        
     }
     
     public static function lists($columns="*",$where=null,$data=array(),$page=false)
