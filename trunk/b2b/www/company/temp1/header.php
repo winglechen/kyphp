@@ -86,22 +86,7 @@
 <div id="menumain_dolphin">
 <div class="mainmenuiner">
 
-<a href="./index.php" target="_self" class="menumain_dolphin">网站首页</a>
-
-<a href="./index.php?p=page&id=" target="_self" class="menumain_dolphin">公司简介</a>
-
-<a href="index.php?p=news" target="_self" class="menumain_dolphin">新闻动态</a>
-
-<a href="index.php?p=product" target="_self" class="menumain_dolphin">产品系列</a>
-
-<a href="temp1/page/join/notice.php" target="_self" class="menumain_dolphin">品牌加盟</a>
-
-<a href="temp1/page/job/job.php" target="_self" class="menumain_dolphin">人才招聘</a>
-
-<a href="temp1/page/service/service.php" target="_self" class="menumain_dolphin">客户服务</a>
-
-<a href="temp1/page/contact/contact.php" target="_self" class="menumain_dolphin">联系我们</a>
-
+<?php include __DIR__.'/../common/nav.php'; ?>
 </div>
 </div>
 

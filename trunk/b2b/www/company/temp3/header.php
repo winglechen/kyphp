@@ -86,7 +86,6 @@
 <div style="font:12px/14px simsun">
 	<a href="temp3/http://demo.2799.cn/1295932157/" style="color:#8b8b8b;font:12px/14px simsun;" onClick="this.style.behavior='url(temp3/#default#homepage)';this.setHomePage('http://demo.2799.cn/1295932157/'); return(false);"><img src="temp3/effect/templates/images/home.jpg" border="0" style="margin:0px 5px 0px 0px;" />设为首页</a>  
 	<a href="temp3/http://demo.2799.cn/1295932157/" style="color:#8b8b8b;font:12px/14px simsun;padding-left:6px;" onClick="window.external.addFavorite('http://demo.2799.cn/1295932157/','注塑设备制造公司'); return(false);"><img src="temp3/effect/templates/images/bookmark.jpg" border="0" style="margin:0px 5px 0px 0px;" />加入收藏</a>
-	  <a href="temp3/mailto:boss@mail.com" style="color:#8b8b8b;font:12px/14px simsun;padding-left:8px;"><img src="temp3/effect/templates/images/mail.jpg" border="0" style="margin:0px 5px 0px 0px;" />联系我们</a>
 </div>
 
 
@@ -115,22 +114,8 @@
 <div id="menumain">
 <div class="mainmenuiner">
 
-<a href="temp3/index.php" target="_self" class="menumain">网站首页</a>
 
-<a href="temp3/page/html/company.php" target="_self" class="menumain">公司概况</a>
-
-<a href="temp3/product/class/" target="_self" class="menumain">产品中心</a>
-
-<a href="temp3/news/class/" target="_self" class="menumain">新闻动态</a>
-
-<a href="temp3/page/quality/goal.php" target="_self" class="menumain">质量体系</a>
-
-<a href="temp3/news/class/?97.html" target="_self" class="menumain">典型客户</a>
-
-<a href="temp3/job/index.php" target="_self" class="menumain">人才招聘</a>
-
-<a href="temp3/page/contact/contact.php" target="_self" class="menumain">联系我们</a>
-
+<?php include __DIR__.'/../common/nav.php'; ?>
 </div>
 </div>
 
