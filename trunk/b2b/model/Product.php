@@ -38,7 +38,7 @@ class Product
         
         $cat['name'] = $tmp['name'];
         
-        $sql = "insert into member_category (". join(',',array_keys($cat)) . ") values(" . Db::addValues($cat). ")";
+        $sql = "insert ignore into member_category (". join(',',array_keys($cat)) . ") values(" . Db::addValues($cat). ")";
         
         Db::query($sql);
         
