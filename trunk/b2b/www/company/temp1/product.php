@@ -35,9 +35,8 @@ $().picFit("auto");
 });
 </script>
 <div id="showpages" >
-	  <div id="pagesinfo">共8条 每页20条 页次：1/1</div>
-	  <div id="pages"><ul><li class="pbutton"><a href=/1294129129/product/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;author=&amp;key=>首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li class="pbutton">下一页</li><li class="opt"><select onChange="window.location=this.options[this.selectedIndex].value"><option value="/1294129129/product/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;author=&amp;key=" selected>第1页</option></select></li><li class="pbutton"><a href=/1294129129/product/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;author=&amp;key=>尾页</a></li></ul></div>
-     </div>
+<?php echo $data['page']; ?>	  
+</div>
 
 </div>
 </div>

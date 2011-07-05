@@ -6,15 +6,22 @@ use Ky\Core\Core\Form;
 Form::init();
 $_POST['corpid'] = $_SESSION['id'];
 
+if(isset($_GET['category1'])){
+    $_POST['category1']   = $_GET['category1'];    
+}
+
 $condition = array(
     'productName' => 'like',
     'corpid'      => 'eq',
+    'category1'          => 'eq',
+    'category2'          => 'eq'
+    'category3'          => 'eq'
 );
 $page = array(
-    'url'           => 'index.php?p=www/member/product_list&page=',
+    'url'           => 'index.php?p=product&page=',
     'curPage'       => $_POST['page'],
     'numPerPage'    => 12,
-    'style'         => 'default',
+    'style'         => 'company',
 );
 
 $data = Product::lists('id,pic,productName,brief,ts,checked',$condition,$_POST,$page);

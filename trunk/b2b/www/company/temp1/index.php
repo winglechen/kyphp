@@ -16,20 +16,15 @@ var PDV_PAGENAME='index';
 <div id='spdv_13602' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
 <div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;">
 <div style="height:49px;border:0px;padding:0;margin:0;background:url(temp1/base/border/779/images/title.jpg) 0px 0px no-repeat;">
-	<div style="float:right;width:57px;height:49px;background:url(temp1/base/border/779/images/title.jpg) -194px 0px no-repeat;"><a href="temp1/news/class/?86.html" style="display:inline"><img src="temp1/base/border/779/images/more.jpg" style="border:0px;padding-top:24px;" /></a></div>
+	<div style="float:right;width:57px;height:49px;background:url(temp1/base/border/779/images/title.jpg) -194px 0px no-repeat;"><a href="index.php?p=news" style="display:inline"><img src="temp1/base/border/779/images/more.jpg" style="border:0px;padding-top:24px;" /></a></div>
 </div>
 <div style="margin:0px;padding:0px;">
 
 <link href="temp1/news/templates/css/newslist_1.css" rel="stylesheet" type="text/css" />
 <ul class="newslist_1">
 
-<li class="newslist_1"><a href="temp1/news/html/?366.html" target="_self" class="newslist_1"   >橱柜品牌进军家居定制行业</a></li>
 
-<li class="newslist_1"><a href="temp1/news/html/?358.html" target="_self" class="newslist_1"   >升级五金配置 赠送石英石台面</a></li>
-
-<li class="newslist_1"><a href="temp1/news/html/?346.html" target="_self" class="newslist_1"   >国际质量管理和质量保证体系国际质量体</a></li>
-
-<li class="newslist_1"><a href="temp1/news/html/?339.html" target="_self" class="newslist_1"   >发现最美的情调舞台</a></li>
+<?php include __DIR__.'/../common/index_new_list.php'; ?>
 
 </ul>
 
@@ -48,7 +43,7 @@ var PDV_PAGENAME='index';
 	<div style="float:right;width:5px;height:49px;background:url(temp1/base/border/782/images/title.jpg) -995px 0px no-repeat;"></div>
 </div>
 <div style="margin:0px;padding:0px;">
-<div style="PADDING-BOTTOM: 0px; PADDING-LEFT: 45px; PADDING-RIGHT: 34px; PADDING-TOP: 26px"><font style="LINE-HEIGHT: 19px; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; COLOR: #383838; FONT-SIZE: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杭州某某厨具有限公司是一家专业生产厨柜的知名企业，也是中国成立早的专业整体厨柜生产企业之一。一直秉承爱厨房的企业宗旨，目前，已成为厨柜行业的领导品牌之一。创立伊始，就致力于打造现代化、艺术化、环保化厨房生活，坚持将欧洲先进的厨房文化带入中国。公司每年多次派设计师前往欧洲学习，并引进法软件进行厨柜设计。近13年的设计实践经验，形成了一个中心，三个基本点的独特设计理念。</font></div>
+<div style="PADDING-BOTTOM: 0px; PADDING-LEFT: 45px; PADDING-RIGHT: 34px; PADDING-TOP: 26px"><font style="LINE-HEIGHT: 19px; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; COLOR: #383838; FONT-SIZE: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $_SESSION['data']['corpintro']; ?></font></div>
 </div>
 </div>
 
@@ -87,7 +82,14 @@ var PDV_PAGENAME='index';
 	<div style="float:right;width:5px;height:49px;background:url(temp1/base/border/781/images/title.jpg) -995px 0px no-repeat;"></div>
 </div>
 <div style="margin:0px;padding:0px;">
-<div style="PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; FONT: 12px/18px simsun; COLOR: #424448; PADDING-TOP: 23px">地&nbsp; 址：杭州市莫山南路868号<br />电&nbsp; 话：0571-98765432<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0571-98765432<br />传&nbsp; 真：0571-98765430<br />邮&nbsp; 箱：boss@mail.com</div>
+<div style="PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; FONT: 12px/18px simsun; COLOR: #424448; PADDING-TOP: 23px">
+
+
+
+<?php include __DIR__.'/../common/company_contact.php'; ?>
+
+
+</div>
 </div>
 </div>
 
@@ -120,7 +122,7 @@ var PDV_PAGENAME='index';
 		
 		</div>
 		<div style="float:right;margin-right:10px;display:inline">
-		<a href="temp1/product/class/" style="line-height:25px;color:">更多</a>
+		<a href="index.php?p=product" style="line-height:25px;color:">更多</a>
 		</div>
 	</div>
 <div style="padding:0px">
@@ -133,37 +135,8 @@ var PDV_PAGENAME='index';
 			<div class="LeftButton" id="LeftArr1"></div>
 			<div class="Cont" id="ISL_Cont_11" style="overflow:hidden;">
 
-					<div class="box">
-						<div class="fang" style="width:225px;height:150px">
-							<div class="picFit" style="width:225px;height:150px">
-							<a href="temp1/product/html/?88.html" target="_self"><img height="150px" src="temp1/product/pics/20100720/1279603730.jpg" width="225px" border="0"></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:225px;height:150px">
-							<div class="picFit" style="width:225px;height:150px">
-							<a href="temp1/product/html/?85.html" target="_self"><img height="150px" src="temp1/product/pics/20100720/1279603682.jpg" width="225px" border="0"></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:225px;height:150px">
-							<div class="picFit" style="width:225px;height:150px">
-							<a href="temp1/product/html/?82.html" target="_self"><img height="150px" src="temp1/product/pics/20100114/1263441984.jpg" width="225px" border="0"></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:225px;height:150px">
-							<div class="picFit" style="width:225px;height:150px">
-							<a href="temp1/product/html/?74.html" target="_self"><img height="150px" src="temp1/product/pics/20100114/1263441922.jpg" width="225px" border="0"></a>
-							</div>
-						</div>
-					</div>
+					
+<?php include __DIR__.'/../common/index_product_list.php'; ?>
 
 			</div>
 			<div class="RightButton" id="RightArr1"></div>

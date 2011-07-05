@@ -57,8 +57,7 @@ var PDV_PAGENAME='query';
 </div>
 
 <div id="showpages">
-	  <div id="pagesinfo">共16条 每页10条 页次：1/2</div>
-	  <div id="pages"><ul><li class="pbutton"><a href=/1294129129/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li><a href=/1294129129/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>2</a></li><li class="pbutton"><a  href=/1294129129/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key= >下一页</a></li><li class="opt"><select onChange="window.location=this.options[this.selectedIndex].value"><option value="/1294129129/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=" selected>第1页</option><option value="/1294129129/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=">第2页</option></select></li><li class="pbutton"><a href=/1294129129/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>尾页</a></li></ul></div>
+<?php echo $data['page']; ?>
 </div>
 
 
