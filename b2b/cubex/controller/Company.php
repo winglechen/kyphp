@@ -2,6 +2,7 @@
 namespace Ky\Cubex\Controller;
 
 use Ky\Model\Mset;
+//use Ky\Model\Company;
 
 
 /**
@@ -29,6 +30,7 @@ class Company
         $nick = substr($host,0,strpos($host,"."));
         $_GET['nick'] = $nick;
         self::getCompanySetting();
+        self::getCompanyDetail();
     }
 
     private static function getCompanySetting()
@@ -38,6 +40,12 @@ class Company
         $_SESSION['setting']    = $data;
         $_GET['corpid']         = $data['corpid'];
         $_GET['temp']           = $data['temp'];
+    }
+    
+    private static function getCompanyDetail()
+    {
+        $data = \Ky\Model\Company::detail($_SESSION['id']);   
+        $_SESSION['data']    = $data;
     }
     
     private static function getAction($action)
