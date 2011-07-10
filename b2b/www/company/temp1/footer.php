@@ -43,17 +43,8 @@
 <link href="temp1/menu/templates/images/bottommenu_1/A.css" rel="stylesheet" type="text/css" />
 <div id="bottommenu">|
 
-<a href="temp1/page/html/company.php" target="_self">关于我们</a>|
 
-<a href="temp1/page/contact/contact.php" target="_self">联系方式</a>|
-
-<a href="temp1/page/contact/feedback.php" target="_self">信息反馈</a>|
-
-<a href="temp1/page/join/application.php" target="_self">加盟申请</a>|
-
-<a href="temp1/page/join/display.php" target="_self">门店展示</a>|
-
-<a href="temp1/advs/link/" target="_self">友情链接</a>|
+<?php include __DIR__.'/../common/links.php'; ?> 
  
 </div>
 

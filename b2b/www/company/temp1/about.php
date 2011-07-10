@@ -50,7 +50,7 @@ var PDV_PAGENAME='query';
 <link href="temp1/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
  
-<?php include __DIR__.'/../common/new_detail.php'; ?>
+<?php include __DIR__.'/../common/about.php'; ?>
 
 
 </div>
@@ -73,7 +73,7 @@ var PDV_PAGENAME='query';
 <div id="nav">
 您现在的位置：<a href="index.php">首页</a> 
  
-&gt; <a href="#" ><?php echo $data['name'] ?></a> 
+&gt; <a href="#" >关于我们</a> 
 
 </div>
 
