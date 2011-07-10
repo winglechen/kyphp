@@ -50,7 +50,7 @@ var PDV_PAGENAME='query';
 <link href="temp1/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
  
-<?php include __DIR__.'/../common/new_detail.php'; ?>
+<?php include __DIR__.'/../common/page_detail.php'; ?>
 
 
 </div>

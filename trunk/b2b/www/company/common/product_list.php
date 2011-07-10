@@ -14,7 +14,7 @@ $condition = array(
     'productName' => 'like',
     'corpid'      => 'eq',
     'category1'          => 'eq',
-    'category2'          => 'eq'
+    'category2'          => 'eq',
     'category3'          => 'eq'
 );
 $page = array(

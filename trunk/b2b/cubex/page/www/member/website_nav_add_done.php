@@ -41,7 +41,8 @@ if(!empty($_POST)){
             'name'    => $_POST['name'],
             'url'    => $_POST['url'],
         );
-        Mnav::update($_POST);       
+        Mnav::update($data);
+		echo mysql_error();
     }
     
 }
