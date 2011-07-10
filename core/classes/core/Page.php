@@ -29,6 +29,11 @@ class Page
         return \Ky\Core\Page\B2b::show(self::$config);
     } 
 
+    private static function companyPage()
+    {
+        return \Ky\Core\Page\Company::show(self::$config);
+    }
+    
     private static function defaultPage()
     {
         $ret = '';
