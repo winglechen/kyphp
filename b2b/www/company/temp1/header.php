@@ -163,12 +163,12 @@
 <script language="javascript" src="temp1/search/js/searchform.js"></script>
 
 <div class="globalsearchformzone">
-<form id="globalsearchform" method="get" action="search/index.php">
+<form id="globalsearchform" method="post" action="index.php?p=product">
    	<div class="globalsearchform">
-    	<input name="key" type="text" id="globalsearchform_key" value="" class="input" />
+    	<input name="productName" type="text" id="globalsearchform_key" value="" class="input" />
   	</div>
 	<div class="globalsearchform1">
-  		<input name="imageField" id="button" type="image" src="temp1/search/templates/images/searchr.jpg" class="imgbutton" />
+  		<input  id="button" type="image" src="temp1/search/templates/images/searchr.jpg" class="imgbutton" />
   	</div>
 </form>
 </div>

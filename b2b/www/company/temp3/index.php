@@ -43,7 +43,8 @@ var PDV_PAGENAME='index';
 	<div style="float:right;width:33px;height:33px;background:url(temp3/base/border/779/images/title.jpg) -967px 0px no-repeat;"><a href="temp3/page/html/company.php" style="display:inline;"><img src="temp3/base/border/779/images/more.jpg" style="border:0px;padding-top:6px;"></a></div>
 </div>
 <div style="margin:0px;padding:0px">
-<div style="PADDING-RIGHT: 2px"><img style="PADDING-LEFT: 10px; FLOAT: right" border=0 alt="" src="temp3/index/pics/20110113/201101131294883143531.jpg" /><font style="LINE-HEIGHT: 22px; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; COLOR: #2e2e2e; FONT-SIZE: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杭州注塑设备制造公司创建于1996年，员工858人，占地面积16万平方米，年产塑料机械2800台套，塑料制品16000吨。是中国塑料机械协会单位，中国轻工机械协会单位，塑料加工协会单位，全国轻工系统技术先进单位，高新技术企业。</font></div>
+<div style="PADDING-RIGHT: 2px"><img style="PADDING-LEFT: 10px; FLOAT: right" border=0 alt="" src="temp3/index/pics/20110113/201101131294883143531.jpg" /><font style="LINE-HEIGHT: 22px; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; COLOR: #2e2e2e; FONT-SIZE: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<?php echo $_SESSION['data']['corpintro']; ?></font></div>
 </div>
 </div>
 
@@ -60,7 +61,7 @@ var PDV_PAGENAME='index';
 		
 		</div>
 		<div style="float:right;margin-right:10px;display:inline">
-		<a href="temp3/product/class" style="line-height:25px;color:">更多</a>
+		<a href="index.php?p=product" style="line-height:25px;color:">更多</a>
 		</div>
 	</div>
 <div style="padding:0px">
@@ -73,77 +74,7 @@ var PDV_PAGENAME='index';
 			<div class="LeftButton" id="LeftArr1"></div>
 			<div class="Cont" id="ISL_Cont_11" style="overflow:hidden;">
 
-					<div class="box">
-						<div class="fang" style="width:150px;height:109px">
-							<div class="picFit" style="width:150px;height:109px">
-							<a href="temp3/product/html/?82.html" target="_blank"><img height="109px" src="temp3/product/pics/20100114/1263441984.jpg" width="150px" border="0"></a>
-							</div>
-						</div>
-						<a href="temp3/" target="_blank" class="prodtitle">全自动高速真空成型机</a>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:150px;height:109px">
-							<div class="picFit" style="width:150px;height:109px">
-							<a href="temp3/product/html/?81.html" target="_blank"><img height="109px" src="temp3/product/pics/20100114/1263441957.jpg" width="150px" border="0"></a>
-							</div>
-						</div>
-						<a href="temp3/" target="_blank" class="prodtitle">自动高速真空成型机</a>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:150px;height:109px">
-							<div class="picFit" style="width:150px;height:109px">
-							<a href="temp3/product/html/?80.html" target="_blank"><img height="109px" src="temp3/product/pics/20100114/1263442011.jpg" width="150px" border="0"></a>
-							</div>
-						</div>
-						<a href="temp3/" target="_blank" class="prodtitle">EPE发泡片材回收造粒机</a>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:150px;height:109px">
-							<div class="picFit" style="width:150px;height:109px">
-							<a href="temp3/product/html/?79.html" target="_blank"><img height="109px" src="temp3/product/pics/20100114/1263441874.jpg" width="150px" border="0"></a>
-							</div>
-						</div>
-						<a href="temp3/" target="_blank" class="prodtitle">HDX1100容压注塑机</a>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:150px;height:109px">
-							<div class="picFit" style="width:150px;height:109px">
-							<a href="temp3/product/html/?78.html" target="_blank"><img height="109px" src="temp3/product/pics/20100114/1263441849.jpg" width="150px" border="0"></a>
-							</div>
-						</div>
-						<a href="temp3/" target="_blank" class="prodtitle">HDX78通用注塑机</a>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:150px;height:109px">
-							<div class="picFit" style="width:150px;height:109px">
-							<a href="temp3/product/html/?77.html" target="_blank"><img height="109px" src="temp3/product/pics/20100114/1263441779.jpg" width="150px" border="0"></a>
-							</div>
-						</div>
-						<a href="temp3/" target="_blank" class="prodtitle">DX78通用注塑机</a>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:150px;height:109px">
-							<div class="picFit" style="width:150px;height:109px">
-							<a href="temp3/product/html/?75.html" target="_blank"><img height="109px" src="temp3/product/pics/20100114/1263439292.jpg" width="150px" border="0"></a>
-							</div>
-						</div>
-						<a href="temp3/" target="_blank" class="prodtitle">HD120注塑机</a>
-					</div>
-
-					<div class="box">
-						<div class="fang" style="width:150px;height:109px">
-							<div class="picFit" style="width:150px;height:109px">
-							<a href="temp3/product/html/?74.html" target="_blank"><img height="109px" src="temp3/product/pics/20100114/1263441922.jpg" width="150px" border="0"></a>
-							</div>
-						</div>
-						<a href="temp3/" target="_blank" class="prodtitle">连杆式注塑机</a>
-					</div>
+					<?php include __DIR__.'/../common/index_product_list2.php'; ?>
 
 			</div>
 			<div class="RightButton" id="RightArr1"></div>
@@ -195,28 +126,7 @@ $().picFit("auto");
 <div class="productclass_dolphin">
 
 
-<a href="temp3/product/class/?115.html" target="_self" class="productclass_dolphin">塑料发泡机械</a>
-
-
-<a href="temp3/product/class/?116.html" target="_self" class="productclass_dolphin">塑料包装材料机械</a>
-
-
-<a href="temp3/product/class/?74.html" target="_self" class="productclass_dolphin">木塑型、板、片材机械</a>
-
-
-<a href="temp3/product/class/?119.html" target="_self" class="productclass_dolphin">塑料网材、土工材料机械</a>
-
-
-<a href="temp3/product/class/?120.html" target="_self" class="productclass_dolphin">塑料管材机械</a>
-
-
-<a href="temp3/product/class/?124.html" target="_self" class="productclass_dolphin">塑料中空成型机</a>
-
-
-<a href="temp3/product/class/?125.html" target="_self" class="productclass_dolphin">塑料注射成型机</a>
-
-
-<a href="temp3/product/class/?126.html" target="_self" class="productclass_dolphin">塑料挤出机</a>
+<?php include __DIR__.'/../common/product_category.php'; ?>
  
 </div>
 
@@ -245,7 +155,7 @@ $().picFit("auto");
 <div style="padding:0px">
 
 
-<a href="temp3/page/html/sales.php"><img src="temp3/diy/pics/20100927/1285552645.jpg" border="0" width="100%" /></a>
+<a href=""><img src="temp3/diy/pics/20100927/1285552645.jpg" border="0" width="100%" /></a>
 
 </div>
 </div>
@@ -259,22 +169,14 @@ $().picFit("auto");
 <div id='spdv_14393' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
 <div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;background:url(temp3/base/border/778/images/title.jpg) 0px 0px no-repeat">
 <div style="height:36px;border:0px;padding:0;margin:0;background:url(temp3/base/border/778/images/title.jpg) 0px 0px no-repeat">
-	<div style="float:right;width:33px;height:36px;background:url(temp3/base/border/778/images/title.jpg) -967px 0px no-repeat;"><a href="temp3/news/class/?86.html" style="display:inline;"><img src="temp3/base/border/778/images/more.jpg" style="border:0px;padding-top:6px;"></a></div>
+	<div style="float:right;width:33px;height:36px;background:url(temp3/base/border/778/images/title.jpg) -967px 0px no-repeat;"><a href="index.php?p=news" style="display:inline;"><img src="temp3/base/border/778/images/more.jpg" style="border:0px;padding-top:6px;"></a></div>
 </div>
 <div style="margin:0px;padding:0px">
 
 <link href="temp3/news/templates/css/newslist_time.css" rel="stylesheet" type="text/css" />
 <ul class="newslist_time">
 
-<li class="newslist_time"><div class="time">2009/12/29</div><a href="temp3/news/html/?346.html" target="_self" class="newslist_time"   >国际质量管理和质量保证体系国际质量体</a></li>
-
-<li class="newslist_time"><div class="time">2009/12/15</div><a href="temp3/news/html/?339.html" target="_self" class="newslist_time"   >公司全面国际质量管理和质量保证体系</a></li>
-
-<li class="newslist_time"><div class="time">2009/12/15</div><a href="temp3/news/html/?338.html" target="_self" class="newslist_time"   >管理和质量保证体系国际质量管理和质量</a></li>
-
-<li class="newslist_time"><div class="time">2009/12/15</div><a href="temp3/news/html/?336.html" target="_self" class="newslist_time"   >公司全面实施国际质量管理和质量保证体</a></li>
-
-<li class="newslist_time"><div class="time">2009/12/15</div><a href="temp3/news/html/?335.html" target="_self" class="newslist_time"   >国际质量管理和质量保证体系国际质量管</a></li>
+<?php include __DIR__.'/../common/index_new_list2.php'; ?>
 
 </ul>
 
@@ -290,7 +192,7 @@ $().picFit("auto");
 <div id='spdv_14394' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
 <div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;background:url(temp3/base/border/777/images/title.jpg) 0px 0px no-repeat">
 <div style="height:44px;border:0px;padding:0;margin:0;background:url(temp3/base/border/777/images/title.jpg) 0px 0px no-repeat">
-	<div style="float:right;width:33px;height:33px;background:url(temp3/base/border/777/images/title.jpg) -967px 0px no-repeat;"><a href="temp3/product/class/" style="display:inline;"><img src="temp3/base/border/777/images/more.jpg" style="border:0px;padding-top:6px;"></a></div>
+	<div style="float:right;width:33px;height:33px;background:url(temp3/base/border/777/images/title.jpg) -967px 0px no-repeat;"><a href="index.php?p=product" style="display:inline;"><img src="temp3/base/border/777/images/more.jpg" style="border:0px;padding-top:6px;"></a></div>
 </div>
 <div style="margin:0px;padding:0px">
 &nbsp;

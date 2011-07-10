@@ -6,7 +6,7 @@ $cat =  Config::getOption('member_new_category','array',null,$_SESSION['id']);
 
 <script language="javascript" src="common/selectbox.js"></script>
 <div class="newssearchformzone">
-<form id="newssearchform" method="get" action="temp1/news/class/index.php">
+<form id="newssearchform" method="post" action="index.php?p=news">
   <div class="newssearchform">
     <select name="cid" id="catid" class="box" style="display:none; background:#ffffff; width:132px; height:19px;">
       <option value="0" >请选择分类</option>
@@ -23,10 +23,10 @@ for($i=0,$cnt=count($cat); $i<$cnt; $i++){
 	</script>
   </div>
 	<div class="newssearchformleft">
-    <input name="key" type="text" id="newssearchform_key" value="" style="width:81px;" class="inputtext">
+    <input name="name" type="text" id="newssearchform_key" value="" style="width:81px;" class="inputtext">
   </div>
   <div class="newssearchform2">
-  <input name="imageField" id="button" type="image" src="temp1/news/templates/images/searchr.jpg" >
+  <input  id="button" type="image" src="temp1/news/templates/images/searchr.jpg" >
   </div>
 </form>
 </div>

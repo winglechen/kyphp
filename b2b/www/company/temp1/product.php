@@ -75,9 +75,9 @@ $().picFit("auto");
  
 <link href="temp1/product/templates/css/nav.css" rel="stylesheet" type="text/css" />
 <div id="nav">
-您现在的位置：<a href="temp1/">整体橱柜公司</a> 
+您现在的位置：<a href="index.php">首页</a> 
  
-&gt; <a href="temp1/product/" >产品展示</a> 
+&gt; <a href="#" >产品展示</a> 
 
 </div>
 

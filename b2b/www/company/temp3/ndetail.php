@@ -42,9 +42,9 @@ var PDV_PAGENAME='query';
  
 <link href="temp3/news/templates/css/nav.css" rel="stylesheet" type="text/css" />
 <div id="nav">
-您现在的位置：<a href="index.php">首页</a> 
+您现在的位置：<a href="temp3/">注塑设备制造公司</a> 
  
-&gt; <a href="#" >新闻中心</a> 
+&gt; <a href="temp3/news/" >新闻中心</a> 
 
 </div>
 
@@ -70,18 +70,9 @@ var PDV_PAGENAME='query';
 
 <link href="temp3/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
-<ul id="queryul">
- 
-
- 
-<?php include __DIR__.'/../common/new_list.php'; ?>
-
-</ul>
+<?php include __DIR__.'/../common/new_detail.php'; ?>
 </div>
 
-<div id="showpages">
-	  <?php echo $data['page']; ?>
-</div>
 
 
 </div>

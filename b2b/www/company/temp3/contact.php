@@ -44,7 +44,7 @@ var PDV_PAGENAME='query';
 <div id="nav">
 您现在的位置：<a href="index.php">首页</a> 
  
-&gt; <a href="#" >新闻中心</a> 
+&gt; <a href="#" >联系我们</a> 
 
 </div>
 
@@ -70,18 +70,9 @@ var PDV_PAGENAME='query';
 
 <link href="temp3/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
-<ul id="queryul">
- 
-
- 
-<?php include __DIR__.'/../common/new_list.php'; ?>
-
-</ul>
+<?php include __DIR__.'/../common/company_contact.php'; ?>
 </div>
 
-<div id="showpages">
-	  <?php echo $data['page']; ?>
-</div>
 
 
 </div>

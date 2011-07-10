@@ -1,10 +1,10 @@
 
 <script language="javascript" src="common/selectbox.js"></script>
 <div class="productsearchformzone">
-<form id="productsearchform" method="get" action="temp1/product/class/index.php">
+<form id="productsearchform" method="post" action="index.php?p=product">
   
    <div class="productsearchform">
-    <select name="catid" id="catid" class="box" style="display:none; background:#ffffff; width:132px; height:19px;">
+    <select name="cid" id="catid" class="box" style="display:none; background:#ffffff; width:132px; height:19px;">
       <option value="0" >请选择分类</option>
 <?php
 
@@ -19,10 +19,10 @@ for($i=0,$cnt=count($cat); $i<$cnt; $i++){
 	</script>
   </div>
     <div class="productsearchformleft">
-    <input name="key" type="text" id="productsearchform_key" value="" style="width:81px;" class="inputtext">
+    <input name="productName" type="text" id="productsearchform_key" value="" style="width:81px;" class="inputtext">
   </div>
   <div class="productsearchform2">
-  <input name="imageField" id="button" type="image" src="temp1/product/templates/images/searchr.jpg" >
+  <input  id="button" type="image" src="temp1/product/templates/images/searchr.jpg" >
   </div>
 </form>
 </div>

@@ -43,15 +43,7 @@
 <link href="temp3/menu/templates/images/bottommenu_1/A.css" rel="stylesheet" type="text/css" />
 <div id="bottommenu">|
 
-<a href="temp3/page/html/company.php" target="_self">关于我们</a>|
-
-<a href="temp3/page/contact/contact.php" target="_self">联系方式</a>|
-
-<a href="temp3/page/contact/feedback.php" target="_self">客户留言</a>|
-
-<a href="temp3/down/class" target="_self">资料下载</a>|
-
-<a href="temp3/advs/link/" target="_self">友情链接</a>|
+<?php include __DIR__.'/../common/links.php'; ?>
  
 </div>
 
@@ -77,7 +69,7 @@
 	</div>
 <div style="padding:0px">
 <div style="width:100%;text-align:center;font:12px/20px Arial, Helvetica, sans-serif">
-<div style="TEXT-ALIGN: center; LINE-HEIGHT: 24px; MARGIN: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #464646">版权所有 Copyright(C)2009-2011 杭州某某注塑设备制造公司</div>
+<div style="TEXT-ALIGN: center; LINE-HEIGHT: 24px; MARGIN: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #464646">版权所有 Copyright(C)2009-2011 <?php echo $_SESSION['data']['corpname']; ?></div>
 </div>
 
 </div>
