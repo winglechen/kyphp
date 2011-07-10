@@ -10,6 +10,17 @@ if(isset($_GET['category1'])){
     $_POST['category1']   = $_GET['category1'];    
 }
 
+if(isset($_GET['category2'])){
+    $_POST['category2']   = $_GET['category2'];    
+}
+if(isset($_GET['category3'])){
+    $_POST['category3']   = $_GET['category3'];    
+}
+
+if(isset($_POST['cid'])){
+
+}
+
 $condition = array(
     'productName' => 'like',
     'corpid'      => 'eq',
