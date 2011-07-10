@@ -75,9 +75,9 @@ var PDV_PAGENAME='query';
  
 <link href="temp1/news/templates/css/nav.css" rel="stylesheet" type="text/css" />
 <div id="nav">
-您现在的位置：<a href="temp1/">整体橱柜公司</a> 
+您现在的位置：<a href="index.php">首页</a> 
  
-&gt; <a href="temp1/news/" >新闻中心</a> 
+&gt; <a href="#" >新闻中心</a> 
 
 </div>
 

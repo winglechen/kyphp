@@ -102,7 +102,7 @@ var PDV_PAGENAME='index';
 <div id='spdv_14712' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
 <div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;">
 <div style="height:35px;border:0px;padding:0;margin:0;background:url(temp1/base/border/783/images/title.jpg) 0px 0px no-repeat;">
-	<div style="float:right;width:42px;height:35px;background:url(temp1/base/border/783/images/title.jpg) -958px 0px no-repeat;"><a href="temp1/product/class/?115.html" style="display:inline"><img src="temp1/base/border/783/images/more.jpg" style="border:0px;padding-top:14px;" /></a></div>
+	<div style="float:right;width:42px;height:35px;background:url(temp1/base/border/783/images/title.jpg) -958px 0px no-repeat;"><a href="index.php?p=product" style="display:inline"><img src="temp1/base/border/783/images/more.jpg" style="border:0px;padding-top:14px;" /></a></div>
 </div>
 <div style="margin:0px;padding:0px;">
 &nbsp;

@@ -100,7 +100,10 @@ for($i=0,$len=count($data['data']); $i<$len; $i++){
         <table width="100%" border="0" cellspacing="3" cellpadding="0" class="modopration">
             <tbody>
                 <tr>
-                    <a href="index.php?p=www/member/website_nav_add&id=<?php echo $row['id']; ?>">修改</a></td>
+                    <td>
+                    <a href="index.php?p=www/member/website_nav_add&id=<?php echo $row['id']; ?>">修改</a> | 
+                    <a href="index.php?p=www/member/website_nav_del&id=<?php echo $row['id']; ?>" onclick="return confirm('您确定要删除吗？');">删除</a>
+                    </td>
                 </tr>
             </tbody>
         </table>

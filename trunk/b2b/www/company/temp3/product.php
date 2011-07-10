@@ -48,28 +48,8 @@ var PDV_PAGENAME='query';
 <div class="productclass_dolphin">
 
 
-<a href="temp3/product/class/?115.html" target="_self" class="productclass_dolphin">塑料发泡机械</a>
 
-
-<a href="temp3/product/class/?116.html" target="_self" class="productclass_dolphin">塑料包装材料机械</a>
-
-
-<a href="temp3/product/class/?74.html" target="_self" class="productclass_dolphin">木塑型、板、片材机械</a>
-
-
-<a href="temp3/product/class/?119.html" target="_self" class="productclass_dolphin">塑料网材、土工材料机械</a>
-
-
-<a href="temp3/product/class/?120.html" target="_self" class="productclass_dolphin">塑料管材机械</a>
-
-
-<a href="temp3/product/class/?124.html" target="_self" class="productclass_dolphin">塑料中空成型机</a>
-
-
-<a href="temp3/product/class/?125.html" target="_self" class="productclass_dolphin">塑料注射成型机</a>
-
-
-<a href="temp3/product/class/?126.html" target="_self" class="productclass_dolphin">塑料挤出机</a>
+<?php include __DIR__.'/../common/product_category.php'; ?>
  
 </div>
 
@@ -99,117 +79,8 @@ var PDV_PAGENAME='query';
 
 <link href="temp3/product/templates/css/productquery_dolphin.css" rel="stylesheet" type="text/css" />
 
-<div class="productquery_dolphin">
-    <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="temp3/product/html/?75.html" target="_self" ><img src="temp3/product/pics/20100114/1263439292.jpg" style="width:150px;height:109px" border="0" /></a>
-		</div>
-		</div>
-	</div>
-	<div class="productquery_dolphin_bottom">
-		<a href="temp3/product/html/?75.html" target="_self" class="prodtitle"   >HD120注塑机</a>
-	</div>
-</div>
 
-
-<div class="productquery_dolphin">
-    <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="temp3/product/html/?77.html" target="_self" ><img src="temp3/product/pics/20100114/1263441779.jpg" style="width:150px;height:109px" border="0" /></a>
-		</div>
-		</div>
-	</div>
-	<div class="productquery_dolphin_bottom">
-		<a href="temp3/product/html/?77.html" target="_self" class="prodtitle"   >DX78通用注塑机</a>
-	</div>
-</div>
-
-
-<div class="productquery_dolphin">
-    <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="temp3/product/html/?78.html" target="_self" ><img src="temp3/product/pics/20100114/1263441849.jpg" style="width:150px;height:109px" border="0" /></a>
-		</div>
-		</div>
-	</div>
-	<div class="productquery_dolphin_bottom">
-		<a href="temp3/product/html/?78.html" target="_self" class="prodtitle"   >HDX78通用注塑机</a>
-	</div>
-</div>
-
-
-<div class="productquery_dolphin">
-    <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="temp3/product/html/?79.html" target="_self" ><img src="temp3/product/pics/20100114/1263441874.jpg" style="width:150px;height:109px" border="0" /></a>
-		</div>
-		</div>
-	</div>
-	<div class="productquery_dolphin_bottom">
-		<a href="temp3/product/html/?79.html" target="_self" class="prodtitle"   >HDX1100容压注塑机</a>
-	</div>
-</div>
-
-
-<div class="productquery_dolphin">
-    <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="temp3/product/html/?74.html" target="_self" ><img src="temp3/product/pics/20100114/1263441922.jpg" style="width:150px;height:109px" border="0" /></a>
-		</div>
-		</div>
-	</div>
-	<div class="productquery_dolphin_bottom">
-		<a href="temp3/product/html/?74.html" target="_self" class="prodtitle"   >连杆式注塑机</a>
-	</div>
-</div>
-
-
-<div class="productquery_dolphin">
-    <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="temp3/product/html/?80.html" target="_self" ><img src="temp3/product/pics/20100114/1263442011.jpg" style="width:150px;height:109px" border="0" /></a>
-		</div>
-		</div>
-	</div>
-	<div class="productquery_dolphin_bottom">
-		<a href="temp3/product/html/?80.html" target="_self" class="prodtitle"   >EPE发泡片材回收造粒机</a>
-	</div>
-</div>
-
-
-<div class="productquery_dolphin">
-    <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="temp3/product/html/?82.html" target="_self" ><img src="temp3/product/pics/20100114/1263441984.jpg" style="width:150px;height:109px" border="0" /></a>
-		</div>
-		</div>
-	</div>
-	<div class="productquery_dolphin_bottom">
-		<a href="temp3/product/html/?82.html" target="_self" class="prodtitle"   >全自动高速真空成型机</a>
-	</div>
-</div>
-
-
-<div class="productquery_dolphin">
-    <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="temp3/product/html/?81.html" target="_self" ><img src="temp3/product/pics/20100114/1263441957.jpg" style="width:150px;height:109px" border="0" /></a>
-		</div>
-		</div>
-	</div>
-	<div class="productquery_dolphin_bottom">
-		<a href="temp3/product/html/?81.html" target="_self" class="prodtitle"   >自动高速真空成型机</a>
-	</div>
-</div>
-
+<?php include __DIR__.'/../common/product_list2.php'; ?>
 
 <script>
 $(function() {
@@ -217,9 +88,8 @@ $().picFit("auto");
 });
 </script>
 <div id="showpages" >
-	  <div id="pagesinfo">共8条 每页20条 页次：1/1</div>
-	  <div id="pages"><ul><li class="pbutton"><a href=/1295932157/product/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;author=&amp;key=>首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li class="pbutton">下一页</li><li class="opt"><select onChange="window.location=this.options[this.selectedIndex].value"><option value="/1295932157/product/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;author=&amp;key=" selected>第1页</option></select></li><li class="pbutton"><a href=/1295932157/product/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;author=&amp;key=>尾页</a></li></ul></div>
-     </div>
+	  <?php echo $data['page']; ?>
+ </div>
 
 </div>
 </div>
@@ -236,7 +106,7 @@ $().picFit("auto");
  
 <link href="temp3/product/templates/css/nav.css" rel="stylesheet" type="text/css" />
 <div id="nav">
-您现在的位置：<a href="temp3/">注塑设备制造公司</a> 
+您现在的位置：<a href="index.php">首页</a> 
  
 &gt; <a href="temp3/product/" >产品展示</a> 
 

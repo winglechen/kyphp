@@ -115,7 +115,7 @@
 <div class="mainmenuiner">
 
 
-<?php include __DIR__.'/../common/nav.php'; ?>
+<?php include __DIR__.'/../common/nav2.php'; ?>
 </div>
 </div>
 
@@ -143,12 +143,12 @@
 <script language="javascript" src="temp3/search/js/searchform.js"></script>
 
 <div class="globalsearchformzone">
-<form id="globalsearchform" method="get" action="search/index.php">
+<form id="globalsearchform" method="post" action="index.php?p=product">
    	<div class="globalsearchform">
-    	<input name="key" type="text" id="globalsearchform_key" value="" class="input" />
+    	<input name="productName" type="text" id="globalsearchform_key" value="" class="input" />
   	</div>
 	<div class="globalsearchform1">
-  		<input name="imageField" id="button" type="image" src="temp3/search/templates/images/searchr.jpg" class="imgbutton" />
+  		<input  id="button" type="image" src="temp3/search/templates/images/searchr.jpg" class="imgbutton" />
   	</div>
 </form>
 </div>
@@ -174,16 +174,9 @@
 	</div>
 <div style="padding:0px">
 
-<script type=text/javascript src="temp3/advs/js/advsflashlb.js"></script>
+
 <div id="swfContent"></div>
-<script type="text/javascript">
-	var xmlData="&lt;list&gt;&lt;item&gt;&lt;img&gt;advs/pics/20110112/1294816228.jpg&lt;/img&gt;&lt;url&gt;http://&lt;/url&gt;&lt;/item&gt;&lt;item&gt;&lt;img&gt;advs/pics/20110112/1294816232.jpg&lt;/img&gt;&lt;url&gt;http://&lt;/url&gt;&lt;/item&gt;&lt;item&gt;&lt;img&gt;advs/pics/20110112/1294816236.jpg&lt;/img&gt;&lt;url&gt;http://&lt;/url&gt;&lt;/item&gt;&lt;/list&gt;";
-	
-	var flashvars = {xmlData:xmlData};
-	var params = {menu:false,wmode:"opaque"};
-	var attributes = {};
-	swfobject.embedSWF("advs/templates/images/advsflashlb.swf", "swfContent", "1002", "250", "6","expressInstall.swf", flashvars, params, attributes);
-</script>
+<img src="temp1/banner.png" width="1002" height="280">
 
 </div>
 </div>
