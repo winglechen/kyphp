@@ -99,6 +99,10 @@ class Trie
                     if($finds[$j]['isword'] && !isset($results[$words[$j]])){
                         $results[$words[$j]] = 1;  
                     }
+                }else{
+                    array_splice($finds,$j,1); 
+                    array_splice($words,$j,1); 
+                    //unset($words[$j]);
                 }
             }
 
