@@ -41,13 +41,13 @@
 
 <div class="right">
  		<div class="postTips">联系方式 (带 <span>*</span> 为必填项) </div>
-<form id="editForm" name="editForm" action="index.php?p=www/member/company_add" method="post">
+<form  onsubmit="return checkSubmit(this);"  id="editForm" name="editForm" action="index.php?p=www/member/company_add" method="post">
 	<div class="formblock">
         <div class="formheader"><div class="headerTitle">联系方式</div></div>        
         <div class="formline">
           <div class="formlabel">业务联系人姓名：<span>*</span></div>
 		  <div class="formcontent">
-		    	<input name="realname" id="realname" type="text" value="<?php echo $_SESSION['realname']; ?>">
+		    	<input onfocus="checkInput(this);" required="true" name="realname" id="realname" type="text" value="<?php echo $_SESSION['realname']; ?>">
                 <span id="name_err"></span>
 		</div>
         </div>
@@ -64,35 +64,35 @@
           <div class="formlabel">公司电话：<span>*</span></div>
 
 		  <div class="formcontent">
-		    	<input name="tel" id="tel" type="text" value="<?php echo $_SESSION['tel']; ?>">
+		    	<input onfocus="checkInput(this);" required="true" name="tel" id="tel" type="text" value="<?php echo $_SESSION['tel']; ?>">
                 <span id="tel_err"></span>
 		  </div>
         </div>
         <div class="formline">
           <div class="formlabel">传真：<span>*</span></div>
 		  <div class="formcontent"> 
-		    	<input name="fax" id="fax" type="text" value="<?php echo $_SESSION['fax']; ?>">
+		    	<input onfocus="checkInput(this);" required="true"  name="fax" id="fax" type="text" value="<?php echo $_SESSION['fax']; ?>">
                 <span id="fax_err"></span>
 		 </div>
         </div>
         <div class="formline">
           <div class="formlabel">E-mail：<span>*</span></div>
 		  <div class="formcontent">
-		    	<input type="text" name="email" id="email" value="<?php echo $_SESSION['email']; ?>" style="width:221px;height:21px">
+		    	<input onfocus="checkInput(this);" required="true"  type="text" name="email" id="email" value="<?php echo $_SESSION['email']; ?>" style="width:221px;height:21px">
                 <span id="email_err"></span>
 		  </div>
         </div>
         <div class="formline">
           <div class="formlabel">所在地区：<span>*</span></div>
 		  <div class="formcontent">
-		    	<select id="province" style="width:74px;height:21px">
+		    	<select id="province" name="province"  style="width:74px;height:21px">
                        </select>
-                        <select n id="capitalcity" style="width:74px;height:21px">
+                        <select  name="city"  id="capitalcity" style="width:74px;height:21px">
                        </select>
                         <select  id="city" style="width:74px;height:21px;display:none">
                         </select>
-                        <input name="province" id="t_province" type="hidden" value="浙江">
-                        <input name="city" id="t_city" type="hidden" value="杭州">
+                        <input id="t_province" type="hidden" value="<?php echo $_SESSION['province']; ?>">
+                        <input id="t_city" type="hidden" value="<?php echo $_SESSION['city']; ?>">
 						
                   	<script language="javascript">
   					control=getAreaControl("province","capitalcity", "city");
@@ -127,7 +127,7 @@
         <div class="formline">
           <div class="formlabel">公司地址：<span>*</span></div>
 		  <div class="formcontent">
-		    	<input type="text" name="address" id="address" value="<?php echo $_SESSION['address']; ?>" style="width:221px;height:21px">
+		    	<input onfocus="checkInput(this);" required="true"  type="text" name="address" id="address" value="<?php echo $_SESSION['address']; ?>" style="width:221px;height:21px">
                 <span id="address_err"></span>
 		  </div>
         </div>
@@ -135,7 +135,7 @@
         <div class="formline">
           <div class="formlabel">邮政编码：<span>*</span></div>
 		  <div class="formcontent">
-		    	<input type="text" name="zipCode" id="zipCode" value="<?php echo $_SESSION['zipCode']; ?>" style="width:221px;height:21px">
+		    	<input onfocus="checkInput(this);" required="true"  type="text" name="zipCode" id="zipCode" value="<?php echo $_SESSION['zipCode']; ?>" style="width:221px;height:21px">
                 <span id="postcode_err"></span>
 		  </div>
         </div>

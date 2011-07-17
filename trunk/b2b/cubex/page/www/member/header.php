@@ -14,6 +14,29 @@
 <script language="javascript" src="./res/common.js"></script>
 <script language="javascript" src="./res/jquery.js"></script>
 <script language="javascript" src="./res/function.js"></script>
+<script language="javascript" src="./res/validator.js"></script>
+<style type="text/css">
+.hint{
+
+}
+
+.no{
+background:url(res/img/no.gif) no-repeat;
+padding-left:18px;
+display:block;
+height:16px;
+line-height:16px;
+color:red;
+}
+
+.yes{
+display:block;
+height:16px;
+line-height:16px;
+width:16px;
+background:url(res/img/yes.gif) no-repeat;
+}
+</style>
 </head>
 <body>
 <!-- head start -->

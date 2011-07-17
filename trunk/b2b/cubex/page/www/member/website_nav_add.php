@@ -61,7 +61,7 @@ if(isset($_GET['id'])){
 				 
 				 
 				 <div class="right">
-  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/website_nav_add_done"  enctype="multipart/form-data" >
+  <form  onsubmit="return checkSubmit(this);"  name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/website_nav_add_done"  enctype="multipart/form-data" >
 	<input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
 <?php
     if(isset($_GET['id'])){

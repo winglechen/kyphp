@@ -55,7 +55,7 @@ if(isset($_GET['id'])){
 				 
 				 
 				 <div class="right">
-  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/website_page_add_done"  enctype="multipart/form-data" >
+  <form  onsubmit="return checkSubmit(this);"  name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/website_page_add_done"  enctype="multipart/form-data" >
 	<input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
 <?php
     if(isset($_GET['id'])){
@@ -117,7 +117,7 @@ if(isset($_GET['id'])){
 <div class="formline">
   <div class="formlabel"><span id="lbl_offerSubject">&nbsp;</span>信息标题：<span>*</span></div>
   <div class="formcontent">
-    <input name="title" id="title" value="<?php echo $form['title']; ?>" type="text" class="input220">
+    <input  onfocus="checkInput(this);" required="true"  name="title" id="title" value="<?php echo $form['title']; ?>" type="text" class="input220">
     <span id="offerSubject_err"></span>
     <div class="note">便于搜索引擎搜索</div>
   </div>
@@ -126,7 +126,7 @@ if(isset($_GET['id'])){
       <div class="formline">
       <div class="formlabel"><span id="lbl_offerKeyword"></span>关键词：</div>
 	   <div class="formcontent">
-       	<input id="keyword" name="keyword" value="<?php echo $form['keyword']; ?>" type="text" class="input220">
+       	<input id="keyword" onfocus="checkInput(this);" required="true"  name="keyword" value="<?php echo $form['keyword']; ?>" type="text" class="input220">
         <div class="note">便于搜索引擎搜索</div>
 	   </div>
     </div>
@@ -136,7 +136,7 @@ if(isset($_GET['id'])){
       <div class="formline">
         <div class="formlabel"><span id="lbl_offerDetail">&nbsp;</span>详细说明：<span>*</span></div>
         <div class="formcontent">
-		  <textarea cols="120" id="detail" name="detail" rows="20"><?php echo $form['detail']; ?></textarea>
+		  <textarea cols="120" id="detail" onfocus="checkInput(this);" required="true"  name="detail" rows="20"><?php echo $form['detail']; ?></textarea>
 <script language="javascript">
 KE.show({id : 'detail'});
 </script>

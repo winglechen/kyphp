@@ -17,7 +17,7 @@
 		  }	  
 </style>
 
-<script language="javascript" src="./res/validator.js"></script>
+
 <script language="javascript" src="./editor/kindeditor-min.js"></script>
 <style type="text/css">.inputlabelok{background:url(./res/img/chkok.gif) no-repeat 0px 0px; padding:2px 0 2px 24px; background-color:#F6F6F6;}.inputlabel{background:transparent; padding:2px 0 2px 24px;}</style>
 
@@ -63,7 +63,7 @@ if(isset($_GET['id'])){
 				 
 				 
 				 <div class="right">
-  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/product_add_done"  enctype="multipart/form-data" >
+  <form  onsubmit="return checkSubmit(this);"  name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/product_add_done"  enctype="multipart/form-data" >
 	<input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
 	<input type="hidden" name="corpname" value="<?php echo $_SESSION['corpname']; ?>" />
 	<input type="hidden" name="province" value="<?php echo $_SESSION['province']; ?>" />
@@ -82,8 +82,8 @@ if(isset($_GET['id'])){
        <div class="formline">
        <div class="formlabel"><span class="inputlabelok"></span>产品名称：<span>*</span></div>
        <div class="formcontent">
-       <input name="productName" id="productName" value="<?php echo $form['productName']; ?>" type="text" class="input220" >
-       <span id="oproductName_err"></span>
+       <input  onfocus="checkInput(this);" required="true"   messageSpan="productName_err" name="productName"   id="productName" value="<?php echo $form['productName']; ?>" type="text" class="input220" >
+       <span id="productName_err"></span>
        <div class="note">产品名称中请勿出现规格、型号、品牌等内容.</div>
          </div>
         </div>
@@ -156,7 +156,7 @@ if(!empty($form['category1']) && !empty($form['category2']))
 <div class="formline">
   <div class="formlabel"><span id="lbl_offerSubject">&nbsp;</span>信息标题：<span>*</span></div>
   <div class="formcontent">
-    <input name="title" id="title" value="<?php echo $form['title']; ?>" type="text" class="input220">
+    <input  onfocus="checkInput(this);" required="true"  name="title" id="title" value="<?php echo $form['title']; ?>" type="text" class="input220">
     <span id="offerSubject_err"></span>
     <div class="note">限50字以内，请务必填写准确，便于客户迅速找到您。<br>
       建议信息标题在标识产品分类的同时增加产品的具体信息，如型号、主要参数、行业用名。</div>
@@ -166,7 +166,7 @@ if(!empty($form['category1']) && !empty($form['category2']))
       <div class="formline">
       <div class="formlabel"><span id="lbl_offerKeyword"></span>关键词：</div>
 	   <div class="formcontent">
-       	<input id="keyword" name="keyword" value="<?php echo $form['keyword']; ?>" type="text" class="input220">
+       	<input id="keyword" onfocus="checkInput(this);" required="true"  name="keyword" value="<?php echo $form['keyword']; ?>" type="text" class="input220">
         <div class="note">为了让买家更精确的找到您，请填写产品名称的核心词、通称或别称。</div>
 	   </div>
     </div>
@@ -176,7 +176,7 @@ if(!empty($form['category1']) && !empty($form['category2']))
       <div class="formline">
         <div class="formlabel"><span id="lbl_offerDetail">&nbsp;</span>详细说明：<span>*</span></div>
         <div class="formcontent">
-		  <textarea cols="120" id="detail" name="detail" rows="20"><?php echo $form['detail']; ?></textarea>
+		  <textarea cols="120" id="detail" onfocus="checkInput(this);" required="true"  name="detail" rows="20"><?php echo $form['detail']; ?></textarea>
 <script language="javascript">
 KE.show({id : 'detail'});
 </script>
