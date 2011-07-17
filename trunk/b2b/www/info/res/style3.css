@@ -100,7 +100,7 @@ background-image:url(url);}
 
 /* == 头部-LOGO-导航 == */
 .header { margin:0 auto; width:960px; height:60px; padding-top:10px;  _margin-top:-130px;}
-.logo {float:left; width:270px; height:15px; background: url(http://pic.hm6688.com/img/logo.gif) left no-repeat; text-align:right; color:#fff; letter-spacing:2px; padding-top:35px; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://pic.hm6688.com/img/logo.gif');}
+.logo {float:left; width:270px; height:15px; background: url(http://pic.ztb2b.com/img/logo.gif) left no-repeat; text-align:right; color:#fff; letter-spacing:2px; padding-top:35px; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://pic.ztb2b.com/img/logo.gif');}
 
 .quicklink {float:left; width:690px; height:40px; padding-top:10px;}
 .branch{float:right;clear:both;}

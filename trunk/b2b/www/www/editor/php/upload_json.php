@@ -10,7 +10,7 @@
 require_once 'JSON.php';
 
 $php_path = dirname(__FILE__) . '/';
-$php_url = 'http://haomingchina.com/';
+$php_url = 'http://ztb2b.com/';
 
 //文件保存目录路径
 $save_path = $php_path . '../attached/';
