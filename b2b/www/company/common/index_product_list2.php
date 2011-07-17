@@ -35,10 +35,10 @@ for($i=0,$len=count($data['data']); $i<$len; $i++){
 <div class="box">
 	<div class="fang" style="width:150px;height:109px">
 		<div class="picFit" style="width:150px;height:109px">
-		<a href="http://www.haomingchina.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_self"><img height="109px" src="<?php echo $row['pic']; ?>" width="150px" border="0"></a>
+		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_self"><img height="109px" src="<?php echo $row['pic']; ?>" width="150px" border="0"></a>
 		</div>
 	</div>
-	<a href="http://www.haomingchina.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_blank" class="prodtitle"><?php echo $row['productName']; ?></a>
+	<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_blank" class="prodtitle"><?php echo $row['productName']; ?></a>
 </div>
 
 <?php

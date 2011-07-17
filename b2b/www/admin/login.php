@@ -10,7 +10,7 @@
 	<div id="login">
 		<div id="login_header">
 			<h1 class="login_logo">
-				<a href="http://hm6688.com"><img src="http://pic.hm6688.com/img/logo.png" /></a>
+				<a href="http://ztb2b.com"><img src="http://pic.ztb2b.com/img/logo.png" /></a>
 			</h1>
 			<div class="login_headerContent">
 				<div class="navList">
