@@ -14,14 +14,14 @@ addBlock($btype,$bid,$pid,$ids);
 
 function addNews($bid,$pid,$ids)
 {
-    $url = 'http://www.haomingchina.com/index.php?p=www/new_detail&id=';
+    $url = 'http://www.ztb2b.com/index.php?p=www/new_detail&id=';
     $sql = 'insert into block(pageId,blockId,title,pic,brief,url,ts) select '. $pid . ',' . $bid . ',title,pic,brief,concat("'.$url.'",id),ts from news where id in('.$ids.')'; 
     Db::query($sql);  
 }
 
 function addBlock($type,$bid,$pid,$ids)
 {
-    $url = 'http://www.haomingchina.com/index.php?p=www/'.$type.'_detail&id=';
+    $url = 'http://www.ztb2b.com/index.php?p=www/'.$type.'_detail&id=';
     $sql = 'insert into block(pageId,blockId,title,pic,brief,url,ts) select '. $pid . ',' . $bid . ',title,pic,brief,concat("'.$url.'",id),ts from '.$type.' where id in('.$ids.')'; 
     Db::query($sql);  
 }

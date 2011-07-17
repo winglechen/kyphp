@@ -20,7 +20,7 @@ echo join("&nbsp;|&nbsp;",$links);
 <!--ul class="about"><a href="http://cn.china.cn/aboutus/index.html" target="_blank">关于我们</a> | <a href="http://cn.china.cn/hyfw/index.html" target="_blank">会员服务</a> | <a href="http://cn.china.cn/ad/fuwu/index.html" target="_blank">广告服务</a> | <a href="http://cn.china.cn/zhaoshang2010/index.html" target="_blank">代理加盟</a> | <a href="http://cn.china.cn/zqsearch/index.html" target="_blank">授权服务中心</a> | <a href="http://my.cn.china.cn/index.php?op=whois" target="_blank">whois查询</a> | <a href="http://cn.china.cn/xyss/index.html" target="_blank">企业认证记录查询</a> | <a href="http://ru.china.cn/" target="_blank">Русский  Язык </a> | <a href="http://cn.china.cn/aboutus/lianxi/index.html" target="_blank">联系我们</a> | <a href="http://cn.china.cn/map/" target="_blank">网站地图</a> | <a href="http://cn.china.cn/friend/index.htm" target="_blank">友情链接</a></ul-->
 
 <ul class="gsInfo">
-<li>@2011 haomingchina.com</li>
+<li>@2011 ztb2b.com</li>
 </ul>
 </div>
 <!--标准尾 end-->
