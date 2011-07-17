@@ -112,7 +112,7 @@ CREATE TABLE `intro_elements` (
 
 LOCK TABLES `intro_elements` WRITE;
 /*!40000 ALTER TABLE `intro_elements` DISABLE KEYS */;
-INSERT INTO `intro_elements` VALUES (1,'关于我们',0,0,'0'),(2,'浩铭简介',0,1,'0'),(3,'加入我们',1,0,'0'),(4,'集团招聘',0,3,'0'),(5,'浩铭文化',1,1,'0');
+INSERT INTO `intro_elements` VALUES (1,'关于我们',0,0,'0'),(2,'中童简介',0,1,'0'),(3,'加入我们',1,0,'0'),(4,'集团招聘',0,3,'0'),(5,'中童文化',1,1,'0');
 /*!40000 ALTER TABLE `intro_elements` ENABLE KEYS */;
 UNLOCK TABLES;
 
