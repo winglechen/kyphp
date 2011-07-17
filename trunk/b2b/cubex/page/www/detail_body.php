@@ -81,8 +81,8 @@ function popWindow(url)
 				       <li><span>联系人：</span><?php echo $company['realman']; ?></li>
 				       <li><span>经营模式：</span><?php echo $company['manageMode']; ?></li>				   				     
 					   <li><span>公司地址：</span><?php echo $company['address']; ?></li>
-				       <li class="top10"><a href="http://<?php echo $company['username']; ?>.haomingchina.com/" target="_blank" ><img src="./res/companysite.gif"></a>
-				       	<a href="http://<?php echo $company['username']; ?>.haomingchina.com/" target="_blank" ><img src="./res/contact.gif"></a></li>
+				       <li class="top10"><a href="http://<?php echo $company['username']; ?>.ztb2b.com/" target="_blank" ><img src="./res/companysite.gif"></a>
+				       	<a href="http://<?php echo $company['username']; ?>.ztb2b.com/" target="_blank" ><img src="./res/contact.gif"></a></li>
 				 </ul>
 			 
 			 </div>

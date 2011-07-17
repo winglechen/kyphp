@@ -80,7 +80,7 @@ $(function(){
 			<div class="headerNav">
 				<a class="logo" href="javascript:void(0);">标志</a>
 				<ul class="nav">
-					<li><a href="http://hm6688.com" target="_blank">访问前台</a></li>
+					<li><a href="http://ztb2b.com" target="_blank">访问前台</a></li>
 					<li><a href="logout.php">退出</a></li>
 				</ul>
 			</div>

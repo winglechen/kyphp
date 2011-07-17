@@ -169,7 +169,7 @@
           <div class="formlabel">公司网址：<span>	&nbsp;</span></div>
 		  <div class="formcontent">
 		    	<input name="website" id="website" type="text" value="<?php echo $_SESSION['website']; ?>" size="30" maxlength="200" style="width:221px;height:21px">
-		    	提示：请填写完整的网址。例：http://www.hm6688.com
+		    	提示：请填写完整的网址。例：http://www.ztb2b.com
                 <span id="homepage_err"></span>
 		  </div>
         </div>  

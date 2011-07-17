@@ -40,7 +40,7 @@ $sql = "select * from company_page where corpid=".$id;
 $pages = Db::getRows($sql);
 
 
-$host = 'http://'.$_POST['username'].'.haomingchina.com/index.php';
+$host = 'http://'.$_POST['username'].'.ztb2b.com/index.php';
 $sql1 = "insert into company_nav(corpid,name,url) values";
 $sql2 = "insert into company_nav2(corpid,name,url) values";
 

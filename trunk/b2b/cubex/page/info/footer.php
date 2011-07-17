@@ -19,7 +19,7 @@
 </div>
 <div class="copyright_2_right">
    <ul>
-     <li>&#169; 2010 浩铭集团  版权所有  京ICP备06000360号</li>
+     <li>&#169; 2010 中童集团  版权所有  京ICP备06000360号</li>
    </ul>
 
 </div>
