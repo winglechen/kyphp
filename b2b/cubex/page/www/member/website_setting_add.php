@@ -53,7 +53,7 @@ if(empty($form)){
 				 
 				 
 				 <div class="right">
-  <form name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/website_setting_add_done"  enctype="multipart/form-data" >
+  <form  onsubmit="return checkSubmit(this);"  name="publishForm" id="publishForm" method="post" action="index.php?p=www/member/website_setting_add_done"  enctype="multipart/form-data" >
 	<input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
 	<input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>" />
 <?php

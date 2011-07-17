@@ -34,7 +34,7 @@
 	 <div class="right">
 
 					<div class="postTips">(带 <span>*</span> 为必填项)</div>
-<form id="corpInfoForm" name="corpInfoForm" action="index.php?p=www/member/company_add" method="post">
+<form  onsubmit="return checkSubmit(this);"  id="corpInfoForm" name="corpInfoForm" action="index.php?p=www/member/company_add" method="post">
 		<!--基本信息-->
 	<div class="formblock">
         <div class="formheader">
@@ -44,7 +44,7 @@
           <div class="formlabel">公司名称：<span>*</span></div>
 		  <div class="formcontent">
 		   		 
-				<input name="corpname" id="corpname" type="text" value="<?php echo $_SESSION['corpname']; ?>" style="width:221px;">
+				<input   onfocus="checkInput(this);" required="true"   name="corpname" id="corpname" type="text" value="<?php echo $_SESSION['corpname']; ?>" style="width:221px;">
 				<span id="corpname_err"></span>
 			  	<div class="note">请填写贵公司的中文全称，如：北京浩天有限责任公司。</div>
 					  </div>
@@ -53,7 +53,7 @@
           <div class="formlabel">企业类型：<span>*</span></div>
 		  <div class="formcontent">
 		    			     
-            	   <select name="corptype" id="corptype">
+            	   <select name="corptype" id="corptype" >
 <?php
 use Ky\Model\Config;
 echo Config::getOption('corptype','option',$_SESSION['corptype']);
@@ -65,7 +65,7 @@ echo Config::getOption('corptype','option',$_SESSION['corptype']);
         <div class="formline">
           <div class="formlabel">公司简介：<span>*</span><br><span class="hui12">(50-1200 字)</span></div>
 		  <div class="formcontent">
-		  	<textarea name="corpintro" cols="60" rows="10" id="corpintro"><?php echo $_SESSION['corpintro']; ?></textarea>
+		  	<textarea   onfocus="checkInput(this);" required="true"  num="49-1200"  name="corpintro" cols="60" rows="10" id="corpintro"><?php echo $_SESSION['corpintro']; ?></textarea>
             <span id="corpintro_err"></span>
             <div class="note">
 				<ul>

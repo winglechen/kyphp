@@ -57,7 +57,7 @@ color:#CCCCCC
       <div class="searchproducts">
       </div>
       <div class="productdatablock">
-        <form id="listForm" name="listForm" method="post" action="">
+        <form  onsubmit="return checkSubmit(this);"  id="listForm" name="listForm" method="post" action="">
         <input type="hidden" name="searchType" id="searchType" value="auditing">
           <div class="operating">
           

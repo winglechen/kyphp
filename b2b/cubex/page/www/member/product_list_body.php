@@ -63,17 +63,17 @@ color:#CCCCCC
     </div>
     <div class="tabswitchborder">
       <div class="searchproducts">
-        <form name="searchForm" id="searchForm" method="post" action="index.php?p=www/member/product_list">
+        <form  onsubmit="return checkSubmit(this);"  name="searchForm" id="searchForm" method="post" action="index.php?p=www/member/product_list">
             <input type="hidden" name="namespace" value="member_product_list_search" />
             <input type="hidden" name="pageParam" value="page" />
             <input type="hidden" name="corpid" value="<?php echo $_SESSION['id']; ?>" />
           <label for="label">产品名称</label>
-          <input type="text" name="productName" id="caption" value="" class="productSearchInput" style="height:19px;line-height:19px;">
+          <input type="text"  onfocus="checkInput(this);" required="true"   messageSpan="productName_err" name="productName"   id="caption" value="" class="productSearchInput" style="height:19px;line-height:19px;">
           <input type="submit" value="查 询">
         </form>
       </div>
       <div class="productdatablock">
-        <form id="listForm" name="listForm" method="post" action="">
+        <form  onsubmit="return checkSubmit(this);"  id="listForm" name="listForm" method="post" action="">
         <input type="hidden" name="searchType" id="searchType" value="auditing">
           <div class="operating">
           

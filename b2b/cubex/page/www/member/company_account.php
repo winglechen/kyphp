@@ -38,7 +38,7 @@ include "header.php";
 	 <div class="right">
 
 					<div class="postTips">(带 <span>*</span> 为必填项)</div>
-<form id="corpInfoForm" name="corpInfoForm" action="index.php?p=www/member/company_add" method="post">
+<form  onsubmit="return checkSubmit(this);"  id="corpInfoForm" name="corpInfoForm" action="index.php?p=www/member/company_add" method="post">
 		<!--基本信息-->
 	<div class="formblock">
         <div class="formheader">
