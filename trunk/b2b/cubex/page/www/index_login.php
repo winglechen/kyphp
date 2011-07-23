@@ -37,7 +37,7 @@ $block2 = Block::listByBlock(2);
 <ul>
 <?php 
     for($i=1,$cnt=count($block1); $i<$cnt && $i<7; $i++){
-        echo '<li>·<a target="_blank" href="'.$block1[$i]['url'].'"><font>'.$block1[$i]['title'].'</font></a></li>';
+        echo '<li>·<a target="_blank" href="'.$block1[$i]['url'].'"><font style="font-size:12px;" >'.$block1[$i]['title'].'</font></a></li>';
 }
 ?>
 </ul>
@@ -55,7 +55,7 @@ $block2 = Block::listByBlock(2);
     
 <?php 
     for($i=1,$cnt=count($block2); $i<$cnt && $i<7; $i++){
-        echo '<li>·<a target="_blank" href="'.$block2[$i]['url'].'"><font>'.$block2[$i]['title'].'</font></a></li>';
+        echo '<li>·<a target="_blank" href="'.$block2[$i]['url'].'"><font style="font-size:12px;" >'.$block2[$i]['title'].'</font></a></li>';
 }
 ?>
 
@@ -120,8 +120,8 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
         <img src="./res/loginTR.jpg" width="6" height="60" alt="">
     </div>
   <div class="btn">
-        <p><a href="index.php?p=www/register" target="_blank"><img src="./res/sign8.gif" width="13" height="13" align="absmiddle">免费注册</a>
-<a href="index.php?p=www/register" target="_blank" style="width:138px;height:24px;padding-top:9px;background:url(http://cn.china.cn/v5shouye/images/btn3Bg1.jpg) no-repeat;display:block;color:#CD0000;font-weight:bold;float:left;margin-top: 7px;margin-right: 3px;margin-bottom: 0;margin-left: 4px;padding-left: 12px;"><img src="./res/sign9.gif" width="13" height="18" align="absmiddle" style="padding-left: 7px;">免费开店</a></p>
+        <p><a href="index.php?p=www/register" target="_blank" style="width:100px;height:24px;padding-top:9px;background:url(./logo/btnlogin.gif) no-repeat;display:block;color:#CD0000;font-weight:bold;float:left;margin-top: 7px;margin-right: 3px;margin-bottom: 0;padding-left: 12px; margin-left:6px;"><img src="./res/sign8.gif" width="13" height="13" align="absmiddle" >免费注册</a>
+<a href="index.php?p=www/register" target="_blank" style="width:100px;height:24px;padding-top:9px;background:url(./logo/btnlogin.gif) no-repeat;display:block;color:#CD0000;font-weight:bold;float:left;margin-top: 7px;margin-right: 3px;margin-bottom: 0;margin-left: 12px;*margin-left:6px;_margin-left:6px;padding-left: 12px;"><img src="./res/sign9.gif" width="13" height="18" align="absmiddle" style="padding-left: 7px;">免费开店</a></p>
  <p><a href="index.php?p=www/member/product_add" target="_blank">发布信息</a><a href="index.php?p=www/register" target="_blank">推广公司</a><a href="index.php?p=www/register" target="_blank">寻找买家</a></p>
     </div>
     <div class="btnBot">
