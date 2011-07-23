@@ -84,6 +84,84 @@ color:#CCCCCC
                 </tr>
               </thead>
               <tbody>
+<tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">   
+    <td align="left" valign="top" class="datadescription">
+        网站首页
+    </td>
+    <td align="left" valign="middle" class="dataexpire">
+        index.php
+    </td>
+    <td align="center" valign="middle" class="datamod">
+        <table width="100%" border="0" cellspacing="3" cellpadding="0" class="modopration">
+            <tbody>
+                <tr>
+                    <td>
+                   </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+
+<tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">   
+    <td align="left" valign="top" class="datadescription">
+        公司简介
+    </td>
+    <td align="left" valign="middle" class="dataexpire">
+        index.php?p=about
+    </td>
+    <td align="center" valign="middle" class="datamod">
+        <table width="100%" border="0" cellspacing="3" cellpadding="0" class="modopration">
+            <tbody>
+                <tr>
+                    <td>
+                   </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr> 
+
+<tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">   
+    <td align="left" valign="top" class="datadescription">
+        新闻动态
+    </td>
+    <td align="left" valign="middle" class="dataexpire">
+        index.php?p=news
+    </td>
+    <td align="center" valign="middle" class="datamod">
+        <table width="100%" border="0" cellspacing="3" cellpadding="0" class="modopration">
+            <tbody>
+                <tr>
+                    <td>
+                   </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>  
+
+<tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">   
+    <td align="left" valign="top" class="datadescription">
+        产品系列
+    </td>
+    <td align="left" valign="middle" class="dataexpire">
+        index.php?p=news
+    </td>
+    <td align="center" valign="middle" class="datamod">
+        <table width="100%" border="0" cellspacing="3" cellpadding="0" class="modopration">
+            <tbody>
+                <tr>
+                    <td>
+                   </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr> 
+
+         
+        
 <?php
 $row = null;
 for($i=0,$len=count($data['data']); $i<$len; $i++){

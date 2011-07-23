@@ -1,21 +1,10 @@
 <!--广告 begin-->	
 
 
-<div class="topAd">
-<script type="text/javascript">   
-var swf_width=960
-var swf_height=32
-var files='http://cn.china.cn/2011images/03/chengxinhuodong-1.jpg|http://cn.china.cn/2011images/109guangjiaohui/guangjiaohuitonglan.jpg|http://cn.china.cn/2011images/03/jiajuyongpintonglan.jpg|http://cn.china.cn/2010images/fangzhapiantixing.gif|http://cn.china.cn/2008images/zhaoshanghan.gif'
-var links='http://cn.china.cn/huodong/chengxinxuanyan/index.html|http://guangjiaohui.china.cn/|http://cn.china.cn/huodong/jiajuyongpin/index.html|http://cn.china.cn/frame/d703046,0a24fe,d2050_7093.html|http://cn.china.cn/zhaoshang2010/index.html'
-var texts=''
-var config='0xffffff:文字颜色|3:文字位置|0xCC0000:文字背景颜色|20:文字背景透明度|0xffffff:按键文字颜色|0xCC0000:按键默认颜色|0x000033:按键当前颜色|4:自动播放时间(秒)|0:图片过渡效果|0:是否显示按钮|_blank:打开窗口'
-
-document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
-document.write('<param name="movie" value="http://cn.china.cn/2007images/images/focuspic1.swf"><param name="quality" value="high">');
-document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
-document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+config+'">');
-document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+config+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
-</script>
+<div style="margin:10px auto;width:960px;">
+<img src="./logo/l.jpg" border="0">
+<img src="./logo/c.jpg" border="0">
+<img src="./logo/r.jpg" border="0">
 </div>
 <!--广告 end-->
 
@@ -131,8 +120,8 @@ document.write('<embed src="http://cn.china.cn/2007images/images/focuspic1.swf" 
         <img src="./res/loginTR.jpg" width="6" height="60" alt="">
     </div>
   <div class="btn">
-        <p><a href="index.php?p=www/register" target="_blank"><img src="./res/sign8.gif" width="13" height="13" align="absmiddle">注册</a>
-<a href="index.php?p=www/register" target="_blank" style="width:138px;height:24px;padding-top:9px;background:url(http://cn.china.cn/v5shouye/images/btn3Bg1.jpg) no-repeat;display:block;color:#CD0000;font-weight:bold;float:left;margin-top: 7px;margin-right: 3px;margin-bottom: 0;margin-left: 4px;padding-left: 12px;"><img src="./res/sign9.gif" width="13" height="18" align="absmiddle" style="padding-left: 7px;">加入中童网</a></p>
+        <p><a href="index.php?p=www/register" target="_blank"><img src="./res/sign8.gif" width="13" height="13" align="absmiddle">免费注册</a>
+<a href="index.php?p=www/register" target="_blank" style="width:138px;height:24px;padding-top:9px;background:url(http://cn.china.cn/v5shouye/images/btn3Bg1.jpg) no-repeat;display:block;color:#CD0000;font-weight:bold;float:left;margin-top: 7px;margin-right: 3px;margin-bottom: 0;margin-left: 4px;padding-left: 12px;"><img src="./res/sign9.gif" width="13" height="18" align="absmiddle" style="padding-left: 7px;">免费开店</a></p>
  <p><a href="index.php?p=www/member/product_add" target="_blank">发布信息</a><a href="index.php?p=www/register" target="_blank">推广公司</a><a href="index.php?p=www/register" target="_blank">寻找买家</a></p>
     </div>
     <div class="btnBot">
