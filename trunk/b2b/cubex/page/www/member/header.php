@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>首页-中国供应商</title>
+<title>中童网-中小企业交流发展平台</title>
 
 <link href="./res/erm.css" rel="stylesheet" type="text/css">
 <link href="./res/erm_old.css" rel="stylesheet" type="text/css">
@@ -83,6 +83,10 @@ background:url(res/img/yes.gif) no-repeat;
                 <!--li><a href="#">询盘信息</a></li-->                    
                 <li><a href="index.php?p=www/member/company_main">公司信息</a></li>
                 <li><a href="index.php?p=www/member/website_style">自助建站</a></li>
+                
+                <li><a href="index.php?p=www/member/website_style">财务管理</a></li>
+                <li><a href="index.php?p=www/member/website_style">我要充值</a></li>
+                <li><a href="index.php?p=www/member/website_style">帮助信息</a></li>
         </ul>
         </div>
         <div class="clear_line"></div>
