@@ -1,0 +1,79 @@
+.body{width:960px;overflow:hidden;background-color:#f2f2f2; border-top-width: 2px;border-top-style: solid;border-top-color: #ab0000; margin-left:auto; margin-right:auto; padding-top:15px; line-height:22px;}
+.daohang{width:960px; margin:10px auto; margin-bottom:3px; line-height:20px; color:#a90000; font-weight:bold;}
+.daohang a{ font-weight:normal;}
+.daohang span{font-weight:normal; color:#3a3a3a;}
+.left{ float:left; width:275px; overflow:hidden; padding-left:13px;}
+.left-A{float:left;width:275px;overflow:hidden;padding-left: 13px;}
+.lft-1{ overflow:hidden; width:275px;}
+.lft-1 dl{ overflow:hidden; width:275px; margin-bottom:13px;}
+.lft-1 dl dt{ width:258px; background-image:url(http://cn.china.cn/2010images/bangzhu/img/img/zuo-tiao.jpg); height:25px; font-weight:bold; color:#FFF; font-size:14px; padding-left:18px; padding-top:5px;}
+.lft-1 dl dd{overflow:hidden;width:258px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #ab0000;border-bottom-color: #ab0000;border-left-color: #ab0000; background-color:#FFF; padding-left:15px; padding-top:13px; padding-bottom:13px;padding-bottom:13px !important;*padding-bottom:8px;}
+.lft-1 dl .ddA{overflow:hidden;width:258px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #ab0000;border-bottom-color: #ab0000;border-left-color: #ab0000; background-color:#FFF; padding-left:15px; padding-top:13px; padding-bottom:13px;}
+.lft-1 dl .ddu{overflow:hidden;width:258px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #ab0000;border-bottom-color: #ab0000;border-left-color: #ab0000; background-color:#FFF; padding-left:0px; padding-top:13px; padding-bottom:0px;}
+.lft-1 dl dd p{ float:left; font-size:12px; font-weight:bold; margin-right:14px; }
+.lft-1 dl dd p a{ color:#a90000;}
+.lft-1 dl dd .p1{ background-image:url(http://cn.china.cn/2010images/bangzhu/img/img/1.jpg); height:24px; width:89px; padding-left:35px; padding-top:3px; margin-bottom:13px;}
+.lft-1 dl dd .p2{background-image:url(http://cn.china.cn/2010images/bangzhu/img/img/3.jpg); height:24px; width:69px; padding-left:35px; padding-top:3px; margin-bottom:13px;}
+.lft-1 dl dd .p3{ background-image:url(http://cn.china.cn/2010images/bangzhu/img/img/2.jpg); height:24px; width:89px; padding-left:35px; padding-top:3px;}
+.lft-1 dl dd .p0{background-image:url(http://cn.china.cn/2010images/bangzhu/img/img/0.jpg); height:24px; width:69px; padding-left:35px; padding-top:3px;}
+.lft-1 dl dd ul{ width:240px; overflow:hidden; padding-top:0px; padding-top:0px !important; *padding-top:8px; }
+.lft-1 dl dd ul li{ width:240px; line-height:25px; height:25px; font-weight:bold;}
+.lft-1 dl dd ul li a{ color:#686868;}
+.lft-1 dl dd ul li img{ margin-right:10px;}
+.lft-1 dl dd h2{ font-size:12px; font-weight:bold; height:auto; *height:20px; line-height:22px;*line-height:normal; padding-top:3px; }
+.lft-1 dl dd h2 a{ color:#ab0000;}
+.lft-1 dl dd .pp{ padding-left:13px; font-weight:normal; line-height:22px; width:230px; overflow:hidden;}
+.lft-1 dl dd .pp a{ color:#686868;}
+.lft-1 dl dd span{ color:#a50000;}
+.right{ width:645px; overflow:hidden; float:right; padding-right:13px;}
+.right-A{width:645px;overflow:hidden;float:right;padding-right: 13px;}
+.ri-top{ width:645px; overflow:hidden; margin-bottom:13px;}
+.ri-top h2{ width:645px; display:block; height:30px; font-weight:bold; font-size:14px; color:#FFF; background-image:url(http://cn.china.cn/2010images/bangzhu/img/img/changtiao.jpg);}
+.ri-top p{width:643px;overflow:hidden;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #d1d1d1;border-bottom-color: #d1d1d1;border-left-color: #d1d1d1;background-color:#FFF;height:204px;}
+
+.ri-top .pA{width:643px;overflow:hidden;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #d1d1d1;border-bottom-color: #d1d1d1;border-left-color: #d1d1d1; background-color:#FFF; height:auto; overflow:hidden;}
+.ri-top .pB{width:643px;overflow:hidden;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #d1d1d1;border-bottom-color: #d1d1d1;border-left-color: #d1d1d1; background-color:#FFF; height:auto; overflow:hidden; background-color:#EBEBEB; text-align:right; display:block; font-weight:bold;}
+.ri-top .pB a{ color:#a30000;}
+.ri-top .pA span{ display:block; padding-left:13px; padding-right:13px; color:#686868; padding-top:13px;}
+.ri-top .pA span .bb{ font-size:14px; color:#a30000; }
+.ri-top h2 .zuo{ float:left; padding-left:20px; padding-top:5px;}
+.ri-top h2 .you{ float:right; font-weight:normal; font-size:12px; padding-right:15px; padding-top:5px;}
+.ri-top h2 .you a{ color:#686868;}
+.ri-di{width:645px; overflow:hidden; margin-bottom:13px;}
+.ri-di .lf{ float:left; overflow:hidden; width:315px;}
+.ri-di .lf h2{ width:315px; display:block; height:30px; font-weight:bold; font-size:14px; color:#FFF; background-image:url(http://cn.china.cn/2010images/bangzhu/img/img/xiaotiao.jpg);}
+.ri-di .lf h2 .zz{ float:left; padding-left:20px; padding-top:5px;}
+.ri-di .lf h2 .yy{ float:right; font-weight:normal; font-size:12px; padding-right:15px; padding-top:5px;}
+.ri-di .lf h2 .yy a{ color:#686868;}
+.ri-di .lf .n{width:313px;overflow:hidden;border-right-width: 1px;	border-bottom-width: 1px;border-left-width: 1px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #d1d1d1;border-bottom-color: #d1d1d1;border-left-color: #d1d1d1;background-color:#FFF;clear:both;padding-top:10px;padding-top:10px !important;*padding-top:14px; 				height: 370px;
+}
+.ri-di .lf .n ul{ width:280px; overflow:hidden; padding-left:15px;}
+.ri-di .lf .n ul li{ width:300px; height:24px; line-height:24px; color:#a90000;}
+.ri-di .lf .n ul li a{ color:#686868;}
+
+.ri-di .lr{ float:right; overflow:hidden; width:315px;}
+.ri-di .lr h2{ width:315px; display:block; height:30px; font-weight:bold; font-size:14px; color:#FFF; background-image:url(http://cn.china.cn/2010images/bangzhu/img/img/xiaotiao.jpg);}
+.ri-di .lr h2 .zz{ float:left; padding-left:20px; padding-top:5px;}
+.ri-di .lr h2 .yy{ float:right; font-weight:normal; font-size:12px; padding-right:15px; padding-top:5px;}
+.ri-di .lr h2 .yy a{ color:#686868;}
+*html .ri-di .lr .n, .ri-di .lf .n{ height:356px;}
+*+html .ri-di .lr .n, .ri-di .lf .n{ height:370px;}
+.ri-di .lr .n{width:313px;overflow:hidden;border-right-width: 1px;	border-bottom-width: 1px;border-left-width: 1px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #d1d1d1;border-bottom-color: #d1d1d1;border-left-color: #d1d1d1;background-color:#FFF;height:370px;clear:both;padding-top:10px;padding-top:10px !important;
+*padding-top:14px;}
+.ri-di .lr .n ul{ width:280px; overflow:hidden; padding-left:15px;}
+.ri-di .lr .n ul li{ width:300px; height:24px; line-height:24px; color:#a90000;}
+.ri-di .lr .n ul li a{ color:#686868;}
+.an{ background-color:#d1d1d1; text-align:center; padding-top:5px; padding-bottom:5px;}
+.liuyan{overflow:hidden;width:933px;background-color:#FFF;margin-left:13px;border: 1px solid #c3c3c3;margin-bottom:13px;}
+.liuyan p{ padding-left:13px; padding-right:13px; color:#686868; width:880px; background-color:#f7f7f7; margin-left:13px; margin-top:13px; padding-top:10px; padding-bottom:10px;}
+.liuyan table { margin-left:13px; margin:10px;}
+.liuyan table td{ height:59px; color:#686868;}
+.liuyan table td input{height:25px;width:480px;border: 1px solid #C3C3C3;}
+.liuyan table td textarea{ height:220px; width:480px; border: 1px solid #C3C3C3;}
+.liuyan table td strong{ color:#a90000;}
+.td1{width:100px; line-height:22px; padding-left:50px; font-size:14px; font-weight:bold; padding-top:8px; background:url(http://cn.china.cn/2010images/bangzhu/img/img/help_jiao1new.jpg) no-repeat;}
+.tb1,.tb2,.tb3{text-align:center;vertical-align:middle;}
+td a{ cursor:pointer;color:#686868;}
+.td3 table{ margin-left:30px;}
+.td2{width:125px;height:15px; color:#696969; background:url(http://cn.china.cn/2010images/bangzhu/img/img/help_jiao3.gif) no-repeat; padding-left:22px; padding-top:3px;}
+td a:hover{ text-decoration:none; color:#a90000; font-weight:bold;}
