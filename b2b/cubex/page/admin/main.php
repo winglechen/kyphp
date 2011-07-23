@@ -123,11 +123,17 @@ $(function(){
                                     <li><a href="index.php?p=admin/supply_check" rel="w_panel" target="navTab" >库存审核</a></li>
                                 </ul>
                             </li>                  
-                            <li><a>文章管理</a>
+                            <li><a>商业资讯</a>
                                 <ul>
                                     <li><a href="trees/index.php?table=ncategory"  showInFrame="true"  rel="w_panel" target="navTab" >分类管理</a></li>
                                     <li><a href="index.php?p=admin/news_list" rel="w_panel" target="navTab" >文章管理</a></li>
                                     <li><a href="index.php?p=admin/news_add" rel="w_panel" target="navTab" >文章添加</a></li>
+                                </ul>
+                            </li>
+                            <li><a>帮助信息</a>
+                                <ul>
+                                    <li><a href="index.php?p=admin/help_list" rel="w_panel" target="navTab" >帮助管理</a></li>
+                                    <li><a href="index.php?p=admin/help_add" rel="w_panel" target="navTab" >帮助添加</a></li>
                                 </ul>
                             </li>
                         </ul>
