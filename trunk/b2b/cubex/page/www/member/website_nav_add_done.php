@@ -28,7 +28,7 @@ if(!empty($_POST)){
         }elseif(3 == $_POST['urltype']) {
             $data = array(
                 'name'     => $_POST['name'],
-                'url'      => 'index.php?p=news&pid='.$_POST['pid'],
+                'url'      => 'index.php?p=page&id='.$_POST['pid'],
                 'urltype'  => 3,
             );
         }
