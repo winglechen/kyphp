@@ -136,7 +136,7 @@ if(isset($_GET['id'])){
       <div class="formline">
         <div class="formlabel"><span id="lbl_offerDetail">&nbsp;</span>详细说明：<span>*</span></div>
         <div class="formcontent">
-		  <textarea cols="120" id="detail" onfocus="checkInput(this);" required="true"  name="detail" rows="20"><?php echo $form['detail']; ?></textarea>
+		  <textarea cols="120" id="detail"   name="detail" rows="20"><?php echo $form['detail']; ?></textarea>
 <script language="javascript">
 KE.show({id : 'detail'});
 </script>
