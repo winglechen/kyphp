@@ -32,7 +32,7 @@ if('product' == $_GET['module']){
           <a href="index.php?p=www/member/company_contact">联系人信息</a> 
         </ul> 
         <ul class=""> 
-          <a href="index.php?p=www/member/company_account">帐户信息</a> 
+          <a href="index.php?p=www/member/company_account">密码修改</a> 
         </ul>
       </div> 
 </div>

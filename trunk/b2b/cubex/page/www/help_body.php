@@ -69,9 +69,9 @@ foreach($data as $new){
 <dl>
 <dt>联系我们</dt>
 <dd class="dd">
-    <b>中童网服务热线：</b>0701-6690666<br>    
+    <b>服务热线：</b>0701-6690666<br>    
     <b>传真号码：</b>0701-6690999<br>
-    <b>服务邮箱：</b>service@ztb2b.com <br>   
+    <b>服务邮箱：</b>wztgad@126.com<br>   
 </dd>  </dl>
 </div>
 </div>
