@@ -45,7 +45,7 @@ background:url(res/img/yes.gif) no-repeat;
 
 <!--title-->
 <div class="erm_header_back">
-<div class="erm_header_textleft">企业管理系统</div>
+<div class="erm_header_textleft">中童网-中小企业交流发展平台</div>
 <div class="erm_header_textright"><strong><?php echo $_SESSION['username']; ?>，您好！</strong><span>
 <a href="index.php?p=www/logout">退出</a></span>
 </div>
@@ -87,6 +87,7 @@ background:url(res/img/yes.gif) no-repeat;
                 <li><a href="index.php?p=www/member/website_style">财务管理</a></li>
                 <li><a href="index.php?p=www/member/website_style">我要充值</a></li>
                 <li><a href="index.php?p=www/member/website_style">帮助信息</a></li>
+                <li><a href="index.php?p=www/help">新手上路</a></li>
         </ul>
         </div>
         <div class="clear_line"></div>

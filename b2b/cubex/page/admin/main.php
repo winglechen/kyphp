@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>kyphp后台管理系统</title>
+<title>中童网-中小企业交流发展平台</title>
 
 <link href="res/dwz/themes/default/style.css" rel="stylesheet" type="text/css" />
 <link href="res/dwz/themes/css/core.css" rel="stylesheet" type="text/css" />
