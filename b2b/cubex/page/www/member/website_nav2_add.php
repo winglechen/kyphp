@@ -111,7 +111,8 @@ if(isset($_GET['id'])){
     <div class="formline">
        <div class="formlabel"><span class="inputlabelok"></span>产品分类链接：<span>*</span></div>
        <div class="formcontent">
-       <select name="cid">
+       <select name="cid" onchange="$('#name').val(this.options[this.selectedIndex].text);" >
+       <option value="-1">请选择</option>
 <?php
     echo Config::getTree('member_category','option',null,$_SESSION['id']);
 ?>
@@ -128,7 +129,8 @@ if(isset($_GET['id'])){
     <div class="formline">
        <div class="formlabel"><span class="inputlabelok"></span>新闻分类链接：<span>*</span></div>
        <div class="formcontent">
-       <select name="nid">
+       <select name="nid" onchange="$('#name').val(this.options[this.selectedIndex].text);" >
+        <option value="-1">请选择</option>
 <?php
     echo Config::getTree('member_new_category','option',null,$_SESSION['id']);
 ?>
@@ -144,7 +146,8 @@ if(isset($_GET['id'])){
     <div class="formline">
        <div class="formlabel"><span class="inputlabelok"></span>自定义页面链接：<span>*</span></div>
        <div class="formcontent">
-       <select name="pid">
+       <select name="pid" onchange="$('#name').val(this.options[this.selectedIndex].text);" >
+        <option value="-1">请选择</option>
 <?php
     echo Mpage::getOption();
 ?>

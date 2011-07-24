@@ -78,9 +78,9 @@ color:#CCCCCC
             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="pdata">
               <thead>
                 <tr>
-                  <td width="100">名称</td>
+                  <td width="150">名称</td>
                   <td>链接</td>
-                  <td width="115">操作</td>
+                  <td width="200">操作</td>
                 </tr>
               </thead>
               <tbody>
@@ -88,6 +88,12 @@ color:#CCCCCC
 $row = null;
 for($i=0,$len=count($data['data']); $i<$len; $i++){
     $row = $data['data'][$i];
+    $url = $row['url'];
+    $pid = 0;
+    
+    if(preg_match('/\?p\=page&id\=(\d*)/i',$url,$result)){
+        $pid = $result[1];
+    }
 ?>
 <tr onmouseover="this.bgColor='#EFFFEE';" onmouseout="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">   
     <td align="left" valign="top" class="datadescription">
@@ -100,9 +106,14 @@ for($i=0,$len=count($data['data']); $i<$len; $i++){
         <table width="100%" border="0" cellspacing="3" cellpadding="0" class="modopration">
             <tbody>
                 <tr>
-                    <td>
+                    <td  align="center">
                         <a href="index.php?p=www/member/website_nav2_add&id=<?php echo $row['id']; ?>">修改</a> | 
                         <a href="index.php?p=www/member/website_nav_del2&id=<?php echo $row['id']; ?>" onclick="return confirm('您确定要删除吗？');">删除</a>
+                        <?php
+                            if($pid != 0){
+                                echo ' | <a href="/index.php?p=www/member/website_page_add&id=' . $pid . '" target="_blank" >编辑内容</a>';
+                            }
+                        ?>
                     </td>
                 </tr>
             </tbody>
