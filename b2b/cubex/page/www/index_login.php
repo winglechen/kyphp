@@ -2,9 +2,14 @@
 
 
 <div style="margin:10px auto;width:960px;">
-<img src="./logo/l.jpg" border="0">
+<!--img src="./logo/l.jpg" border="0">
 <img src="./logo/c.jpg" border="0">
-<img src="./logo/r.jpg" border="0">
+<img src="./logo/r.jpg" border="0"-->
+
+<img src="./img/index_top_banner_l.jpg" border="0">
+<img src="./img/index_top_banner_c.jpg" border="0">
+<img src="./img/index_top_banner_r.jpg" border="0">
+
 </div>
 <!--广告 end-->
 
