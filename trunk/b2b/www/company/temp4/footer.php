@@ -41,17 +41,9 @@
 <div style="padding:0px">
 
 <link href="temp4/menu/templates/images/bottommenu_1/A.css" rel="stylesheet" type="text/css" />
-<div id="bottommenu">|
-
-<a href="temp4/page/html/company.php" target="_self">关于我们</a>|
-
-<a href="temp4/news/class/?86.html" target="_self">新闻中心</a>|
-
-<a href="temp4/page/contact/contact.php" target="_self">联系方式</a>|
-
-<a href="temp4/page/contact/feedback.php" target="_self">在线留言</a>|
-
-<a href="temp4/advs/link/" target="_self">友情链接</a>|
+<div id="bottommenu">
+    
+<?php include __DIR__.'/../common/links.php'; ?> 
  
 </div>
 

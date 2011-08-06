@@ -32,7 +32,7 @@ for($i=0,$len=count($data['data']); $i<$len; $i++){
     $row = $data['data'][$i];
 ?>
 <li class="title">
-	<div class="title"><a href="index.php?p=ndetail&id=<?php echo $row['id']; ?>" target="_blank"   ><?php echo $row['name']; ?></a></div>
+	<div class="title"><a href="index.php?p=ndetail&id=<?php echo $row['id']; ?>"   ><?php echo $row['name']; ?></a></div>
 	<div class="time"><?php echo date('Y-m-d',$row['ts']); ?></div>
 </li>
 
