@@ -29,18 +29,22 @@ $row = null;
 for($i=0,$len=count($data['data']); $i<$len; $i++){
     $row = $data['data'][$i];
 ?>
+
 <div class="productquery_dolphin">
     <div class="productquery_dolphin_top">
-		<div class="fang" style="width:150px;height:109px">
-		<div class="picFit" style="width:150px;height:109px">
-		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_blank" ><img src="<?php echo $row['pic']; ?>" style="width:150px;height:109px" border="0" /></a>
+		<div class="fang" style="width:132px;height:132px">
+		<div class="picFit" style="width:132px;height:132px">
+		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_self" ><img src="<?php echo $row['pic']; ?>" style="width:132px;height:132px" border="0" /></a>
 		</div>
 		</div>
 	</div>
-	<div class="productquery_dolphin_bottom" style="width:150px">
-		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_blank" class="prodtitle"   ><?php echo $row['productName']; ?></a>
+	<div class="productquery_dolphin_bottom" style="width:132px;line-height:20px;">
+		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?> target="_self" class="prodtitle" style="line-height:20px;"  ><?php echo $row['productName']; ?></a>
 	</div>
 </div>
+
+
+
 
 
 <?php

@@ -91,20 +91,8 @@ var PDV_PAGENAME='query';
 <div style="padding:0px">
 
 <link href="temp4/product/templates/css/productquery_dolphin.css" rel="stylesheet" type="text/css" />
+<?php include __DIR__.'/../common/company_contact.php'; ?>
 
-
-<?php include __DIR__.'/../common/product_list3.php'; ?>
-
-
-<script>
-$(function() {
-$().picFit("auto");
-});
-</script>
-
-<div id="showpages" >
-	 <?php echo $data['page']; ?>
-</div>
 
 </div>
 </div>

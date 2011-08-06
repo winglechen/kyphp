@@ -45,29 +45,7 @@ var PDV_PAGENAME='query';
 <link href="temp4/product/templates/css/productclass_dolphin.css" rel="stylesheet" type="text/css" />
 <div class="productclass_dolphin">
 
-
-<a href="temp4/product/class/?1.html" target="_self" class="productclass_dolphin">莱卡生物显微镜</a>
-
-
-<a href="temp4/product/class/?2.html" target="_self" class="productclass_dolphin">莱卡手术显微镜</a>
-
-
-<a href="temp4/product/class/?3.html" target="_self" class="productclass_dolphin">奥林巴斯医疗产品</a>
-
-
-<a href="temp4/product/class/?4.html" target="_self" class="productclass_dolphin">内镜清洗机</a>
-
-
-<a href="temp4/product/class/?5.html" target="_self" class="productclass_dolphin">牙科产品</a>
-
-
-<a href="temp4/product/class/?6.html" target="_self" class="productclass_dolphin">GE心电产品系列</a>
-
-
-<a href="temp4/product/class/?10.html" target="_self" class="productclass_dolphin">血液透析产品</a>
-
-
-<a href="temp4/product/class/?11.html" target="_self" class="productclass_dolphin">其它设备</a>
+<?php include __DIR__.'/../common/product_category.php'; ?>
  
 </div>
 
@@ -106,29 +84,8 @@ var PDV_PAGENAME='query';
 </div>
 <div style="margin:0px;padding:0px;">
 <link href="temp4/product/templates/css/product_searchform_dolphin.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="temp4/product/js/selectbox.js"></script>
-<div class="productsearchformzone">
-<form id="productsearchform" method="get" action="temp4/product/class/index.php">
-  
-   <div class="productsearchform">
-    <select name="catid" id="catid" class="box" style="display:none; background:#ffffff; width:130px; height:19px;">
-      <option value="0" >请选择分类</option>
-      
-	  <option value='1'>莱卡生物显微镜</option><option value='2'>莱卡手术显微镜</option><option value='3'>奥林巴斯医疗产品</option><option value='4'>内镜清洗机</option><option value='5'>牙科产品</option><option value='6'>GE心电产品系列</option><option value='10'>血液透析产品</option><option value='11'>其它设备</option>
-    
-    </select> 
-	<script>
-	makeSelectBox('catid','temp4/');
-	</script>
-  </div>
-    <div class="productsearchformleft">
-    <input name="key" type="text" id="productsearchform_key" value="" style="width:80px;" class="inputproduct">
-  </div>
-  <div class="productsearchform2">
-  <input name="imageField" id="button" type="image" src="temp4/product/templates/images/searchr.jpg" >
-  </div>
-</form>
-</div>
+
+<?php include __DIR__.'/../common/product_search.php'; ?>
 
 </div>
 </div>
@@ -154,63 +111,13 @@ var PDV_PAGENAME='query';
 <link href="temp4/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
 <ul id="queryul">
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?423.html" target="_self"   >参加华南国际口腔展概况</a></div>
-	<div class="time">2010-05-13</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?427.html" target="_self"   >夏季常见病防治小知识</a></div>
-	<div class="time">2010-06-21</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?426.html" target="_self"   >最适合中国人的防流感食物</a></div>
-	<div class="time">2010-06-21</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?425.html" target="_self"   >夏季常见病防治小知识</a></div>
-	<div class="time">2010-06-21</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?424.html" target="_self"   >清晨喝水保健功效最好</a></div>
-	<div class="time">2010-06-21</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?419.html" target="_self"   >我国药品注册管理出现新变化我国药品注册管理出现新变化</a></div>
-	<div class="time">2010-04-20</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?420.html" target="_self"   >政策利空药企发改委划区调研降药价政策利空药企发改委划区调研降药价</a></div>
-	<div class="time">2010-05-13</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?421.html" target="_self"   >我国药品注册管理出现新变化我国药品注册管理出现新变化</a></div>
-	<div class="time">2010-05-13</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?422.html" target="_self"   >政策利空药企 发改委划区调研降药价</a></div>
-	<div class="time">2010-05-13</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp4/news/html/?321.html" target="_self"   >30家知名媒体聚焦药业自主创新家知名媒体聚焦药业自主创新</a></div>
-	<div class="time">2009-12-10</div>
-</li>
+ <?php include __DIR__.'/../common/new_list.php'; ?>
 
 </ul>
 </div>
 
 <div id="showpages">
-	  <div id="pagesinfo">共14条 每页10条 页次：1/2</div>
-	  <div id="pages"><ul><li class="pbutton"><a href=/1294374538/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li><a href=/1294374538/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>2</a></li><li class="pbutton"><a  href=/1294374538/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key= >下一页</a></li><li class="opt"><select onChange="window.location=this.options[this.selectedIndex].value"><option value="/1294374538/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=" selected>第1页</option><option value="/1294374538/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=">第2页</option></select></li><li class="pbutton"><a href=/1294374538/news/class/index.php?page=2&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>尾页</a></li></ul></div>
+	  <?php echo $data['page']; ?>
 </div>
 
 

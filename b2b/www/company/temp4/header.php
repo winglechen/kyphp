@@ -107,13 +107,7 @@
 	</div>
 <div style="padding:0px">
 
-
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="990" height="296">
- <param name="movie" value="diy/pics/20101227/1293413880.swf" />
- <param name="quality" value="high" />
- <param name="wmode" value="transparent" />
- <embed src="temp4/diy/pics/20101227/1293413880.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="990" height="296"></embed>
-</object>
+<img src="temp1/banner.png"  width="990" height="296">
 
 </div>
 </div>
@@ -138,9 +132,9 @@
 
 <div style="height:40px">
 	<img src="temp4/effect/templates/images/sep.jpg" border="0" style="margin:0px 2px 0px 0px;vertical-align:middle;" />
-	<a href="temp4/" style="color:#2e2e2e;padding-right:4px;font:12px/20px Simsun;">返回首页</a>
+	<a href="./index.php" style="color:#2e2e2e;padding-right:4px;font:12px/20px Simsun;">返回首页</a>
 	<img src="temp4/effect/templates/images/sep.jpg" border="0" style="margin:0px 2px 0px 1px;vertical-align:middle;" />
-<a href="temp4/http://demo.2799.cn/1294374538/" style="color:#2e2e2e;padding-right:4px;font:12px/20px Simsun;" onClick="window.external.addFavorite('http://demo.2799.cn/1294374538/','医疗器械公司'); return(false);">加入收藏</a>
+<a href="" style="color:#2e2e2e;padding-right:4px;font:12px/20px Simsun;" onClick="window.external.addFavorite('http://ztb2b.com','医疗器械公司'); return(false);">加入收藏</a>
 </div>
 
 
@@ -166,87 +160,10 @@
 <div style="padding:0px">
 
 <link href="temp4/menu/templates/images/dropdownmenu_dolphin/A.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="temp4/menu/js/dropdownmenu_dolphin.js"></script>
+
 <div class="dropdownmenu_dolphin">
 
-<div id="dorpmenu_dolphin0" class="dorpmenu_dolphin">
-	<a href="temp4/index.php" class="dorpmenu_dolphin">网站首页</a>
-</div>
-<div id="subdorpmenu_dolphin0" class="subdorpmenu_dolphin">
-
-</div>
-
-<div id="dorpmenu_dolphin1" class="dorpmenu_dolphin">
-	<a href="temp4/page/html/company.php" class="dorpmenu_dolphin">公司介绍</a>
-</div>
-<div id="subdorpmenu_dolphin1" class="subdorpmenu_dolphin">
-<ul>
-
-<li id="dropmenuli_dolphin383" ><a href="temp4/page/html/company.php" class="subdorpmenu_dolphin">公司简介</a></li>
-
-<li id="dropmenuli_dolphin384" ><a href="temp4/page/html/words.php" class="subdorpmenu_dolphin">领导致辞</a></li>
-
-<li id="dropmenuli_dolphin385" ><a href="temp4/page/html/honor.php" class="subdorpmenu_dolphin">企业荣誉</a></li>
-
-<li id="dropmenuli_dolphin386" ><a href="temp4/page/html/sales.php" class="subdorpmenu_dolphin">销售网络</a></li>
-
-<li id="dropmenuli_dolphin387" ><a href="temp4/page/html/culture.php" class="subdorpmenu_dolphin">企业文化</a></li>
-
-<li id="dropmenuli_dolphin388" ><a href="temp4/page/html/organ.php" class="subdorpmenu_dolphin">组织机构</a></li>
-
-<li id="dropmenuli_dolphin389" ><a href="temp4/page/html/history.php" class="subdorpmenu_dolphin">发展历程</a></li>
-</ul>
-
-</div>
-
-<div id="dorpmenu_dolphin2" class="dorpmenu_dolphin">
-	<a href="temp4/news/class/" class="dorpmenu_dolphin">新闻中心</a>
-</div>
-<div id="subdorpmenu_dolphin2" class="subdorpmenu_dolphin">
-<ul>
-
-<li id="dropmenuli_dolphin392" ><a href="temp4/news/class/?86.html" class="subdorpmenu_dolphin">公司新闻</a></li>
-
-<li id="dropmenuli_dolphin393" ><a href="temp4/news/class/?95.html" class="subdorpmenu_dolphin">行业动态</a></li>
-
-<li id="dropmenuli_dolphin394" ><a href="temp4/news/class/?106.html" class="subdorpmenu_dolphin">相关知识</a></li>
-</ul>
-
-</div>
-
-<div id="dorpmenu_dolphin3" class="dorpmenu_dolphin">
-	<a href="temp4/product/class/" class="dorpmenu_dolphin">产品展示</a>
-</div>
-<div id="subdorpmenu_dolphin3" class="subdorpmenu_dolphin">
-
-</div>
-
-<div id="dorpmenu_dolphin4" class="dorpmenu_dolphin">
-	<a href="temp4/job/index.php" class="dorpmenu_dolphin">人才招聘</a>
-</div>
-<div id="subdorpmenu_dolphin4" class="subdorpmenu_dolphin">
-
-</div>
-
-<div id="dorpmenu_dolphin5" class="dorpmenu_dolphin">
-	<a href="temp4/page/contact/contact.php" class="dorpmenu_dolphin">联系我们</a>
-</div>
-<div id="subdorpmenu_dolphin5" class="subdorpmenu_dolphin">
-<ul>
-
-<li id="dropmenuli_dolphin390" ><a href="temp4/page/contact/contact.php" class="subdorpmenu_dolphin">联系方式</a></li>
-
-<li id="dropmenuli_dolphin391" ><a href="temp4/page/contact/feedback.php" class="subdorpmenu_dolphin">在线留言</a></li>
-</ul>
-
-</div>
-
-<div id="dorpmenu_dolphin6" class="dorpmenu_dolphin">
-	<a href="temp4/page/contact/feedback.php" class="dorpmenu_dolphin">在线留言</a>
-</div>
-<div id="subdorpmenu_dolphin6" class="subdorpmenu_dolphin">
-
-</div>
+<?php include __DIR__.'/../common/nav3.php'; ?>
  
 </div>
 

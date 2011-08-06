@@ -24,7 +24,6 @@ for($i=0,$len=count($data['data']); $i<$len; $i++){
 ?>
 
 
-
 <div class="box">
 	<div class="fang" style="width:225px;height:150px">
 		<div class="picFit" style="width:225px;height:150px">
