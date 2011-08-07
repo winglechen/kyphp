@@ -58,14 +58,7 @@
 	</div>
 <div style="padding:0px">
 
-
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="973" height="197">
- <param name="movie" value="diy/pics/20101028/1288247774.swf" />
- <param name="quality" value="high" />
- <param name="wmode" value="transparent" />
- <embed src="temp5/diy/pics/20101028/1288247774.swf" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="100%"></embed>
-</object>
-
+<img src="temp1/banner.png" width="973" height="197">
 </div>
 </div>
 
@@ -165,108 +158,9 @@
 <div style="padding:0px">
 
 <link href="temp5/menu/templates/images/dropdownmenu_dolphin/A.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="temp5/menu/js/dropdownmenu_dolphin.js"></script>
+
 <div class="dropdownmenu_dolphin">
-
-<div id="dorpmenu_dolphin0" class="dorpmenu_dolphin">
-	<a href="temp5/index.php" class="dorpmenu_dolphin">网站首页</a>
-</div>
-<div id="subdorpmenu_dolphin0" class="subdorpmenu_dolphin">
-
-</div>
-
-<div id="dorpmenu_dolphin1" class="dorpmenu_dolphin">
-	<a href="temp5/page/html/company.php" class="dorpmenu_dolphin">公司简介</a>
-</div>
-<div id="subdorpmenu_dolphin1" class="subdorpmenu_dolphin">
-<ul>
-
-<li id="dropmenuli_dolphin402" ><a href="temp5/page/html/company.php" class="subdorpmenu_dolphin">公司简介</a></li>
-
-<li id="dropmenuli_dolphin403" ><a href="temp5/page/html/culture.php" class="subdorpmenu_dolphin">企业文化</a></li>
-
-<li id="dropmenuli_dolphin404" ><a href="temp5/page/html/honor.php" class="subdorpmenu_dolphin">企业荣誉</a></li>
-
-<li id="dropmenuli_dolphin405" ><a href="temp5/page/html/display.php" class="subdorpmenu_dolphin">厂房设备</a></li>
-
-<li id="dropmenuli_dolphin406" ><a href="temp5/page/html/sales.php" class="subdorpmenu_dolphin">营销网络</a></li>
-
-<li id="dropmenuli_dolphin407" ><a href="temp5/page/html/words.php" class="subdorpmenu_dolphin">总经理致辞</a></li>
-</ul>
-
-</div>
-
-<div id="dorpmenu_dolphin2" class="dorpmenu_dolphin">
-	<a href="temp5/page/html/honor.php" class="dorpmenu_dolphin">企业荣誉</a>
-</div>
-<div id="subdorpmenu_dolphin2" class="subdorpmenu_dolphin">
-
-</div>
-
-<div id="dorpmenu_dolphin3" class="dorpmenu_dolphin">
-	<a href="temp5/product/class/" class="dorpmenu_dolphin">产品中心</a>
-</div>
-<div id="subdorpmenu_dolphin3" class="subdorpmenu_dolphin">
-<ul>
-
-<li id="dropmenuli_dolphin412" ><a href="temp5/product/class/?1.html" class="subdorpmenu_dolphin">汽机车零件</a></li>
-
-<li id="dropmenuli_dolphin413" ><a href="temp5/product/class/?2.html" class="subdorpmenu_dolphin">园林工具零件</a></li>
-
-<li id="dropmenuli_dolphin414" ><a href="temp5/product/class/?3.html" class="subdorpmenu_dolphin">齿轮系列</a></li>
-
-<li id="dropmenuli_dolphin415" ><a href="temp5/product/class/?4.html" class="subdorpmenu_dolphin">交直流工具</a></li>
-
-<li id="dropmenuli_dolphin416" ><a href="temp5/product/class/?5.html" class="subdorpmenu_dolphin">结构零件</a></li>
-</ul>
-
-</div>
-
-<div id="dorpmenu_dolphin4" class="dorpmenu_dolphin">
-	<a href="temp5/news/class/" class="dorpmenu_dolphin">新闻动态</a>
-</div>
-<div id="subdorpmenu_dolphin4" class="subdorpmenu_dolphin">
-<ul>
-
-<li id="dropmenuli_dolphin417" ><a href="temp5/news/class/?86.html" class="subdorpmenu_dolphin">公司新闻</a></li>
-
-<li id="dropmenuli_dolphin418" ><a href="temp5/news/class/?95.html" class="subdorpmenu_dolphin">行业动态</a></li>
-</ul>
-
-</div>
-
-<div id="dorpmenu_dolphin5" class="dorpmenu_dolphin">
-	<a href="temp5/page/quality/goal.php" class="dorpmenu_dolphin">质量体系</a>
-</div>
-<div id="subdorpmenu_dolphin5" class="subdorpmenu_dolphin">
-<ul>
-
-<li id="dropmenuli_dolphin408" ><a href="temp5/page/quality/goal.php" class="subdorpmenu_dolphin">质量目标</a></li>
-
-<li id="dropmenuli_dolphin409" ><a href="temp5/page/quality/policy.php" class="subdorpmenu_dolphin">质量方针</a></li>
-</ul>
-
-</div>
-
-<div id="dorpmenu_dolphin6" class="dorpmenu_dolphin">
-	<a href="temp5/job/index.php" class="dorpmenu_dolphin">人才招聘</a>
-</div>
-<div id="subdorpmenu_dolphin6" class="subdorpmenu_dolphin">
-
-</div>
-
-<div id="dorpmenu_dolphin7" class="dorpmenu_dolphin">
-	<a href="temp5/page/contact/contact.php" class="dorpmenu_dolphin">联系我们</a>
-</div>
-<div id="subdorpmenu_dolphin7" class="subdorpmenu_dolphin">
-<ul>
-
-<li id="dropmenuli_dolphin410" ><a href="temp5/page/contact/contact.php" class="subdorpmenu_dolphin">联系方式</a></li>
-
-<li id="dropmenuli_dolphin411" ><a href="temp5/page/contact/feedback.php" class="subdorpmenu_dolphin">信息反馈</a></li>
-</ul>
-
-</div>
+<?php include __DIR__.'/../common/nav3.php'; ?>
  
 </div>
 
@@ -294,12 +188,12 @@
 <script language="javascript" src="temp5/search/js/searchform.js"></script>
 
 <div class="globalsearchformzone">
-<form id="globalsearchform" method="get" action="search/index.php">
+<form id="globalsearchform" method="post" action="index.php?p=product">
    	<div class="globalsearchform">
-    	<input name="key" type="text" id="globalsearchform_key" value="" class="input" />
+    	<input name="productName" type="text" id="globalsearchform_key" value="" class="input" />
   	</div>
 	<div class="globalsearchform1">
-  		<input name="imageField" id="button" type="image" src="temp5/search/templates/images/searchr.jpg" class="imgbutton" />
+  		<input id="button" type="image" src="temp5/search/templates/images/searchr.jpg" class="imgbutton" />
   	</div>
 </form>
 </div>
