@@ -59,7 +59,7 @@
 <div style="padding:0px">
 
 
-<a href="temp3/http://www.baidu.com"><img src="temp3/advs/pics/20100926/1285491063.jpg" border="0" /></a>
+<a href="#"><img src="temp3/advs/pics/20100926/1285491063.jpg" border="0" /></a>
 
 
 </div>
