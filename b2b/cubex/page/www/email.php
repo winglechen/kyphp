@@ -2,7 +2,7 @@
 use Ky\Model\Company;
 
 
-$status = Company::emailValid($_GET['name']);
+$status = Company::emailValid($_GET['email']);
 
 if($status){
     echo 0;
