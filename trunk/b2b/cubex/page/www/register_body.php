@@ -138,7 +138,7 @@ function refreshCaptcha()
           </tr>
           <tr>
             <th><span>*</span>电子邮箱：</th>
-            <td colspan="3"><input dataType="email" ajax="index.php?p=www/username&email=" ajax_err="email已存在，请重试"
+            <td colspan="3"><input dataType="email" ajax="index.php?p=www/email&email=" ajax_err="email已存在，请重试"
   onfocus="checkInput(this);" required="true" messageSpan="email_err"  type="text" name="email" id="email" value="" class="putong" size="50"></td>
             <td><span id="email_err"></span>
             <span id="email_info"></span></td>
