@@ -135,9 +135,9 @@
 <!--会员信息结束-->
 
 <!--紧急采购广告-->
-<div style="margin:8px 0 0 2px;"><a href="http://my.cn.china.cn/admin.php?op=EmergentBuyInfoList" target="_blank"><img border="0" src="./res/tuu.jpg"></a></div>
+<div style="margin:8px 0 0 2px;"><a href="#" target="_blank"><img border="0" src="./res/tuu.jpg"></a></div>
 <!--/erm公告-->
-<div style="margin:8px 0 0 2px;"><a href="http://my.cn.china.cn/admin.php?op=ApplyRegistershow" target="_blank"><img border="0" src="./res/apply2.jpg"></a></div>
+<div style="margin:8px 0 0 2px;"><a href="" target="_blank"><img border="0" src="./img/admin_main_ad.jpg"></a></div>
 
 </div>
 
