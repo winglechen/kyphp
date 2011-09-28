@@ -98,27 +98,15 @@
 
 <!-- 网站标志 -->
 
-<div id='pdv_10806' class='pdv_class'  title='' style='width:253px;height:85px;top:0px;left:14px; z-index:6'>
-<div id='spdv_10806' class='pdv_top' style='overflow:hidden;width:100%;height:100%'>
-<div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
-	<div style="height:25px;margin:1px;display:none;background:;">
-		<div style="float:left;margin-left:6px;line-height:25px;font-weight:bold;color:">
-		
-		</div>
-		<div style="float:right;margin-right:10px;display:none">
-		<a href="temp1/-1" style="line-height:25px;color:">更多</a>
-		</div>
-	</div>
-<div style="padding:0px">
+<div id='pdv_10806' class='pdv_class'  title='' style='width:380px;height:60px;top:0px;left:14px; z-index:6'>
+    <div id='spdv_10806' class='pdv_top' style='overflow:hidden;width:100%;height:100%'>
+        <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+            <div style="padding:0px">
+                <img src="temp3/advs/pics/20100926/1285491063.jpg" style="width:369px;height=46px;margin-top:10px;" border="0" />
+            </div>
+        </div>
 
-
-<img src="temp1/advs/pics/20100719/1279516084.jpg" border="0" />
-
-
-</div>
-</div>
-
-</div>
+    </div>
 </div>
 
 <!-- 图片/FLASH -->
