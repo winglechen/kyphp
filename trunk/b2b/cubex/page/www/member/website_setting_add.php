@@ -148,7 +148,7 @@ if(empty($form)){
     </tbody></table>
     <table border="0" cellspacing="0" cellpadding="0">
       <tbody><tr>
-        <td style="color:#FF00FF">说明：上传图片限500k以内jpg、png格式图片</td>
+        <td style="color:#FF00FF">说明：logo尺寸 宽：369px 高：46px<br />上传图片限500k以内jpg、png、GIF格式图片</td>
       </tr>
     </tbody></table>
     </td>
@@ -159,7 +159,7 @@ if(empty($form)){
         </div>
       </div>
       
-      <div class="formline">
+      <!--div class="formline">
         <div class="formlabel">公司图片：</div>
         <div class="formcontent"> 
 <table cellspacing="0" cellpadding="0" width="100%" border="0">
@@ -196,7 +196,7 @@ if(empty($form)){
 
           <div class="note"> </div>
         </div>
-      </div>
+      </div-->
       
       <div class="formline">
         <div class="formlabel">网站banner：</div>
@@ -226,7 +226,7 @@ if(empty($form)){
     </tbody></table>
     <table border="0" cellspacing="0" cellpadding="0">
       <tbody><tr>
-        <td style="color:#FF00FF">说明：上传图片限500k以内jpg、png格式图片</td>
+        <td style="color:#FF00FF">说明：图片尺寸：宽1000px 高：50--500px<br />上传图片限500k以内jpg、png、GIF格式图片</td>
       </tr>
     </tbody></table>
     </td>
