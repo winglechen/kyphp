@@ -76,7 +76,7 @@ if('product' == $_GET['module']){
           <a href="index.php?p=www/member/website_style">网站设置</a>
         </ul>
         <ul class="">
-          <a href="index.php?p=www/member/website_setting_add">网站图片</a>
+          <a href="index.php?p=www/member/website_setting_add">logo及图片</a>
         </ul>
         <ul class="">
           <a href="index.php?p=www/member/website_footer">网站底部修改</a>
