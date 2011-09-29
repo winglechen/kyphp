@@ -22,22 +22,7 @@ var PDV_PAGENAME='query';
 
 <link href="temp5/product/templates/css/productclass_dolphin.css" rel="stylesheet" type="text/css" />
 <div class="productclass_dolphin">
-
-
-<a href="temp5/product/class/?1.html" target="_self" class="productclass_dolphin">汽机车零件</a>
-
-
-<a href="temp5/product/class/?2.html" target="_self" class="productclass_dolphin">园林工具零件</a>
-
-
-<a href="temp5/product/class/?3.html" target="_self" class="productclass_dolphin">齿轮系列</a>
-
-
-<a href="temp5/product/class/?4.html" target="_self" class="productclass_dolphin">交直流工具</a>
-
-
-<a href="temp5/product/class/?5.html" target="_self" class="productclass_dolphin">结构零件</a>
- 
+<?php include __DIR__.'/../common/product_category.php'; ?>
 </div>
 
 </div>
@@ -58,30 +43,11 @@ var PDV_PAGENAME='query';
 <div style="height:48px;border:0px;padding:0;margin:0;background:url(temp5/base/border/787/images/title.jpg) 0px 0px no-repeat;">
 </div>
 <div style="margin:0px;padding:0px;">
-<link href="temp5/product/templates/css/product_searchform_dolphin.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="temp5/product/js/selectbox.js"></script>
-<div class="productsearchformzone">
-<form id="productsearchform" method="get" action="temp5/product/class/index.php">
-  
-   <div class="productsearchform">
-    <select name="catid" id="catid" class="box" style="display:none; background:#ffffff; width:155px; height:19px;">
-      <option value="0" >请选择分类</option>
-      
-	  <option value='1'>汽机车零件</option><option value='2'>园林工具零件</option><option value='3'>齿轮系列</option><option value='4'>交直流工具</option><option value='5'>结构零件</option>
-    
-    </select> 
-	<script>
-	makeSelectBox('catid','temp5/');
-	</script>
-  </div>
-    <div class="productsearchform">
-    <input name="key" type="text" id="productsearchform_key" value="" style="width:153px;" class="inputtext">
-  </div>
-  <div class="productsearchform2">
-  <input name="imageField" id="button" type="image" src="temp5/product/templates/images/search5.gif" >
-  </div>
-</form>
-</div>
+<link href="temp1/product/templates/css/product_searchform_dolphin.css" rel="stylesheet" type="text/css" />
+
+<?php
+    include __DIR__ . '/../common/product_search.php';
+?>
 
 </div>
 </div>
@@ -101,9 +67,9 @@ var PDV_PAGENAME='query';
  
 <link href="temp5/news/templates/css/nav.css" rel="stylesheet" type="text/css" />
 <div id="nav">
-您现在的位置：<a href="temp5/">机械零部件制造公司</a> 
+您现在的位置：<a href="index.php">首页</a> 
  
-&gt; <a href="temp5/news/" >新闻中心</a> 
+&gt; 新闻中心 
 
 </div>
 <div class="img"></div>
@@ -131,58 +97,12 @@ var PDV_PAGENAME='query';
 <link href="temp5/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
 <ul id="queryul">
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?410.html" target="_self"   >召开2010年度经济工作会议暨企业文化头脑风暴会</a></div>
-	<div class="time">2010-04-06</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?419.html" target="_self"   >跨入品牌经营时代</a></div>
-	<div class="time">2010-04-20</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?420.html" target="_self"   >品牌意识开始觉醒</a></div>
-	<div class="time">2010-05-13</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?423.html" target="_self"   >华大学调研组来厂调研</a></div>
-	<div class="time">2010-05-13</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?412.html" target="_self"   >荣获省名牌产品称号</a></div>
-	<div class="time">2010-04-06</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?428.html" target="_self"   >召开年度经济工作会议暨企业文化头脑风暴会</a></div>
-	<div class="time">2010-07-15</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?409.html" target="_self"   >公司推出以旧换新业务集团销售公司推出以旧换新业务</a></div>
-	<div class="time">2010-04-06</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?411.html" target="_self"   >集团销售公司推出以旧换新业务</a></div>
-	<div class="time">2010-04-06</div>
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp5/news/html/?321.html" target="_self"   >表彰2009年度十佳员工及金牌业务员、金牌服务工程师 </a></div>
-	<div class="time">2009-12-10</div>
-</li>
-
+<?php include __DIR__.'/../common/new_list.php'; ?>
 </ul>
 </div>
 
 <div id="showpages">
-	  <div id="pagesinfo">共9条 每页10条 页次：1/1</div>
-	  <div id="pages"><ul><li class="pbutton"><a href=/1294375486/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li class="pbutton">下一页</li><li class="opt"><select onChange="window.location=this.options[this.selectedIndex].value"><option value="/1294375486/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=" selected>第1页</option></select></li><li class="pbutton"><a href=/1294375486/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>尾页</a></li></ul></div>
+<?php echo $data['page']; ?>
 </div>
 
 

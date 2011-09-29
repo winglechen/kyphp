@@ -43,16 +43,7 @@
 <link href="temp5/menu/templates/images/bottommenu_1/A.css" rel="stylesheet" type="text/css" />
 <div id="bottommenu">|
 
-<a href="temp5/page/html/company.php" target="_self">关于我们</a>|
-
-<a href="temp5/page/contact/contact.php" target="_self">联系方式</a>|
-
-<a href="temp5/page/contact/feedback.php" target="_self">信息反馈</a>|
-
-<a href="temp5/job/index.php" target="_self">人才招聘</a>|
-
-<a href="temp5/advs/link/" target="_self">友情链接</a>|
- 
+<?php include __DIR__.'/../common/links.php'; ?> 
 </div>
 
 
@@ -77,7 +68,7 @@
 	</div>
 <div style="padding:0px">
 <div style="width:100%;text-align:center;font:12px/20px Arial, Helvetica, sans-serif">
-<div style="TEXT-ALIGN: center; LINE-HEIGHT: 24px; MARGIN: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #525252">版权所有 Copyright(C)2009-2010 杭州市某某机械零部件制造公司</div>
+<div style="TEXT-ALIGN: center; LINE-HEIGHT: 24px; MARGIN: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #525252">版权所有 Copyright(C)2009-2012<?php echo $_SESSION['data']['corpname']; ?></div>
 </div>
 
 </div>

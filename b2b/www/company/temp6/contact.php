@@ -85,22 +85,8 @@ var PDV_PAGENAME='query';
 		<a href="-1" style="line-height:25px;color:">更多</a>
 		</div>
 	</div>
-<div style="padding:0px">
-
-<link href="temp6/product/templates/css/productquery.css" rel="stylesheet" type="text/css" />
- 
-<?php include __DIR__.'/../common/product_list5.php'; ?>
-
-<script>
-$(function() {
-$().picFit("auto");
-});
-</script>
-
-<div id="showpages" >
-<?php echo $data['page']; ?>	  
-</div>
-
+<div style="padding:0px;overflow:hidden;">
+<?php include __DIR__.'/../common/contact.php'; ?>
 
 </div>
 </div>

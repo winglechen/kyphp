@@ -3,4 +3,4 @@ use Ky\Model\Product;
 
 $data = Product::detail($_GET['id']);
 
-echo $data['detail'];
+echo htmlspecialchars_decode(stripslashes($data['detail']));
