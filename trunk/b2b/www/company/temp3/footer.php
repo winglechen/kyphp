@@ -69,7 +69,7 @@
 	</div>
 <div style="padding:0px">
 <div style="width:100%;text-align:center;font:12px/20px Arial, Helvetica, sans-serif">
-<div style="TEXT-ALIGN: center; LINE-HEIGHT: 24px; MARGIN: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #464646">版权所有 Copyright(C)2009-2011 <?php echo $_SESSION['data']['corpname']; ?></div>
+<div style="TEXT-ALIGN: center; LINE-HEIGHT: 24px; MARGIN: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #464646"><?php echo $_SESSION['setting']['footer']; ?></div>
 </div>
 
 </div>

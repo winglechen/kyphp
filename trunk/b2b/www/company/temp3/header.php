@@ -3,9 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>-注塑设备制造公司</title>
-<meta content="" name=keywords />
-<meta content="" name=description />
+
+<title><?php echo $_SESSION['setting']['title']; ?></title>
+<meta content="<?php echo $_SESSION['setting']['keyword']; ?>" name=keywords />
+<meta content="<?php echo $_SESSION['setting']['description']; ?>" name=description />
+
 <link href="temp3/base/templates/css/common.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="temp3/base/js/base.js"></script>
 <script type="text/javascript" src="temp3/base/js/common.js"></script>
@@ -59,7 +61,8 @@
 <div style="padding:0px">
 
 
-<a href="#"><img src="temp3/advs/pics/20100926/1285491063.jpg" border="0" /></a>
+<?php $logo_src = (!empty($_SESSION['setting']['logo'])) ? $_SESSION['setting']['logo'] : 'temp3/advs/pics/20100926/1285491063.jpg'; ?>
+<a href="#"><img src="<?php echo $logo_src; ?>" style="width:369px;height:46px;" border="0" /></a>
 
 
 </div>
@@ -83,7 +86,7 @@
 	</div>
 <div style="padding:0px">
 
-<div style="font:12px/14px simsun">
+<div style="font:12px/14px simsun;display:none;">
 	<a href="temp3/http://demo.2799.cn/1295932157/" style="color:#8b8b8b;font:12px/14px simsun;" onClick="this.style.behavior='url(temp3/#default#homepage)';this.setHomePage('http://demo.2799.cn/1295932157/'); return(false);"><img src="temp3/effect/templates/images/home.jpg" border="0" style="margin:0px 5px 0px 0px;" />设为首页</a>  
 	<a href="temp3/http://demo.2799.cn/1295932157/" style="color:#8b8b8b;font:12px/14px simsun;padding-left:6px;" onClick="window.external.addFavorite('http://demo.2799.cn/1295932157/','注塑设备制造公司'); return(false);"><img src="temp3/effect/templates/images/bookmark.jpg" border="0" style="margin:0px 5px 0px 0px;" />加入收藏</a>
 </div>
@@ -176,7 +179,9 @@
 
 
 <div id="swfContent"></div>
-<img src="temp1/banner.png" width="1002" height="280">
+<?php $banner_src = (!empty($_SESSION['setting']['banner'])) ? $_SESSION['setting']['banner'] : 'temp1/banner.png'; ?>
+<img src="<?php echo $banner_src; ?>" width="1002px" height="280px">
+
 
 </div>
 </div>
