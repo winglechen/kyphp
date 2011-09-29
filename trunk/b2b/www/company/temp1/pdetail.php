@@ -18,10 +18,10 @@ var PDV_PAGENAME='query';
     	<div style="float:right;width:5px;height:49px;background:url(temp1/base/border/784/images/title.jpg) -995px 0px no-repeat;"></div>
     </div>
     <div style="margin:0px;padding:0px;">
-    <link href="temp1/news/templates/css/news_search_dolphin.css" rel="stylesheet" type="text/css" />
+    <link href="temp1/product/templates/css/product_searchform_dolphin.css" rel="stylesheet" type="text/css" />
     
     <?php
-        include __DIR__ . '/../common/new_search.php';
+        include __DIR__ . '/../common/product_search.php';
     ?>
     
     
@@ -48,7 +48,7 @@ var PDV_PAGENAME='query';
 <div style="padding:0px">
 
 <link href="temp1/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
-<div id="newsquery">
+<div id="newsquery" style="overflow:hidden;">
  
 <?php include __DIR__.'/../common/product_detail.php'; ?>
 
@@ -73,7 +73,7 @@ var PDV_PAGENAME='query';
 <div id="nav">
 您现在的位置：<a href="index.php">首页</a> 
  
-&gt; <a href="#" ><?php echo $data['name'] ?></a> 
+&gt; <a href="#" ><?php echo $data['productName'] ?></a> 
 
 </div>
 
@@ -92,11 +92,11 @@ var PDV_PAGENAME='query';
 </div>
 <div style="margin:0px;padding:0px;">
 
-<link href="temp1/news/templates/css/newsclass_dolphin.css" rel="stylesheet" type="text/css" />
+<link href="temp1/product/templates/css/productclass_dolphin.css" rel="stylesheet" type="text/css" />
 <div class="newsclass_dolphin">
 
 
-<?php include __DIR__.'/../common/new_category.php'; ?>
+<?php include __DIR__.'/../common/product_category.php'; ?>
 
 </div>
 

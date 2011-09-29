@@ -45,18 +45,7 @@ var PDV_PAGENAME='query';
 <link href="temp6/news/templates/css/newsclass_dolphin.css" rel="stylesheet" type="text/css" />
 <div class="newsclass_dolphin">
 
-
-<a href="temp6/news/class/?86.html" target="_self" class="newsclass_dolphin">公司新闻</a>
-
-
-<a href="temp6/news/class/?95.html" target="_self" class="newsclass_dolphin">行业动态</a>
-
-
-<a href="temp6/news/class/?106.html" target="_self" class="newsclass_dolphin">媒体报道</a>
-
-
-<a href="temp6/news/class/?107.html" target="_self" class="newsclass_dolphin">科技创新</a>
- 
+<?php include __DIR__.'/../common/new_category.php'; ?>
 </div>
 
 </div>
@@ -73,9 +62,9 @@ var PDV_PAGENAME='query';
  
 <link href="temp6/news/templates/css/nav.css" rel="stylesheet" type="text/css" />
 <div id="nav">
-您现在的位置：<a href="temp6/">吊装机械设备公司</a> 
+您现在的位置：<a href="index.php">首页/a> 
  
-&gt; <a href="temp6/news/" >新闻中心</a> 
+&gt; <a href="#" >新闻中心</a> 
 
 </div>
 
@@ -102,73 +91,12 @@ var PDV_PAGENAME='query';
 <link href="temp6/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
 <ul id="queryul">
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?411.html" target="_self"   >注重科技创新提高产品竞争力注重科技创新提高产品竞争力</a></div>
-	<div class="time">2010-05-25</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?412.html" target="_self"   >装置提供数据服务控制装置提供数据服务</a></div>
-	<div class="time">2010-05-25</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?410.html" target="_self"   >汽车电子产品归纳为两类汽车电子产品归纳为两类</a></div>
-	<div class="time">2010-05-25</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?402.html" target="_self"   >自动变速器控制系统</a></div>
-	<div class="time">2010-02-21</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?403.html" target="_self"   >控制装置提供数据服务</a></div>
-	<div class="time">2010-02-21</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?433.html" target="_self"   >科技注重创新有创新必会有突破</a></div>
-	<div class="time">2010-07-23</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?432.html" target="_self"   >人才是第一要素，增强自主创新能力</a></div>
-	<div class="time">2010-07-23</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?434.html" target="_self"   >贯彻科学发展观指导生产实践</a></div>
-	<div class="time">2010-07-23</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?435.html" target="_self"   >长期以来贯彻科学发展观指导生产实践</a></div>
-	<div class="time">2010-07-23</div>
-
-</li>
- 
-<li class="title">
-	<div class="title"><a href="temp6/news/html/?436.html" target="_self"   >科技注重创新，有创新必会有突破</a></div>
-	<div class="time">2010-07-23</div>
-
-</li>
-
+<?php include __DIR__.'/../common/new_list.php'; ?>
 </ul>
 </div>
 
 <div id="showpages">
-	  <div id="pagesinfo">共10条 每页10条 页次：1/1</div>
-	  <div id="pages"><ul><li class="pbutton"><a href=/1295931972/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>首页</a></li><li class="pbutton">上一页</li><li class="pagesnow">1</li><li class="pbutton">下一页</li><li class="opt"><select onChange="window.location=this.options[this.selectedIndex].value"><option value="/1295931972/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=" selected>第1页</option></select></li><li class="pbutton"><a href=/1295931972/news/class/index.php?page=1&amp;catid=0&amp;myord=uptime&amp;myshownums=&amp;showtj=&amp;showdate=&amp;author=&amp;key=>尾页</a></li></ul></div>
+    <?php echo $data['page']; ?>	  
 </div>
 
 

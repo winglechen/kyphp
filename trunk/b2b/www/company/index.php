@@ -1,6 +1,7 @@
 <?php
 //入口文件
 
+error_reporting(1);
 require(__DIR__ . '/../../lib/core/Dispatcher.php');
 
 $config = array(

@@ -42,7 +42,7 @@ var PDV_PAGENAME='query';
  
 <link href="temp3/news/templates/css/nav.css" rel="stylesheet" type="text/css" />
 <div id="nav">
-您现在的位置：<a href="index.php">首页</a> > 新闻详细
+您现在的位置：<a href="index.php">首页</a> > 产品详细
  
 
 </div>
@@ -69,7 +69,7 @@ var PDV_PAGENAME='query';
 
 <link href="temp3/news/templates/css/newsquery.css" rel="stylesheet" type="text/css" />
 <div id="newsquery">
-<?php include __DIR__.'/../common/new_detail.php'; ?>
+<?php include __DIR__.'/../common/product_detail.php'; ?>
 </div>
 
 
@@ -90,9 +90,9 @@ var PDV_PAGENAME='query';
 </div>
 <div style="margin:0px;padding:0px">
 
-<link href="temp3/news/templates/css/newsclass_dolphin.css" rel="stylesheet" type="text/css" />
-<div class="newsclass_dolphin">
-<?php include __DIR__.'/../common/new_category.php'; ?>
+<link href="temp3/product/templates/css/productclass_dolphin.css" rel="stylesheet" type="text/css" />
+<div class="productclass_dolphin">
+<?php include __DIR__.'/../common/product_category.php'; ?>
  
 </div>
 

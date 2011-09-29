@@ -45,12 +45,12 @@ for($i=0,$len=count($data['data']); $i<$len; $i++){
     <div class="productquery_dolphin_top">
 		<div class="fang" style="width:225px;height:150px">
 		<div class="picFit" style="width:225px;height:150px">
-		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_blank" ><img src="<?php echo $row['pic']; ?>" style="width:225px;height:150px" border="0" /></a>
+		<a href="index.php?p=pdetail&id=<?php echo $row['id']; ?>" ><img src="<?php echo $row['pic']; ?>" style="width:225px;height:150px" border="0" /></a>
 		</div>
 		</div>
 	</div>
 	<div class="productquery_dolphin_bottom" style="width:225px;overflow:hidden;">
-		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_blank" class="prodtitle"   ><?php echo $row['productName']; ?></a>
+		<a href="index.php?p=pdetail&id=<?php echo $row['id']; ?>" class="prodtitle"   ><?php echo $row['productName']; ?></a>
 	</div>
 </div>
 

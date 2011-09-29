@@ -26,11 +26,11 @@ for($i=0,$len=count($data['data']); $i<$len; $i++){
 <td>
 	<div class="fang" style="width:162px;height:122px">
 	<div class="picFit" style="width:162px;height:122px">
-		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_self" ><img src="<?php echo $row['pic']; ?>" style="width:162px;height:122px;" border="0" /></a>
+		<a href="index.php?p=pdetail&id=<?php echo $row['id']; ?>" target="_self" ><img src="<?php echo $row['pic']; ?>" style="width:162px;height:122px;" border="0" /></a>
 	</div>
 	</div>
 	<div class="title" style="width:162px;">
-		<a href="http://www.ztb2b.com/index.php?p=www/detail&id=<?php echo $row['id']; ?>" target="_self" class="title"   ><?php echo $row['productName']; ?></a>
+		<a href="index.php?p=pdetail&id=<?php echo $row['id']; ?>" target="_self" class="title"   ><?php echo $row['productName']; ?></a>
 	</div>
 </td>
 

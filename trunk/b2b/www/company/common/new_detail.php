@@ -3,4 +3,4 @@ use Ky\Model\Mnew;
 
 $data = Mnew::detail($_GET['id']);
 
-echo $data['detail'];
+echo htmlspecialchars_decode($data['detail']);

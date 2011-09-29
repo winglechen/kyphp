@@ -87,17 +87,7 @@
 <div id="menumain">
 <div class="mainmenuiner">
 
-<a href="temp6/index.php" target="_self" class="menumain">网站首页</a>
-
-<a href="temp6/page/html/company.php" target="_self" class="menumain">公司简介</a>
-
-<a href="temp6/news/class/" target="_self" class="menumain">新闻资讯</a>
-
-<a href="temp6/product/class/" target="_self" class="menumain">产品展示</a>
-
-<a href="temp6/page/tech/equipment.php" target="_self" class="menumain">科技实力</a>
-
-<a href="temp6/page/contact/contact.php" target="_self" class="menumain">联系我们</a>
+<?php include __DIR__.'/../common/nav2.php'; ?>
 
 </div>
 </div>
@@ -161,9 +151,9 @@ flash/swflash.cab#version=6,0,29,0" width="990" height="247">
 <script language="javascript" src="temp6/search/js/searchform.js"></script>
 
 <div class="globalsearchformzone">
-<form id="globalsearchform" method="get" action="search/index.php">
+<form id="globalsearchform" method="post" action="index.php?p=product">
    	<div class="globalsearchform">
-    	<input name="key" type="text" id="globalsearchform_key" value="" class="input" />
+    	<input name="productName" type="text" id="globalsearchform_key" value="" class="input" />
   	</div>
 	<div class="globalsearchform1">
   		<input name="imageField" id="button" type="image" src="temp6/search/templates/images/searchr.jpg" class="imgbutton" />
