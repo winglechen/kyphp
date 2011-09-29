@@ -8,7 +8,7 @@ define('LIB_PATH',                  $dir.'/../lib/');
 define('CONFIG_PATH',               $dir.'/../config/');
 define('CUBEX_PATH',                $dir.'/../cubex/');
 define('GLIDER_PATH',               $dir.'/../glider/');
-define('IMG_HOST',                  'http://localhost/kyphp/b2b/www/html/');
+define('IMG_HOST',                  'http://pic.ztb2b.com/');
 define('IMG_PATH',                  $dir.'/../www/html/');
 
 return array(
