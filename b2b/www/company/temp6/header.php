@@ -3,9 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>-吊装机械设备公司</title>
-<meta content="" name=keywords />
-<meta content="" name=description />
+
+<title><?php echo $_SESSION['setting']['title']; ?></title>
+<meta content="<?php echo $_SESSION['setting']['keyword']; ?>" name=keywords />
+<meta content="<?php echo $_SESSION['setting']['description']; ?>" name=description />
+
 <link href="temp6/base/templates/css/common.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="temp6/base/js/base.js"></script>
 <script type="text/javascript" src="temp6/base/js/common.js"></script>
@@ -58,8 +60,8 @@
 	</div>
 <div style="padding:0px">
 
-
-<img src="temp6/advs/pics/20100524/1274670298.jpg" border="0" />
+<?php $logo_src = (!empty($_SESSION['setting']['logo'])) ? $_SESSION['setting']['logo'] : 'temp3/advs/pics/20100926/1285491063.jpg'; ?>
+<img src="<?php echo $logo_src; ?>" style="width:369px;height:46px;" border="0" />
 
 
 </div>
@@ -114,17 +116,10 @@
 <div style="padding:0px">
 <div align="center">
   <p>
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id=scriptmain name=scriptmain codebase="http://download.macromedia.com/pub/shockwave/cabs/
-flash/swflash.cab#version=6,0,29,0" width="990" height="247">
-      <param name="movie" value="advs/templates/images/lbxml.swf?bcastr_xml_url=advs/xml/lbxml.php?g=1|">
-      <param name="quality" value="high">
-      <param name=scale value=noscale>
-      <param name="LOOP" value="false">
-      <param name="menu" value="false">
-      <param name="wmode" value="transparent">
-      <embed src="temp6/advs/templates/images/lbxml.swf?bcastr_xml_url=advs/xml/lbxml.php?g=1|" width="990" height="247"  loop="false" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" salign="T" name="scriptmain" menu="false" wmode="transparent"></embed>
-    </object>
-   
+     <?php $banner_src = (!empty($_SESSION['setting']['banner'])) ? $_SESSION['setting']['banner'] : 'temp1/banner.png'; ?>
+<img src="<?php echo $banner_src; ?>" width="990px" height="220px">
+    </p>
+  
 </div>
 
 </div>

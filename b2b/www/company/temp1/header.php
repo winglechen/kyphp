@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>-整体橱柜公司</title>
-<meta content="" name=keywords />
-<meta content="" name=description />
+<title><?php echo $_SESSION['setting']['title']; ?></title>
+<meta content="<?php echo $_SESSION['setting']['keyword']; ?>" name=keywords />
+<meta content="<?php echo $_SESSION['setting']['description']; ?>" name=description />
 <link href="temp1/base/templates/css/common.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="temp1/base/js/base.js"></script>
 <script type="text/javascript" src="temp1/base/js/common.js"></script>
@@ -35,7 +35,8 @@
 <div style="padding:0px">
 
 
-<img src="temp1/banner.png" width="1002" height="280">
+<?php $banner_src = (!empty($_SESSION['setting']['banner'])) ? $_SESSION['setting']['banner'] : 'temp1/banner.png'; ?>
+<img src="<?php echo $banner_src; ?>" width="1002px" height="280px">
 
 </div>
 </div>
@@ -102,7 +103,8 @@
     <div id='spdv_10806' class='pdv_top' style='overflow:hidden;width:100%;height:100%'>
         <div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
             <div style="padding:0px">
-                <img src="temp3/advs/pics/20100926/1285491063.jpg" style="width:369px;height=46px;margin-top:10px;" border="0" />
+                <?php $logo_src = (!empty($_SESSION['setting']['logo'])) ? $_SESSION['setting']['logo'] : 'temp3/advs/pics/20100926/1285491063.jpg'; ?>
+                <img src="<?php echo $logo_src; ?>" style="width:369px;height:46px;margin-top:10px;" border="0" />
             </div>
         </div>
 
