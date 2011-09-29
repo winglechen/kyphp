@@ -36,6 +36,6 @@ if(!empty($_POST)){
 
     Mset::update($_POST);          
     
-    header('Location:index.php?p=www/member/website_setting_add');
 }
+header('Location:index.php?p=www/member/website_setting_add');
 

@@ -79,7 +79,7 @@ if('product' == $_GET['module']){
           <a href="index.php?p=www/member/website_setting_add">logo及图片</a>
         </ul>
         <ul class="">
-          <a href="index.php?p=www/member/website_footer">网站底部修改</a>
+          <a href="index.php?p=www/member/website_setting_seo">seo管理</a>
         </ul>
         <ul class="">
           <a href="index.php?p=www/member/website_nav_list">网站导航管理</a>
