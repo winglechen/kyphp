@@ -62,46 +62,18 @@ if(empty($form)){
 
     <div class="formblock">
       <div class="formheader">
-        <div class="headerTitle">公司SEO管理</div>
+        <div class="headerTitle">公司底部管理</div>
       </div>
       
-      <div class="formline">
-       <div class="formlabel"><span class="inputlabelok"></span>网站标题：<span>*</span></div>
-       <div class="formcontent">
-       <input name="title" id="title" value="<?php echo $form['title']; ?>" type="text" class="input220" >
-       <span id="oproductName_err"></span>
-       <div class="note"></div>
-         </div>
-        </div>
-
-    <div class="formline">
-       <div class="formlabel"><span class="inputlabelok"></span>网站关键词：<span>*</span></div>
-       <div class="formcontent">
-       <input name="keyword" id="keyword" value="<?php echo $form['keyword']; ?>" type="text" class="input220" >
-       <span id="oproductName_err"></span>
-       <div class="note"></div>
-         </div>
-        </div>
-
-
-    <div class="formline">
-       <div class="formlabel"><span class="inputlabelok"></span>网站描述：<span>*</span></div>
-       <div class="formcontent">
-        <textarea cols="120" name="description" rows="10"><?php echo $form['description']; ?></textarea> 
-       <span id="oproductName_err"></span>
-       <div class="note"></div>
-         </div>
-        </div>
-
  
-    <!--div class="formline">
+    <div class="formline">
        <div class="formlabel"><span class="inputlabelok"></span>网站底部：<span>*</span></div>
        <div class="formcontent">
         <textarea cols="120" name="footer" rows="10"><?php echo $form['footer']; ?></textarea> 
        <span id="oproductName_err"></span>
        <div class="note"></div>
          </div>
-        </div-->
+        </div>
 
 
      
